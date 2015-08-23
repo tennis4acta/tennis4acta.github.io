@@ -2,12 +2,12 @@
 title: Australian Chinese Tennis Association
 header-img: img/home-bg.jpg
 email: info@acta.net.au
-description: "Write your site description here. It will be used as your sites meta description as well!"
+description: "澳洲华人网球协会"
 baseurl: ""
 url: "http://acta.net.au"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  IronSummitMedia
+# twitter_username: SBootstrap
+# github_username:  davidtmiller
+# facebook_username:  IronSummitMedia
 
 # Build settings
 markdown: kramdown
