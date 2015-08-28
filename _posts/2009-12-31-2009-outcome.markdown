@@ -52,7 +52,7 @@ header-img: "img/post-bg-05.jpg"
             </tr>
             <tr>
                 <td>少年女子單打</td>
-                <td>Linda Huan</td>
+                <td>Linda Huang</td>
                 <td>Sharon Huang</td>
             </tr>
         </tbody>
