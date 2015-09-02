@@ -9,3 +9,4 @@ header-img: "img/post-bg-05.jpg"
     <img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="Chania" width="800" />
 </div>
 
+<a href="http://acta.net.au/0.register/"> 大赛报名表 </a>
