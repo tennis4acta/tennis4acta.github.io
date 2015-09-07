@@ -13,6 +13,10 @@ description: "澳洲華人网球協會"
             {{ post.subtitle }}
         </h3>
         {% endif %}
+        <p/>
+        {% if post.title == paginator.posts.first.title %}
+            {{ post.content }}
+        {% endif %}
     </a>
     <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
