@@ -31,6 +31,10 @@ header-img: "img/post-bg-05.jpg"
                 <td>Don Qiu/Jason Qiu</td>
             </tr>
             <tr>
+                <td>女子雙打</td>
+                <td>Wendy Xia/Vicky Zhuang</td>
+                <td>Linda Huang/Lili Zhang</td>
+            <tr>
                 <td>混合雙打</td>
                 <td>Samuel Chan/Doris</td>
                 <td>Jason Huang/Sharon Huang</td>

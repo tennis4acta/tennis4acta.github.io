@@ -39,7 +39,7 @@ header-img: "img/post-bg-05.jpg"
             </tr>
             <tr>
                 <td>50歲以上雙打</td>
-                <td>Samuel  Chan/Doris</td>
+                <td>John Wang/Anh Lee</td>
                 <td>Gorden Yu/Ben Kwok</td>
             </tr>
             <tr>
