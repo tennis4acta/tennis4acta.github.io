@@ -1,14 +1,11 @@
 ---
 layout:     post
-title:      "ACTA2012北极星旅游杯华人網球大獎賽"
+title:      "2012ACTA华人網球大獎賽"
 date:       2012-12-31 12:00:00
 author:     "ACTA"
 header-img: "img/post-bg-05.jpg"
 ---
-<div class="container">
-    <img class="img-responsive" src="{{ site.baseurl }}/img/2012-poster.jpg" alt="Chania" width="600" />
-</div>
-<p>澳洲華人網球協會主辦的2012年北极星旅游杯华人網球大獎賽于12月2日星期日隆重舉行，这次華人網球大獎賽首次得到了Eastwood北极星旅行社和Wentworthville POP Dollar的支持和赞助。賽事設有男子雙打以及1２歲以下和１２歲以上少年男子單打三個項目的比賽。</p>
+<p>澳洲華人網球協會主辦的2012年华人網球大獎賽于12月2日星期日隆重舉行，这次華人網球大獎賽設有男子雙打以及12歲以下和12歲以上少年男子單打三個項目的比賽。</p>
 <div class="container">
     <h2>比賽戰果</h2>
     <table class="table">
