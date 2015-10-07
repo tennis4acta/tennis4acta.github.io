@@ -395,3 +395,21 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+
+.left-banner {
+position: absolute;
+left: 0px;
+margin-left: auto;
+margin-right: auto;
+width: 20%;
+height: 30%;
+}
+
+.right-banner {
+position: absolute;
+right: 0px;
+margin-left: auto;
+margin-right: auto;
+width:15%;
+height:150px;
+}
