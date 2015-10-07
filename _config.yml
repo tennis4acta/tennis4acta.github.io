@@ -1,12 +1,12 @@
 # Site settings
 title: 澳洲華人网球會
 header-img: img/home-bg.jpg
-email: info@acta.net.au
+email: info@actc.org.au
 description: "Australian Chinese Tennis Club"
 baseurl: ""
-url: "http://acta.net.au"
+url: "http://actc.org.au"
 # twitter_username: SBootstrap
-# github_username: 
+# github_username:
 # facebook_username:  IronSummitMedia
 
 # Build settings
