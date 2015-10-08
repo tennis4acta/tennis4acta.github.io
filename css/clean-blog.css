@@ -157,8 +157,8 @@ hr.small {
 .intro-header .site-heading img,
 .intro-header .page-heading img {
   float: left;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   background: #555;
 }
 .intro-header .site-heading h1,
