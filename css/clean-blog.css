@@ -161,7 +161,7 @@ hr.small {
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.1;
   display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -175,7 +175,7 @@ hr.small {
   }
 }
 .intro-header .post-heading h1 {
-  font-size: 35px;
+  font-size: 30px;
 }
 .intro-header .post-heading .subheading,
 .intro-header .post-heading .meta {
@@ -184,7 +184,7 @@ hr.small {
 }
 .intro-header .post-heading .subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   margin: 10px 0 30px;
   font-weight: 600;
 }
@@ -202,7 +202,7 @@ hr.small {
     font-size: 55px;
   }
   .intro-header .post-heading .subheading {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 .post-preview > a {
