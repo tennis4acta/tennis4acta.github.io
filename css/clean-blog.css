@@ -154,8 +154,16 @@ hr.small {
 .intro-header .page-heading {
   text-align: center;
 }
+.intro-header .site-heading img,
+.intro-header .page-heading img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
 .intro-header .site-heading h1,
 .intro-header .page-heading h1 {
+  position: relative;
   margin-top: 0;
   font-size: 50px;
 }
