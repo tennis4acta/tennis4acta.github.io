@@ -9,7 +9,7 @@ header-img: "img/pano-bg.jpg"
 <a href="http://actc.org.au/0.register/" class="btn btn-success btn-lg btn-block active"> 大赛报名表 </a>
 
 <div class="container">
-    <img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="Chania" width="800" />
+    <img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="Chania" width="750" />
 </div>
 
 <a href="http://actc.org.au/0.register/" class="btn btn-success btn-lg btn-block active"> 大赛报名表 </a>
