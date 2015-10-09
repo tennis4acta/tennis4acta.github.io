@@ -6,7 +6,9 @@ author:     "ACTA"
 header-img: "img/pano-bg.jpg"
 ---
 
-<a href="http://actc.org.au/0.register/" class="btn btn-success btn-lg active"> 大赛报名表 </a> <a href="#" class="btn btn-primary btn-lg active"> 比赛规则 </a> <a href="#" class="btn btn-info btn-lg active"> 奖品 </a> <a href="#" class="btn btn-warning btn-lg active"> 比赛分组 </a>
+<div class="span2">
+<a href="http://actc.org.au/0.register/" class="btn btn-success btn-lg active" role="button"> 大赛报名表 </a> <a href="#" class="btn btn-primary btn-lg active" role="button"> 比赛规则 </a> <a href="#" class="btn btn-info btn-lg active" role="button"> 奖品 </a> <a href="#" class="btn btn-warning btn-lg active" role="button"> 比赛分组 </a>
+</div>
 
 <div class="container">
     <img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="Chania" width="750" />
