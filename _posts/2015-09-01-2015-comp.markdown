@@ -8,7 +8,7 @@ header-img: "img/pano-bg.jpg"
 
 <p class="text-center">
 <a href="http://actc.org.au/0.register/" class="btn btn-success btn-lg active" role="button"> 大赛报名表 </a>
-<a href="http://actc.org.au/2015/08/31/2015-comp-rule/" class="btn btn-primary btn-lg disabled" role="button"> 比赛规则 </a>
+<a href="http://actc.org.au/2015/08/31/2015-comp-rule/" class="btn btn-primary btn-lg active" role="button"> 比赛规则 </a>
 <a href="#" class="btn btn-info btn-lg disabled" role="button"> 比赛奖品 </a>
 <a href="#" class="btn btn-warning btn-lg disabled" role="button"> 比赛分组 </a>
 </p>
