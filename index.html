@@ -3,7 +3,7 @@ layout: page
 description: "Australian Chinese Tennis Club"
 ---
 
-{% for post in paginator.posts %}
+<!-- {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
@@ -21,9 +21,24 @@ description: "Australian Chinese Tennis Club"
     <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
-{% endfor %}
+{% endfor %} -->
 
-<!-- <!-- Pager -->
+<div class="post-preview">
+    <a href="{{ paginator.posts.first.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ paginator.posts.first.title }}
+        </h2>
+        {% if paginator.posts.first.subtitle %}
+        <h3 class="post-subtitle">
+            {{ paginator.posts.first.subtitle }}
+        </h3>
+        {% endif %}
+        <p/>
+        {{ paginator.posts.first.content }}
+    </a>
+</div>
+
+<!-- Pager -->
 {% if paginator.total_pages > 1 %}
 <ul class="pager">
     {% if paginator.previous_page %}
@@ -37,4 +52,4 @@ description: "Australian Chinese Tennis Club"
     </li>
     {% endif %}
 </ul>
-{% endif %} -->
+{% endif %}
