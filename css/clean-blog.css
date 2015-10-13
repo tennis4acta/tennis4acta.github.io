@@ -429,9 +429,10 @@ height: 30%;
   box-sizing:border-box;
   -moz-box-sizing:border-box;
   -webkit-box-sizing:border-box;
-  margin:0 auto;
+  margin:100 auto;
   /*max-width:1300px;*/
   padding: 51px 38px 45px;
+  align:center;
 }
 #container .view-all{
   color:#b2b2b2;
