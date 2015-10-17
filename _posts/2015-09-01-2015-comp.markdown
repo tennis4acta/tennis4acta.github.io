@@ -18,3 +18,7 @@ header-img: "img/pano-bg.jpg"
 </div>
 
 <a href="{{ site.baseurl }}/0.register/" class="btn btn-success btn-lg btn-block active"> 大赛报名表 </a>
+
+<p>我們所有賽事工作人員都是義工，為了本次網球大賽，為了大家能有一個愉快的網球嘉年華，都付出了大量的勞動.</p>
+<p>因此，請大家主動配合我們的工作，讓本次活動能順利圓滿地進行。</p>
+<p>謝謝！</p>
