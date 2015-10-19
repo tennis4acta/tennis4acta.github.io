@@ -500,7 +500,7 @@ height: 30%;
 .thumbnail > a {
     display: block;
     /* 4:3 aspect ratio */
-    padding-top: 75%;
+    padding-top: 100%;
     /* center align pt. 1 */
     position: relative;
 }
