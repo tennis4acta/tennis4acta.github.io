@@ -5,44 +5,38 @@ date:       2015-09-01 12:00:00
 author:     "ACTA"
 header-img: "img/pano-bg.jpg"
 ---
-<p class="text-center">
-    <a href="{{ site.baseurl }}/0.register/" class="btn btn-success btn-lg active" role="button"> 大赛报名表 </a>
-    <a href="{{ site.baseurl }}/2015/08/31/2015-comp-rule/" class="btn btn-primary btn-lg active" role="button"> 比赛规则 </a>
-    <a href="#" class="btn btn-info btn-lg disabled" role="button"> 比赛奖品 </a>
-    <a href="#" class="btn btn-warning btn-lg disabled" role="button"> 比赛分组 </a>
-</p>
-
-<br>
-
-<div>
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">...</div>
-    <div role="tabpanel" class="tab-pane" id="profile">...</div>
-    <div role="tabpanel" class="tab-pane" id="messages">...</div>
-    <div role="tabpanel" class="tab-pane" id="settings">...</div>
-  </div>
+<div class="container">
+	<p class="text-center">
+		<a href="{{ site.baseurl }}/0.register/" class="btn btn-success btn-lg active" role="button"> 大赛报名表 </a>
+		<a href="{{ site.baseurl }}/2015/08/31/2015-comp-rule/" class="btn btn-primary btn-lg active" role="button"> 比赛规则 </a>
+		<a href="#" class="btn btn-info btn-lg disabled" role="button"> 比赛奖品 </a>
+		<a href="#" class="btn btn-warning btn-lg disabled" role="button"> 比赛分组 </a>
+	</p>
+	<br>
+	<div>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+			<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+			<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+			<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+		</ul>
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="home">...</div>
+			<div role="tabpanel" class="tab-pane" id="profile">...</div>
+			<div role="tabpanel" class="tab-pane" id="messages">...</div>
+			<div role="tabpanel" class="tab-pane" id="settings">...</div>
+		</div>
+	</div>
+	<div>
+		<img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="Chania"  align="middle" />
+	</div>
+	<br>
+	<p class="text-center">
+		<a href="{{ site.baseurl }}/0.register/" class="btn btn-success btn-lg active"> 大赛报名表 </a>
+	</p>
+	<p>我們所有賽事工作人員都是義工，為了本次網球大賽，為了大家能有一個愉快的網球嘉年華，都付出了大量的勞動.</p>
+	<p>因此，請大家主動配合我們的工作，讓本次活動能順利圓滿地進行。</p>
+	<p>謝謝！</p>
 </div>
-
-<div>
-<img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="Chania"  align="middle" />
-</div>
-<br>
-
-
-
-<p class="text-center">
-<a href="{{ site.baseurl }}/0.register/" class="btn btn-success btn-lg active"> 大赛报名表 </a>
-</p>
-
-<p>我們所有賽事工作人員都是義工，為了本次網球大賽，為了大家能有一個愉快的網球嘉年華，都付出了大量的勞動.</p>
-<p>因此，請大家主動配合我們的工作，讓本次活動能順利圓滿地進行。</p>
-<p>謝謝！</p>
