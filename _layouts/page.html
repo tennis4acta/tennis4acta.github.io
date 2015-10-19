@@ -1,45 +1,35 @@
 ---
 layout: default
 ---
-
 <!-- Page Header -->
 <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                  <div class="row text-center">
-                    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-centered vcenter thumbnail">
-                      <!--<div class="thumbnail" href="#">-->
-                      <a href="{{ site.baseurl }}/#"><img src="{{ site.baseurl }}/img/logo.jpg" class="img-responsive" alt="" /></a>
-                      <!--</div>-->
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-centered vcenter">
-                      <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                      <hr class="small">
-                      <span class="subheading">{{ page.description }}</span>
-                    </div>
-                  </div>
-                </div>
-            </div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="site-heading">
+        <div class="row text-center">
+          <div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-2 col-lg-2 col-centered vcenter thumbnail">
+            <img src="{{ site.baseurl }}/img/logo.jpg" class="img-responsive" alt="" />
+          </div>
+          <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-lg-10 col-centered vcenter">
+            <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+            <hr class="small">
+            <span class="subheading">{{ page.description }}</span>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+</div>
 </header>
-
 <div class="left-banner img-responsive img-rounded" align="left"><img src="{{ site.baseurl }}/img/sponsors/Rice.jpg" /> </div>
-
 <div class="right-banner img-responsive img-rounded"><img src="{{ site.baseurl }}/img/sponsors/Rice.jpg" /> </div>
-
 <!-- Main Content -->
 <div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            {{ content }}
-        </div>
-    </div>
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    {{ content }}
+  </div>
 </div>
-
-
-
-
+</div>
 <hr>
