@@ -13,14 +13,25 @@ header-img: "img/pano-bg.jpg"
 		<a href="#" class="btn btn-warning btn-lg disabled" role="button"> 比赛分组 </a>
 	</p>
 	<br>
-
-	<div>
-		<img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="Chania"  align="middle" />
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+			<img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="Chania"  align="middle" />
+		</div>
 	</div>
 	<br>
 	<p class="text-center">
 		<a href="{{ site.baseurl }}/0.register/" class="btn btn-success btn-lg active"> 大赛报名表 </a>
 	</p>
+
+	<h2>比賽規則</h1>
+	<ol>
+	  <li>各項比賽第一輪小組賽中以九局賽制打循環賽，每場比賽必须打滿九局，如果每局 打到平分（40:40）后以一球定胜負。</li>
+	  <li>小组赛前二名进入第二轮，一小组的第一名和另一组的第二名以九局赛制打淘汰赛。</li>
+	  <li>进入决赛双方打一盘(Set) 决出冠亚军。</li>
+	  <li>如遇特殊情况比赛程序及赛制以组赛方最终安排为准。</li>
+	  <li>比賽中如果出現特殊情況或爭議，由賽事組委裁决。</li>
+	</ol>
+
 	<p>我們所有賽事工作人員都是義工，為了本次網球大賽，為了大家能有一個愉快的網球嘉年華，都付出了大量的勞動.</p>
 	<p>因此，請大家主動配合我們的工作，讓本次活動能順利圓滿地進行。</p>
 	<p>謝謝！</p>
