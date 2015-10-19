@@ -496,3 +496,23 @@ height: 30%;
   vertical-align:bottom;
   white-space:normal;
 }
+
+.thumbnail > a {
+    display: block;
+    /* 4:3 aspect ratio */
+    padding-top: 75%;
+    /* center align pt. 1 */
+    position: relative;
+}
+.thumbnail > a > img {
+    /* fit within container */
+    max-width: 100%;
+    max-height: 100%;
+    /* center align pt. 2 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
