@@ -13,21 +13,7 @@ header-img: "img/pano-bg.jpg"
 		<a href="#" class="btn btn-warning btn-lg disabled" role="button"> 比赛分组 </a>
 	</p>
 	<br>
-	<div>
-		<!-- Nav tabs -->
-		<ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-			<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-			<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-		</ul>
-		<!-- Tab panes -->
-		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active" id="home">...</div>
-			<div role="tabpanel" class="tab-pane" id="profile">...</div>
-			<div role="tabpanel" class="tab-pane" id="messages">...</div>
-			<div role="tabpanel" class="tab-pane" id="settings">...</div>
-		</div>
-	</div>
+
 	<div>
 		<img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="Chania"  align="middle" />
 	</div>
