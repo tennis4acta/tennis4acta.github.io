@@ -5,7 +5,7 @@ date:       2015-09-01 12:00:00
 author:     "ACTA"
 header-img: "img/pano-bg.jpg"
 ---
-<div class="container">
+<div>
 	<p class="text-center">
 		<a href="{{ site.baseurl }}/0.register/" class="btn btn-success btn-lg active" role="button"> 大赛报名表 </a>
 		<a href="{{ site.baseurl }}/2015/08/31/2015-comp-rule/" class="btn btn-primary btn-lg active" role="button"> 比赛规则 </a>
