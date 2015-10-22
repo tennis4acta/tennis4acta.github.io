@@ -6,11 +6,14 @@ author:     "ACTA"
 header-img: "img/pano-bg.jpg"
 ---
 <div>
-	<p> 点此报名 <a href="{{ site.baseurl }}/0.register/" class="btn btn-success btn-lg active" role="button"> 大赛报名表 </a> </p>
+	<p> 大赛正式接受报名，截至日期2015年11月23日 </p>
+  <p class="text-center"> <a href="{{ site.baseurl }}/0.register/" class="btn btn-success btn-lg active" role="button"> 大赛报名表 </a> </p>
+  <p><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> 由于场地有限，将限制参赛人数，即日起接受报名，11月23日截止（或额满提早截止）</p>
+
 	<br>
 	<div class="btn-group btn-group-justified" role="group" aria-label="others">
 		<div class="btn-group" role="group">
-			<a href="{{ site.baseurl }}/2015/08/31/2015-comp-rule/" class="btn btn-primary btn-lg active" role="button"> 比赛规则 </a>
+			<a href="{{ site.baseurl }}/2015/08/31/2015-comp-rule/" class="btn btn-primary btn-lg active" role="button">比赛规则</a>
 		</div>
 		<div class="btn-group" role="group">
 			<a href="#" class="btn btn-info btn-lg disabled" role="button"> 比赛奖品 </a>
@@ -19,7 +22,7 @@ header-img: "img/pano-bg.jpg"
 			<a href="#" class="btn btn-warning btn-lg disabled" role="button"> 比赛分组 </a>
 		</div>
 		<div class="btn-group" role="group">
-			<a href="{{ site.baseurl }}/2015/08/30/2015-volunteer/" class="btn btn-danger btn-lg active" role="button"> 成为志愿者 </a>
+			<a href="{{ site.baseurl }}/2015/08/30/2015-volunteer/" class="btn btn-danger btn-lg active" role="button">成为志愿者</a>
 		</div>
 	</div>
 <br>
