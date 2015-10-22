@@ -1,0 +1,54 @@
+---
+layout: page
+description: "Australian Chinese Tennis Club"
+---
+<!-- {% for post in paginator.posts %}
+  <div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <h2 class="post-title">            {{ post.title }}
+      </h2>
+      {% if post.subtitle %}
+        <h3 class="post-subtitle">
+        {{ post.subtitle }}
+        </h3>
+      {% endif %}
+      <p/>
+        {% if post.title == paginator.posts.first.title %}
+          {{ post.content }}
+        {% endif %}
+      </a>
+      <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+    </div>
+    <hr>
+  {% endfor %} -->
+  <div class="post-preview">
+    <a href="{{ paginator.posts.first.url | prepend: site.baseurl }}">
+      <h1 class="post-title" style="text-align: center;">
+      {{ paginator.posts.first.title }}
+      </h1>
+      {% if paginator.posts.first.subtitle %}
+        <h3 class="post-subtitle" style="text-align: center;">
+        {{ paginator.posts.first.subtitle }}
+        </h3>
+      {% endif %}
+      <br>
+      <!-- <div class="container"> -->
+        {{ paginator.posts.first.content }}
+      <!-- </div> -->
+    </a>
+  </div>
+  <!-- Pager -->
+  <!-- {% if paginator.total_pages > 1 %}
+    <ul class="pager">
+      {% if paginator.previous_page %}
+        <li class="previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+        </li>
+      {% endif %}
+      {% if paginator.next_page %}
+        <li class="next">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+        </li>
+      {% endif %}
+    </ul>
+  {% endif %} -->
