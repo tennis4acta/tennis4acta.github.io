@@ -4,8 +4,23 @@ title: "大赛报名表"
 description: "Registration form"
 header-img: "img/home-bg.jpg"
 ---
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-        <iframe src="https://docs.google.com/forms/d/1hKgZkzTngXxOD-M7RsiLBMAABySAOgaTyiuxlHtDRgg/viewform?embedded=true" width="600" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-    </div>
+<style>
+@media (max-width: 767px) {
+    iframe {
+        max-width: calc(100vw + 40px) !important;
+        margin: -11px -25px;}
+    .iframe-wrapper {
+        width:100vw;
+        overflow: hidden;
+        margin: 0 -15px;}
+/* you might not the margin property on the wrapper (or you might need to change it to suit your needs); in my case it's used to align the wrapper with the edge of the screen as my site has 15px padding, which isn't needed here because the form already has it's own padding   */
+}
+</style>
+
+<div class="iframe-wrapper">
+        <iframe src="https://docs.google.com/forms/d/1hKgZkzTngXxOD-M7RsiLBMAABySAOgaTyiuxlHtDRgg/viewform?embedded=true" width="600" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
 </div>
+
+
+
