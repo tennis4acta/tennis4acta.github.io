@@ -19,7 +19,7 @@ header-img: "img/post-bg-01.jpg"
         <tbody>
             <tr>
                 <td>男子雙打</td>
-                <td>刘晓成/William Wu</td>
+                <td>刘晓成/陈忠伟(William)</td>
                 <td>Nalphky Lim/Jason Huang</td>
             </tr>
             <tr>
