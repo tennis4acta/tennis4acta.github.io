@@ -121,6 +121,9 @@ header-img: "img/pano-bg.jpg"
             <li>Medal x2</li>
             <li><mark><strong>Total Value $140</strong></mark></li>
           </ul></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr>
           <th>Senior Double</th>
@@ -141,6 +144,9 @@ header-img: "img/pano-bg.jpg"
             <li>Broadsword傘 x2</li>
             <li><mark><strong>Total Value $60</strong></mark></li>
           </ul></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr>
           <th>Junior Single</th>
@@ -166,6 +172,8 @@ header-img: "img/pano-bg.jpg"
             <li>Wall art No.3</li>
             <li><mark><strong>Total Value $35</strong></mark></li>
           </ul></td>
+          <td></td>
+          <td></td>
         </tr>
       </tbody>
 </table>
