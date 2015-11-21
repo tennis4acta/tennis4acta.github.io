@@ -30,7 +30,7 @@ header-img: "img/pano-bg.jpg"
             <li>Broadsword傘 x2</li>
             <li>李錦記調料禮包 x2</li>
             <li>Trophy x2</li>
-            <li><mark><strong>Total Value $876</strong></mark></li>
+            <li><mark><strong><em>Total Value $876</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.1 x2</li>
@@ -38,7 +38,7 @@ header-img: "img/pano-bg.jpg"
             <li>Broadsword傘 x2</li>
             <li>李錦記調料禮包 x2</li>
             <li>Trophy x2</li>
-            <li><mark><strong>Total Value $440</strong></mark></li>
+            <li><mark><strong><em>Total Value $440</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.2 x2</li>
@@ -46,21 +46,21 @@ header-img: "img/pano-bg.jpg"
             <li>Broadsword傘 x2</li>
             <li>李錦記調料禮包 x2</li>
             <li>Medal x2</li>
-            <li><mark><strong>Total Value $300</strong></mark></li>
+            <li><mark><strong><em>Total Value $300</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.2 x2</li>
             <li>Broadsword傘 x2</li>
             <li>李錦記調料禮包 x2</li>
-            <li><mark><strong>Total Value $200</strong></mark></li>
+            <li><mark><strong><em>Total Value $200</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Broadsword傘 x2</li>
-            <li><mark><strong>Total Value $60</strong></mark></li>
+            <li><mark><strong><em>Total Value $60</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Broadsword傘 x2</li>
-            <li><mark><strong>Total Value $60</strong></mark></li>
+            <li><mark><strong><em>Total Value $60</em></strong></mark></li>
           </ul></td>
         </tr>
         <tr>
@@ -70,35 +70,35 @@ header-img: "img/pano-bg.jpg"
             <li>Cash Prize $100</li>
             <li>李錦記調料禮包 x2</li>
             <li>Trophy x2</li>
-            <li><mark><strong>Total Value $716</strong></mark></li>
+            <li><mark><strong><em>Total Value $716</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.1 x2</li>
             <li>Rebel Voucher $200</li>
             <li>李錦記調料禮包 x2</li>
             <li>Trophy x2</li>
-            <li><mark><strong>Total Value $380</strong></mark></li>
+            <li><mark><strong><em>Total Value $380</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.2 x2</li>
             <li>Cash Prize $100</li>
             <li>李錦記調料禮包 x2</li>
             <li>Medal x2</li>
-            <li><mark><strong>Total Value $200</strong></mark></li>
+            <li><mark><strong><em>Total Value $200</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.2 x2</li>
             <li>Broadsword傘 x2</li>
             <li>李錦記調料禮包 x2</li>
-            <li><mark><strong>Total Value $200</strong></mark></li>
+            <li><mark><strong><em>Total Value $200</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Broadsword傘 x2</li>
-            <li><mark><strong>Total Value $60</strong></mark></li>
+            <li><mark><strong><em>Total Value $60</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Broadsword傘 x2</li>
-            <li><mark><strong>Total Value $60</strong></mark></li>
+            <li><mark><strong><em>Total Value $60</em></strong></mark></li>
           </ul></td>
         </tr>
         <tr>
@@ -107,19 +107,19 @@ header-img: "img/pano-bg.jpg"
             <li>OSIM按摩器 uPamper x2</li>
             <li>李錦記調料禮包 x2</li>
             <li>Trophy x2</li>
-            <li><mark><strong>Total Value $616</strong></mark></li>
+            <li><mark><strong><em>Total Value $616</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Cash Prize $160</li>
             <li>李錦記調料禮包 x2</li>
             <li>Trophy x2</li>
-            <li><mark><strong>Total Value $200</strong></mark></li>
+            <li><mark><strong><em>Total Value $200</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.2 x2</li>
             <li>李錦記調料禮包 x2</li>
             <li>Medal x2</li>
-            <li><mark><strong>Total Value $140</strong></mark></li>
+            <li><mark><strong><em>Total Value $140</em></strong></mark></li>
           </ul></td>
           <td></td>
           <td></td>
@@ -131,18 +131,18 @@ header-img: "img/pano-bg.jpg"
             <li>OSIM按摩器 uPamper x2</li>
             <li>李錦記調料禮包 x2</li>
             <li>Trophy x2</li>
-            <li><mark><strong>Total Value $616</strong></mark></li>
+            <li><mark><strong><em>Total Value $616</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.1 x2</li>
             <li>Cash Prize $100</li>
             <li>李錦記調料禮包 x2</li>
             <li>Trophy x2</li>
-            <li><mark><strong>Total Value $280</strong></mark></li>
+            <li><mark><strong><em>Total Value $280</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Broadsword傘 x2</li>
-            <li><mark><strong>Total Value $60</strong></mark></li>
+            <li><mark><strong><em>Total Value $60</em></strong></mark></li>
           </ul></td>
           <td></td>
           <td></td>
@@ -154,23 +154,22 @@ header-img: "img/pano-bg.jpg"
             <li>Wall art No.2</li>
             <li>Tennis Ranch $50</li>
             <li>Trophy</li>
-            <li><mark><strong>Total Value $100</strong></mark></li>
+            <li><mark><strong><em>Total Value $100</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.3 </li>
-            <li>Tennis Ranch Voucher $50</li>
-            <li>李錦記調料禮包 x2</li>
+            <li>Tennis Ranch $50</li>
             <li>Trophy</li>
-            <li><mark><strong>Total Value $85</strong></mark></li>
+            <li><mark><strong><em>Total Value $85</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.3</li>
             <li>Medal</li>
-            <li><mark><strong>Total Value $35</strong></mark></li>
+            <li><mark><strong><em>Total Value $35</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
             <li>Wall art No.3</li>
-            <li><mark><strong>Total Value $35</strong></mark></li>
+            <li><mark><strong><em>Total Value $35</em></strong></mark></li>
           </ul></td>
           <td></td>
           <td></td>
