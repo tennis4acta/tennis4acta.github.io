@@ -102,7 +102,7 @@ header-img: "img/pano-bg.jpg"
           </ul></td>
         </tr>
         <tr>
-          <th>Ladies' Double</th>
+          <th>Women's Double</th>
           <td><ul class="list-unstyled">
             <li>OSIM按摩器 uPamper x2</li>
             <li>李錦記調料禮包 x2</li>
@@ -177,6 +177,7 @@ header-img: "img/pano-bg.jpg"
       </tbody>
 </table>
 
+<p class="bg-success">參賽者均可獲得3公斤皇族香米，White Glo小牙膏一支，麵包模具一個，以及赞助商优惠券</p>
 <p class="bg-warning"><strong>Note:</strong> ACTC keeps the right to adjust the prize allocation subject to sponsorship and other factors.</p>
 </small>
 </div>
