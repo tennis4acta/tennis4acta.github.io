@@ -38,6 +38,28 @@ header-img: "img/pano-bg.jpg"
             <li>Trophy x2</li>
             <li><mark><strong>Total Value $440</strong></mark></li>
           </ul></td>
+          <td><ul>
+            <li>Wall art No.2 x2</li>
+            <li>Cash Prize $100</li>
+            <li>Broadsword Umbrella x2</li>
+            <li>李錦記調料禮包 x2</li>
+            <li>Medal x2</li>
+            <li><mark><strong>Total Value $300</strong></mark></li>
+          </ul></td>
+          <td><ul>
+            <li>Wall art No.2 x2</li>
+            <li>Broadsword Umbrella x2</li>
+            <li>李錦記調料禮包 x2</li>
+            <li><mark><strong>Total Value $200</strong></mark></li>
+          </ul></td>
+          <td><ul>
+            <li>Broadsword Umbrella x2</li>
+            <li><mark><strong>Total Value $60</strong></mark></li>
+          </ul></td>
+          <td><ul>
+            <li>Broadsword Umbrella x2</li>
+            <li><mark><strong>Total Value $60</strong></mark></li>
+          </ul></td>
         </tr>
       <tbody>
       </tbody>
