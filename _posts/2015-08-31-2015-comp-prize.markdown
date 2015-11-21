@@ -177,7 +177,10 @@ header-img: "img/pano-bg.jpg"
       </tbody>
 </table>
 
+</small>
+
 <p class="bg-success">參賽者均可獲得3公斤皇族香米，White Glo小牙膏一支，麵包模具一個，以及赞助商优惠券</p>
+<small>
 <p class="bg-warning"><strong>Note:</strong> ACTC keeps the right to adjust the prize allocation subject to sponsorship and other factors.</p>
 </small>
 </div>
