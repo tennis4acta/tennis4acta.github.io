@@ -22,14 +22,22 @@ header-img: "img/pano-bg.jpg"
       </thead>
         <tr>
           <th>Men's Double (Grade A)</th>
-          <th><ul>
+          <td><ul>
             <li>OSIM按摩器 uPamper x2</li>
             <li>Cash Prize $200</li>
             <li>Broadsword Umbrella x2</li>
             <li>李錦記調料禮包 x2</li>
             <li>Trophy x2</li>
             <li><mark><strong>Total Value $876</strong></mark></li>
-          </ul></th>
+          </ul></td>
+          <td><ul>
+            <li>Wall art No.1 x2</li>
+            <li>Cash Prize $200</li>
+            <li>Broadsword Umbrella x2</li>
+            <li>李錦記調料禮包 x2</li>
+            <li>Trophy x2</li>
+            <li><mark><strong>Total Value $440</strong></mark></li>
+          </ul></td>
         </tr>
       <tbody>
       </tbody>
