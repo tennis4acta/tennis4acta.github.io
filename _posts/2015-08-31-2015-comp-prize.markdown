@@ -5,7 +5,7 @@ date:       2015-08-31 13:00:00
 author:     "ACTA"
 header-img: "img/pano-bg.jpg"
 ---
-<h1 class="page-header">比赛奖品 比赛奖品</h1>
+<h1 class="page-header">比赛奖品 Prize</h1>
 
 <div class="table-responsive">
 <small>
@@ -177,5 +177,7 @@ header-img: "img/pano-bg.jpg"
         </tr>
       </tbody>
 </table>
+
+<p class="bg-warning"><strong>Note:</strong> ACTC keeps the right the adjust the prize allocation subject to sponsorship and other factors.</p>
 </small>
 </div>
