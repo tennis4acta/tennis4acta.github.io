@@ -178,6 +178,6 @@ header-img: "img/pano-bg.jpg"
       </tbody>
 </table>
 
-<p class="bg-warning"><strong>Note:</strong> ACTC keeps the right the adjust the prize allocation subject to sponsorship and other factors.</p>
+<p class="bg-warning"><strong>Note:</strong> ACTC keeps the right to adjust the prize allocation subject to sponsorship and other factors.</p>
 </small>
 </div>
