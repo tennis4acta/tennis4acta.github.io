@@ -1,0 +1,38 @@
+---
+layout:     post
+title:      "2015年ACTC皇族香米杯華人網球大獎賽 比赛奖品"
+date:       2015-08-31 13:00:00
+author:     "ACTA"
+header-img: "img/pano-bg.jpg"
+---
+<h1 class="page-header">比赛奖品 比赛奖品</h1>
+
+<div class="table-responsive">
+<table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Champion</th>
+          <th>Runner-up</th>
+          <th>3rd Place</th>
+          <th>4th Place</th>
+          <th>5th Place</th>
+          <th>6th Place</th>
+        </tr>
+      </thead>
+        <tr>
+          <th>Men's Double (Grade A)</th>
+          <th><ul>
+            <li>OSIM按摩器 uPamper x2</li>
+            <li>Cash Prize $200</li>
+            <li>Broadsword Umbrella x2</li>
+            <li>李錦記調料禮包 x2</li>
+            <li>Trophy x2</li>
+            <li><mark><strong>Total Value $876</strong></mark></li>
+          </ul></th>
+        </tr>
+      <tbody>
+      </tbody>
+</table>
+</div>
+
