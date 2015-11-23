@@ -167,10 +167,7 @@ header-img: "img/pano-bg.jpg"
             <li>Medal</li>
             <li><mark><strong><em>Total Value $35</em></strong></mark></li>
           </ul></td>
-          <td><ul class="list-unstyled">
-            <li>Wall art No.3</li>
-            <li><mark><strong><em>Total Value $35</em></strong></mark></li>
-          </ul></td>
+          <td></td>
           <td></td>
           <td></td>
         </tr>

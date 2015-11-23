@@ -7,17 +7,49 @@ header-img: "img/pano-bg.jpg"
 ---
 <h1 class="page-header">比賽規則 Competition Rules</h1>
 
-<h2>Rules of round robin</h2>
+<h2>Game rules</h2>
 <ol>
-  <li>The player/team that wins 5 games win the match. However, due to the round robin requirement, the match will stop when one player/team wins 6 games or total number of games reach 9. Therefore, the possible score will be: 6:0, 6:1, 6:2, 6:3, 5:4. <br>比赛胜5局者赢得比赛。然而，基于循环赛寄小分的需要，球员需要继续比赛直到一方赢得6局或者双方一共打满9局。因此，循环赛期间可能出现的比分是6:0, 6:1, 6:2, 6:3, 5:4。</li>
+  <li>The player/team that wins 5 games wins the match. <br>比赛胜5局者赢得比赛。</li>
+  <li>Junior single player that wins 4 games wins the match.</li>
   <li>No AD scoring: As soon as a game gets to deuce it’s "next point wins". The receiving pair decides who returns the point.<br>如果双方出现第一次DUECE平分，任何一方赢得下一分的赢得本局。由接发球方选择接球区。</li>
   <li>At 4 games all a short tie-break is played, first to 5 points. If it gets to 4-4 its “next point wins” with players coming to the net to spin the racquet to decide who serves the final point to determine the set. (The spinning winner chooses serve/return, the other party chooses side)<br>如果出现4:4平分，第9局将为short tie-break，先赢5分者赢得比赛。如果出现4-4，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）</li>
-  <li>At the case when the score is 5:3 (The 5 games side already wins the match), the player/team serving first serves the last game.<br>如果出现5:3的比分（比赛双方胜负已定），仍然需要打最后一局，这时将不用打tie-break，由先发球方发最后一局。</li>
+  <li><em>Final</em> The player/team plays a 6 games set with 7 points tiebreak. If it gets to 6-6 its “next point wins” with players coming to the net to spin the racquet to decide who serves the final point to determine the set. (The spinning winner chooses serve/return, the other party chooses side)<br>如果出现6:6平分，第13局将为tie-break，先赢7分者赢得比赛。如果出现6-6，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）</li>
 </ol>
 
-<h2>Rules of finals and semi-finals</h2>
+<h2>Round robin</h2>
+The final order of the group round robin is determined by the following order from top:
 <ol>
-  <li>The player/team plays a full set.<br>比赛双方打一盘比赛。 </li>
-  <li>No AD scoring: As soon as a game gets to deuce it’s "next point wins". The receiving pair decides who returns the point.<br>如果双方出现第一次DUECE平分，任何一方赢得下一分的赢得本局。由接发球方选择接球区。</li>
-  <li>At 6 games all a tie-break is played, first to 7 points. If it gets to 6-6 its “next point wins” with players coming to the net to spin the racquet to decide who serves the final point to determine the set. (The spinning winner chooses serve/return, the other party chooses side)<br>如果出现6:6平分，第13局将为tie-break，先赢7分者赢得比赛。如果出现6-6，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）</li>
+  <li>The number of matches a player/team wins</li>
+  <li>If two teams have same number of wins, compare the winning difference of games.</li>
+  <li>If two teams have same winning difference of games, determined by the result between two teams</li>
+  <li>If still same or 3 way lock happens (a beat b, b beat c, c beat a), a short tiebreak will be played</li>
+</ol>
+
+<h2>Men's Double</h2>
+<ol>
+  <li>Players are divided into 4 groups for round robin</li>
+  <li>The top 2 of each group enter quater final to play elimination</li>
+  <li>The losing sides of semi-finals will play one more match to determine 3rd/4th place.</li>
+  <li>The 5th/6th order is determined by round robin performance from losing side of quater-finals</li>
+</ol>
+
+<h2>Junior Single</h2>
+<ol>
+  <li>Players win 4 games to win the match</li>
+  <li>Players are divided into 3 groups for round robin</li>
+  <li>The top 1 of each group (3 players) enter the final round robin</li>
+  <li>The final results are determined by the final round robin (no final match)</li>
+</ol>
+
+<h2>Women's Double</h2>
+<ol>
+  <li>Players are diveded into 2 groups for round robin</li>
+  <li>Top 1 of each group plays final</li>
+  <li>2nd position of each group plays for 3rd place</li>
+</ol>
+
+<h2>Senior Double</h2>
+<ol>
+  <li>Players play round robin in one group</li>
+  <li>The final results are determined by the round robin (no final match)</li>
 </ol>
