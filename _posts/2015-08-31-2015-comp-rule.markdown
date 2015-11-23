@@ -36,9 +36,8 @@ The final order of the group round robin is determined by the following order fr
 <h2>Junior Single</h2>
 <ol>
   <li>Players win 4 games to win the match</li>
-  <li>Players are divided into 3 groups for round robin</li>
-  <li>The top 1 of each group (3 players) enter the final round robin</li>
-  <li>The final results are determined by the final round robin (no final match)</li>
+  <li>Players are divided into 2 groups for round robin</li>
+  <li>The top 2 of each group enter semi-final for elimination.</li>
 </ol>
 
 <h2>Women's Double</h2>
