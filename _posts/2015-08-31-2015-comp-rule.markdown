@@ -25,30 +25,43 @@ The final order of the group round robin is determined by the following order fr
   <li>If still same or 3 way lock happens (a beat b, b beat c, c beat a), a short tiebreak will be played</li>
 </ol>
 
-<h2>Men's Double</h2>
+<h2>Men's Double Grade A</h2>
 <ol>
+  <li>There are 14 pairs attending Men's Double Grade A</li>
   <li>Players are divided into 4 groups for round robin</li>
   <li>The top 2 of each group enter quater final to play elimination</li>
   <li>The losing sides of semi-finals will play one more match to determine 3rd/4th place.</li>
   <li>The 5th/6th order is determined by round robin performance from losing side of quater-finals</li>
 </ol>
 
+<h2>Men's Double Grade B</h2>
+<ol>
+  <li>There are 20 pairs attending Men's Double Grade B</li>
+  <li>Players are divided into 5 groups for round robin</li>
+  <li>The top pair of each group enter quarter final;</li>
+  <li>The best 3 number 2 in 5 groups also enter quarter final. To compare the order in number 2 of each group, we follow the same round robin order (matches -> winning game difference). If still same, a short tie break will play.
+  <li>The losing sides of semi-finals will play one more match to determine 3rd/4th place.</li>
+  <li>The 5th/6th order is determined by round robin performance from losing side of quater-finals</li>
+</ol>
+
+
 <h2>Junior Single</h2>
 <ol>
-  <li>Players win 4 games to win the match</li>
-  <li>Players are divided into 2 groups for round robin</li>
-  <li>The top 2 of each group enter semi-final for elimination.</li>
+  <li>There are 9 players attending Junior Single</li>
+  <li>Players are divided into 3 groups for round robin</li>
+  <li>The top player of each group enter final round robin (no final match)</li>
 </ol>
 
 <h2>Women's Double</h2>
 <ol>
+  <li>There are 6 pairs attending Women's Double</li>
   <li>Players are diveded into 2 groups for round robin</li>
-  <li>Top 1 of each group plays final</li>
-  <li>2nd position of each group plays for 3rd place</li>
+  <li>Top 2 of each group plays semi-finals</li>
 </ol>
 
 <h2>Senior Double</h2>
 <ol>
+  <li>There are 3 pairs attending Senior Double</li>
   <li>Players play round robin in one group</li>
   <li>The final results are determined by the round robin (no final match)</li>
 </ol>
