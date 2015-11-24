@@ -14,46 +14,47 @@ header-img: "img/pano-bg.jpg"
   <li>At 4 games all a short tie-break is played, first to 5 points. If it gets to 4-4 its “next point wins” with players coming to the net to spin the racquet to decide who serves the final point to determine the set. (The spinning winner chooses serve/return, the other party chooses side)<br>如果出现4:4平分，第9局将为short tie-break，先赢5分者赢得比赛。如果出现4-4，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）</li>
   <li><em>Final</em> The player/team plays a 6 games set with 7 points tiebreak. If it gets to 6-6 its “next point wins” with players coming to the net to spin the racquet to decide who serves the final point to determine the set. (The spinning winner chooses serve/return, the other party chooses side)<br>如果出现6:6平分，第13局将为tie-break，先赢7分者赢得比赛。如果出现6-6，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）</li>
 </ol>
-<h2>Round robin</h2>
-The final order of the group round robin is determined by the following order from top:
+<h2>循環賽規則 Round robin</h2>
+The final order of the group round robin is determined by the following order from top:<br>我們按照以下條件決定循環賽最終成績
 <ol>
-  <li>The number of matches a player/team wins</li>
-  <li>If two teams have same number of wins, compare the winning difference of games.</li>
-  <li>If two teams have same winning difference of games, determined by the result between two teams</li>
-  <li>If still same or 3 way lock happens (a beat b, b beat c, c beat a), a short tiebreak will be played</li>
+  <li>The number of matches a player/team wins<br>勝場數</li>
+  <li>The game difference, if two teams have same number of wins<br>如果兩隊有相同的勝場數，比較淨勝局數</li>
+  <li>The match result between two teams, if two teams have same game difference<br>如果淨勝局數相同，比較兩隊間的成績</li>
+  <li>If still same or 3 way lock happens (a beats b, b beats c, c beats a), a short tiebreak will be played<br>如果發生三方連鎖局面（比如A勝B，B勝C，C勝A，同時3隊相同淨勝局數），加賽short break</li>
 </ol>
 <h2>Men's Double Grade A</h2>
 <ol>
-  <li>There are 14 pairs attending Men's Double Grade A</li>
-  <li>Players are divided into 4 groups for round robin</li>
-  <li>The top 2 of each group enter quater final to play elimination</li>
-  <li>The losing sides of semi-finals will play one more match to determine 3rd/4th place.</li>
-  <li>The 5th/6th order is determined by round robin performance from losing side of quater-finals</li>
+  <li>There are 14 pairs participating Men's Double Grade A<br>14對球員參加男雙A級別</li>
+  <li>Players are divided into 4 groups for round robin<br>球員分4組打循環賽</li>
+  <li>The top 2 of each group play quarter final<br>小組前兩名進入淘汰賽</li>
+  <li>The losing sides of semi-finals will play one more match to determine 3rd/4th place.<br>半決賽敗方需要加賽一場來決定3／4名</li>
+  <li>The 5th/6th order is determined by round robin performance<br>5／6名的成績根據小組賽確定</li>
 </ol>
 <h2>Men's Double Grade B</h2>
 <ol>
-  <li>There are 20 pairs attending Men's Double Grade B</li>
-  <li>Players are divided into 5 groups for round robin</li>
-  <li>The top pair of each group enter quarter final;</li>
-  <li>The best 3 number 2 in 5 groups also enter quarter final. To compare the order in number 2 of each group, we follow the same round robin order (matches -> winning game difference). If still same, a short tie break will play.</li>
-  <li>The losing sides of semi-finals will play one more match to determine 3rd/4th place.</li>
-  <li>The 5th/6th order is determined by round robin performance from losing side of quater-finals</li>
+  <li>There are 20 pairs participating Men's Double Grade B<br>20對球員參加男雙B級別</li>
+  <li>Players are divided into 5 groups for round robin<br>球員分5組打循環賽</li>
+  <li>The top team of each group play quarter final<br>小組賽頭名進入四分之一決賽</li>
+  <li>The best of 3 second places in 5 groups also enter quarter final. To compare the order in second places of all groups, we follow the same round robin order (matches -> winning game difference). If still same, a short tie break will play.<br>3个最好的小组第二也进入四分之一决赛。我們使用循環賽規則比較成績（勝場數；淨勝局數），如果仍然無法確定，加賽short break</li>
+  <li>The order of quater final is decided by draw, but the second place team must play with first place team<br>抽籤決定四分之一比賽的排序，但是小組第二必須和小組第一打</li>
+  <li>The losing sides of semi-finals will play one more match to determine 3rd/4th place.<br>半決賽敗方需要加賽一場來決定3／4名</li>
+  <li>The 5th/6th order is determined by round robin performance from losing side of quater-finals<br>5／6名的成績根據小組賽確定</li>
 </ol>
 <h2>Junior Single</h2>
 <ol>
-  <li>There are 9 players attending Junior Single</li>
-  <li>Players are divided into 3 groups for round robin</li>
-  <li>The top player of each group enter final round robin (no final match)</li>
+  <li>There are 9 players participating Junior Single<br>9位球員參加少年單打比賽</li>
+  <li>Players are divided into 3 groups for round robin<br>球員分3組打循環賽</li>
+  <li>The top player of each group enters final round robin (no final match)<br>3位小組頭名再打一輪循環賽決定最終排名</li>
 </ol>
 <h2>Women's Double</h2>
 <ol>
-  <li>There are 6 pairs attending Women's Double</li>
-  <li>Players are diveded into 2 groups for round robin</li>
-  <li>Top 2 of each group plays semi-finals</li>
+  <li>There are 6 pairs participating Women's Double<br>6對球員參加女雙比賽</li>
+  <li>Players are diveded into 2 groups for round robin<br>球員分2組打循環賽</li>
+  <li>The top 2 of each group play semi-finals<br>小組前兩名進入半決賽</li>
 </ol>
 <h2>Senior Double</h2>
 <ol>
-  <li>There are 3 pairs attending Senior Double</li>
-  <li>Players play round robin in one group</li>
-  <li>The final results are determined by the round robin (no final match)</li>
+  <li>There are 3 pairs participating Senior Double<br>3對球員參加老年雙打比賽</li>
+  <li>Players play round robin in one group<br>球員打單循環賽</li>
+  <li>The final result is determined by the round robin (no final match)<br>最終成績由循環賽確定</li>
 </ol>
