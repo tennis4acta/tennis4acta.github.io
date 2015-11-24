@@ -168,8 +168,8 @@ header-img: "img/pano-bg.jpg"
             <li><mark><strong><em>Total Value $35</em></strong></mark></li>
           </ul></td>
           <td><ul class="list-unstyled">
+            <li>All players from 4th place have same prize</li>
             <li>Wall art No.3</li>
-            <li>Medal</li>
             <li><mark><strong><em>Total Value $35</em></strong></mark></li>
           </ul></td>
           <td></td>

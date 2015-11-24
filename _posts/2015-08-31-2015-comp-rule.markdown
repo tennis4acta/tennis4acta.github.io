@@ -45,7 +45,7 @@ The final order of the group round robin is determined by the following order fr
   <li>There are 9 players participating Junior Single<br>9位球員參加少年單打比賽</li>
   <li>Players are divided into 3 groups for round robin<br>球員分3組打循環賽</li>
   <li>The top player of each group enters final round robin (no final match)<br>3位小組頭名再打一輪循環賽決定最終排名</li>
-  <li>The best 2nd place in all groups is 4th place.<br>最好的小组第二為第4名</li>
+  <li>If time is allowed, all 2nd places and 3rd places will play another round robin to determine the final position<br>如果時間允許，小組的第二名和第三名分別打一輪循環賽以確定最終名次。</li>
 </ol>
 <h2>女子雙打 Women's Double</h2>
 <ol>
