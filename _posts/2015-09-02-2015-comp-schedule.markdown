@@ -12,7 +12,7 @@ header-img: "img/pano-bg.jpg"
   <li>According to the previous competition result and other source, we set seeds for Men's Double Grade A, Women's Double, Junior Single
     <ul>
       <li>Men's Double Grade A
-        <table class="table table-striped table-condensed">
+        <table class="table table-striped table-condensed table-bordered">
           <tr>
             <td><em>Jacky Leung</em>/Henry Ko</td><td>2011 champion</td>
           </tr>
@@ -28,9 +28,9 @@ header-img: "img/pano-bg.jpg"
         </table>
       </li>
       <li>Women's Double
-        <table class="table table-striped table-condensed">
+        <table class="table table-striped table-condensed table-bordered">
           <tr>
-            <td><em>Georgia Wu</em>/Jia Bei Mei </td><td>current NSW registered player)</td>
+            <td><em>Georgia Wu</em>/Jia Bei Mei </td><td>current NSW registered player</td>
           </tr>
           <tr>
             <td>Dong Xia/<em>Ping Chen</em></td><td>previous Hubei Province player</td>
@@ -38,7 +38,7 @@ header-img: "img/pano-bg.jpg"
         </table>
       </li>
       <li>Junior single
-        <table class="table table-striped table-condensed">
+        <table class="table table-striped table-condensed table-bordered">
           <tr>
             <td>Jeremy Jin</td><td>current <em>Australian Year11 Champion</em></td>
           </tr>
@@ -49,27 +49,7 @@ header-img: "img/pano-bg.jpg"
       </li>
     </ul>
   We can't decide seeds for Men's double Grade B. Therefore, there will be no seeds players in Grade B.
-  <li>Then we allocate the group number to the team in order. For example, in Men's Double Grade A, there are 4 groups. So we number the sorted team in 1-2-3-4 order. For seeds,
-  <table class="table table-striped table-condensed">
-    <tr>
-    <li>[1] Jacky Leung/Henry Ko</li>
-    <li>[2] Nalphky Lim/Stephen Crawford</li>
-    <li>[3] Louis Lu/Zhang Zhuo</li>
-    <li>[4] David Zhou/George Huang</li>
-  </ol>
-  The remaining teams are also numbered as the same manner
-  <ol>
-    <li>[1] Percy Chen/Mike Zhao</li>
-    <li>[2] Richard Gong/Ming Zhu</li>
-    <li>[3] George Guo/David Fei</li>
-    <li>[4] Yong Huang/Adam Maclean</li>
-    <li>[1] David Jin/Wayne Han</li>
-    <li>[2] Johnson  Liu/Brian Huang</li>
-    <li>[3] David Shu/Kevin Shu</li>
-    <li>[4] Brendan Xu/John Hu</li>
-    <li>[1] Richard Yang/John Cao</li>
-    <li>[2] Billy Zhou/John Lu</li>
-  </ol>
+  <li>Then we allocate the group number to the team in order. For example, in Men's Double Grade A, there are 4 groups. So we number the sorted teams in 1-2-3-4 1-2-3-4 order, for seeds and other players</li>
 </ul>
 
 <p>The ACTC committee decide the seeds players, and the other grouping order is just decided by the players name.</p>
