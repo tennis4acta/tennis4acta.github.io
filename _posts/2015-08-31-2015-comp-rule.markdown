@@ -43,8 +43,7 @@ The final order of the group round robin is determined by the following order fr
 <h2>Women's Double</h2>
 <ol>
   <li>Players are diveded into 2 groups for round robin</li>
-  <li>Top 1 of each group plays final</li>
-  <li>2nd position of each group plays for 3rd place</li>
+  <li>The top 2 of each group enter semi-final for elimination.</li>
 </ol>
 
 <h2>Senior Double</h2>
