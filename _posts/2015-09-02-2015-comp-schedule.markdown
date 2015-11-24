@@ -58,15 +58,15 @@ header-img: "img/pano-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
     <img src="{{ site.baseurl }}/img/2015/A-grouping.jpg" class="img-responsive" alt="A-grouping">
   </div>
-  <p />
+  <p /><hr><p />
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
     <img src="{{ site.baseurl }}/img/2015/B-grouping.jpg" class="img-responsive" alt="B-grouping">
   </div>
-  <p />
+  <p /><hr><p />
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
     <img src="{{ site.baseurl }}/img/2015/J-grouping.jpg" class="img-responsive" alt="J-grouping">
   </div>
-  <p />
+  <p /><hr><p />
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
     <img src="{{ site.baseurl }}/img/2015/W-grouping.jpg" class="img-responsive" alt="W-grouping">
   </div>
