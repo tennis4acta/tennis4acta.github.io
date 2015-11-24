@@ -1,0 +1,58 @@
+---
+layout:     post
+title:      "2015年ACTC皇族香米杯華人網球大獎賽 賽事安排"
+date:       2015-09-02 12:00:00
+author:     "ACTC"
+header-img: "img/pano-bg.jpg"
+---
+<h1 class="page-header">賽事安排 Schedule</h1>
+<h2>分組原則 Grouping Principle</h2>
+<ul>
+  <li>We sort (from A to Z) the players according to the family name of the player 1 (in registration form); If the family names of the player 1 are same, sorted by family name of the player 2, first name of the player 1, first name of the player 2.</li>
+  <li>According to the previous competition result and other source, we set seeds for Men's Double Grade A, Women's Double, Junior Single
+    <ul>
+      <li>Men's Double Grade A
+        <ol>
+          <li><em>Jacky Leung</em>/Henry Ko (2011 champion)</li>
+          <li><em>Nalphky Lim</em>/Stephen Crawford (2012 champion)</li>
+          <li>Louis Lu/<em>Zhang Zhuo</em> (current ATP registered player)</li>
+          <li>David Zhou/<em>George Huang</em> (2007 champion)</li>
+        </ol>
+      </li>
+      <li>Women's Double
+        <ol>
+          <li><em>Georgia Wu</em>/Jia Bei Mei (current NSW registered player)</li>
+          <li>Dong Xia/<em>Ping Chen</em> (previous Hubei Province player)</li>
+        </ol>
+      </li>
+      <li>Junior single
+        <ol>
+          <li>Jeremy Jin (current <em>Australian Year11 Champion</em>)</li>
+          <li>Victor Lu (St. George champion)</li>
+        </ol>
+      </li>
+    </ul>
+  We can't decide seed for Men's double Grade B.
+  <li>Then we allocate the group number to the team in order. For example, in Men's Double Grade A, there are 4 groups. So we number the sorted team in 1-2-3-4 order. For seeds,
+  <ol>
+    <li>[1] Jacky Leung/Henry Ko</li>
+    <li>[2] Nalphky Lim/Stephen Crawford</li>
+    <li>[3] Louis Lu/Zhang Zhuo</li>
+    <li>[4] David Zhou/George Huang</li>
+  </ol>
+  The remaining teams are also numbered as the same manner
+  <ol>
+    <li>[1] Percy Chen/Mike Zhao</li>
+    <li>[2] Richard Gong/Ming Zhu</li>
+    <li>[3] George Guo/David Fei</li>
+    <li>[4] Yong Huang/Adam Maclean</li>
+    <li>[1] David Jin/Wayne Han</li>
+    <li>[2] Johnson  Liu/Brian Huang</li>
+    <li>[3] David Shu/Kevin Shu</li>
+    <li>[4] Brendan Xu/John Hu</li>
+    <li>[1] Richard Yang/John Cao</li>
+    <li>[2] Billy Zhou/John Lu</li>
+  </ol>
+</ul>
+
+<h3>The ACTC committee decide the seeds players, and the other grouping order is just decided by the players name.
