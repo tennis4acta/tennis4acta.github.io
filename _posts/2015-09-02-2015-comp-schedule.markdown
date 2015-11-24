@@ -32,7 +32,7 @@ header-img: "img/pano-bg.jpg"
         </ol>
       </li>
     </ul>
-  We can't decide seed for Men's double Grade B.
+  We can't decide seeds for Men's double Grade B. Therefore, there will be no seeds players in Grade B.
   <li>Then we allocate the group number to the team in order. For example, in Men's Double Grade A, there are 4 groups. So we number the sorted team in 1-2-3-4 order. For seeds,
   <ol>
     <li>[1] Jacky Leung/Henry Ko</li>
@@ -55,4 +55,22 @@ header-img: "img/pano-bg.jpg"
   </ol>
 </ul>
 
-<h3>The ACTC committee decide the seeds players, and the other grouping order is just decided by the players name.
+<p>The ACTC committee decide the seeds players, and the other grouping order is just decided by the players name.</p>
+
+<div class="row text-center">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+    <img src="{{ site.baseurl }}/img/2015/A-grouping.jpg" class="img-responsive" alt="A-grouping">
+  </div>
+  <p />
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+    <img src="{{ site.baseurl }}/img/2015/B-grouping.jpg" class="img-responsive" alt="B-grouping">
+  </div>
+  <p />
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+    <img src="{{ site.baseurl }}/img/2015/J-grouping.jpg" class="img-responsive" alt="J-grouping">
+  </div>
+  <p />
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+    <img src="{{ site.baseurl }}/img/2015/W-grouping.jpg" class="img-responsive" alt="W-grouping">
+  </div>
+</div>
