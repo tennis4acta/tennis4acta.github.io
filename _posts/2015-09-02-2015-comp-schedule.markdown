@@ -8,11 +8,8 @@ header-img: "img/pano-bg.jpg"
 <h1 class="page-header">賽事安排 Schedule</h1>
 
 <h2>时间表 Schedule</h2>
-<div class="row text-center">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <img src="{{ site.baseurl }}/img/2015/Schedule.jpg" class="img-responsive" alt="A-grouping">
-  </div>
-</div>
+
+<a href="{{ site.baseurl }}/img/2015/Schedule.pdf" target="_blank">    <img src="{{ site.baseurl }}/img/2015/Schedule.jpg" class="img-responsive" alt="schedule"></a>
 
 Please note:
 
