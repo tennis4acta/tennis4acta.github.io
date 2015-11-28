@@ -6,6 +6,29 @@ author:     "ACTC"
 header-img: "img/pano-bg.jpg"
 ---
 <h1 class="page-header">賽事安排 Schedule</h1>
+
+<h2>时间表 Schedule</h2>
+<div class="row text-center">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+    <img src="{{ site.baseurl }}/img/2015/Schedule.jpg" class="img-responsive" alt="A-grouping">
+  </div>
+</div>
+
+Please note:
+
+<ol>
+<li>The players MUST register at reception 15 minutes before your first match.<br>
+     For doubles player, the pair must register together. One player registration for double's player is NOT allowed.<br>
+所有球员必须在该球员第一场比赛15分钟前到达签到台签到。双打球员必须两人同时到场签到，领取礼包。我们不允许单人签到。</li>
+<li>All players should bring one form of ID that shows your official name. We know a lot of players registered as their English name, but the official name is in other form. Please bring one ID so we can record the real name for players. For junior kids, the guardian should bring the ID. Thanks for your cooperation.<br>
+所有球员必须提供一份显示你真实官方姓名的ID（很多球员用英文名注册，但是其真实姓名为其他形式）。对于青少年球员，请监护人提供一份监护人的ID。谢谢您的合作。</li>
+<li>The time on the schedule except the 8:15AM are for guidance. We play continuous matches. Once a match is finished at a given court, the following match will start immediately (plus warm up time 3mins). So all players are supposed to stay around the court. If your match is ready, and we can't find you, we will broadcast your name. If no show in 10 minutes, you will forfeit the match as 0:5. So please be ontime.<br>
+比赛为连场比赛，当一场比赛结束后，下一场会立即开始（有3分钟的热身时间）。所以，Schedule中的时间为指导时间，并不是真实比赛时间。因此，请所有球员留在球场周围，等候下一场比赛。如果球员比赛迟到超过10分钟，比赛会判0：5负（我们会广播两次）。</li>
+</ol>
+
+<p>Also, we will not provide lunch this time, instead, we will provide one bottle of drink water to each player. So please bring your own lunch, drink and don't forget sunscreen.<br>
+由于义工资源的限制，本次大赛我们将不会提供午餐。每位运动员将会获得一瓶饮用水。因此，请各位运动员自备午餐、更多的饮用水以及防晒霜。</p>
+
 <h2>分組原則 Grouping Principle</h2>
 <ul>
   <li>We sort (from A to Z) the players according to the family name of the player 1 (in registration form); If the family names of the player 1 are same, sorted by family name of the player 2, first name of the player 1, first name of the player 2.<br>我們將球員按照註冊表中的球員1的姓排序（A - Z）；如果球員1的姓相同，比較球員2的姓，球員1的名，球員2的名，依此類推</li>
