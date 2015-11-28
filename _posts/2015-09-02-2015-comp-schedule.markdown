@@ -9,7 +9,7 @@ header-img: "img/pano-bg.jpg"
 
 <h2>时间表 Schedule</h2>
 <div class="row text-center">
-  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <img src="{{ site.baseurl }}/img/2015/Schedule.jpg" class="img-responsive" alt="A-grouping">
   </div>
 </div>
