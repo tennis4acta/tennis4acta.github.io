@@ -442,3 +442,8 @@ height: 30%;
     bottom: 0;
     margin: auto;
 }
+
+.thumb {
+   width: 64px;
+   height: auto;
+}
