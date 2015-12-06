@@ -332,124 +332,124 @@ header-img: "img/pano-bg.jpg"
       <a href="{{ site.baseurl }}/img/2015/hejia/96.jpg" title="96" data-gallery> <img src="{{ site.baseurl }}/img/2015/hejia/thumbnail/96.jpg" alt="96" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/j1.jpg" title="j1" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j1.jpg" alt="j1" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/j1.JPG" title="j1" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j1.jpg" alt="j1" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/j2.jpg" title="j2" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j2.jpg" alt="j2" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/j2.JPG" title="j2" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j2.jpg" alt="j2" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/j3.jpg" title="j3" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j3.jpg" alt="j3" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/j3.JPG" title="j3" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j3.jpg" alt="j3" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/j4.jpg" title="j4" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j4.jpg" alt="j4" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/j4.JPG" title="j4" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j4.jpg" alt="j4" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/j5.jpg" title="j5" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j5.jpg" alt="j5" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/j5.JPG" title="j5" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j5.jpg" alt="j5" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/j6.jpg" title="j6" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j6.jpg" alt="j6" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/j6.JPG" title="j6" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j6.jpg" alt="j6" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/j7.jpg" title="j7" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j7.jpg" alt="j7" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/j7.JPG" title="j7" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/j7.jpg" alt="j7" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s1.jpg" title="s1" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s1.jpg" alt="s1" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s1.JPG" title="s1" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s1.jpg" alt="s1" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s2.jpg" title="s2" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s2.jpg" alt="s2" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s2.JPG" title="s2" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s2.jpg" alt="s2" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s3.jpg" title="s3" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s3.jpg" alt="s3" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s3.JPG" title="s3" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s3.jpg" alt="s3" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s4.jpg" title="s4" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s4.jpg" alt="s4" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s4.JPG" title="s4" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s4.jpg" alt="s4" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s5.jpg" title="s5" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s5.jpg" alt="s5" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s5.JPG" title="s5" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s5.jpg" alt="s5" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s6.jpg" title="s6" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s6.jpg" alt="s6" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s6.JPG" title="s6" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s6.jpg" alt="s6" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s7.jpg" title="s7" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s7.jpg" alt="s7" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s7.JPG" title="s7" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s7.jpg" alt="s7" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s8.jpg" title="s8" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s8.jpg" alt="s8" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s8.JPG" title="s8" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s8.jpg" alt="s8" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s9.jpg" title="s9" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s9.jpg" alt="s9" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s9.JPG" title="s9" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s9.jpg" alt="s9" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s10.jpg" title="s10" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s10.jpg" alt="s10" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s10.JPG" title="s10" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s10.jpg" alt="s10" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s11.jpg" title="s11" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s11.jpg" alt="s11" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s11.JPG" title="s11" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s11.jpg" alt="s11" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s12.jpg" title="s12" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s12.jpg" alt="s12" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s12.JPG" title="s12" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s12.jpg" alt="s12" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s13.jpg" title="s13" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s13.jpg" alt="s13" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s13.JPG" title="s13" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s13.jpg" alt="s13" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s14.jpg" title="s14" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s14.jpg" alt="s14" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s14.JPG" title="s14" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s14.jpg" alt="s14" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s15.jpg" title="s15" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s15.jpg" alt="s15" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s15.JPG" title="s15" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s15.jpg" alt="s15" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s16.jpg" title="s16" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s16.jpg" alt="s16" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s16.JPG" title="s16" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s16.jpg" alt="s16" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s17.jpg" title="s17" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s17.jpg" alt="s17" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s17.JPG" title="s17" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s17.jpg" alt="s17" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s18.jpg" title="s18" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s18.jpg" alt="s18" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s18.JPG" title="s18" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s18.jpg" alt="s18" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s19.jpg" title="s19" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s19.jpg" alt="s19" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s19.JPG" title="s19" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s19.jpg" alt="s19" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s20.jpg" title="s20" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s20.jpg" alt="s20" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s20.JPG" title="s20" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s20.jpg" alt="s20" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s21.jpg" title="s21" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s21.jpg" alt="s21" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s21.JPG" title="s21" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s21.jpg" alt="s21" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s22.jpg" title="s22" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s22.jpg" alt="s22" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s22.JPG" title="s22" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s22.jpg" alt="s22" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s23.jpg" title="s23" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s23.jpg" alt="s23" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s23.JPG" title="s23" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s23.jpg" alt="s23" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s24.jpg" title="s24" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s24.jpg" alt="s24" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s24.JPG" title="s24" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s24.jpg" alt="s24" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s25.jpg" title="s25" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s25.jpg" alt="s25" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s25.JPG" title="s25" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s25.jpg" alt="s25" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s26.jpg" title="s26" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s26.jpg" alt="s26" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s26.JPG" title="s26" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s26.jpg" alt="s26" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s27.jpg" title="s27" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s27.jpg" alt="s27" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s27.JPG" title="s27" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s27.jpg" alt="s27" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s28.jpg" title="s28" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s28.jpg" alt="s28" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s28.JPG" title="s28" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s28.jpg" alt="s28" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s29.jpg" title="s29" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s29.jpg" alt="s29" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s29.JPG" title="s29" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s29.jpg" alt="s29" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s30.jpg" title="s30" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s30.jpg" alt="s30" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s30.JPG" title="s30" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s30.jpg" alt="s30" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s31.jpg" title="s31" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s31.jpg" alt="s31" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s31.JPG" title="s31" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s31.jpg" alt="s31" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s32.jpg" title="s32" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s32.jpg" alt="s32" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s32.JPG" title="s32" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s32.jpg" alt="s32" /> </a>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <a href="{{ site.baseurl }}/img/2015/jonathan/s33.jpg" title="s33" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s33.jpg" alt="s33" /> </a>
+      <a href="{{ site.baseurl }}/img/2015/jonathan/s33.JPG" title="s33" data-gallery> <img src="{{ site.baseurl }}/img/2015/jonathan/thumbnail/s33.jpg" alt="s33" /> </a>
     </div>
 </div>
 <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
