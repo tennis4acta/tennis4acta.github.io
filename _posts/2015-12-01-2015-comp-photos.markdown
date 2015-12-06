@@ -1,11 +1,10 @@
 ---
 layout:     post
-title:      "2015年ACTC皇族香米杯華人網球大獎賽 Photos"
-date:       2015-12-01 12:00:00
-author:     "ACTC"
+title:      ""
+author:     ""
 header-img: "img/2015/hejia/96.jpg"
 ---
-<h1 class="page-header">Photos</h1>
+<h1 class="page-header">2015年ACTC皇族香米杯華人網球大獎賽 Photos</h1>
 感谢本次大赛指定摄影<b>何嘉摄影</b>以及义工<b>Jonathan</b>提供照片。
 
 <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
