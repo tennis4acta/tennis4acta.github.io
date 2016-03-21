@@ -6,10 +6,11 @@ author:     "ACTC"
 header-img: "img/post-bg-01.jpg"
 ---
 <p>（2016年1月10日讯）</p>
+
 <p>新年伊始，迎来网球新赛季，澳洲赛事好戏连连。华人网球也不甘寂寞，以新年网球趴梯拉开网球活动的序幕。元月10日，骄阳似火，众华人网球爱好者在悉尼北边Pennant Hills网球中心欢聚一堂，美酒、佳肴、打球、聊天，共迎新年。中国网球传奇人物朱振华先生携一家三代网球人前来和大家畅叙。原国家网球队队员、上海队主教练亲临指导教球。新年新气象，期待2016华人网球更多活动更多欢笑。</p>
 
 
-    <img class="img-responsive" src="{{ site.baseurl }}/img/2016/01/10a.jpg" alt="Chania" width="800" />
-    <img class="img-responsive" src="{{ site.baseurl }}/img/2016/01/10b.jpg" alt="Chania" width="800" />
+<img class="img-responsive" src="{{ site.baseurl }}/img/2016/01/10a.jpg" alt="10a" width="800" />
+<img class="img-responsive" src="{{ site.baseurl }}/img/2016/01/10b.jpg" alt="10b" width="800" />
 
 
