@@ -10,8 +10,8 @@ header-img: "img/post-bg-01.jpg"
 
 <p>悉尼华人网球SCT将在5月15日举办单打积分赛，这是悉尼华人第一次尝试业余积分赛制，这是华人网球的又一件幸事。要参加积分赛的球员请浏览 <a href="http://www.sydneychinesetennis.com.au" target="_blank">www.sydneychinesetennis.com.au</a> ，并在网上报名。</p>
 
-<img src="https://farm2.staticflickr.com/1564/26086415604_2e8ca23447_o.jpg" width="905" height="1280" alt="sct_poster"></a>
-<br>
-<img src="https://farm2.staticflickr.com/1603/26599147422_675a94136d_q.jpg" width="150" height="150" alt="sct_qr">
+<p><img class="img-responsive" src="https://farm2.staticflickr.com/1564/26086415604_2e8ca23447_o.jpg" width="905" height="1280" alt="sct_poster"></p>
+
+<p><img class="img-responsive" src="https://farm2.staticflickr.com/1603/26599147422_675a94136d_q.jpg" width="150" height="150" alt="sct_qr"></p>
 
 <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
