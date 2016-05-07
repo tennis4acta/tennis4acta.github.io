@@ -1,0 +1,15 @@
+---
+layout:     post
+title:      "SCT悉尼华人网球网站开通"
+date:       2000-04-19 12:00:00
+author:     "ACTC"
+header-img: "img/post-bg-01.jpg"
+---
+<!-- <h2>世界华人网球锦标赛墨尔本隆重举行</h2> -->
+<h2>将举办华人网球单打积分赛</h2>
+
+<p>由Wayne Han等发起组织的悉尼华人网球SCT，将在2016年5月15日举办单打积分赛，这是悉尼华人第一次尝试业余积分赛制，这是华人网球的又一件幸事。要参加积分赛的球员请浏览 <a href="http://www.sydneychinesetennis.com.au" target="_blank">www.sydneychinesetennis.com.au</a> ，并在网上报名。</p>
+
+<p><img class="img-responsive" src="https://farm2.staticflickr.com/1564/26086415604_2e8ca23447_o.jpg" width="905" height="1280" alt="sct_poster"></p>
+
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
