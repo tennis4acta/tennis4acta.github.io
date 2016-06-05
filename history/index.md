@@ -47,7 +47,19 @@ header-img: "img/history-bg.jpg"
     {% if page.resource == true %}
       {% for pc in page.categories %}
         {% if pc == cat %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  <div class="post-preview">
+    <a href="{{ page.url | prepend: page.baseurl }}">
+      <h2 class="page-title">
+        {{ page.title }}
+      </h2>
+      {% if page.subtitle %}
+        <h3 class="post-subtitle">
+          {{ page.subtitle }}
+        </h3>
+      {% endif %}
+    </a>
+  </div>
+
         {% endif %}   <!-- cat-match-p -->
       {% endfor %}  <!-- page-category -->
     {% endif %}   <!-- resource-p -->
