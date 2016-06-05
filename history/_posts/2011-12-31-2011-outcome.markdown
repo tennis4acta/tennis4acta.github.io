@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     post_history
 title:      "2011年ACTA皇族香米杯華人網球大獎賽"
 date:       2011-12-31 12:00:00
 author:     "ACTA"
