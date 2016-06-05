@@ -5,8 +5,7 @@ description: "History"
 header-img: "img/history-bg.jpg"
 ---
 
-{% for page in site.pages %}
-  {% if page.categories contains 'history' %}
+{% for page in site.categories.history %}
   <div class="post-preview">
     <a href="{{ page.url | prepend: page.baseurl }}">
       <h2 class="page-title">
@@ -23,5 +22,4 @@ header-img: "img/history-bg.jpg"
       {{ page.content }}
     {% endif %}
   </div>
-  {% endif %}
 {% endfor %}
