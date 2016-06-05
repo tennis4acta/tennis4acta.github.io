@@ -5,24 +5,32 @@ description: "History"
 header-img: "img/history-bg.jpg"
 ---
 
-{% for page in n site.pages %}
-  {% if page.categories contains "history" %}
-    <div class="post-preview">
-      <a href="{{ page.url | prepend: page.baseurl }}">
-        <h2 class="page-title">
-          {{ page.title }}
-        </h2>
-        {% if page.subtitle %}
-          <h3 class="post-subtitle">
-            {{ page.subtitle }}
-          </h3>
-        {% endif %}
-      </a>
-      <p/>
-      {% if page.title == site.categories.history.first.title %}
-        {{ page.excerpt }}
+{% for page in site.categories.history %}
+  <div class="post-preview">
+    <a href="{{ page.url | prepend: page.baseurl }}">
+      <h2 class="page-title">
+        {{ page.title }}
+      </h2>
+      {% if page.subtitle %}
+        <h3 class="post-subtitle">
+          {{ page.subtitle }}
+        </h3>
       {% endif %}
+    </a>
+    <p/>
+    {% if page.title == site.categories.history.first.title %}
+      {{ page.content }}
+    {% endif %}
+  </div>
+{% endfor %}
+
+<br />
+
+{% for page in site.pages %}
+  {% if page.categories contains 'history' %}
+    <div class="item">
+      <h3>{{page.title}}</h3>
+      <p>{{page.description}}</p>
     </div>
   {% endif %}
 {% endfor %}
-
