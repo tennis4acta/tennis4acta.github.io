@@ -6,7 +6,7 @@ header-img: "img/history-bg.jpg"
 ---
 
 {% for page in n site.pages %}
-  {% if page.categories contains 'history' %}
+  {% if page.categories contains "history" %}
     <div class="post-preview">
       <a href="{{ page.url | prepend: page.baseurl }}">
         <h2 class="page-title">
