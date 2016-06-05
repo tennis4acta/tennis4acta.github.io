@@ -29,13 +29,11 @@ header-img: "img/history-bg.jpg"
 {% for page in site.pages %}
   {% if page.resource == true %}
     {% if page.categories contains 'history' %}
-      <div class="post-preview">
-        <a href="{{ page.url }}">
+        <a href="{{ page.url | prepend: page.baseurl }}">
           <h2 class="page-title">
             {{ page.title }}
           </h2>
         </a>
-      </div>
     {% endif %}
   {% endif %}
 {% endfor %}
