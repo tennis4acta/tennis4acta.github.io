@@ -18,3 +18,4 @@ paginate_path: /others/page:num
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 category-list: [history, others, 2016, 2015]
+excerpt_separator: <!--more-->
