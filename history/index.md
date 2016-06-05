@@ -5,7 +5,8 @@ description: "History"
 header-img: "img/history-bg.jpg"
 ---
 
-{% for page in site.categories.history %}
+{% for page in site.pages %}
+  {% if page.categories contains 'history' %}
   <div class="post-preview">
     <a href="{{ page.url | prepend: page.baseurl }}">
       <h2 class="page-title">
@@ -21,16 +22,6 @@ header-img: "img/history-bg.jpg"
     {% if page.title == site.categories.history.first.title %}
       {{ page.content }}
     {% endif %}
-  </div>
-{% endfor %}
-
-<p> aasdfafasdfasdf </p>
-
-{% for page in site.pages %}
-  {% if page.categories contains 'history' %}
-  <div class="post-preview">
-      <h3 class="page-title">{{ page.title }}</h3>
-      {{ page.excerpt }}
   </div>
   {% endif %}
 {% endfor %}
