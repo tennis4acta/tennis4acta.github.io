@@ -24,13 +24,11 @@ header-img: "img/history-bg.jpg"
   </div>
 {% endfor %}
 
-<br />
+<p> aasdfafasdfasdf </p>
 
 {% for page in site.pages %}
   {% if page.categories contains 'history' %}
-    <div class="item">
-      <h3>{{page.title}}</h3>
-      <p>{{page.description}}</p>
-    </div>
+      <h3>{{ page.title }}</h3>
+      <p>{{ page.excerpt }}</p>
   {% endif %}
 {% endfor %}
