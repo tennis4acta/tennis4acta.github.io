@@ -73,9 +73,13 @@ categories: [history, 2015]
     </div>
   </div>
 </div>
+
 <br>
+
 <a class="btn btn-info btn-lg btn-block" href="{{ site.baseurl }}/2015/12/01/2015-comp-photos/" role="button" target="_blank">查看所有官方照片</a>
+
 <br>
+
 <p>2015年ACTC皇族香米杯华人网球大奖赛于2015年11月29日星期日在Pennant Hills Tennis Centre举行。参赛球员和亲友团近三百人欢聚一堂，共享年度华人网球盛会。</p>
 <p>大奖赛设有A和B两个级别的男子双打，女子双打、55岁以上人士双打和12岁以下少年单打等项目的比赛。今年参赛球员高手林立，包括ATP注册球员、ITF和澳洲排名的球员、前中国国家队和省队的球员以及不少在往届赛事中取得佳绩的父子兵。少年球员中更有澳洲少年单打冠军和地区冠军球员。</p>
 <p>天布满阴云，凉风习习，球员早早来到，个个摩拳擦掌。上午八点比赛正式开始，一百位网球好手在各小组循环赛中展开角逐。参赛选手都各自有亲友拉拉队前来助阵，整个网球中心十个场地，加油声欢呼声此起彼伏。午时过后，各项比赛先后进入淘汰赛，使得比赛更为激烈，扣人心弦。网球中心的游乐场上，儿童有奖游戏也在欢笑声中进行着，孩子们玩掷网球游戏和颠网球游戏。</p>
@@ -84,13 +88,24 @@ categories: [history, 2015]
 <p>男双A级别的项目云集了华人小区的网球高手，有赛会老牌冠军，也有ATP和ITF注册排名的好手，比赛激烈程度可想而知。决赛在许剑强/John Hu和陆正邦/张卓之间展开，双方实力相当，精彩场面层出不穷。陆正邦/张卓在1比5落后的情况下，奋起直追，将比赛逼至抢七。最终许剑强/John Hu稳住阵脚，以7比5拿下抢七赢得了冠军，陆正邦/张卓获得亚军，Xiaoyuan Jin/Wei Han第三名。</p>
 <p>华人网球大奖赛从2004年起办了有将近十届，后因故停办了几年。今年华人网球大奖赛再度举办，其规模之大，水平之高，赛程之流畅，超过以往历届，广大华人网球爱好者和社会各界赞美如潮。据赛会负责人表示，他们会认真总结经验，力争把明年的大奖赛办得更好。</p>
 <p>今年ACTC华人网球大奖赛由皇族牌泰国香米冠名赞助，也得到了OSIM、鹰标风油精、南天旅行社、蜀香坊、WhiteGlo、旺旺食品以及何嘉摄影工作室等公司的大力支持和赞助。球会名誉主席，纽省上议院还特别资助了本次赛事。</p>
+
 <br>
+
 <!--more-->
+
 <a class="btn btn-info btn-block" href="{{ site.baseurl }}/2015/12/01/2015-comp-other-photos/" role="button" target="_blank">查看其他来源照片</a>
+
 <br>
-<img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="2015 poster" />
+
+<div class="row text-center">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="2015 poster" />
+  </div>
+</div>
+
 <br>
-<div class="table-responsive">
+
+<!-- <div class="table-responsive">
   <table class="table">
     <tr>
       <td class="success text-center"><a href="{{ site.baseurl }}/2015/08/31/2015-comp-rule/"><strong>比赛规则 Rules</strong></a></td>
@@ -99,6 +114,12 @@ categories: [history, 2015]
       <td class="info text-center"><a href="{{ site.baseurl }}/8.volunteer/"><strong>成为志愿者 Volunteer</strong></a></td>
     </tr>
   </table>
-</div>
+</div> -->
+
 <br>
-<img class="img-responsive" src="{{ site.baseurl }}/img/sponsors/wangguozhong.jpg" alt="wangguozhong" />
+
+<div class="row text-center">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <img class="img-responsive" src="{{ site.baseurl }}/img/sponsors/wangguozhong.jpg" alt="wangguozhong" />
+  </div>
+</div>
