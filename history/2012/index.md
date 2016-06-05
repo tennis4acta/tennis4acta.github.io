@@ -6,6 +6,7 @@ author:     "ACTA"
 header-img: "img/post-bg-01.jpg"
 categories: [history]
 resource:   true
+permalink:  2012
 ---
 <p>澳洲華人網球協會主辦的2012年华人網球大獎賽于12月2日星期日隆重舉行，这次華人網球大獎賽設有男子雙打以及12歲以下和12歲以上少年男子單打三個項目的比賽。</p>
 <div class="container">
