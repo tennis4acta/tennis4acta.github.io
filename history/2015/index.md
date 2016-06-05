@@ -6,7 +6,7 @@ author:     "ACTC"
 header-img: "img/post-bg-01.jpg"
 categories: [history]
 resource:   true
-permalink:  2015
+permalink:  /2015
 ---
 <!-- <h1 class="text-center"> <strong>2015年ACTC皇族香米杯華人網球大獎賽</strong> </h1>
 <h2 class="text-center"> <strong>2015 ACTC Tennis Competition</strong></h2> -->
