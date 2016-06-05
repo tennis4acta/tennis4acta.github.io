@@ -85,6 +85,7 @@ categories: [history, 2015]
 <p>华人网球大奖赛从2004年起办了有将近十届，后因故停办了几年。今年华人网球大奖赛再度举办，其规模之大，水平之高，赛程之流畅，超过以往历届，广大华人网球爱好者和社会各界赞美如潮。据赛会负责人表示，他们会认真总结经验，力争把明年的大奖赛办得更好。</p>
 <p>今年ACTC华人网球大奖赛由皇族牌泰国香米冠名赞助，也得到了OSIM、鹰标风油精、南天旅行社、蜀香坊、WhiteGlo、旺旺食品以及何嘉摄影工作室等公司的大力支持和赞助。球会名誉主席，纽省上议院还特别资助了本次赛事。</p>
 <br>
+<!--more-->
 <a class="btn btn-info btn-block" href="{{ site.baseurl }}/2015/12/01/2015-comp-other-photos/" role="button" target="_blank">查看其他来源照片</a>
 <br>
 <img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="2015 poster" />
