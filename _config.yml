@@ -16,3 +16,5 @@ permalink: pretty
 paginate: 5
 paginate_path: /others/page:num
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+category-list: ["history", "others", "2016", "2015"]
