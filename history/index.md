@@ -28,22 +28,23 @@ header-img: "img/history-bg.jpg"
 
 {% for page in site.pages %}
   {% if page.resource == true %}
-    {% for pc in page.categories %}
-      {% if pc == "history" %}
-        <div class="post-preview">
-          <a href="{{ page.url }}">
-            <h2 class="page-title">
-              {{ page.title }}
-            </h2>
-          </a>
-        </div>
-      {% endif %}   <!-- cat-match-p -->
-    {% endfor %}  <!-- page-category -->
-  {% endif %}   <!-- resource-p -->
+    {% if page.categories contains 'history' %}
+      <div class="post-preview">
+        <a href="{{ page.url }}">
+          <h2 class="page-title">
+            {{ page.title }}
+          </h2>
+        </a>
+      </div>
+    {% endif %}
+  {% endif %}
 {% endfor %}
 
 ----------------------------
 
+{% for cat in site.category-list %}
+### {{ cat }}
+<ul>
   {% for page in site.pages %}
     {% if page.resource == true %}
       {% for pc in page.categories %}
@@ -53,3 +54,5 @@ header-img: "img/history-bg.jpg"
       {% endfor %}  <!-- page-category -->
     {% endif %}   <!-- resource-p -->
   {% endfor %}  <!-- page -->
+</ul>
+{% endfor %}  <!-- cat -->
