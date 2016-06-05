@@ -5,9 +5,27 @@ description: "History"
 header-img: "img/history-bg.jpg"
 ---
 
-<!-- <h3><a href="{{ site.baseurl }}/2000/01/01/all-results/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true">历届赛事成绩</span></a></h3> -->
+{% for page in site.categories.history %}
+  <div class="post-preview">
+    <a href="{{ page.url | prepend: page.baseurl }}">
+      <h2 class="page-title">
+        {{ page.title }}
+      </h2>
+      {% if page.subtitle %}
+        <h3 class="post-subtitle">
+          {{ page.subtitle }}
+        </h3>
+      {% endif %}
+    </a>
+    <p/>
+    {% if page.title == site.categories.history.first.title %}
+      {{ page.content }}
+    {% endif %}
+  </div>
+{% endfor %}
 
-{% for post in site.categories.history %}
+
+<!-- {% for post in site.categories.history %}
   <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
       <h2 class="post-title"> {{ post.title }}   </h2>
@@ -24,10 +42,10 @@ header-img: "img/history-bg.jpg"
 
     </div>
     <hr>
-  {% endfor %}
+{% endfor %} -->
 
   <!-- Pager -->
-{% if site.categories.history.total_pages > 1 %}
+<!-- {% if site.categories.history.total_pages > 1 %}
     <ul class="pager">
       {% if site.categories.history.previous_page %}
         <li class="previous">
@@ -48,7 +66,7 @@ header-img: "img/history-bg.jpg"
 {% if page.previous_in_category != nil %}
     <a href="{{page.previous_in_category.url}}" class="previous-link">Newer Post</a>
 {% endif %}
-
+ -->
 <!-- <div class="list-group">
     <a href="{{ site.baseurl }}/2015/12/03/2015-outcome/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2015年ACTC皇族香米杯華人網球大獎賽</a>
     <a href="{{ site.baseurl }}/2012/12/31/2012-outcome/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2012年ACTA华人網球大獎賽</a>
