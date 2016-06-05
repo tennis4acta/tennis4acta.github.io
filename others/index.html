@@ -1,0 +1,49 @@
+---
+layout: page
+title: "澳洲华人网球活动"
+description: "Others"
+header-img: "img/history-bg.jpg"
+---
+{% for post in paginator.posts %}
+  <div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <h2 class="post-title"> {{ post.title }}   </h2>
+      {% if post.subtitle %}
+        <h3 class="post-subtitle">
+        {{ post.subtitle }}
+        </h3>
+      {% endif %}
+      </a>
+      <p/>
+        {% if post.title == paginator.posts.first.title %}
+          {{ post.content }}
+        {% endif %}
+
+    </div>
+    <hr>
+  {% endfor %}
+
+  <!-- Pager -->
+{% if paginator.total_pages > 1 %}
+    <ul class="pager">
+      {% if paginator.previous_page %}
+        <li class="previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+        </li>
+      {% endif %}
+      {% if paginator.next_page %}
+        <li class="next">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+        </li>
+      {% endif %}
+    </ul>
+  {% endif %}
+
+
+    <h3></h3>
+    <div class="list-group">
+        <a href="{{ site.baseurl }}/2000/04/09/2016-SCT/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> SCT悉尼华人网球网站开通</a>
+        <a href="{{ site.baseurl }}/2000/04/09/2016-Xiamen-University/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 第三届维祥杯网球邀请赛即将开赛</a>
+        <a href="{{ site.baseurl }}/2000/03/09/2016-March-Mel-World-Comp" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2016世界华人网球锦标赛墨尔本隆重举行</a>
+        <a href="{{ site.baseurl }}/2000/02/10/2016-Feb-Zone-Comp" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2016首届悉尼华人网球“地域赛”圆满落下帷幕</a>
+    </div>

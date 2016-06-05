@@ -18,11 +18,23 @@
                 <li>
                     <a href="{{ site.baseurl }}/">Home</a>
                 </li>
-                {% for page in site.pages %}{% if page.title %}
+<!--                 {% for page in site.pages %}{% if page.title %}
                 <li>
                     <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                 </li>
-                {% endif %}{% endfor %}
+                {% endif %}{% endfor %} -->
+                <li>
+                    <a href="{{ site.baseurl }}/about/">關於我們</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/history/">過往賽事</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/others/">澳洲华人网球活动</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/contact/">聯絡我們</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
