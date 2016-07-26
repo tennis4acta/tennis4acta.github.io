@@ -4,7 +4,6 @@ title:      "2015年ACTC皇族香米杯華人網球大獎賽"
 date:       2015-12-03 12:00:00
 author:     "ACTC"
 header-img: "img/post-bg-01.jpg"
-permalink:  /2015
 ---
 <!-- <h1 class="text-center"> <strong>2015年ACTC皇族香米杯華人網球大獎賽</strong> </h1>
 <h2 class="text-center"> <strong>2015 ACTC Tennis Competition</strong></h2> -->
