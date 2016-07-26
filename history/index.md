@@ -16,6 +16,6 @@ header-img: "img/history-bg.jpg"
     <a href="{{ site.baseurl }}/history/2007/league" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2007年ACTA華人网球聯賽</a>
     <a href="{{ site.baseurl }}/history/2006/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2006年ACTA恆豐超市杯網球大獎賽</a>
     <a href="{{ site.baseurl }}/history/2005/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2005年ACTA先達杯網球大獎賽</a>
-    <a href="{{ site.baseurl }}/history/2004/invite" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2004年ACTA安博杯網球大獎賽</a>
+    <a href="{{ site.baseurl }}/history/2004" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2004年ACTA安博杯網球大獎賽</a>
     <a href="{{ site.baseurl }}/history/2004/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2004年龍卷風网球邀請賽</a>
 </div>
