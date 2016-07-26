@@ -58,6 +58,7 @@ header-img: "img/history-bg.jpg"
         <dd>代表湖北参加2013年全运会</dd>
         <dd>2014年获得ptr国际教练员证书</dd>
       </dl>
+      <img class="img-responsive" src="https://c1.staticflickr.com/9/8796/27945484784_3eac77efb5_z.jpg" alt="mjb" />
     </td>
   </tr>
   <tr>
@@ -67,6 +68,7 @@ header-img: "img/history-bg.jpg"
         <dt>前湖北省队专业运动员 ，职业球员</dt>
         <dd>ITF青少年最高排名200</dd>
       </dl>
+      <img class="img-responsive" src="https://c7.staticflickr.com/9/8898/28278468150_59df518355_z.jpg" alt="zz" />
     </td>
   </tr>
   <tr>
@@ -80,6 +82,7 @@ header-img: "img/history-bg.jpg"
         <dd>2015紐省錦標賽女子14歲組單打冠軍</dd>
         <dd>2015悉尼少年16歲組女子單打冠軍</dd>
       </dl>
+      <img class="img-responsive" src="https://c1.staticflickr.com/9/8721/28530033296_e6c01845d4_z.jpg" alt="jzs" />
     </td>
   </tr>
   <tr>
@@ -91,6 +94,7 @@ header-img: "img/history-bg.jpg"
         <dd>2016 Nepean Easter網球賽冠軍</dd>
         <dd>2016紐省網球錦標賽少年男子雙打冠軍</dd>
       </dl>
+      <img class="img-responsive" src="https://c4.staticflickr.com/9/8307/28484548291_6876e77dba_z.jpg" alt="jt" />
     </td>
   </tr>
 
