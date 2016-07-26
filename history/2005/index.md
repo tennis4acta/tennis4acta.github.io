@@ -4,7 +4,6 @@ title:      "2005年ACTA先達杯網球大獎賽"
 date:       2005-12-31 12:00:00
 author:     "ACTA"
 header-img: "img/post-bg-01.jpg"
-permalink:  /2005
 ---
 <div class="container">
     <img class="img-responsive" src="{{ site.baseurl }}/img/2005-poster.jpg" alt="Chania" width="600" />
