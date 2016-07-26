@@ -4,8 +4,6 @@ title:      "2004年龍卷風网球邀請賽"
 date:       2004-07-31 12:00:00
 author:     "ACTA"
 header-img: "img/post-bg-01.jpg"
-categories: [history]
-resource:   true
 permalink:  /2004a
 ---
 <p>2004年7月31日至8月21日舉辦了龍卷風网球邀請賽。這是一次連續四個周末的單打比賽。共有16位男子選手和8位女子選手參加了比賽。BURWOOD市議員王國忠先生，AUBURN市議員Jack Au，以及Philip Lueng觀看了最后的決賽并為得獎選手頒發了獎杯和獎金。</p>

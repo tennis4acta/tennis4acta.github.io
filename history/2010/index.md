@@ -4,8 +4,6 @@ title:      "2010年ACTA皇族香米杯華人網球大獎賽"
 date:       2010-12-31 12:00:00
 author:     "ACTA"
 header-img: "img/post-bg-01.jpg"
-categories: [history]
-resource:   true
 permalink:  /2010
 ---
 <div class="container">
