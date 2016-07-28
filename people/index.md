@@ -5,7 +5,7 @@ description: "People"
 header-img: "img/history-bg.jpg"
 ---
 <h2>生活在澳洲的华人网球精英</h2>
-<div class="row text-center">
+<div class="rowr">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     朱振華
   </div>
