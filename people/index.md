@@ -9,7 +9,7 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     朱振華
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-1">
+  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>中國網球名宿 87歲</dt>
       <dd>50-60年代5次獲得全國網球比賽男子單打冠軍，三次男子雙打冠軍</dd>
@@ -23,7 +23,7 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     劉曉成
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-1">
+  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>前中國網球隊主力，澳洲華人網球協會名譽主席</dt>
       <dd>代表中國網球隊參加戴維斯杯、亞洲杯</dd>
@@ -34,7 +34,7 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     朱晓玲
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-1">
+  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>前中国网球队队员</dt>
       <dd>曾夺得全运会单打冠军，女双冠军（和余丽桥搭档）</dd>
@@ -46,7 +46,7 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     韩蓓
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-1">
+  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8>
     <dl>
       <dt>前中国国家队队员</dt>
       <dd>退役后长期从事少年网球教学，曾担任澳网温网女双冠军得主郑洁晏紫少年时的网球教练</dd>
@@ -56,7 +56,7 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     梅加貝
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-1">
+  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>前湖北省专业运动员</dt>
       <dd>代表湖北参加2013年全运会</dd>
@@ -68,7 +68,7 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     張卓
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-1">
+  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>前湖北省队专业运动员 ，职业球员</dt>
       <dd>ITF青少年最高排名200</dd>
@@ -79,7 +79,7 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     Jessica Zhu Stanmore
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-1">
+  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>14歲，目前全澳女子排名176</dt>
       <dd>2016悉尼公開賽女子單打冠軍</dd>
@@ -94,7 +94,7 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     Jeremy Jin 金童
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-1">
+  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>11歲，目前澳洲該年齡組排名第三</dt>
       <dd>2015 TCA少年網球大師賽冠軍</dd>
