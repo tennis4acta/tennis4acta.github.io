@@ -5,7 +5,6 @@ description: "People"
 header-img: "img/history-bg.jpg"
 ---
 <h2>生活在澳洲的华人网球精英</h2>
-<br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <h3>朱振華</h3>
@@ -21,7 +20,6 @@ header-img: "img/history-bg.jpg"
     <img class="img-responsive" src="https://c5.staticflickr.com/9/8615/28530030996_9cd93db86f_o.jpg" alt="zzh" />
   </div>
 </div>
-<br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <h3>劉曉成</h3>
@@ -34,7 +32,6 @@ header-img: "img/history-bg.jpg"
     </dl>
   </div>
 </div>
-<br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <h3>朱晓玲</h3>
@@ -48,7 +45,6 @@ header-img: "img/history-bg.jpg"
     </dl>
   </div>
 </div>
-<br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <h3>韩蓓</h3>
@@ -61,7 +57,6 @@ header-img: "img/history-bg.jpg"
     <img class="img-responsive" src="https://c7.staticflickr.com/9/8886/28494934862_b0c4c8fcc2_c.jpg" alt="hb" />
   </div>
 </div>
-<br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <h3>梅加貝</h3>
@@ -75,7 +70,6 @@ header-img: "img/history-bg.jpg"
     <img class="img-responsive" src="https://c1.staticflickr.com/9/8796/27945484784_3eac77efb5_z.jpg" alt="mjb" />
   </div>
 </div>
-<br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <h3>張卓</h3>
@@ -88,7 +82,6 @@ header-img: "img/history-bg.jpg"
     <img class="img-responsive" src="https://c7.staticflickr.com/9/8898/28278468150_59df518355_z.jpg" alt="zz" />
   </div>
 </div>
-<br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <h3>Jessica Zhu Stanmore</h3>
@@ -105,7 +98,6 @@ header-img: "img/history-bg.jpg"
     <img class="img-responsive" src="https://c1.staticflickr.com/9/8721/28530033296_e6c01845d4_z.jpg" alt="jzs" />
   </div>
 </div>
-<br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <h3>Jeremy Jin 金童</h3>
