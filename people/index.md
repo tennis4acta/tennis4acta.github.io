@@ -8,7 +8,7 @@ header-img: "img/history-bg.jpg"
 <br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h4>朱振華</h4>
+    <h3>朱振華</h3>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
@@ -24,7 +24,7 @@ header-img: "img/history-bg.jpg"
 <br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h4>劉曉成</h4>
+    <h3>劉曉成</h3>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
@@ -37,7 +37,7 @@ header-img: "img/history-bg.jpg"
 <br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h4>朱晓玲</h4>
+    <h3>朱晓玲</h3>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
@@ -51,7 +51,7 @@ header-img: "img/history-bg.jpg"
 <br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h4>韩蓓</h4>
+    <h3>韩蓓</h3>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
@@ -64,7 +64,7 @@ header-img: "img/history-bg.jpg"
 <br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h4>梅加貝</h4>
+    <h3>梅加貝</h3>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
@@ -78,7 +78,7 @@ header-img: "img/history-bg.jpg"
 <br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h4>張卓</h4>
+    <h3>張卓</h3>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
@@ -91,7 +91,7 @@ header-img: "img/history-bg.jpg"
 <br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h4>Jessica Zhu Stanmore</h4>
+    <h3>Jessica Zhu Stanmore</h3>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
@@ -108,7 +108,7 @@ header-img: "img/history-bg.jpg"
 <br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h4>Jeremy Jin 金童</h4>
+    <h3>Jeremy Jin 金童</h3>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
