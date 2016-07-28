@@ -52,7 +52,8 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>前中国国家队队员</dt>
-      <dd>退役后长期从事少年网球教学，曾担任澳网温网女双冠军得主郑洁晏紫少年时的网球教练</dd>
+      <dd>曾担任澳网温网女双冠军得主郑洁晏紫少年时的网球教练</dd>
+      <dd>退役后长期从事青少年网球教学</dd>
     </dl>
     <img class="img-responsive" src="https://c7.staticflickr.com/9/8886/28494934862_b0c4c8fcc2_c.jpg" alt="hb" />
   </div>
