@@ -6,6 +6,7 @@ header-img: "img/history-bg.jpg"
 ---
 <h2>生活在澳洲的华人网球精英</h2>
 
+<div class="table-responsive">
 <table class="table table-hover">
   <tr>
     <td>朱振華</td>
@@ -99,3 +100,4 @@ header-img: "img/history-bg.jpg"
   </tr>
 
 </table>
+</div>
