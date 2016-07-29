@@ -43,7 +43,7 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>前中国国家网球队队员</dt>
-      <dd>多次获得全国女子单打, 女子双打和混双冠军</dd>
+      <dd>多次获得全国女子单打，女子双打和混双冠军</dd>
       <dd>第五届全运会女双金牌，女单银牌和混双铜牌</dd>
       <dd>1982年代表中国参加亚运会获团体亚军</dd>
       <dd>多次代表中国参加世界女子协会杯及世界职业巡循赛</dd>
@@ -60,7 +60,7 @@ header-img: "img/history-bg.jpg"
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
-      <dt>前中国国家网球队队员, 澳洲华人网球协会名誉顾问</dt>
+      <dt>前中国国家网球队队员，澳洲华人网球协会名誉顾问</dt>
       <dd>国际网联ITF二级教练员</dd>
       <dd>退役后长期从事青少年网球教学</dd>
       <dd>曾担任澳网温网女双冠军得主郑洁晏紫少年时的网球教练</dd>
@@ -89,7 +89,7 @@ header-img: "img/history-bg.jpg"
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
-      <dt>前湖北省网球队专业运动员 ，职业球员</dt>
+      <dt>前湖北省网球队专业运动员，职业球员</dt>
       <dd>ITF青少年最高排名200</dd>
     </dl>
     <img class="img-responsive" src="https://c7.staticflickr.com/9/8898/28278468150_59df518355_z.jpg" alt="zz" />
@@ -103,11 +103,11 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>14岁，目前全澳女子排名176</dt>
-      <dd>2016 悉尼公开赛女子单打冠军</dd>
-      <dd>2016 悉尼少年女子单打双打冠军</dd>
-      <dd>2016 纽省锦标赛女子16岁组单打冠军</dd>
-      <dd>2015 纽省锦标赛女子14岁组单打冠军</dd>
-      <dd>2015 悉尼少年16岁组女子单打冠军</dd>
+      <dd>2016年悉尼公开赛女子单打冠军</dd>
+      <dd>2016年悉尼少年女子单打双打冠军</dd>
+      <dd>2016年纽省锦标赛女子16岁组单打冠军</dd>
+      <dd>2015年纽省锦标赛女子14岁组单打冠军</dd>
+      <dd>2015年悉尼少年16岁组女子单打冠军</dd>
     </dl>
     <img class="img-responsive" src="https://c1.staticflickr.com/9/8611/28001613304_43f3d490fd.jpg" alt="jzs" />
   </div>
@@ -120,9 +120,9 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>11岁，目前澳洲该年龄组排名第三</dt>
-      <dd>2015 TCA少年网球大师赛冠军</dd>
-      <dd>2016 Nepean Easter网球赛冠军</dd>
-      <dd>2016 纽省网球锦标赛少年男子双打冠军</dd>
+      <dd>2015年TCA少年网球大师赛冠军</dd>
+      <dd>2016年Nepean Easter网球赛冠军</dd>
+      <dd>2016年纽省网球锦标赛少年男子双打冠军</dd>
     </dl>
     <img class="img-responsive" src="https://c4.staticflickr.com/9/8307/28484548291_6876e77dba_z.jpg" alt="jt" />
   </div>
