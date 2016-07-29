@@ -18,6 +18,11 @@
                 <li>
                     <a href="{{ site.baseurl }}/">Home</a>
                 </li>
+<!--                 {% for page in site.pages %}{% if page.title %}
+                <li>
+                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                </li>
+                {% endif %}{% endfor %} -->
                 <li>
                     <a href="{{ site.baseurl }}/about/">關於我們</a>
                 </li>
@@ -26,9 +31,6 @@
                 </li>
                 <li>
                     <a href="{{ site.baseurl }}/others/">澳洲华人网球活动</a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/people/">澳洲华人网球精英</a>
                 </li>
                 <li>
                     <a href="{{ site.baseurl }}/contact/">聯絡我們</a>
