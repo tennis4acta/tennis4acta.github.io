@@ -32,6 +32,7 @@ header-img: "img/history-bg.jpg"
       <dd>代表中国网球队参加戴维斯杯、亚洲杯</dd>
       <dd>多次获得全国团体冠军，全国双打冠军</dd>
     </dl>
+    <img class="img-responsive" src="https://c3.staticflickr.com/9/8858/28585938386_52113c8cf2.jpg" alt="lxc" />
   </div>
 </div>
 <br>
@@ -42,10 +43,14 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>前中国国家网球队队员</dt>
-      <dd>曾夺得全运会单打冠军，女双冠军（和余丽桥搭档）</dd>
-      <dd>多次夺得过全国混双冠军（搭档尤伟）</dd>
-      <dd>现持澳洲二级教练证书</dd>
+      <dd>多次获得全国女子单打, 女子双打和混双冠军</dd>
+      <dd>第五届全运会女双金牌，女单银牌和混双铜牌</dd>
+      <dd>1982年代表中国参加亚运会获团体亚军</dd>
+      <dd>多次代表中国参加世界女子协会杯及世界职业巡循赛</dd>
+      <dd>澳洲职业网球协会和教练协会会员</dd>
+      <dd>澳洲职业网球俱乐部持二级教练员证书教练</dd>
     </dl>
+    <img class="img-responsive" src="https://c1.staticflickr.com/9/8770/28585938616_a6da232fd7.jpg" alt="zxy" />
   </div>
 </div>
 <br>
@@ -55,7 +60,7 @@ header-img: "img/history-bg.jpg"
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
-      <dt>前中国国家网球队队员</dt>
+      <dt>前中国国家网球队队员, 澳洲华人网球协会名誉顾问</dt>
       <dd>国际网联ITF二级教练员</dd>
       <dd>退役后长期从事青少年网球教学</dd>
       <dd>曾担任澳网温网女双冠军得主郑洁晏紫少年时的网球教练</dd>
@@ -104,7 +109,7 @@ header-img: "img/history-bg.jpg"
       <dd>2015 纽省锦标赛女子14岁组单打冠军</dd>
       <dd>2015 悉尼少年16岁组女子单打冠军</dd>
     </dl>
-    <img class="img-responsive" src="https://c1.staticflickr.com/9/8721/28530033296_e6c01845d4_z.jpg" alt="jzs" />
+    <img class="img-responsive" src="https://c1.staticflickr.com/9/8611/28001613304_43f3d490fd.jpg" alt="jzs" />
   </div>
 </div>
 <br>
