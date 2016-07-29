@@ -103,7 +103,7 @@ header-img: "img/history-bg.jpg"
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
       <dt>14岁，目前全澳女子排名176</dt>
-      <dd>2016年悉尼公开赛女子单打冠军</dd>
+      <dd>2016年悉尼公开赛少年女子单打冠军</dd>
       <dd>2016年悉尼少年女子单打双打冠军</dd>
       <dd>2016年纽省锦标赛女子16岁组单打冠军</dd>
       <dd>2015年纽省锦标赛女子14岁组单打冠军</dd>
