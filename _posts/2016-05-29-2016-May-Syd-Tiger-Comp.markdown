@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "2016老虎俱乐部主办华人网球赛"
+title:      "老虎俱乐部主办华人网球赛"
 date:       2016-05-29 12:00:00
 author:     "ACTC"
 header-img: "img/post-bg-01.jpg"

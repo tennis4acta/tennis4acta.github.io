@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "2016首届好健康杯网球单打赛完美落幕"
+title:      "首届好健康杯网球单打赛完美落幕"
 date:       2016-05-15 12:00:00
 author:     "ACTC"
 header-img: "img/post-bg-01.jpg"

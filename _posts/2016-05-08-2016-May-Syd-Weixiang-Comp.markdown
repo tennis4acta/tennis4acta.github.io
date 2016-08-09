@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "2016厦门大学维祥杯网球邀请赛落下帷幕"
+title:      "厦门大学维祥杯网球邀请赛落下帷幕"
 date:       2016-05-08 12:00:00
 author:     "ACTC"
 header-img: "img/post-bg-01.jpg"

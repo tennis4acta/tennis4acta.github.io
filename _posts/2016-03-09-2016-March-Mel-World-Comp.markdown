@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "2016世界华人网球锦标赛墨尔本隆重举行"
+title:      "世界华人网球锦标赛墨尔本隆重举行"
 date:       2016-03-09 12:00:00
 author:     "ACTC"
 header-img: "img/post-bg-01.jpg"
