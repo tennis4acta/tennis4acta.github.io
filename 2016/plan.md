@@ -10,9 +10,9 @@ header-img: "img/post-bg-01.jpg"
 ## 一、主办单位：澳洲华人网球会
 
 ## 二、比赛地点：
-    > **Pennant Hills Tennis Centre**
-    > **Pennant Hills Park**
-    > Britannia Street Pennant Hills NSW 2120
+> **Pennant Hills Tennis Centre**
+> **Pennant Hills Park**
+> Britannia Street Pennant Hills NSW 2120
 
 ## 三、比賽項目：
 大奖赛设有八个项目，如果某项目报名人数不足6人（组），将取消该项目。赛事组委会将根据各项目参赛人数多少，调整奖品奖金额度和受众面。
