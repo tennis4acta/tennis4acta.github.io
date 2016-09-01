@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "寻找双打比赛搭档"
-description: "Find Double's partner"
+title: "寻找双打比赛搭档球员列表"
+description: "Playlist for finding Double's partner"
 header-img: "img/home-bg.jpg"
 ---
 
