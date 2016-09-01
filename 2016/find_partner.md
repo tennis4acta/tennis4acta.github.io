@@ -4,6 +4,8 @@ title: "寻找双打比赛搭档"
 description: "Find Double's partner"
 header-img: "img/home-bg.jpg"
 ---
+<a href="https://docs.google.com/spreadsheets/d/1X7fsELy0tnUz_dLS-XWJeXi5szskK6QFLVJSfG9kEko/edit?usp=sharing"  class="btn btn-primary btn-lg btn-block">点此链接查看其他寻找搭档的球员</a>
+
 
 <style>
 @media (max-width: 767px) {
