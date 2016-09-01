@@ -19,5 +19,5 @@ header-img: "img/home-bg.jpg"
 </style>
 
 <div class="iframe-wrapper text-center">
-    <iframe src="https://docs.google.com/spreadsheets/d/1X7fsELy0tnUz_dLS-XWJeXi5szskK6QFLVJSfG9kEko/pubhtml?gid=304554789&amp;single=true&amp;widget=true&amp;headers=false"  width="800" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    <iframe src="https://docs.google.com/spreadsheets/d/1X7fsELy0tnUz_dLS-XWJeXi5szskK6QFLVJSfG9kEko/pubhtml?widget=true&amp;headers=false"></iframe>
 </div>
