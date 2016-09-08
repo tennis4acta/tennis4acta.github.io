@@ -98,7 +98,7 @@ header-img: "img/post-bg-01.jpg"
 
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
-    <img class="img-responsive" src="{{ site.baseurl }}/img/2015-poster.jpg" alt="2015 poster" />
+    <img class="img-responsive" src="https://c6.staticflickr.com/9/8080/28916720293_def2c3a6fa_h.jpg" alt="2015 poster" />
   </div>
 </div>
 
