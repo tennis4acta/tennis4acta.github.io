@@ -98,7 +98,7 @@ description: "Australian Chinese Tennis Club"
     <strong>志愿者：</strong>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-    待招募。负责儿童游戏，或接待员，或食品（BBQ）准备
+    待招募。负责儿童游戏，或接待员，或食品准备
   </div>
 </div>
 <p>赛事组委会所有成员将竭尽所能，为华人网球爱好者奉献一场高大上的赛事。具体比赛细节以后陆续公布。11月下旬，不见不散！</p>
