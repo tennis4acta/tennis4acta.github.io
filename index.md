@@ -3,7 +3,7 @@ layout: page
 description: "Australian Chinese Tennis Club"
 ---
 
-<p class="text-center"><h1>2016年ACTC皇族香米杯华人网球大奖赛</h1></p>
+<h1><p class="text-center">2016年ACTC皇族香米杯华人网球大奖赛</p></h1>
 <br>
 
 ## 一、主办单位：澳洲华人网球会
@@ -26,7 +26,7 @@ description: "Australian Chinese Tennis Club"
 * 男子A级别双打（16对）
 * 男子B级别双打（24对）
 * 女子双打（8对）
-* 中年组男子双打（50 -70岁）（12对）
+* 中老年组男子双打（50～70岁）（12对）
 
 ## 四、比赛日期：
 
@@ -101,7 +101,7 @@ description: "Australian Chinese Tennis Club"
     待招募。负责儿童游戏，或接待员，或食品准备
   </div>
 </div>
-<p>赛事组委会所有成员将竭尽所能，为华人网球爱好者奉献一场高大上的赛事。具体比赛细节以后陆续公布。11月下旬，不见不散！</p>
+<p>赛事组委会所有成员将竭尽所能，为华人网球爱好者奉献一场高大上的赛事。11月下旬，不见不散！</p>
 <hr>
 <p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
 <div class="row">
