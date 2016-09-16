@@ -20,6 +20,9 @@ header-img: "img/home-bg.jpg"
 }
 </style>
 
+出于对隐私的保护，我们不会将您的个人信息发布到网站的公开链接上。但是我们会将您的联系方式共享给其他寻找搭档的球员，以供寻找搭档。
+当您寻找搭档成功，我们会将您从列表中移除。
+
 <div class="iframe-wrapper text-center">
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdydzYhkwxn42C5CQpBF4pnL-G_OpzJhg6FuOMqSqdf5ExsqA/viewform?embedded=true" width="800" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </div>
