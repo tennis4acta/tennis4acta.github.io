@@ -57,7 +57,7 @@ description: "Australian Chinese Tennis Club"
 如果您没有双打比赛搭档，您可以在[寻找双打比赛搭档页面](http://actc.org.au/2016/find_partner/)注册您的个人信息。
 
 <hr>
-## 赛事组委会筹备工作正式启动
+## 赛事组委会成员
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <strong>总指导和技术顾问：</strong>
@@ -93,12 +93,20 @@ description: "Australian Chinese Tennis Club"
     虞丹丹
   </div>
 </div>
+<div>
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <strong>裁判：</strong>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+    Sam Chan，Grace Chen .....    <a href="{{ site.baseurl }}/volunteer/" target="_blank">继续招募裁判义工</a>  
+  </div>
+</div>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
     <strong>协调员：</strong>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-    待招募（需要安排协调比赛，参赛者免问）
+    Jim Liang，Lauren Shen，.....<a href="{{ site.baseurl }}/volunteer/" target="_blank">继续招募比赛协调员义工</a>  
   </div>
 </div>
 <div class="row">
@@ -106,7 +114,7 @@ description: "Australian Chinese Tennis Club"
     <strong>志愿者：</strong>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-    待招募。负责儿童游戏，或接待员，或食品准备
+    April Pan，Shelley Zhang <a href="{{ site.baseurl }}/volunteer/" target="_blank">继续招募。负责儿童游戏，或接待员，或食品准备</a>
   </div>
 </div>
 <p>赛事组委会所有成员将竭尽所能，为华人网球爱好者奉献一场高大上的赛事。11月下旬，不见不散！</p>
