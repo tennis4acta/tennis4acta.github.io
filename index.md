@@ -9,14 +9,17 @@ description: "Australian Chinese Tennis Club"
 <div class="container">
   <div class="row">
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-centered vcenter">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
         <a href="#" class="btn btn-primary btn-lg btn-block" disabled="disabled">大赛报名表</a>
       </div>    
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-centered vcenter">
-        <a href="{{ site.baseurl }}/2016/find_partner/" class="btn btn-warning btn-block btn-lg active" role="button">寻找双打搭档</a>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
+        <a href="{{ site.baseurl }}/2016/terms/" class="btn btn-info btn-lg btn-block" disabled="disabled">赛者须知</a>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-centered vcenter">
-        <a href="{{ site.baseurl }}/volunteer/" class="btn btn-success btn-lg btn-block active" role="button">招募志愿者</a>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
+        <a href="{{ site.baseurl }}/2016/qa/" class="btn btn-success btn-lg btn-block active" role="button">Q&A</a>
+      </div>      
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
+        <a href="{{ site.baseurl }}/2016/find_partner/" class="btn btn-warning btn-block btn-lg active" role="button">寻找双打搭档</a>
       </div>
     </div>
   </div>
