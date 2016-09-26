@@ -8,9 +8,15 @@ description: "Australian Chinese Tennis Club"
 
 <div class="container">
   <div class="row">
-    <a href="#" class="btn btn-primary btn-lg active" disabled="disabled">大赛报名表</a>
-    <a href="{{ site.baseurl }}/2016/find_partner/" class="btn btn-warning btn-block btn-lg active" role="button">寻找双打搭档</a>
-    <a href="{{ site.baseurl }}/volunteer/" class="btn btn-success btn-lg btn-block active" role="button">招募志愿者</a>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-centered vcenter">
+      <a href="#" class="btn btn-primary btn-lg active" disabled="disabled">大赛报名表</a>
+    </div>    
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-centered vcenter">
+      <a href="{{ site.baseurl }}/2016/find_partner/" class="btn btn-warning btn-block btn-lg active" role="button">寻找双打搭档</a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-centered vcenter">
+      <a href="{{ site.baseurl }}/volunteer/" class="btn btn-success btn-lg btn-block active" role="button">招募志愿者</a>
+    </div>
   </div>
 </div>
 
