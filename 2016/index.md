@@ -8,4 +8,4 @@ header-img: "img/home-bg.jpg"
 
 ## test
 
-{% include_relative 2016/qa/ %}
+{% include 2016/qa/ %}
