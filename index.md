@@ -6,6 +6,16 @@ description: "Australian Chinese Tennis Club"
 <h1><p class="text-center"><a href="{{ site.baseurl }}/2016/">2016年ACTC皇族香米杯华人网球大奖赛</a></p></h1>
 <br>
 
+<div class="container">
+  <div class="row">
+    <a href="#" class="btn btn-primary btn-lg active" disabled="disabled">大赛报名表</a>
+    <a href="{{ site.baseurl }}/2016/find_partner/" class="btn btn-default btn-lg active" role="button">寻找双打搭档</a>
+    <a href="{{ site.baseurl }}/volunteer/" class="btn btn-default btn-lg active" role="button">招募志愿者</a>
+  </div>
+</div>
+
+<hr>
+
 ## 一、主办单位：澳洲华人网球会
 
 ## 二、比赛地点：
