@@ -3,7 +3,7 @@ layout: page
 description: "Australian Chinese Tennis Club"
 ---
 
-<h1><p class="text-center">[2016年ACTC皇族香米杯华人网球大奖赛]{% link {{ site.baseurl }}/2016/ %}</p></h1>
+<h1><p class="text-center"><a href="{{ site.baseurl }}/2016/">2016年ACTC皇族香米杯华人网球大奖赛</a></p></h1>
 <br>
 
 ## 一、主办单位：澳洲华人网球会
