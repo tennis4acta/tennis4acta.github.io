@@ -10,10 +10,10 @@ description: "Australian Chinese Tennis Club"
   <div class="row">
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="#" class="btn btn-primary btn-lg btn-block" disabled="disabled">大赛报名表</a>
+        <a href="#" class="btn btn-default btn-lg btn-block disabled" role="button">大赛报名表</a>
       </div>    
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="{{ site.baseurl }}/2016/terms/" class="btn btn-info btn-lg btn-block active">赛者须知</a>
+        <a href="{{ site.baseurl }}/2016/terms/" class="btn btn-info btn-lg btn-block active" role="button">赛者须知</a>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
         <a href="{{ site.baseurl }}/2016/qa/" class="btn btn-success btn-lg btn-block active" role="button">Q&A</a>
