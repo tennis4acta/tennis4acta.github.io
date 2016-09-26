@@ -2,7 +2,6 @@
 layout:     page
 title:      "2016ACTC皇族香米杯華人網球大獎賽参赛者 Q&A"
 date:       2016-09-22 12:00:00
-tag:        "include"
 author:     "ACTC"
 header-img: "img/post-bg-01.jpg"
 ---

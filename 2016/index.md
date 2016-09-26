@@ -1,7 +1,8 @@
 ---
 layout: page
 title: "2016ACTC皇族香米杯華人網球大獎賽"
-description: "2016ACTC皇族香米杯華人網球大獎賽"
+date:       2016-09-26 12:00:00
+author:     "ACTC"
 header-img: "img/home-bg.jpg"
 ---
 
