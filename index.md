@@ -10,14 +10,14 @@ description: "Australian Chinese Tennis Club"
   <div class="row">
     <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="#" class="btn btn-default btn-lg btn-block disabled" role="button">大赛报名表</a>
-      </div>    
+        <a href="{{ site.baseurl }}/2016/registration/" class="btn btn-default btn-lg btn-block disabled" role="button">大赛报名表</a>
+      </div>
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
         <a href="{{ site.baseurl }}/2016/terms/" class="btn btn-info btn-lg btn-block active" role="button">参赛者须知</a>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
         <a href="{{ site.baseurl }}/2016/qa/" class="btn btn-success btn-lg btn-block active" role="button">Q&A</a>
-      </div>      
+      </div>
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
         <a href="{{ site.baseurl }}/2016/find_partner/" class="btn btn-warning btn-block btn-lg active" role="button">寻找双打搭档</a>
       </div>
@@ -119,7 +119,7 @@ description: "Australian Chinese Tennis Club"
     <strong>裁判：</strong>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-    Sam Chan，Grace Chen .....    <a href="{{ site.baseurl }}/volunteer/" target="_blank">继续招募裁判义工</a>  
+    Sam Chan，Grace Chen .....    <a href="{{ site.baseurl }}/volunteer/" target="_blank">继续招募裁判义工</a>
   </div>
 </div>
 <div class="row">
@@ -127,7 +127,7 @@ description: "Australian Chinese Tennis Club"
     <strong>协调员：</strong>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-    Jim Liang，Lauren Shen，.....<a href="{{ site.baseurl }}/volunteer/" target="_blank">继续招募比赛协调员义工</a>  
+    Jim Liang，Lauren Shen，.....<a href="{{ site.baseurl }}/volunteer/" target="_blank">继续招募比赛协调员义工</a>
   </div>
 </div>
 <div class="row">
