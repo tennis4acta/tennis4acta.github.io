@@ -14,9 +14,9 @@ header-img: "img/home-bg.jpg"
    ```
    Bank: Bankwest Australia
 
-   Acc name: Australia Chinese Tennis Club
-   BSB: 302-984
-   Acc number: 0120733
+   Acc name:    Australia Chinese Tennis Club
+   BSB:         302-984
+   Acc number:  0120733
    ```
    附言中请注明参赛球员的姓名。
 
