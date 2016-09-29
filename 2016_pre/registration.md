@@ -18,6 +18,7 @@ header-img: "img/home-bg.jpg"
    BSB: 302-984
    Acc number: 0120733
    ```
+   附言中请注明参赛球员的姓名。
 
 3. 请将转帐截图或者照片发送至
 
