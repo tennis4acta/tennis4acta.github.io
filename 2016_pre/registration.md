@@ -6,8 +6,11 @@ header-img: "img/home-bg.jpg"
 ---
 
 ## 报名流程
+<br>
+
 1. 请填写下面的报名表
 2. 请转帐 报名费（单打$25；双打$50）至
+
 ```
 Bank: Bankwest Australia
 
@@ -15,10 +18,16 @@ Acc name: Australia Chinese Tennis Club
 BSB: 302-984
 Acc number: 0120733
 ```
-3. 请将转帐截图或者照片发送至<br>
-<img src="https://c2.staticflickr.com/6/5633/29374068973_dd66f02a83_o.png" class="img-responsive" alt="email"><br>
+
+3. 请将转帐截图或者照片发送至
+
+<img src="https://c2.staticflickr.com/6/5633/29374068973_dd66f02a83_o.png" class="img-responsive" alt="email">
+
 并在邮件中请注明球员姓名及参赛组别
-4. **请注意：** 澳洲华人网球会将审核了您的报名信息，在收到您的报名费以后，向您发送确认邮件。**只有您收到了我们的确认邮件才表示注册成功。**<br>如果您在转帐并发邮件后的3个工作日后仍没有收到确认邮件，请email或者在微信群中和组委会联系。
+
+4. **请注意：** 澳洲华人网球会将审核了您的报名信息，在收到您的报名费以后，向您发送确认邮件。**只有您收到了我们的确认邮件才表示注册成功。**
+
+如果您在转帐并发邮件后的3个工作日后仍没有收到确认邮件，请email或者在微信群中和组委会联系。
 
 <style>
 @media (max-width: 767px) {
