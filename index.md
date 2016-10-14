@@ -28,6 +28,13 @@ description: "Australian Chinese Tennis Club"
 </div>
 
 <hr>
+<div class="row text-center">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <img class="img-responsive" src="https://c2.staticflickr.com/6/5824/30230300361_7097122852_h.jpg" alt="2016 poster" />
+  </div>
+</div>
+
+<hr>
 
 ## 一、主办单位：澳洲华人网球会
 
