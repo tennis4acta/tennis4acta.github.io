@@ -27,7 +27,7 @@ description: "Australian Chinese Tennis Club"
 
 <hr>
 <div class="row text-center">
-  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+  <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
     <img class="img-responsive" src="https://c2.staticflickr.com/6/5824/30230300361_7097122852_h.jpg" alt="2016 poster" />
   </div>
 </div>
