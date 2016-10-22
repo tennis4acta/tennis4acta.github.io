@@ -23,7 +23,7 @@ header-img: "img/home-bg.jpg"
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <h3>小组赛</h3>
     <div class="iframe-wrapper text-center">
-      <iframe src="http://actc.challonge.com/2016_double_b_roundrobin/module" width="100%" height="2000" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+      <iframe src="http://actc.challonge.com/2016_double_b_roundrobin/module?theme=2" width="100%" height="2000" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
 
