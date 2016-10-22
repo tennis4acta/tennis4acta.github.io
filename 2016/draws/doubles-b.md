@@ -17,8 +17,9 @@ header-img: "img/home-bg.jpg"
 </style>
 
 <h1><p class="text-center">2016年ACTC皇族香米杯华人网球大奖赛</p></h1>
-<h2><p class="text-center">男子B级别单打</p></h2>
+<h2><p class="text-center">男子B级别双打</p></h2>
 <br>
+<h3>小组赛</h3>
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <div class="iframe-wrapper text-center">
@@ -27,6 +28,7 @@ header-img: "img/home-bg.jpg"
   </div>
 <div>
 <br>
+<h3>淘汰赛</h3>
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <div class="iframe-wrapper text-center">
