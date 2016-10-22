@@ -8,22 +8,27 @@ description: "Australian Chinese Tennis Club"
 <h3>2016年ACTC皇族香米杯华人网球大奖赛 开始报名了，请点下面<a href="{{ site.baseurl }}/2016/registration/">大赛报名表</a>报名。</h3>
 <br>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
-      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="{{ site.baseurl }}/2016/registration/" class="btn btn-primary btn-lg btn-block active" role="button">大赛报名表</a>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="{{ site.baseurl }}/2016/terms/" class="btn btn-info btn-lg btn-block active" role="button">参赛者须知</a>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="{{ site.baseurl }}/2016/qa/" class="btn btn-success btn-lg btn-block active" role="button">Q&A</a>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="{{ site.baseurl }}/2016/find_partner/" class="btn btn-warning btn-block btn-lg active" role="button">寻找双打搭档</a>
-      </div>
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
+      <a href="{{ site.baseurl }}/2016/registration/" class="btn btn-primary btn-lg btn-block active" role="button">大赛报名表</a>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
+      <a href="{{ site.baseurl }}/2016/terms/" class="btn btn-info btn-lg btn-block active" role="button">参赛者须知</a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
+      <a href="{{ site.baseurl }}/2016/qa/" class="btn btn-success btn-lg btn-block active" role="button">Q&A</a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
+      <a href="{{ site.baseurl }}/2016/find_partner/" class="btn btn-warning btn-block btn-lg active" role="button">寻找双打搭档</a>
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="row text-center">
+  <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <img class="img-responsive" src="https://c2.staticflickr.com/6/5824/30230300361_7097122852_h.jpg" alt="2016 poster" />
   </div>
 </div>
 
