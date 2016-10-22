@@ -1,5 +1,4 @@
 _site
 node_modules
 *~lock*
-*.ipynb
 .ipynb_checkpoints/
