@@ -19,7 +19,7 @@ header-img: "img/home-bg.jpg"
 </style>
 
 <div class="iframe-wrapper text-center">
-    <iframe src="http://actc.challonge.com/2016_single_b/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+    <iframe src="http://actc.challonge.com/2016_single_b/module" width="100%" height="2000" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 
 
 </div>
