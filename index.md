@@ -26,7 +26,14 @@ description: "Australian Chinese Tennis Club"
 </div>
 <br>
 <hr>
-<h3><a href="{{ site.baseurl }}/2016/prize/">奖品及奖金已公布</a></h3>
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
+      <h3><a href="{{ site.baseurl }}/2016/prize/">奖品及奖金已公布</a></h3>
+    </div>
+  </div>
+</div>
+
 <br>
 <hr>
 <div class="row text-center">
