@@ -24,7 +24,7 @@ header-img: "img/home-bg.jpg"
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <h4>A组</h4>
     <div class="iframe-wrapper text-center">
-      <iframe src="http://actc.challonge.com/2016bdouble_a/module" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+      <iframe src="http://actc.challonge.com/2016bdouble_a/module?show_standings=1" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
