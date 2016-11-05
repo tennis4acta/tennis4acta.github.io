@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "男子B级别双打"
-description: "男子B级别双打"
+description: "赛程"
 header-img: "img/home-bg.jpg"
 ---
 <style>
