@@ -24,37 +24,37 @@ header-img: "img/home-bg.jpg"
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <h4>A组</h4>
     <div class="iframe-wrapper text-center">
-      <iframe src="http://actc.challonge.com/2016bdouble_a/module?show_standings=1" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+      <iframe src="http://actc.challonge.com/2016bdouble_a/module?show_standings=1&tab=standings" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <h4>B组</h4>
     <div class="iframe-wrapper text-center">
-      <iframe src="http://actc.challonge.com/2016bdouble_b/module" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+      <iframe src="http://actc.challonge.com/2016bdouble_b/module?show_standings=1&tab=standings" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <h4>C组</h4>
     <div class="iframe-wrapper text-center">
-      <iframe src="http://actc.challonge.com/2016bdouble_c/module" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+      <iframe src="http://actc.challonge.com/2016bdouble_c/module?show_standings=1&tab=standings" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <h4>D组</h4>
     <div class="iframe-wrapper text-center">
-      <iframe src="http://actc.challonge.com/2016bdouble_d/module" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+      <iframe src="http://actc.challonge.com/2016bdouble_d/module?show_standings=1&tab=standings" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <h4>E组</h4>
     <div class="iframe-wrapper text-center">
-      <iframe src="http://actc.challonge.com/2016bdouble_e/module" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+      <iframe src="http://actc.challonge.com/2016bdouble_e/module?show_standings=1&tab=standings" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <h4>F组</h4>
     <div class="iframe-wrapper text-center">
-      <iframe src="http://actc.challonge.com/2016bdouble_f/module" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+      <iframe src="http://actc.challonge.com/2016bdouble_f/module?show_standings=1&tab=standings" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
 </div>
@@ -64,13 +64,13 @@ header-img: "img/home-bg.jpg"
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <h4>ABC组</h4>
     <div class="iframe-wrapper text-center">
-      <iframe src="http://actc.challonge.com/2016bdouble_abc/module" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+      <iframe src="http://actc.challonge.com/2016bdouble_abc/module?show_standings=1&tab=standings" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <h4>DEF组</h4>
     <div class="iframe-wrapper text-center">
-      <iframe src="http://actc.challonge.com/2016bdouble_def/module" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+      <iframe src="http://actc.challonge.com/2016bdouble_def/module?show_standings=1&tab=standings" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
 </div>  
