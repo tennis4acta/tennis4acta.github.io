@@ -17,7 +17,7 @@ header-img: "img/home-bg.jpg"
 </ul>
 <h2>分组原则</h2>
 本次大奖赛不设种子球员。各个组别球员以（姓，名）按字母排序（少年组按年龄排序），依次放入个小组中。<br>例如，Djokovic, Murray, Federer, Nadal 四位球员分到两个小组中，按姓氏排序为 Djokovic， Federer， Murray， Nadal。那样第一小组球员为Djokovic，Murray，第二小组球员为Federer，Nadal。
-<br>s
+<br>
 
 <h1 class="page-header">比賽規則 Competition Rules</h1>
 <h2>Game rules</h2>
