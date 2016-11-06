@@ -6,16 +6,19 @@ header-img: "img/home-bg.jpg"
 ---
 <h1 class="page-header">比賽分组</h1>
 <ul>
-  <li><a href="{{ site.baseurl }}/2016/draws/single-a">男子A级别单打</a></li>
-  <li><a href="{{ site.baseurl }}/2016/draws/single-b">男子B级别单打</a></li>
-  <li><a href="{{ site.baseurl }}/2016/draws/single-pro">专业组单打（男女均可）</a></li>
-  <li><a href="{{ site.baseurl }}/2016/draws/single-junior">少年单打（7-12岁男女均可）</a></li>
-  <li><a href="{{ site.baseurl }}/2016/draws/double-a">男子A级别双打</a></li>
-  <li><a href="{{ site.baseurl }}/2016/draws/double-b">男子B级别双打</a></li>
-  <li><a href="{{ site.baseurl }}/2016/draws/double-women">女子双打</a></li>
-  <li><a href="{{ site.baseurl }}/2016/draws/double-senior">中老年组男子双打（50～70岁）</a></li>
+  <li><a href="{{ site.baseurl }}/2016/draws/single-a">男子A级别单打</a>：分4个小组，小组头两名进入淘汰赛。</li>
+  <li><a href="{{ site.baseurl }}/2016/draws/single-b">男子B级别单打</a>：分8个小组，小组头两名进入淘汰赛。</li>
+  <li><a href="{{ site.baseurl }}/2016/draws/single-pro">专业组单打（男女均可）</a>：分2个小组，小组头两名进入淘汰赛。</li>
+  <li><a href="{{ site.baseurl }}/2016/draws/single-junior">少年单打（7-12岁男女均可）。</a>：分3个小组，小组第一名直接进入淘汰赛；小组第二名进入附加赛（循环赛），胜者进入淘汰赛</li>
+  <li><a href="{{ site.baseurl }}/2016/draws/double-a">男子A级别双打</a>：分2个小组，小组头两名进入淘汰赛。</li>
+  <li><a href="{{ site.baseurl }}/2016/draws/double-b">男子B级别双打</a>：分6个小组，小组第一名直接进入淘汰赛；小组第二名进入附加赛（循环赛），ABC组及DEF组胜者进入淘汰赛。</li>
+  <li><a href="{{ site.baseurl }}/2016/draws/double-women">女子双打</a>：分2个小组，小组头两名进入淘汰赛。</li>
+  <li><a href="{{ site.baseurl }}/2016/draws/double-senior">中老年组男子双打（50～70岁）</a>：分3个小组，小组第一名直接进入淘汰赛；小组第二名进入附加赛（循环赛），胜者进入淘汰赛。</li>
 </ul>
 <br>
+<h2>分组原则</h2>
+本次大奖赛不设种子球员。各个组别球员以（姓，名）按字母排序（少年组按年龄排序），依次放入个小组中。<br>例如，Djokovic, Murray, Federer, Nadal 四位球员分到两个小组中，按姓氏排序为 Djokovic， Federer， Murray， Nadal。那样第一小组球员为Djokovic，Murray，第二小组球员为Federer，Nadal。
+
 <h1 class="page-header">比賽規則 Competition Rules</h1>
 <h2>Game rules</h2>
 <ol>
