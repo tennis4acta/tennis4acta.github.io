@@ -33,6 +33,6 @@ header-img: "img/home-bg.jpg"
 The final order of the group round robin is determined by the following order from top:<br>我們按照以下條件決定循環賽最終成績
 <ol>
   <li>The number of matches a player/team wins<br>勝場數</li>
-  <li>The game difference, if two teams have same number of wins<br>如果兩隊有相同的勝場數，比較勝局數</li>
+  <li>The number of winning games, if two teams have same number of wins<br>如果兩隊有相同的勝場數，比較勝局數</li>
   <li>The match result between two teams, if two teams have same game difference<br>如果勝局數相同，比較兩隊間的成績</li>
 </ol>
