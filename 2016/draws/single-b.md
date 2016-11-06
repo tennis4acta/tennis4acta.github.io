@@ -58,13 +58,13 @@ header-img: "img/home-bg.jpg"
     </div>
   </div>
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
-    <h4>F组</h4>
+    <h4>G组</h4>
     <div class="iframe-wrapper text-center">
       <iframe src="http://actc.challonge.com/2016bsingle_g/module?show_standings=1&tab=standings" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
-    <h4>F组</h4>
+    <h4>H组</h4>
     <div class="iframe-wrapper text-center">
       <iframe src="http://actc.challonge.com/2016bsingle_h/module?show_standings=1&tab=standings" width="100%" height="300" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
