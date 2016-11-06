@@ -5,16 +5,16 @@ description: "比賽分组及規則"
 header-img: "img/home-bg.jpg"
 ---
 <h1 class="page-header">比賽分组</h1>
-<ol>
+<ul>
   <li><a href="{{ site.baseurl }}/2016/draws/single-a">男子A级别单打</a></li>
   <li><a href="{{ site.baseurl }}/2016/draws/single-b">男子B级别单打</a></li>
-  <li><a href="{{ site.baseurl }}/2016/draws/single-pro">专业组单打（男女均可</a></li>
-  <li><a href="{{ site.baseurl }}/2016/draws/single-junior">少年单打（7-12岁男女均可</a></li>
+  <li><a href="{{ site.baseurl }}/2016/draws/single-pro">专业组单打（男女均可）</a></li>
+  <li><a href="{{ site.baseurl }}/2016/draws/single-junior">少年单打（7-12岁男女均可）</a></li>
   <li><a href="{{ site.baseurl }}/2016/draws/double-a">男子A级别双打</a></li>
   <li><a href="{{ site.baseurl }}/2016/draws/double-b">男子B级别双打</a></li>
   <li><a href="{{ site.baseurl }}/2016/draws/double-women">女子双打</a></li>
   <li><a href="{{ site.baseurl }}/2016/draws/double-senior">中老年组男子双打（50～70岁）</a></li>
-</ol>
+</ul>
 <br>
 <h1 class="page-header">比賽規則 Competition Rules</h1>
 <h2>Game rules</h2>
