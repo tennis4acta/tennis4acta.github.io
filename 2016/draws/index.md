@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "2016年ACTC皇族香米杯華人網球大獎賽"
-description: "比賽分组及規則"
+title: "比賽分组及規則"
+description: "2016年ACTC皇族香米杯華人網球大獎賽"
 header-img: "img/home-bg.jpg"
 ---
 <h1 class="page-header">比賽分组</h1>
