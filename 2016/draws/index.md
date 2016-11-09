@@ -1,9 +1,10 @@
-  ---
+---
 layout: page
 title: "比赛分组及规则"
 description: "2016年ACTC皇族香米杯华人网球大奖赛"
 header-img: "img/home-bg.jpg"
 ---
+
 <h1 class="page-header">比赛分组</h1>
 <ul>
   <li><a class="btn btn-info" role="button" href="{{ site.baseurl }}/2016/draws/single-a">男子A级别单打</a>：分4个小组，小组头两名进入淘汰赛。 </li>
