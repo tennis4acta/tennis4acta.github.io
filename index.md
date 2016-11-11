@@ -8,7 +8,7 @@ description: "Australian Chinese Tennis Club"
 <h3>2016年ACTC皇族香米杯华人网球大奖赛 开始报名了，请点下面<a href="{{ site.baseurl }}/2016/registration/">大赛报名表</a>报名。</h3>
 <br>
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
       <a href="{{ site.baseurl }}/2016/registration/" class="btn btn-primary btn-lg btn-block" disabled="disabled" role="button">大赛报名表</a>
@@ -24,11 +24,14 @@ description: "Australian Chinese Tennis Club"
     </div>
   </div>
 </div>
-<br>
+<br> -->
 <hr>
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered vcenter">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-centered vcenter">
+      <h3><a href="{{ site.baseurl }}/2016/draws/">比赛分组及竞赛规则已公布</a></h3>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-centered vcenter">
       <h3><a href="{{ site.baseurl }}/2016/prize/">奖品及奖金已公布</a></h3>
     </div>
   </div>
