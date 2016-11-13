@@ -11,6 +11,6 @@ header-img: "img/home-bg.jpg"
 
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <img class="img-responsive" src="https://c6.staticflickr.com/6/5569/25318333469_8e09b5fd6f_o.jpg"  alt="2016prize" />
+    <img class="img-responsive" src="https://c1.staticflickr.com/6/5527/30652724400_5b4bfa1d87_o.jpg"  alt="2016prize" />
   </div>
 </div>
