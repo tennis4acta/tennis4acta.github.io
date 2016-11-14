@@ -38,9 +38,9 @@ header-img: "img/home-bg.jpg"
 </ol>
 
 <h2>循环赛规则 Round robin</h2>
-The final order of the group round robin is determined by the following order from top:<br>我们按照以下条件决定循环赛最终成绩
+The final order of the group round robin is determined by the following order from top:<br>我们按照以下顺序决定循环赛最终成绩
 <ol>
   <li>The number of matches a player/team wins<br>胜场数</li>
-  <li>The number of winning games, if two teams have same number of wins<br>如果两队有相同的胜场数，比较胜局数</li>
-  <li>The match result between two teams, if two teams have same game difference<br>如果胜局数相同，比较两队间的成绩</li>
+  <li>The number of match wins between tied opponents<br>如果胜场数相同，比较相互间的成绩</li>
+  <li>The number of winning game<br>如果多队有相同的胜场数及相互胜场数，比较总获胜局数</li>
 </ol>
