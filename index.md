@@ -3,7 +3,7 @@ layout: page
 description: "Australian Chinese Tennis Club"
 ---
 <div class="row text-center">
-  <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <img class="img-responsive" src="https://c2.staticflickr.com/6/5457/30883334701_0acc2d860f_h.jpg" alt="2016 banner" />
   </div>
 </div>
