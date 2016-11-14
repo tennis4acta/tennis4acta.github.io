@@ -2,8 +2,12 @@
 layout: page
 description: "Australian Chinese Tennis Club"
 ---
+<div class="row text-center">
+  <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+    <img class="img-responsive" src="https://c2.staticflickr.com/6/5457/30883334701_0acc2d860f_h.jpg" alt="2016 banner" />
+  </div>
+</div>
 
-<h1><p class="text-center">2016年ACTC皇族香米杯华人网球大奖赛</p></h1>
 <br>
 <!-- <h3>2016年ACTC皇族香米杯华人网球大奖赛 开始报名了，请点下面<a href="{{ site.baseurl }}/2016/registration/">大赛报名表</a>报名。</h3>
 <br> -->
