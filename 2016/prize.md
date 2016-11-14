@@ -3,7 +3,7 @@ layout: page
 title: "2016ACTC皇族香米杯華人網球大獎賽 Prize"
 date:       2016-09-26 12:00:00
 author:     "ACTC"
-header-img: "img/home-bg.jpg"
+header-img: "https://c6.staticflickr.com/6/5457/30883334701_0acc2d860f_h.jpg"
 ---
 
 <h1><p class="text-center">2016年ACTC皇族香米杯华人网球大奖赛 奖品及奖金</p></h1>
