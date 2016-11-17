@@ -8,7 +8,7 @@ header-img: "img/home-bg.jpg"
 @media (max-width: 767px) {
     iframe {
         max-width: calc(100vw + 40px) !important;
-        margin: -11px -25px;}
+        margin: -5px -25px;}
     .iframe-wrapper {
         width:100vw;
         overflow: hidden;
