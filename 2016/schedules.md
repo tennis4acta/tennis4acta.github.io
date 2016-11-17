@@ -15,6 +15,6 @@ header-img: "img/home-bg.jpg"
 
 <h1 class="page-header">11月20日单打赛程</h1>
 <div class="embed-responsive">
-    <iframe class="embed-responsive-item" src="https://docs.google.com/spreadsheets/d/183jilcMs00rdrycHD8FkyvE1idprKMighNTzz1Dy47E/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" height="1000" ></iframe>
+    <iframe class="embed-responsive-item" src="https://docs.google.com/spreadsheets/d/183jilcMs00rdrycHD8FkyvE1idprKMighNTzz1Dy47E/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 </div>
 <br>
