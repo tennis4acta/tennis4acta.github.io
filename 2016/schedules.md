@@ -8,11 +8,11 @@ header-img: "img/home-bg.jpg"
 @media (max-width: 767px) {
     iframe {
         max-width: calc(100vw + 40px) !important;
-        margin: -5px -25px;}
+        margin: -5px -5px;}
     .iframe-wrapper {
         width:100vw;
         overflow: hidden;
-        margin: 0 -15px;}
+        margin: 0 -5px;}
 /* you might not the margin property on the wrapper (or you might need to change it to suit your needs); in my case it's used to align the wrapper with the edge of the screen as my site has 15px padding, which isn't needed here because the form already has it's own padding   */
 }
 </style>
