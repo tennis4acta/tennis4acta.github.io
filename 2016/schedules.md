@@ -4,18 +4,6 @@ title: "赛程"
 description: "Schedule"
 header-img: "img/home-bg.jpg"
 ---
-<style>
-@media (max-width: 767px) {
-    iframe {
-        max-width: calc(100vw + 40px) !important;
-        margin: -5px -5px;}
-    .iframe-wrapper {
-        width:100vw;
-        overflow: hidden;
-        margin: 0 -5px;}
-/* you might not the margin property on the wrapper (or you might need to change it to suit your needs); in my case it's used to align the wrapper with the edge of the screen as my site has 15px padding, which isn't needed here because the form already has it's own padding   */
-}
-</style>
 
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -24,8 +12,9 @@ header-img: "img/home-bg.jpg"
 </div>
 
 <br>
+
 <h1 class="page-header">11月20日单打赛程</h1>
 <div class="embed-responsive embed-responsive-4by3">
-    <iframe class="embed-responsive-item" src="https://docs.google.com/spreadsheets/d/183jilcMs00rdrycHD8FkyvE1idprKMighNTzz1Dy47E/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    <iframe class="embed-responsive-item" src="https://docs.google.com/spreadsheets/d/183jilcMs00rdrycHD8FkyvE1idprKMighNTzz1Dy47E/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" height="1000" ></iframe>
 </div>
 <br>
