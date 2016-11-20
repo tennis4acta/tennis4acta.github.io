@@ -27,7 +27,7 @@ header-img: "img/home-bg.jpg"
       <iframe src="http://actc.challonge.com/2016asingle_final/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
     </div>
   </div>
-<div>
+</div>
 
 <hr>
 
