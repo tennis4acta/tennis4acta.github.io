@@ -43,6 +43,26 @@ description: "Australian Chinese Tennis Club"
 </div>
 <br> -->
 
+<h2><p class="text-center">男子A级别单打</p></h2>
+<h3>淘汰赛</h3>
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
+    <div class="iframe-wrapper text-center">
+      <iframe src="http://actc.challonge.com/2016asingle_final/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+    </div>
+  </div>
+</div>
+
+<h2><p class="text-center">男子B级别单打</p></h2>
+<h3>淘汰赛</h3>
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
+    <div class="iframe-wrapper text-center">
+      <iframe src="http://actc.challonge.com/2016bsingle_final/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+    </div>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-centered vcenter">
