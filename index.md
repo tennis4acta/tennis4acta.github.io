@@ -43,7 +43,6 @@ description: "Australian Chinese Tennis Club"
 </div>
 <br> -->
 
-<hr>
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-centered vcenter">

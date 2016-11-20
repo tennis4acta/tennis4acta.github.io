@@ -18,6 +18,7 @@ header-img: "img/home-bg.jpg"
 
 <h1><p class="text-center">2016年ACTC皇族香米杯华人网球大奖赛</p></h1>
 <h2><p class="text-center">男子A级别单打</p></h2>
+
 <h3>更新</h3>
   <ul>
     <li>17/11/2016： A级别C组 LU Yongfeng 因故退赛。</li>
