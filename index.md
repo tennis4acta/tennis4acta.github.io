@@ -43,8 +43,7 @@ description: "Australian Chinese Tennis Club"
 </div>
 <br> -->
 
-<h2><p class="text-center">男子A级别单打</p></h2>
-<h3>淘汰赛</h3>
+<h3>男子A级别单打 淘汰赛</h3>
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <div class="iframe-wrapper text-center">
@@ -53,8 +52,7 @@ description: "Australian Chinese Tennis Club"
   </div>
 </div>
 
-<h2><p class="text-center">男子B级别单打</p></h2>
-<h3>淘汰赛</h3>
+<h3>男子B级别单打 淘汰赛</h3>
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
     <div class="iframe-wrapper text-center">
