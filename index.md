@@ -42,13 +42,6 @@ description: "Australian Chinese Tennis Club"
   </div>
 </div>
 <br> -->
-<h2>男子A级别单打 淘汰赛</h2>
-      <iframe src="http://actc.challonge.com/2016asingle_final/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
-
-
-<h2>男子B级别单打 淘汰赛</h2>
-      <iframe src="http://actc.challonge.com/2016bsingle_final/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
-
 
 <hr>
 <div class="row">
