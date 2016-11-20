@@ -29,7 +29,7 @@ header-img: "img/home-bg.jpg"
   </div>
 <div>
 
-<br>
+<hr>
 
 <h3>小组赛</h3>
 <div class="row">
