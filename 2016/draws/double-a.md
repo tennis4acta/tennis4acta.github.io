@@ -23,3 +23,9 @@ header-img: "img/home-bg.jpg"
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="http://actc.challonge.com/2016adouble_final/module" frameborder="0" allowtransparency="true"></iframe>
 </div>
+
+<hr>
+<h2>更新</h2>
+<ul>
+<li>21/11/2016： 男子双打A级别B组 YIN Guanqiao 因伤退赛，替换为 JIN Hong</li>
+</ul>
