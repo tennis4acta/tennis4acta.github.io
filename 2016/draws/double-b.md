@@ -55,3 +55,8 @@ header-img: "img/home-bg.jpg"
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="http://actc.challonge.com/2016bdouble_final/module" frameborder="0" allowtransparency="true"></iframe>
 </div>
+
+<h2>更新</h2>
+<ul>
+<li>21/11/2016： 男子双打B级别E组 CHEN Kile 因故退赛，替换为 LI Eddy</li>
+</ul>
