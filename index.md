@@ -47,11 +47,8 @@ description: "Australian Chinese Tennis Club"
 
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10  col-md-offset-1 col-md-10  col-lg-offset-1 col-lg-10 col-centered vcenter">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-centered vcenter">
-    <h3><a href="{{ site.baseurl }}/2016/1127/"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> A/B 级别单打比赛进行中</a></h3>
-  </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-centered vcenter">
-      <h3><a href="{{ site.baseurl }}/2016/schedules/"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> 11月27日赛程已公布</a></h3>
+      <h3><a href="{{ site.baseurl }}/2016/schedules/"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> 11月27日比赛进行中 </a></h3>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-centered vcenter">
       <h3><a href="{{ site.baseurl }}/2016/draws/"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> 比赛分组及竞赛规则已公布</a></h3>
