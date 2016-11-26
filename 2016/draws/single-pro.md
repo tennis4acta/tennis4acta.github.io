@@ -27,4 +27,6 @@ header-img: "img/home-bg.jpg"
 <h2>更新</h2>
 <ul>
 <li>23/11/2016： 男子专业级别B组 YU Sameul 因故退赛，替换为 CAO Junjie</li>
+<li>26/11/2016： 男子专业级别A组 HARRIS Sameul 因故退赛，替换为 HAN Wei</li>
+<li>26/11/2016： 男子专业级别A组 HU John 因故退赛，替换为 XU Brendan</li>
 </ul>
