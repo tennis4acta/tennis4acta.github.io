@@ -272,26 +272,3 @@ description: "Australian Chinese Tennis Club"
 <hr>
 <h4 class="text-center"> <strong>2015年ACTC皇族香米杯華人網球大獎賽</strong> </h4>
 <br>
-
-<script>
-$(document).ready(function () {
-    jQuery("#nanoGallery").nanoGallery({
-        kind: 'flickr',
-        userID: '140446684@N03',
-
-        // uncomment this line to display one specific album:
-        photoset:'72157677489196035',
-
-        // uncomment this line to display full photostream (v5.0.0):
-        // photoset:'none',
-
-        thumbnailWidth: 125,
-        thumbnailHeight: 125,
-        thumbnailLabel: {
-            displayDescription: false,
-            position: 'overImageOnBottom'
-        },
-        thumbnailHoverEffect:'borderLighter'
-    });
-});
-</script>

@@ -252,3 +252,27 @@
 <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
 <script src="{{ "/js/bootstrap-image-gallery.min.js " | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/js/jquery.nanogallery.min.js" | prepend: site.baseurl }}"></script>
+
+
+<script>
+$(document).ready(function () {
+    jQuery("#nanoGallery").nanoGallery({
+        kind: 'flickr',
+        userID: '140446684@N03',
+
+        // uncomment this line to display one specific album:
+        photoset:'72157677489196035',
+
+        // uncomment this line to display full photostream (v5.0.0):
+        // photoset:'none',
+
+        thumbnailWidth: 125,
+        thumbnailHeight: 125,
+        thumbnailLabel: {
+            displayDescription: false,
+            position: 'overImageOnBottom'
+        },
+        thumbnailHoverEffect:'borderLighter'
+    });
+});
+</script>
