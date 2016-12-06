@@ -204,45 +204,42 @@ description: "Australian Chinese Tennis Club"
         <li data-target="#carousel-example-generic" data-slide-to="5"></li>
         <li data-target="#carousel-example-generic" data-slide-to="6"></li>
       </ol>
+
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="{{ site.baseurl }}/img/2015/hejia/95.jpg" alt="95">
+          <img src="https://c8.staticflickr.com/6/5701/31175517591_1f6916c3d9_h.jpg" alt="95">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="{{ site.baseurl }}/img/2015/hejia/71.jpg" alt="71">
+          <img src="https://c1.staticflickr.com/6/5614/30468465704_e44ae0872d_h.jpg" alt="71">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="{{ site.baseurl }}/img/2015/hejia/70.jpg" alt="70">
+          <img src="https://c4.staticflickr.com/6/5697/31175516971_23148c8a50_h.jpg" alt="70">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="{{ site.baseurl }}/img/2015/hejia/69.jpg" alt="69">
+          <img src="https://c1.staticflickr.com/6/5746/30468465104_86079ab706_h.jpg" alt="69">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="{{ site.baseurl }}/img/2015/hejia/67.jpg" alt="67">
+          <img src="https://c4.staticflickr.com/6/5568/30482575083_f7aa023619_h.jpg" alt="67">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="{{ site.baseurl }}/img/2015/hejia/66.jpg" alt="66">
-          <div class="carousel-caption">
-          </div>
-        </div>
-        <div class="item">
-          <img src="{{ site.baseurl }}/img/2015/hejia/65.jpg" alt="65">
+          <img src="https://c4.staticflickr.com/6/5696/31290494595_7d513ba19e_h.jpg" alt="66">
           <div class="carousel-caption">
           </div>
         </div>
       </div>
       <!-- Controls -->
+
       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
