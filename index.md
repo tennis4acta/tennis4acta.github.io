@@ -140,6 +140,7 @@ description: "Australian Chinese Tennis Club"
 <p>今年的赛事由皇族牌泰国香米的冠名赞助，同时也得到了Western Union西联汇款、H&T华信地产、OSIM、慕思寝具、蜀香坊、康道国际、澳力宝、澳中商业保险公司和Pro Racquet Sports和何嘉创意制作公司等的鼎力支持和赞助。</p>
 <hr>
 
+<h2>相册集锦</h2>
 <div id="nanoGallery"></div>
 
 
