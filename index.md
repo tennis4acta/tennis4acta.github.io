@@ -122,15 +122,30 @@ description: "Australian Chinese Tennis Club"
 
 <br>
 <hr>
+
+<p>由澳洲华人网球会主办的ACTC皇族香米杯网球大奖赛于11月20日和27日两天在Pennant Hills Tennis Centre进行。球员和亲友约500人参与了这场网球盛宴。</p>
+
+<p>这次大奖赛，赛事组委会应广大网球爱好者的要求，除了传统双打项目，还增设了男子单打项目。11月20日进行男子单打A级别和B级别两个项目的预赛，11月27日进行男子A级别双打、男子B级别双打、女子双打、中老年双打，以及专业组单打和少年单打的比赛项目，同时还进行了男子单打A和B级别的决赛。</p>
+
+<p>两天的比赛，近200位参赛球员在8个项目的比赛中，展开激烈的争夺。各个赛场高潮迭起，精彩纷呈。据了解，本届大奖赛引起了各路网球好手的极大关注和重视，被称之为华人网球年终总决赛。很多球员在赛前几个月里积极准备，强化训练，针对性练兵，力争在比赛中发挥出最佳竞技状态，取得好成绩。经过290多场比赛，于11月27日下午决出了全部8个项目的名次，中国网球传奇人物朱振华，前国手刘晓成和韩蓓为赢得名次的球员颁发奖杯和奖金。</p>
+
+<p>四个双打项目的比赛中，Luke陈宇辰/ William陈忠伟中青年组合获得男子A级别双打冠军，Jin Xiaoyuan/ Michael Wang亚军。李然/Collin Maxime赢得男子B级别双打冠军，黎瀚/Jason Ju亚军。获得女双冠军的是Maria Xu/高卫华，Xue Lin/Crystal Ma获得亚军。赢得中老年双打冠军的是Yang Yan/Lu Lewis，李共/David Fei获得亚军。</p>
+
+<p>单打项目方面，Luke陈宇辰赢得男子A级别单打冠军，Frank张获得亚军。男子B级别单打由两位50岁以上的球员Yang Yan和桂志鸿分别获得冠亚军。专业组单打分别由Qiu Junto和Brendan许剑强分获冠亚军。少年单打，Will Zhao赢得冠军，Raymond Jiang获得亚军，Chase Zhao和Patrick Xu并列第三。</p>
+
+<p>大奖赛延承了传统，在比赛现场举行了儿童网球有奖游戏，旨在培养儿童对网球的兴趣，也营造一种家庭网球日的气氛。</p>
+
+<p>本届大奖赛，赛事组在官方网页上采用了即时比分实况更新系统，让球员在赛场通过手机及时了解赛况。赛前分组也是采用程序化抽签，让参赛球员在公平公正比赛氛围中竞逐。</p>
+
+<p>今年的赛事由皇族牌泰国香米的冠名赞助，同时也得到了Western Union西联汇款、H&T华信地产、OSIM、慕思寝具、蜀香坊、康道国际、澳力宝、澳中商业保险公司和Pro Racquet Sports和何嘉创意制作公司等的鼎力支持和赞助。</p>
+<hr>
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
     <img class="img-responsive" src="https://c2.staticflickr.com/6/5824/30230300361_7097122852_h.jpg" alt="2016 poster" />
   </div>
 </div>
 
-<hr>
-
-## 一、主办单位：澳洲华人网球会
+<!-- ## 一、主办单位：澳洲华人网球会
 
 ## 二、比赛地点：
 > **Pennant Hills Tennis Centre** <br>
@@ -241,7 +256,8 @@ description: "Australian Chinese Tennis Club"
     April Pan，Shelley Zhang <a href="{{ site.baseurl }}/volunteer/" target="_blank">继续招募。负责儿童游戏，或接待员，或食品准备</a>
   </div>
 </div>
-<p>赛事组委会所有成员将竭尽所能，为华人网球爱好者奉献一场高大上的赛事。11月下旬，不见不散！</p>
+<p>赛事组委会所有成员将竭尽所能，为华人网球爱好者奉献一场高大上的赛事。11月下旬，不见不散！</p> -->
+
 <hr>
 <p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
 <div class="row">
