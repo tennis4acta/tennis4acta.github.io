@@ -139,11 +139,15 @@ description: "Australian Chinese Tennis Club"
 
 <p>今年的赛事由皇族牌泰国香米的冠名赞助，同时也得到了Western Union西联汇款、H&T华信地产、OSIM、慕思寝具、蜀香坊、康道国际、澳力宝、澳中商业保险公司和Pro Racquet Sports和何嘉创意制作公司等的鼎力支持和赞助。</p>
 <hr>
-<div class="row text-center">
+
+<div id="nanoGallery"></div>
+
+
+<!-- <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
     <img class="img-responsive" src="https://c2.staticflickr.com/6/5824/30230300361_7097122852_h.jpg" alt="2016 poster" />
   </div>
-</div>
+</div> -->
 
 <!-- ## 一、主办单位：澳洲华人网球会
 
@@ -268,3 +272,26 @@ description: "Australian Chinese Tennis Club"
 <hr>
 <h4 class="text-center"> <strong>2015年ACTC皇族香米杯華人網球大獎賽</strong> </h4>
 <br>
+
+<script>
+$(document).ready(function () {
+    jQuery("#nanoGallery").nanoGallery({
+        kind: 'flickr',
+        userID: '140446684@N03',
+
+        // uncomment this line to display one specific album:
+        photoset:'72157677489196035',
+
+        // uncomment this line to display full photostream (v5.0.0):
+        // photoset:'none',
+
+        thumbnailWidth: 125,
+        thumbnailHeight: 125,
+        thumbnailLabel: {
+            displayDescription: false,
+            position: 'overImageOnBottom'
+        },
+        thumbnailHoverEffect:'borderLighter'
+    });
+});
+</script>
