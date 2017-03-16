@@ -1,6 +1,6 @@
 ---
 layout:     page
-title:      "2017年ACTC杯悉尼华人网球地域赛"
+title:      "2017 ACTC杯悉尼华人网球地域赛"
 date:       2017-03-10 12:00:00
 author:     "ACTC"
 header-img: "img/post-bg-01.jpg"
