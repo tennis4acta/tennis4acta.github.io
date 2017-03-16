@@ -1,6 +1,6 @@
 ---
 layout:     page
-title:      "2017年ACTC华人网球地域赛"
+title:      "2017年ACTC杯悉尼华人网球地域赛"
 date:       2017-03-10 12:00:00
 author:     "ACTC"
 header-img: "img/post-bg-01.jpg"
@@ -10,7 +10,7 @@ header-img: "img/post-bg-01.jpg"
 
 <hr>
 
-<h1>2017年ACTC华人网球地域赛章程</h1>
+<h1>2017年ACTC杯悉尼华人网球地域赛章程</h1>
 
 <dl>
   <dt>比赛时间：</dt><dd>2017年3月26日8:30am（请选手8:00am到场）</dd>
