@@ -1,6 +1,7 @@
 ---
 layout:     page
 title:      "澳洲华人网球会"
+description: "Australian Chinese Tennis Club"
 date:       2017-06-04
 author:     "ACTC"
 header-img: "img/post-bg-01.jpg"
