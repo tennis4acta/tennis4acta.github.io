@@ -24,6 +24,25 @@ header-img: "img/history-bg.jpg"
 <br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+    <h3>陈娟</h3>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
+    <dl>
+      <dt>前中国国家队队员</dt>
+      <dd>1978年第8届曼谷亚运会女单亚军，和余丽桥搭档女双季军</dd>
+      <dd>1978年全国网球赛和余丽桥搭档女双冠军</dd>
+      <dd>1980年全国硬地网球冠军赛女单冠军</dd>
+      <dd>1980年全国硬地网球冠军赛，和朱晓云搭档女双亚军</dd>
+      <dd>1981年全国硬地网球冠军赛，和朱晓云搭档女双冠军</dd>
+      <dd>1984年全国硬地网球冠军赛，和龚庆庆搭档女双冠军</dd>
+      <dd>现在在墨尔本从事网球教学</dd>
+    </dl>
+    <img class="img-responsive" src="https://c1.staticflickr.com/5/4240/34290459274_de898ff9b7_s.jpg" alt="lxc" />
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <h3>刘晓成</h3>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
@@ -119,7 +138,8 @@ header-img: "img/history-bg.jpg"
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
-      <dt>11岁，目前澳洲该年龄组排名第三</dt>
+      <dt>12岁，目前澳洲该年龄组排名第三</dt>
+      <dd>2017年代表澳大利亚赴法国参加浪琴杯13岁以下网球赛</dd>
       <dd>2015年TCA少年网球大师赛冠军</dd>
       <dd>2016年Nepean Easter网球赛冠军</dd>
       <dd>2016年纽省网球锦标赛少年男子双打冠军</dd>
