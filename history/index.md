@@ -6,6 +6,7 @@ header-img: "img/history-bg.jpg"
 ---
 
 <div class="list-group">
+    <a href="{{ site.baseurl }}/history/2016/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2016年ACTC皇族香米杯華人網球大獎賽</a>
     <a href="{{ site.baseurl }}/history/2015/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2015年ACTC皇族香米杯華人網球大獎賽</a>
     <a href="{{ site.baseurl }}/history/2012/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2012年ACTA华人網球大獎賽</a>
     <a href="{{ site.baseurl }}/history/2011/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2011年ACTA皇族香米杯華人網球大獎賽</a>

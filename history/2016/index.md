@@ -1,6 +1,9 @@
 ---
-layout: page
-description: "Australian Chinese Tennis Club"
+layout:     page
+title:      "2016年ACTC皇族香米杯华人网球大奖赛"
+date:       2016-11-27
+author:     "ACTC"
+header-img: "img/post-bg-01.jpg"
 ---
 
 <style>
@@ -14,6 +17,8 @@ description: "Australian Chinese Tennis Club"
         margin: 0 -15px;}
 }
 </style>
+
+<h2>近两百位网球好手角逐八个项目桂冠</h2>
 
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
