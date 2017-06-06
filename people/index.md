@@ -37,7 +37,7 @@ header-img: "img/history-bg.jpg"
       <dd>1984年全国硬地网球冠军赛，和龚庆庆搭档女双冠军</dd>
       <dd>现在在墨尔本从事网球教学</dd>
     </dl>
-    <img class="img-responsive" src="https://c1.staticflickr.com/5/4240/34290459274_de898ff9b7_s.jpg" alt="lxc" />
+    <img class="img-responsive" src="https://c1.staticflickr.com/5/4240/34290459274_7093c6ae22_h.jpg" alt="chenjuan" />
   </div>
 </div>
 <br>
