@@ -4,6 +4,8 @@ title: "過往賽事"
 description: "History"
 header-img: "img/history-bg.jpg"
 ---
+<h2><a href="{{ site.baseurl }}/history/all_results/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 历史成绩</a></h2>
+
 
 <div class="list-group">
     <a href="{{ site.baseurl }}/history/2016/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2016年ACTC皇族香米杯華人網球大獎賽</a>
