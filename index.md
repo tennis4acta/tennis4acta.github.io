@@ -3,14 +3,19 @@ layout:     page
 title:      "澳洲华人网球会"
 description: "Australian Chinese Tennis Club"
 ---
+<h1>华人网球免费辅导活动深受欢迎</h1>
+<h2>业余网球爱好者认真学习受益良多</h2>
 
-<h2>ACTC首次举办华人女子网球活动</h2>
+<p>为了提高华人业余网球水平，推动华人网球运动发展。澳洲华人网球会于2017年6月4日和6月25日分别举办女子和男子网球免费辅导活动。近60位业余网球爱好者参加活动，接受专业教练的指导。</p>
+<p>华人网球辅导活动由澳洲华人网球会名誉主席刘晓成和顾问韩蓓发起和组织，并亲自组成专业教练团队，研究指导方案。专业教练梅加贝、庄培和陈宇辰积极参与，无私奉献。几位教练根据球员特点，按水平程度和技术特点，从底线、截击、高压和发球等技术环节精心指导，逐个纠正不规范动作。指导活动中，球员认真学习，根据教练的指点反复练习。</p>
+<p>澳洲华人网球会是非盈利组织，有责任帮助广大业余网球爱好者提高技战术水平。从举办的两次活动来看，球员受益很多，深受欢迎。我们将认真总结经验，把以后的网球公益活动办得更好。</p>
 
-<p>为了提高华人业余女子网球水平，澳洲华人网球会于2017年6月4日在Welfare Ave, Beverly Hills举办女子网球指导活动。球会名誉主席刘晓成和球会顾问韩蓓亲自出马教学，原湖北队的梅加贝和原上海队的陈宇辰加入教练团队。</p>
-<p>这次活动吸引了众多女子网球爱好者积极参与，使她们有机会得到国家级教练的精心辅导。</p>
-<p>球会将根据广大球员的需要，不定期举办男女网球指导活动，帮助网球爱好者提高水平。</p>
-
-<img class="img-responsive" src="https://c1.staticflickr.com/5/4230/35095748046_8e41c032ba_k.jpg" alt="wuhan" width="800" />
+<img class="img-responsive" src="https://farm5.staticflickr.com/4342/36998687711_cbc8391f9f_c.jpg" alt="event1" width="800" />
+<br>
+<img class="img-responsive" src="https://farm5.staticflickr.com/4338/37140962635_680137a39a_c.jpg" alt="jeremy2" width="800" />
+<br>
+<br>
+<img class="img-responsive" src="https://farm5.staticflickr.com/4230/35095748046_dbf59bb7fc_c.jpg" alt="jeremy2" width="800" />
 
 <hr>
 <p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
