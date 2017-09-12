@@ -1,7 +1,9 @@
 ---
-layout:     page
-title:      "澳洲华人网球会"
-description: "Australian Chinese Tennis Club"
+layout:     post
+title:      "光明壹佰Be100和澳洲华人网球会正式签约冠名赞助2017年ACTC华人网球大奖赛"
+date:       2017-09-12 12:00:00
+author:     "ACTC"
+header-img: "img/post-bg-01.jpg"
 ---
 <h1>光明壹佰Be100和澳洲华人网球会正式签约冠名赞助2017年ACTC华人网球大奖赛</h1>
 
@@ -11,13 +13,5 @@ description: "Australian Chinese Tennis Club"
 <p>澳洲华人网球会是一个非营利性的组织，球会所有的工作人员都是义务为广大网球爱好者服务。多年来，球会除了主办每年年末的ACTC网球大奖赛，今年上半年还参与了华人网球地域赛的组织工作，以及不定期举办网球球友的免费指导活动。球会得到光明壹佰（Be100）地产开发公司的鼎力支持，无疑给该组织注入了新的活力。</p>
 <p>据悉，目前澳洲华人网球会已经启动了“2017年ACTC光明壹佰华人网球大奖赛”的筹备工作。球会负责人表示，组委会工作团队将全力以赴，为华人网球爱好者举办一场高质量的赛事。</p>
 
-<img class="img-responsive" src="https://farm5.staticflickr.com/4416/36348884404_c88bd67fba_b.jpg" alt="sign" width="1024" />
+<img class="img-responsive" src="https://farm5.staticflickr.com/4416/36348884404_c88bd67fba_b.jpg" alt="event1" width="1024" />
 <p>图片说明：图为光明壹佰Be100的马达和澳洲华人网球会的Warren Wang正式签订赞助协议。</p>
-
-<hr>
-<p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
-<div class="row">
-  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
-    <img class="img-responsive" src="https://c5.staticflickr.com/9/8179/28251007604_30faf539bc_z.jpg" alt="Chania" />
-  </div>
-</div>
