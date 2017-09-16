@@ -3,7 +3,7 @@ layout:     page
 title:      "澳洲华人网球会"
 description: "Australian Chinese Tennis Club"
 ---
-# 2017年ACTC光明壹佰杯华人网球大奖赛方案
+# 2017 ACTC光明壹佰杯华人网球大奖赛方案
 
 ## 主办单位：澳洲华人网球会
 
