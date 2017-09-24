@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2016 ACTC 网球大奖赛 报名表"
+title: "2017 ACTC 网球大奖赛 报名表"
 description: "Registration"
 header-img: "img/home-bg.jpg"
 ---
@@ -18,5 +18,3 @@ header-img: "img/home-bg.jpg"
 * <a href="https://www.eventbrite.com.au/e/2017-actc-b-tickets-38071904090?ref=elink" target="_blank" style="color:#005580">男子双打 B级别</a>
 * <a href="https://www.eventbrite.com.au/e/2017-actc-tickets-38104026168?ref=elink" target="_blank" style="color:#005580">女子双打</a>
 * <a href="https://www.eventbrite.com.au/e/2017-actc-50-70-tickets-38104475512?ref=elink" target="_blank" style="color:#005580">中老年男子双打（50 -70岁）</a>
-
-
