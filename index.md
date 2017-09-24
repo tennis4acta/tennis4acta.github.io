@@ -9,20 +9,14 @@ description: "Australian Chinese Tennis Club"
 
 ## 主办单位：澳洲华人网球会
 ### 冠名赞助：光明壹佰 Be100 Property
-
-<br>
-
+___
 <a role="button" class="btn btn-info btn-block" href="{{ site.baseurl }}/2017/rules/">参赛者须知</a>
-
 #### 请点击以上链接，仔细阅读参赛者须知。如有违反或未符合参赛条件，ACTC将取消该球员参赛资格。
 
 <br>
-
 #### ACTC 将于2017年9月30日晚8点整开放报名。
-
 <a role="button" class="btn btn-info btn-block " href="{{ site.baseurl }}/2017/registration/" disabled="disabled">报名表</a>
-
-<br>
+___
 
 ## 比赛地点：Pennant Hills Tennis Centre
 #### Pennant Hills Park, Britannia Street Pennant Hills NSW 2120
@@ -58,7 +52,6 @@ description: "Australian Chinese Tennis Club"
 
 #### 注：参加少年单打项目的球员不受排名限制。赛事组委会有权根据实际情况调整和解释大奖赛方案。
 #### 注：本届大奖赛是为**华裔**业余网球球员举办的赛事”，华人业余网球员都可以参加。但如果遇到特殊情况，比如球员父母一方是华人，祖籍是华人等，需要提供相关证明，请在报名前提交组委会讨论通过后再报名。
-___
 ___
 
 ### 组委会成员
