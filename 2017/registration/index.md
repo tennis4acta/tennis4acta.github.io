@@ -12,13 +12,13 @@ header-img: "img/home-bg.jpg"
 ### 各级别报名请点击一下相应链接：
 
 #### 单打
-* <a href="href="{{ site.baseurl }}/2017/registration/single_a" target="_blank" style="color:#005580">男子单打 A级别</a>
-* <a href="href="{{ site.baseurl }}/2017/registration/single_b" target="_blank" style="color:#005580">男子单打 B级别</a>
-* <a href="href="{{ site.baseurl }}/2017/registration/single_j" target="_blank" style="color:#005580">少年单打</a>
+* <a href="{{ site.baseurl }}/2017/registration/single_a" target="_blank" style="color:#005580">男子单打 A级别</a>
+* <a href="{{ site.baseurl }}/2017/registration/single_b" target="_blank" style="color:#005580">男子单打 B级别</a>
+* <a href="{{ site.baseurl }}/2017/registration/single_j" target="_blank" style="color:#005580">少年单打</a>
 
 #### 双打
 
-* <a href="href="{{ site.baseurl }}/2017/registration/double_a" target="_blank" style="color:#005580">男子双打 A级别</a>
-* <a href="href="{{ site.baseurl }}/2017/registration/double_b" target="_blank" style="color:#005580">男子双打 B级别</a>
-* <a href="href="{{ site.baseurl }}/2017/registration/double_w" target="_blank" style="color:#005580">女子双打</a>
-* <a href="href="{{ site.baseurl }}/2017/registration/double_" target="_blank" style="color:#005580">中老年男子双打（50 -70岁）</a>
+* <a href="{{ site.baseurl }}/2017/registration/double_a" target="_blank" style="color:#005580">男子双打 A级别</a>
+* <a href="{{ site.baseurl }}/2017/registration/double_b" target="_blank" style="color:#005580">男子双打 B级别</a>
+* <a href="{{ site.baseurl }}/2017/registration/double_w" target="_blank" style="color:#005580">女子双打</a>
+* <a href="{{ site.baseurl }}/2017/registration/double_s" target="_blank" style="color:#005580">中老年男子双打（50 -70岁）</a>

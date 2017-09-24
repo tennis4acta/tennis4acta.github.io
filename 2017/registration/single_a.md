@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2017 ACTC 网球大奖赛 男子单打A级别"
+title: "2017 ACTC 网球大奖赛 男子单打A级别 报名表"
 description: "男子单打A级别"
 header-img: "img/home-bg.jpg"
 ---
