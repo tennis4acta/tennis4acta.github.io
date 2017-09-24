@@ -45,11 +45,12 @@ description: "Australian Chinese Tennis Club"
 #### 注：本届大奖赛是为**华裔**业余网球球员举办的赛事”，华人业余网球员都可以参加。但如果遇到特殊情况，比如球员父母一方是华人，祖籍是华人等，需要提供相关证明，请在报名前提交组委会讨论通过后再报名。
 ___
 
-## <button type="button" class="btn btn-info btn-block" href="{{ site.baseurl }}/2017/rules">参赛者须知</button>
+<a role="button" class="btn btn-info btn-block" href="{{ site.baseurl }}/2017/rules/">参赛者须知</a>
 
 #### 请点击以上链接，仔细阅读参赛者须知。如有违反或未符合参赛条件，ACTC将取消该球员参赛资格。
+___
 
-## 组委会成员
+### 组委会成员
 赛事总指导：刘晓成 Leo（球会名誉主席）
 赛事总顾问：韩蓓 Helen（球会名誉顾问）
 赛事总监：王跃 Warren
