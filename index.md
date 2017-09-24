@@ -9,13 +9,10 @@ description: "Australian Chinese Tennis Club"
 ### 冠名赞助：光明壹佰 Be100 Property
 ___
 <a role="button" class="btn btn-info btn-block" href="{{ site.baseurl }}/2017/rules/">参赛者须知</a>
-#### 请点击以上链接，仔细阅读参赛者须知。如有违反或未符合参赛条件，ACTC将取消该球员参赛资格。
-
-<br>
+___
 #### ACTC 将于2017年9月30日晚8点整开放报名。
 <a role="button" class="btn btn-warning btn-block " href="{{ site.baseurl }}/2017/registration/" disabled="disabled">报名表</a>
 ___
-
 ## 比赛地点：Pennant Hills Tennis Centre
 #### Pennant Hills Park, Britannia Street Pennant Hills NSW 2120
 
