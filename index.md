@@ -10,8 +10,8 @@ description: "Australian Chinese Tennis Club"
 ___
 <a role="button" class="btn btn-info btn-block" href="{{ site.baseurl }}/2017/rules/">参赛者须知</a>
 ___
-#### ACTC 将于2017年9月30日晚8点整开放报名。
 <a role="button" class="btn btn-warning btn-block " href="{{ site.baseurl }}/2017/registration/" disabled="disabled">报名表</a>
+#### ACTC 将于2017年9月30日晚8点整开放报名。
 ___
 ## 比赛地点：Pennant Hills Tennis Centre
 #### Pennant Hills Park, Britannia Street Pennant Hills NSW 2120
