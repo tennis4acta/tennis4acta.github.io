@@ -10,13 +10,12 @@ description: "Australian Chinese Tennis Club"
 ___
 <a role="button" class="btn btn-info btn-block" href="{{ site.baseurl }}/2017/rules/">参赛者须知</a>
 
-<a role="button" class="btn btn-warning btn-block " href="{{ site.baseurl }}/2017/registration/" disabled="disabled">报名表</a>
-#### ACTC 将于2017年9月30日晚8点整开放报名。
+<a role="button" class="btn btn-warning btn-block " href="{{ site.baseurl }}/2017/registration/">报名表</a>
 ___
-## 比赛地点：Pennant Hills Tennis Centre
+### 比赛地点：Pennant Hills Tennis Centre
 #### Pennant Hills Park, Britannia Street Pennant Hills NSW 2120
 
-## 比赛日期（根据报名情况调整）：
+### 比赛日期（根据报名情况调整）：
 * 2017年11月26日星期日：
   * 男子A级别单打，男子B级别单打，少年单打（打完决赛）
 * 2017年12月3日星期日：
@@ -24,15 +23,15 @@ ___
 
 #### 注：如遇大雨，比赛将延后，到时请留意球会网站和群里的消息。
 
-## 比赛项目：
+### 比赛项目：
 本届大奖赛设有七个项目，如果某项目报名人数不足6人（对），将取消该项目。组委会有权根据报名情况调整参赛人数。
 
-### 单打（参赛人数）：
+#### 单打（参赛人数）：
 * 男子A级别单打（20人）  
 * 男子B级别单打 （40人）
 * 少年单打（8-12岁男女均可）（16人）
 
-### 双打（参赛对数）：
+#### 双打（参赛对数）：
 * 男子A级别双打（16对）  
 * 男子B级别双打（32对）
 * 女子双打（16对）
