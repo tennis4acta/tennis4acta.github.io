@@ -4,10 +4,8 @@ title:      "澳洲华人网球会"
 description: "Australian Chinese Tennis Club"
 ---
 # 2017 ACTC光明壹佰杯华人网球大奖赛方案
-
 <br>
-
-## 主办单位：澳洲华人网球会
+### 主办单位：澳洲华人网球会
 ### 冠名赞助：光明壹佰 Be100 Property
 ___
 <a role="button" class="btn btn-info btn-block" href="{{ site.baseurl }}/2017/rules/">参赛者须知</a>
@@ -15,7 +13,7 @@ ___
 
 <br>
 #### ACTC 将于2017年9月30日晚8点整开放报名。
-<a role="button" class="btn btn-info btn-block " href="{{ site.baseurl }}/2017/registration/" disabled="disabled">报名表</a>
+<a role="button" class="btn btn-warning btn-block " href="{{ site.baseurl }}/2017/registration/" disabled="disabled">报名表</a>
 ___
 
 ## 比赛地点：Pennant Hills Tennis Centre
