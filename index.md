@@ -9,7 +9,7 @@ description: "Australian Chinese Tennis Club"
 ### 冠名赞助：光明壹佰 Be100 Property
 ___
 <a role="button" class="btn btn-info btn-block" href="{{ site.baseurl }}/2017/rules/">参赛者须知</a>
-___
+
 <a role="button" class="btn btn-warning btn-block " href="{{ site.baseurl }}/2017/registration/" disabled="disabled">报名表</a>
 #### ACTC 将于2017年9月30日晚8点整开放报名。
 ___
