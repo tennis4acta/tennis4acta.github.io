@@ -11,7 +11,9 @@ ___
 <a role="button" class="btn btn-info btn-block" href="{{ site.baseurl }}/2017/rules/">参赛者须知</a>
 
 <a role="button" class="btn btn-warning btn-block " href="{{ site.baseurl }}/2017/registration/">报名表</a>
+
 ___
+
 ### 比赛地点：Pennant Hills Tennis Centre
 #### Pennant Hills Park, Britannia Street Pennant Hills NSW 2120
 
@@ -49,17 +51,14 @@ ___
 ___
 
 ### 组委会成员
-赛事总指导：刘晓成 Leo（球会名誉主席）
 
-赛事总顾问：韩蓓 Helen（球会名誉顾问）
-
-赛事总监：王跃 Warren
-
-赛事副总监兼总裁判长：赵欣 Sheen
-
-裁判：招募裁判义工（参赛者不宜）
-
-协调员：招募比赛协调员义工（参赛者不宜）
+| 赛事总指导      | 刘晓成 Leo（球会名誉主席） |
+| 赛事总顾问      | 韩蓓 Helen（球会名誉顾问） |
+| 赛事总监       | 王跃 Warren |
+| 赛事副总监兼总裁判长  | 赵欣 Sheen  |
+| 赛事副总裁判长  | 黎翰 Civet  |
+| 裁判 | 招募裁判义工（参赛者不宜） |
+| 协调员 | 招募比赛协调员义工（参赛者不宜） |
 <hr>
 <p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
 <div class="row">
