@@ -10,6 +10,8 @@ description: "Australian Chinese Tennis Club"
 ___
 <a role="button" class="btn btn-info btn-block" href="{{ site.baseurl }}/2017/rules/">参赛者须知</a>
 
+<a role="button" class="btn btn-success btn-block " href="{{ site.baseurl }}/2017/qa/">Q&A</a>
+
 <a role="button" class="btn btn-warning btn-block " href="{{ site.baseurl }}/2017/registration/">报名表</a>
 
 ___
