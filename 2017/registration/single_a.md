@@ -10,5 +10,8 @@ header-img: "img/home-bg.jpg"
 2. 2016年ACTC网球大奖赛上获得A级别男单前八名，B级别男单冠亚军的球员，只限参加A级别男单项目。
 3. 曾经参加过任何国的国家、省、市等专业网球队，2012年以前退役的球员。接受过体校（包括少体校）超过三年专业网球训练，2012年以前离开体校的球员。可以参加A级别男单项目。
 
+### 男子单打A级别 已报满！
+如果您想进入waiting list，请发邮件至 <a href="mailto:info@actc.org.au?Subject=Waiting%20list%20A%20grade%20singles" target="_top">info@actc.org.au</a>
+
 ### 请点击一下链接报名
 * <a href="https://www.eventbrite.com.au/e/2017-actc-a-tickets-37998273860?ref=elink" target="_blank" style="color:#005580">男子单打 A级别</a>
