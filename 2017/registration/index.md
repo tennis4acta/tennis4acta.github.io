@@ -5,7 +5,9 @@ description: "Registration"
 header-img: "img/home-bg.jpg"
 ---
 
-### 2017 ACTC光明壹佰杯华人网球大奖赛 将于2017年9月30日晚上8点开放报名
+### 2017 ACTC光明壹佰杯华人网球大奖赛 火热报名中
+* 男子单打 A级别 已报满
+* 男子单打 B级别 已报满
 
 ### 报名前请仔细阅读<a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/rules/">参赛者须知</a>，并确认相应参赛资格。
 
