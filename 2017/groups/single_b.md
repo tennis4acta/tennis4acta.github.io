@@ -8,19 +8,18 @@ header-img: "img/home-bg.jpg"
 <h2><p class="text-center">男子B级别单打</p></h2>
 <br>
 
-
+<h3>分组</h3>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-      <th>6</th>
-      <th>7</th>
-      <th>8</th>
+      <th>Ba</th>
+      <th>Bb</th>
+      <th>Bc</th>
+      <th>Bd</th>
+      <th>Be</th>
+      <th>Bf</th>
+      <th>Bg</th>
+      <th>Bh</th>
     </tr>
   </thead>
   <tbody>
