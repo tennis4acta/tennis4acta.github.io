@@ -24,7 +24,7 @@ header-img: "img/home-bg.jpg"
   <tbody>
     <tr>
       <th>小组Aa</th>
-      <td>CAO, Aaron(1)</td>
+      <td>CAO, Aaron(2)</td>
       <td>GONG, Richard</td>
       <td>HUANG, George</td>
       <td>TANG, Weichun</td>
@@ -33,7 +33,7 @@ header-img: "img/home-bg.jpg"
     </tr>
     <tr>
       <th>小组Ab</th>
-      <td>CHEN, Luke(2)</td>
+      <td>CHEN, Luke(1)</td>
       <td>GUI, Mingyang</td>
       <td>JIANG, Donny</td>
       <td>TAO, Zhimei</td>
@@ -42,7 +42,7 @@ header-img: "img/home-bg.jpg"
     </tr>
     <tr>
       <th>小组Ac</th>
-      <td>HONG, Willie(3)</td>
+      <td>HONG, Willie(4)</td>
       <td>GUI, Zhihong</td>
       <td>SUN, Tao</td>
       <td>WANG, Charlie</td>
@@ -51,7 +51,7 @@ header-img: "img/home-bg.jpg"
     </tr>
     <tr>
       <th>小组Ad</th>
-      <td>JIN, Xiaoyuan(4)</td>
+      <td>JIN, Xiaoyuan(3)</td>
       <td>HAN, Wei</td>
       <td>SUSENO, Lawrence</td>
       <td>WANG, Michael</td>
