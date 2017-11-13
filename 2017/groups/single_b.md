@@ -88,4 +88,4 @@ header-img: "img/home-bg.jpg"
   </tbody>
 </table>
 
-<iframe src="http://actc.challonge.com/2017_single_b_rr/module" width="100%" height="2500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+<iframe src="http://actc.challonge.com/2017_single_b_rr/module" width="100%" height="2600" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
