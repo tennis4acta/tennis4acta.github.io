@@ -61,6 +61,4 @@ header-img: "img/home-bg.jpg"
   </tbody>
 </table>
 
-<div class="embed-responsive">
-  <iframe class="embed-responsive-item" src="http://actc.challonge.com/2017_single_a_rr/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
-</div>
+<iframe src="http://actc.challonge.com/2017_single_a_rr/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
