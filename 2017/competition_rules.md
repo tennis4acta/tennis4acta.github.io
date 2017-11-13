@@ -4,7 +4,7 @@ title: "比赛分组及规则"
 header-img: "img/home-bg.jpg"
 ---
 
-<h2>分组原则</h2>
+<h1 class="page-header">分组原则</h1>
 本次大奖赛单双打A级别根据2016年ACTC网球大奖赛成绩设定种子球员，少年单打根据AR ranking设定种子球员，其他组别不设种子球员。
 <br>
 各个组别球员以（姓，名）按字母排序（少年组按年龄排序），依次放入个小组中。 <br>例如，Djokovic, Murray, Federer, Nadal 四位球员分到两个小组中，按姓氏排序为 Djokovic， Federer， Murray， Nadal。那样第一小组球员为Djokovic，Murray，第二小组球员为Federer，Nadal。
