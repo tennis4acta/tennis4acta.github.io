@@ -26,8 +26,8 @@ header-img: "img/home-bg.jpg"
 The final order of the group round robin is determined by the following order from top:<br>我们按照以下顺序决定循环赛最终成绩
 
 <ol>
-  <li>The number of matches a player/team wins 胜场数</li>
-  <li>The number of winning game 如果胜场数相同，比较总获胜局数</li>
-  <li>The number of match wins between tied opponents 如果总获胜局也相同，比较相互间的成绩</li>
-  <li>The number of winning game difference 最后比较总净胜局数</li>
+<li>The number of matches a player/team wins 胜场数</li>
+<li>The number of winning game 如果胜场数相同，比较总获胜局数</li>
+<li>The number of match wins between tied opponents 如果总获胜局也相同，比较相互间的成绩</li>
+<li>The number of winning game difference 最后比较总净胜局数</li>
 </ol>
