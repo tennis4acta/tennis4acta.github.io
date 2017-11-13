@@ -16,7 +16,7 @@ header-img: "img/home-bg.jpg"
 1. **First to 5:** The player/team that wins 5 games wins the match. (Final excepted)<br>除决赛外，比赛胜5局者赢得比赛。
 2. **No AD scoring （Short Duece):** As soon as a game gets to deuce it's "next point wins". The receiving player/pair decides who returns the point.<br>如果双方出现第一次DUECE平分，任何一方赢得下一分的赢得本局。由接发球方选择接球区。
 3. **Gold point tiebreak:** At 4 games all a short tie-break is played, first to 5 points wins. If it gets to 4-4 its “next point wins” with players coming to the net to spin the racquet to decide who serves the final point to determine the set. (The spinning winner chooses serve/return, the other party chooses side)<br>如果出现4:4平分，第9局将为short tie-break，先赢5分者赢得比赛。如果出现4-4，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）。
-4. **Final** The player/team plays a 6 games set with 7 points tiebreak. If it gets to 6-6 its “next point wins” with players coming to the net to spin the racquet to decide who serves the final point to determine the set. (The spinning winner chooses serve/return, the other party chooses side)<br><em>决赛</em> 如果出现6:6平分，第13局将为tiebreak，先赢7分者赢得比赛。如果出现6-6，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）。
+4. **Final:** The player/team plays a 6 games set with 7 points tiebreak. If it gets to 6-6 its “next point wins” with players coming to the net to spin the racquet to decide who serves the final point to determine the set. (The spinning winner chooses serve/return, the other party chooses side)<br><em>决赛</em> 如果出现6:6平分，第13局将为tiebreak，先赢7分者赢得比赛。如果出现6-6，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）。
 
 <h2>循环赛规则 Round robin</h2>
 
