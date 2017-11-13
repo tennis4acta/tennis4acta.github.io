@@ -12,7 +12,7 @@ header-img: "img/home-bg.jpg"
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
+      <th>分组\球员</th>
       <th>1</th>
       <th>2</th>
       <th>3</th>
