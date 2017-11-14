@@ -22,7 +22,16 @@ header-img: "img/home-bg.jpg"
 
 The final order of the group round robin is determined by the following order from top<br>我们按照以下顺序决定循环赛最终成绩
 
-1. The number of matches a player/team wins 胜场数
-2. The number of winning game 如果胜场数相同，比较总获胜局数
-3. The number of match wins between tied opponents 如果总获胜局也相同，比较相互间的成绩
-4. The number of winning game difference 最后比较总净胜局数
+1. The number of matches a player/team wins<br>胜场数
+2. The number of winning game<br>如果胜场数相同，比较总获胜局数
+3. The number of match wins between tied opponents<br>如果总获胜局也相同，比较相互间的成绩
+4. The number of winning game difference<br>最后比较总净胜局数
+
+<h2>淘汰赛 Elimination stage</h2>
+
+1. The top 2 in each group in round robin enter elimination stage<br>循环赛小组前两名进入淘汰赛
+2. There is no byes in Mens Singles A/B grade, Mens Doubles A&B grade, and Senior Doubles<br>男子单打A/B级别，双打A/B级别，以及中老年组双打淘汰赛没有轮空
+3. There are 3 groups for Junior's Singles and Women's Doubles, so there are byes in eliminatino stage<br>少年单打及女子双打为3个小组，所以淘汰赛将会有轮空
+
+   1. The top 2 players/pairs with highest winning games percentages in group No.1 will get byes in the first round elimination<br>3个小组排名第一的球员中局数胜率最高的两位获得淘汰赛第一轮轮空
+   2. The lowest winning games percentages in group No.1 vs The lowest winning games percentages in group No.2<br>小组排名第一中局数胜率最低的在淘汰赛第一轮对阵小组第二中局数胜率最低
