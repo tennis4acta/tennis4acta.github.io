@@ -48,7 +48,7 @@ header-img: "img/home-bg.jpg"
     <tr>
       <th>Bd</th>
       <td>FU, Wei</td>
-      <td>LIANG, Kevin</td>
+      <td>-LIANG, Kevin- LAU, Joseph</td>
       <td>ON, Ka ming eric</td>
       <td>WEI, Alfred</td>
       <td>ZHANG, Chi</td>
@@ -59,7 +59,7 @@ header-img: "img/home-bg.jpg"
       <td>LIANG, Yuanxin</td>
       <td>POON, Wai lam</td>
       <td>WEN, Ruli (ken)</td>
-      <td>ZHANG, Patrick</td>
+      <td>-ZHANG, Patrick- HAN, Jarry</td>
     </tr>
     <tr>
       <th>Bf</th>
@@ -75,7 +75,7 @@ header-img: "img/home-bg.jpg"
       <td>LIU, Qing</td>
       <td>SHAO, Scross dounan</td>
       <td>XU, Bao</td>
-      <td>ZHAO, Shiliang</td>
+      <td>-ZHAO, Shiliang- CHEN, Hansheng</td>
     </tr>
     <tr>
       <th>Bh</th>
@@ -87,5 +87,9 @@ header-img: "img/home-bg.jpg"
     </tr>
   </tbody>
 </table>
+
+* 2017-11-15 Patrick Zhang 退赛，Jarry Han 递补
+* 2017-11-16 Kevin Liang 退赛，Joseph Lau 递补
+* 2017-11-20 Shiliang Zhao 退赛，Hansheng Chen 递补
 
 <iframe src="http://actc.challonge.com/2017_single_b_rr/module" width="100%" height="2700" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
