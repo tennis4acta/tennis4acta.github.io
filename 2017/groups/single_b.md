@@ -48,7 +48,7 @@ header-img: "img/home-bg.jpg"
     <tr>
       <th>Bd</th>
       <td>FU, Wei</td>
-      <td>-LIANG, Kevin- LAU, Joseph</td>
+      <td><strike>LIANG, Kevin</strike> LAU, Joseph</td>
       <td>ON, Ka ming eric</td>
       <td>WEI, Alfred</td>
       <td>ZHANG, Chi</td>
@@ -59,7 +59,7 @@ header-img: "img/home-bg.jpg"
       <td>LIANG, Yuanxin</td>
       <td>POON, Wai lam</td>
       <td>WEN, Ruli (ken)</td>
-      <td>-ZHANG, Patrick- HAN, Jarry</td>
+      <td><strike>ZHANG, Patrick</strike> HAN, Jarry</td>
     </tr>
     <tr>
       <th>Bf</th>
@@ -75,7 +75,7 @@ header-img: "img/home-bg.jpg"
       <td>LIU, Qing</td>
       <td>SHAO, Scross dounan</td>
       <td>XU, Bao</td>
-      <td>-ZHAO, Shiliang- CHEN, Hansheng</td>
+      <td><strike>ZHAO, Shiliang</strike> CHEN, Hansheng</td>
     </tr>
     <tr>
       <th>Bh</th>
