@@ -8,7 +8,11 @@ description: "Australian Chinese Tennis Club"
 ### 主办单位：澳洲华人网球会
 ### 冠名赞助：光明壹佰 Be100 Property
 ___
+
 <a role="button" class="btn btn-danger btn-block " href="{{ site.baseurl }}/2017/1126/">11月26日 单打分组已公布</a>
+* <button type="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_a/>男子A级别单打 赛程</button>
+* <button type="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_b/>男子B级别单打 赛程</button>
+* <button type="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_j/>少年单打 赛程</button>
 
 <a role="button" class="btn btn-warning btn-block " href="{{ site.baseurl }}/2017/competition_rules/">分组原则以及竞赛规则</a>
 
