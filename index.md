@@ -11,10 +11,10 @@ ___
 
 
 <h3> <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_b/">男子B级别单打 火热进行中 点此查看实时比分</a></h3>
+<h3> <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_a/">男子A级别单打 火热进行中 点此查看实时比分</a></h3>
 
 <a role="button" class="btn btn-danger btn-block " href="{{ site.baseurl }}/2017/1126/">11月26日 单打分组已公布</a>
 
-<h4> <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_a/">男子A级别单打 赛程</a></h4>
 <h4> <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_j/">少年单打 赛程</a></h4>
 
 <a role="button" class="btn btn-warning btn-block " href="{{ site.baseurl }}/2017/competition_rules/">分组原则以及竞赛规则</a>
