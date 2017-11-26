@@ -5,9 +5,6 @@ description: "Australian Chinese Tennis Club"
 ---
 # 2017 ACTC光明壹佰杯华人网球大奖赛
 <br>
-### 主办单位：澳洲华人网球会
-### 冠名赞助：光明壹佰 Be100 Property
-___
 
 #### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_j/">少年单打 Jemery Zhang勇夺冠军，Miranda Xu屈居第二</a>
 #### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_b/">男子B级别单打 Alfred Wei and Lewid Lu 闯入决赛 点此查看全部比分</a></h3>
@@ -24,6 +21,9 @@ ___
 
 ___
 
+### 主办单位：澳洲华人网球会
+### 冠名赞助：光明壹佰 Be100 Property
+___
 ### 比赛地点：Pennant Hills Tennis Centre
 #### Pennant Hills Park, Britannia Street Pennant Hills NSW 2120
 
