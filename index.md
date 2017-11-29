@@ -8,8 +8,8 @@ description: "Australian Chinese Tennis Club"
 
 ### 2017年11月26日 首比赛日
 
-#### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_j/">少年单打 Jemery Zhang勇夺冠军，Miranda Xu屈居第二</a>
-#### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_b/">男子B级别单打 Alfred Wei and Lewid Lu 闯入决赛 点此查看全部比分</a>
+#### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_j/">少年单打 Jeremyy Zhang勇夺冠军，Miranda Xu屈居第二</a>
+#### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_b/">男子B级别单打 Alfred Wei and Lewis Lu 闯入决赛 点此查看全部比分</a>
 #### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_a/">男子A级别单打 Willie Hong and Michael Wang 闯入决赛 点此查看全部比分</a>
 
 <a role="button" class="btn btn-danger btn-block " href="{{ site.baseurl }}/2017/1126/">11月26日 单打分组已公布</a>
