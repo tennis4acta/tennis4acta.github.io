@@ -5,6 +5,14 @@ description: "Australian Chinese Tennis Club"
 ---
 # 2017 ACTC光明壹佰杯华人网球大奖赛
 <br>
+### 2017年12月3日 双打及决赛日
+
+#### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/double_b/">男子双打B级别 点此查看比分</a>
+#### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/double_a/">男子双打A级别 点此查看比分</a>
+#### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/double_w/">女子双打 点此查看比分</a>
+#### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/double_s/">中老年双打 点此查看比分</a>
+#### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_b/">男子B级别单打决赛 Alfred Wei vs Lewis Lu 点此查看全部比分</a>
+#### <a role="button" class="btn btn-link" href="{{ site.baseurl }}/2017/draw/single_a/">男子A级别单打决赛 Willie Hong vs Michael Wang 点此查看全部比分</a>
 
 <a role="button" class="btn btn-danger btn-block " href="{{ site.baseurl }}/2017/1203/">12月03日 单打分组已公布</a>
 
@@ -40,12 +48,12 @@ ___
 本届大奖赛设有七个项目，如果某项目报名人数不足6人（对），将取消该项目。组委会有权根据报名情况调整参赛人数。
 
 #### 单打（参赛人数）：
-* 男子A级别单打（20人）  
+* 男子A级别单打（20人）
 * 男子B级别单打 （40人）
 * 少年单打（8-12岁男女均可）（16人）
 
 #### 双打（参赛对数）：
-* 男子A级别双打（16对）  
+* 男子A级别双打（16对）
 * 男子B级别双打（32对）
 * 女子双打（16对）
 * 中老年男子双打（50 -70岁）（16对）
@@ -55,7 +63,7 @@ ___
 * 接受体校（包括少体校）3年以上网球系统训练，2012年1月1日后离开体校的球员。
 * 目前在国际或国家专业网球机构有注册或能查到排名的球员，比如有澳洲排名 tennis Australia ranking (AR ranking)
 * 目前在澳洲、中国等国的国家、省、市等专业网球队的现役球员。
-* 目前在ITF和ATP注册的现役专业球员。  
+* 目前在ITF和ATP注册的现役专业球员。
 
 #### 注：参加少年单打项目的球员不受排名限制。赛事组委会有权根据实际情况调整和解释大奖赛方案。
 #### 注：本届大奖赛是为**华裔**业余网球球员举办的赛事，华人业余网球员都可以参加。但如果遇到特殊情况，比如球员父母一方是华人，祖籍是华人等，需要提供相关证明，请在报名前提交组委会讨论通过后再报名。
