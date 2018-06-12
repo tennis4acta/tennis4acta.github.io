@@ -11,7 +11,7 @@ description: "Australian Chinese Tennis Club"
 * 协办单位：悉尼华人网球会SCT
 * 日期时间：2018年7月1日 8:00AM
 * 比赛地点：Pennant Hills Tennis Center, Brittania St, Penant Hills, NSW 2120
-* 报名费用：$100/队
+* 报名费用：$100/队 + $6 手续费
 * 报名日期：2018年6月18日周一开始接受报名，2018年6月24日星期日5时截止报名或额满自动提前截止
 * 赛会为参赛球员提供免费午餐
 
