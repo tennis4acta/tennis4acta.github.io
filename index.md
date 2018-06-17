@@ -6,6 +6,8 @@ description: "Australian Chinese Tennis Club"
 
 # 2018年ACTC光明壹佰杯华人网球地域赛
 
+### <a href="https://www.eventbrite.com.au/e/2018actc-tickets-46900128547">点此链接报名！</a>
+
 * 主办单位：澳洲华人网球会Australian Chinese Tennis Club
 * 冠名赞助：光明壹佰 Be100 Property
 * 协办单位：悉尼华人网球会SCT
