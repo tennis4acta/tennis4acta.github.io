@@ -6,12 +6,6 @@ description: "Australian Chinese Tennis Club"
 
 # 2018年ACTC光明壹佰杯华人网球地域赛
 
-<br>
-
-<iframe src="https://challonge.com/actc2018regional/module" width="100%" height="1500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
-
-<br>
-
 * 主办单位：澳洲华人网球会Australian Chinese Tennis Club
 * 冠名赞助：光明壹佰 Be100 Property
 * 协办单位：悉尼华人网球会SCT
@@ -26,6 +20,10 @@ description: "Australian Chinese Tennis Club"
     <img class="img-responsive" src="https://farm2.staticflickr.com/1758/27883340157_fb184274d4_o.jpg" alt="logo" />
   </div>
 </div>
+
+<p> </p>
+<iframe src="https://challonge.com/actc2018regional/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+<p> </p>
 
 ## 组队和赛制
 
