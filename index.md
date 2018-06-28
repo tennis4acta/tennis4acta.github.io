@@ -21,6 +21,23 @@ description: "Australian Chinese Tennis Club"
   </div>
 </div>
 
+## 参赛球队
+* 广东队
+  * 队长：Han Li
+* 港澳队
+  * 队长：Ka Ming ON
+* 天津
+  * 队长：Lu Wang
+* 四川
+  * 队长：Ru Hao Wang
+* 广西
+  * 队长：Rui Chen
+* 上海
+  * 队长：Yan Yang
+* 北京
+  * 队长：Ying Cao
+
+#### Note：小组赛分组按各队队长First Name排序，间隔分组。
 <br>
 <iframe src="https://challonge.com/actc2018regional/module" width="100%" height="700" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 <br>
