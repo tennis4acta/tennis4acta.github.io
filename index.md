@@ -20,25 +20,21 @@ description: "Australian Chinese Tennis Club"
 </div>
 
 ## 参赛球队
-* 广东队
-  * 队长：Han Li
-* 港澳队
-  * 队长：Ka Ming ON
-* 天津
-  * 队长：Lu Wang
-* 四川
-  * 队长：Ru Hao Wang
-* 广西
-  * 队长：Rui Chen
-* 上海
-  * 队长：Yan Yang
-* 北京
-  * 队长：Ying Cao
+* 广东队：Han Li，Yat Man Gong，Yingxi Ma，Hai Hao Lu，Zhen Yang Zhong，Dacheng Zhong，Zhi Ju
+* 港澳队：Ka Ming ON，Xu Li YI，Chak San Wong，Siu Fai Wong，Tak Ho Wong，Ka Ming HO，Ka Kei Chio
+* 天津：Lu Wang，Rong Liu，WeiNa Shi，YiXuan Cao，Liang Shang
+* 四川：Ru Hao Wang，Pei Han，Xing Rong Zhang，Qing Liu，Ke Chen，Mingfei Jiang，Junchi Chen
+* 广西：Rui Chen，Miao Mei，Si Dong Pan，Lun Li，JiZhong Wu，Guwu Song，Wei Peng
+* 上海：Yan Yang，Yuchen Chen，Zhihong Yang，John Cao，Shiwei Sun，Yan Shen，Weichun Tang
+* 北京：Ying Cao，Tian Ji Yang，YiXuan Qiu，Ran Li，Hui Gao
 
 #### Note：小组赛分组按各队队长First Name排序，间隔分组。
 <br>
 <iframe src="https://challonge.com/actc2018regional/module" width="100%" height="1000" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 <br>
+
+## 赛程
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTWkV8pz1yWLLDruAraoHCjzWpEQAbXPyrZBIaN6KhpfJAfFxQeQ8NbJgvo5MbaRp5DAeheZgGO3u59/pubhtml?widget=true&amp;headers=false"></iframe>
 
 ## 组队和赛制
 
