@@ -30,7 +30,7 @@ description: "Australian Chinese Tennis Club"
 
 #### Note：小组赛分组按各队队长First Name排序，间隔分组。
 <br>
-<iframe src="https://challonge.com/actc2018regional/module" width="100%" height="1000" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+<iframe src="https://challonge.com/actc2018regional/module" width="100%" height="1000" frameborder="0" scrolling="auto" allowtransparency="true" width="100%" height="600" ></iframe>
 <br>
 
 ## 赛程
