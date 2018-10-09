@@ -6,15 +6,11 @@ description: "Australian Chinese Tennis Club"
 
 # 2018年ACTC光明壹佰杯华人网球地域赛
 
-### <a href="https://www.eventbrite.com.au/e/2018actc-tickets-46900128547">点此链接报名！</a>
-
 * 主办单位：澳洲华人网球会Australian Chinese Tennis Club
 * 冠名赞助：光明壹佰 Be100 Property
 * 协办单位：悉尼华人网球会SCT
 * 日期时间：2018年7月1日 8:00AM
 * 比赛地点：Pennant Hills Tennis Center, Brittania St, Penant Hills, NSW 2120
-* 报名费用：$100/队 + $6 手续费
-* 报名日期：2018年6月18日周一开始接受报名，2018年6月24日星期日5时截止报名或额满自动提前截止
 * 赛会为参赛球员提供免费午餐
 
 <div class="row">
@@ -22,6 +18,23 @@ description: "Australian Chinese Tennis Club"
     <img class="img-responsive" src="https://farm2.staticflickr.com/1758/27883340157_fb184274d4_o.jpg" alt="logo" />
   </div>
 </div>
+
+## 参赛球队
+* 广东队：Han Li，Yat Man Gong，Yingxi Ma，Hai Hao Lu，Zhen Yang Zhong，Dacheng Zhong，Zhi Ju
+* 港澳队：Ka Ming ON，Xu Li YI，Chak San Wong，Siu Fai Wong，Tak Ho Wong，Ka Ming HO，Ka Kei Chio
+* 天津：Lu Wang，Rong Liu，WeiNa Shi，YiXuan Cao，Liang Shang
+* 四川：Ru Hao Wang，Pei Han，Xing Rong Zhang，Qing Liu，Ke Chen，Mingfei Jiang，Junchi Chen
+* 广西：Rui Chen，Miao Mei，Si Dong Pan，Lun Li，JiZhong Wu，Guwu Song，Wei Peng
+* 上海：Yan Yang，Yuchen Chen，Zhihong Yang，John Cao，Shiwei Sun，Yan Shen，Weichun Tang
+* 北京：Ying Cao，Tian Ji Yang，YiXuan Qiu，Ran Li，Hui Gao
+
+#### Note：小组赛分组按各队队长First Name排序，间隔分组。
+<br>
+<iframe src="https://challonge.com/actc2018regional/module" width="100%" height="1000" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+<br>
+
+## 赛程
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTWkV8pz1yWLLDruAraoHCjzWpEQAbXPyrZBIaN6KhpfJAfFxQeQ8NbJgvo5MbaRp5DAeheZgGO3u59/pubhtml?widget=true&amp;headers=false" width="80%" height="500" ></iframe>
 
 ## 组队和赛制
 
@@ -50,17 +63,25 @@ description: "Australian Chinese Tennis Club"
 
 ## 比赛规则
 
-### 小组赛规则
+### A组循环赛规则（北京，天津，广东队，广西队）： 
 1. 小组赛每轮比赛为2场双打，1场单打；每轮比赛赢两场以上的球队赢得该轮比赛。小组循环赛每一轮必须打完全部三场比赛。
 2. 小组赛依次按照“获胜轮数”、“球队间比赛成绩”、“获胜盘数”、“胜局数”，“-负局数”决定小组排序；小组前两名进入半决赛。
 3. 每场比赛胜5局者赢得比赛。
 4. 如果双方出现第一次DUECE平分后，任何一方赢得下一分的赢得本局。由接发球方选择接球区。
-5. 如果出现4:4平分，第9局将为short tie-break，先赢5分者赢得比赛。如果出现4-4，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）。
+如果出现4:4平分，第9局将为short tie-break，先赢5分者赢得比赛。如果出现4-4，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）。
+
+### B组循环赛规则（港澳队，上海队，四川队）： 
+1. 小组赛每轮比赛为2场双打，1场单打；每轮比赛赢两场以上的球队赢得该轮比赛。小组循环赛每一轮必须打完全部三场比赛。
+2. 小组赛依次按照“获胜轮数”、“球队间比赛成绩”、“获胜盘数”、“胜局数”，“-负局数”决定小组排序；小组前两名进入半决赛。
+3. 每场比赛胜一盘者赢得比赛。
+4. 如果双方出现第二次DUECE平分，任何一方赢得下一分的赢得本局。由接发球方选择接球区。
+如果出现6:6平分，第13局将为tiebreak，先赢7分者赢得比赛。如果出现6-6，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）。
 
 ### 淘汰赛规则
+A、B两个小组前两名进入第二轮淘汰赛。淘汰赛规则：
 1. 每场比赛胜一盘者赢得比赛。
 2. 如果双方出现第二次DUECE平分，任何一方赢得下一分的赢得本局。由接发球方选择接球区。
-3. 如果出现6:6平分，第13局将为tiebreak，先赢7分者赢得比赛。如果出现6-6，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）。
+如果出现6:6平分，第13局将为tiebreak，先赢7分者赢得比赛。如果出现6-6，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）。
 
 #### 组委会保留对比赛规则的解释权，并有权根据实际情况调整。
 
