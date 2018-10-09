@@ -1,7 +1,7 @@
 ---
 layout:     page
-title:      "2017第二届ACTC杯悉尼华人网球地域赛"
-date:       2017-03-27 12:00:00
+title:      "2018ACTC光明壹佰杯華人網球地域賽"
+date:       2018-07-02 12:00:00
 author:     "ACTC"
 header-img: "img/post-bg-01.jpg"
 ---
