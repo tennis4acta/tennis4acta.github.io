@@ -20,8 +20,6 @@ header-img: "img/post-bg-01.jpg"
 
 <p>据悉，本届赛事得到了光明壹佰Be100物业公司倾情冠名赞助，也得到了皇族牌泰国香米、西联汇款、慕思寝具、Goodhealth、蜀香坊、澳保商业保险公司、康道国际、white Glo、澳保投资理财和Pro Racquet Sports等公司的鼎力支持和赞助。</p>
 
-</p>
-
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <img class="img-responsive" src="https://farm2.staticflickr.com/1936/43381547530_9fcaf864e8_o.jpg" alt="2017final" />
