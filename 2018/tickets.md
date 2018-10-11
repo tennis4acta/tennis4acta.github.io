@@ -5,12 +5,6 @@ description: "Registration"
 header-img: "img/home-bg.jpg"
 ---
 
-## 2018年11月25日 
-
-### 男子A级别单打
-
-<div id="eventbrite-widget-container-51284881461"></div>
-
 <script src="https://www.eventbrite.com.au/static/widgets/eb_widgets.js"></script>
 
 <script type="text/javascript">
@@ -29,3 +23,13 @@ header-img: "img/home-bg.jpg"
         onOrderComplete: exampleCallback  // Method called when an order has successfully completed
     });
 </script>
+
+## 2018年11月25日 
+
+### 男子A级别单打
+
+<div id="eventbrite-widget-container-51284881461"></div>
+
+### 男子单打B级别
+
+<div style="width:195px; text-align:center;" ><iframe  src="https://www.eventbrite.com.au/countdown-widget?eid=51285142241" frameborder="0" height="557" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:12px; padding:10px 0 5px; margin:2px; width:195px; text-align:center;" ><a class="powered-by-eb" style="color: #ADB0B6; text-decoration: none;" target="_blank" href="http://www.eventbrite.com.au/">Powered by Eventbrite</a></div></div>
