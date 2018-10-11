@@ -8,11 +8,8 @@ header-img: "img/home-bg.jpg"
 ## 2018年11月25日 
 
 ### 男子A级别单打
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com.au/e/2018-actc-a-tickets-51284881461" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-51284881461" type="button">Buy Tickets</button>
-<noscript></a>Buy Tickets on Eventbrite</noscript>
+
+<div id="eventbrite-widget-container-51284881461"></div>
 
 <script src="https://www.eventbrite.com.au/static/widgets/eb_widgets.js"></script>
 
@@ -22,10 +19,13 @@ header-img: "img/home-bg.jpg"
     };
 
     window.EBWidgets.createWidget({
+        // Required
         widgetType: 'checkout',
         eventId: '51284881461',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-51284881461',
-        onOrderComplete: exampleCallback
+        iframeContainerId: 'eventbrite-widget-container-51284881461',
+
+        // Optional
+        iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+        onOrderComplete: exampleCallback  // Method called when an order has successfully completed
     });
 </script>
