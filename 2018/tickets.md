@@ -5,6 +5,8 @@ description: "Registration"
 header-img: "img/home-bg.jpg"
 ---
 
+### 2018年10月18日周四 晚8时开放报名
+
 ## 2018年11月25日 
 
 <div class="row text-center">
