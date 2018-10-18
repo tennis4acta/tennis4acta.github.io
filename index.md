@@ -7,7 +7,8 @@ description: "Australian Chinese Tennis Club"
 # 2018年ACTC光明壹佰杯华人网球大奖赛
 # 2018 Be100 Chinese Tennis Competition
 
-## <a href="{{ site.baseurl }}/2018/tickets/"> 报名链接 （火热报名中） </a> 
+
+## <span style="color:red"><a href="{{ site.baseurl }}/2018/tickets/"> 报名链接 （火热报名中） </a></span>
 
 <br>
 <div class="row">
