@@ -7,6 +7,8 @@ description: "Australian Chinese Tennis Club"
 # 2018年ACTC光明壹佰杯华人网球大奖赛
 # 2018 Be100 Chinese Tennis Competition
 
+## <a href="{{ site.baseurl }}/2018/tickets/"> 报名链接 （火热报名中） </a> 
+
 <br>
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
@@ -31,7 +33,7 @@ Stanhope Gardens NSW 2768'''
 * 2018年10月18日周四起接受报名
 * 2018年11月11日星期日5时截止报名或额满自动提前截止
 
-## <a href="{{ site.baseurl }}/2018/tickets/"> 报名链接 </a> （2018年10月18日周四 晚8时开放报名）
+## <a href="{{ site.baseurl }}/2018/tickets/"> 报名链接 （火热报名中） </a> 
 
 ## 比赛项目及人数
 本届大奖赛设有八个项目，如果某项目报名人数不足6人（对），将取消该项目。组委会将根据报名情况调整参赛人数。
