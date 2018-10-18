@@ -8,7 +8,7 @@ description: "Australian Chinese Tennis Club"
 # 2018 Be100 Chinese Tennis Competition
 
 
-## <span style="color:red"><a href="{{ site.baseurl }}/2018/tickets/"> 报名链接 （火热报名中） </a></span>
+<h2> <span style="color:red"><a href="{{ site.baseurl }}/2018/tickets/"> 报名链接 （火热报名中） </a></span></h2>
 
 <br>
 <div class="row">
