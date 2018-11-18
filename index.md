@@ -22,7 +22,7 @@ Blacktown Tennis Centre
 Stanhope Pkwy & Sentry Drive, 
 Stanhope Gardens NSW 2768'''
 
-## 11月25日 <a href="{{ site.baseurl }}/2018/1125/">单打分组及赛程已公布 点此链接查看</a>
+## <a href="{{ site.baseurl }}/2018/1125/">11月25日 单打分组及赛程已公布 点此链接查看</a>
 
 ## 比赛项目及人数
 * 中老年组双打因报名人数不足，已取消
