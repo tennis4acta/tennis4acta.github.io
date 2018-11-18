@@ -15,14 +15,16 @@ description: "Australian Chinese Tennis Club"
 </div>
 <br>
 
-* 主办单位：澳洲华人网球会
-* 冠名赞助：光明壹佰 Be100 Property
 * 比赛地点：'''
 Blacktown Tennis Centre
 Stanhope Pkwy & Sentry Drive, 
 Stanhope Gardens NSW 2768'''
 
+<br>
+
 ## <a href="{{ site.baseurl }}/2018/1125/">11月25日 单打分组及赛程已公布 点此链接查看</a>
+
+<br>
 
 ## 比赛项目及人数
 * 中老年组双打因报名人数不足，已取消
