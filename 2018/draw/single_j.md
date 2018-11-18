@@ -6,5 +6,6 @@ header-img: "img/home-bg.jpg"
 
 <iframe src="https://challonge.com/actc2018jr/module" width="100%" height="1200" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 
+* 2018-11-18: Emily Xu 退赛；Darren Jeng递补
 
 <iframe src="https://challonge.com/actc2018jrp/module" width="100%" height="600" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
