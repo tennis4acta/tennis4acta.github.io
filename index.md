@@ -7,9 +7,6 @@ description: "Australian Chinese Tennis Club"
 # 2018年ACTC光明壹佰杯华人网球大奖赛
 # 2018 Be100 Chinese Tennis Competition
 
-
-<h2> <span style="color:red"><a href="{{ site.baseurl }}/2018/tickets/"> 报名链接 （火热报名中） </a></span></h2>
-
 <br>
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
@@ -24,20 +21,11 @@ description: "Australian Chinese Tennis Club"
 Blacktown Tennis Centre
 Stanhope Pkwy & Sentry Drive, 
 Stanhope Gardens NSW 2768'''
-* 比赛及报名日期
-  * 2018年11月25日星期日：
-    * 男子A级别单打，男子B级别单打，女子单打，少年单打（打完决赛）
-  * 2018年12月2日星期日： 
-    * 男子A级别双打，中老年双打，男子B级别双打，女子双打
-    * 男子A级别单打决赛，男子B级别单打决赛，女单决赛
-  * 注：如遇大雨，比赛将延后，到时请留意球会网站和群里的消息。
-* 2018年10月18日周四起接受报名
-* 2018年11月11日星期日5时截止报名或额满自动提前截止
 
-## <a href="{{ site.baseurl }}/2018/tickets/"> 报名链接 （火热报名中） </a> 
+## 11月25日 <a href="{{ site.baseurl }}/2018/1125/">单打分组及赛程已公布 点此链接查看</a>
 
 ## 比赛项目及人数
-本届大奖赛设有八个项目，如果某项目报名人数不足6人（对），将取消该项目。组委会将根据报名情况调整参赛人数。
+* 中老年组双打因报名人数不足，已取消
 
 ### 单打（参赛人数）：
 * 男子A级别单打（20人）  
@@ -49,7 +37,7 @@ Stanhope Gardens NSW 2768'''
 * 男子A级别双打（16对）  
 * 男子B级别双打（32对） 
 * 女子双打（12对）
-* 中老年双打（50 -70岁 男女均可）（16对）
+* -中老年双打（50 -70岁 男女均可）（16对）-
 
 注： 本届大奖赛是为华裔业余网球球员举办的赛事。 
 
