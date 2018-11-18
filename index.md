@@ -13,12 +13,6 @@ description: "Australian Chinese Tennis Club"
     <img class="img-responsive" src="https://farm2.staticflickr.com/1912/43404101680_f2a99fe49e_o.jpg" alt="logo" />
   </div>
 </div>
-<br>
-
-* 比赛地点：'''
-Blacktown Tennis Centre
-Stanhope Pkwy & Sentry Drive, 
-Stanhope Gardens NSW 2768'''
 
 <br>
 
