@@ -9,4 +9,4 @@ header-img: "img/home-bg.jpg"
 * 小组赛1～3组，依据Australian Ranking，决定1～6号种子，1/6、2/5、3/4 分别同组；最年少的4位球员进第4组。
 * 2018-11-18: Emily Xu 退赛；Darren Jeng递补
 
-<iframe src="https://challonge.com/actc2018jrp/module" width="100%" height="600" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+<iframe src="https://challonge.com/actc2018jrp/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
