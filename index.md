@@ -34,6 +34,10 @@ description: "Australian Chinese Tennis Club"
 
 ## <a href="{{ site.baseurl }}/2018/1202/">12月2日 Day2</a>
 
+<h3> <a href="{{ site.baseurl }}/2018/draw/double_a" target="_blank" style="color:#005580">男子双打 A级别</a></h3>
+<h3> <a href="{{ site.baseurl }}/2018/draw/double_b" target="_blank" style="color:#005580">男子双打 B级别</a></h3>
+<h3> <a href="{{ site.baseurl }}/2018/draw/double_w" target="_blank" style="color:#005580">女子双打</a></h3>
+
 <br>
 
 <hr>
