@@ -20,14 +20,10 @@ description: "Australian Chinese Tennis Club"
 ### 比赛地点：Pennant Hills Tennis Center（Brittania St Pennant Hills NSW 2120）
 ### 报名费用：$100/队
 ### 报名日期：2019年6月22日周六开始接受报名；2019年6月30日星期日5时截止或额满截止
-
-<a href="https://www.eventbrite.com.au/e/2019actc-tickets-62827392422" rel="noopener noreferrer" target="_blank">
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-62827392422" type="button">Buy Tickets</button></a>
-
 * 赛会为参赛球员提供简易午餐
-
 ### 奖 金：冠军$800，亚军$600，季军$400,第四名$200
+
+<div style="width:195px; text-align:center;" ><iframe  src="https://www.eventbrite.com.au/calendar-widget?eid=62827392422" frameborder="0" height="403" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:12px; padding:10px 0 5px; margin:2px; width:195px; text-align:center;" ><a class="powered-by-eb" style="color: #ADB0B6; text-decoration: none;" target="_blank" href="http://www.eventbrite.com.au/">Powered by Eventbrite</a></div></div>
 
 ## 组队：
   1. 本届地域赛将设8支参赛队。各省（直辖市）队先报名先得，超出8队的列为候补。
