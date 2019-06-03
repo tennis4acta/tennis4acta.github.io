@@ -21,9 +21,9 @@ description: "Australian Chinese Tennis Club"
 ### 报名费用：$100/队
 ### 报名日期：2019年6月22日周六开始接受报名；2019年6月30日星期日5时截止或额满截止
 
-<a href="https://www.eventbrite.com.au/e/2019actc-tickets-62827392422" rel="noopener noreferrer" target="_blank"></noscript>
+<a href="https://www.eventbrite.com.au/e/2019actc-tickets-62827392422" rel="noopener noreferrer" target="_blank">
 <!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-62827392422" type="button">Buy Tickets</button>
+<button id="eventbrite-widget-modal-trigger-62827392422" type="button">Buy Tickets</button></a>
 
 * 赛会为参赛球员提供简易午餐
 
