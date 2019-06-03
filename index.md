@@ -21,27 +21,9 @@ description: "Australian Chinese Tennis Club"
 ### 报名费用：$100/队
 ### 报名日期：2019年6月22日周六开始接受报名；2019年6月30日星期日5时截止或额满截止
 
-<!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com.au/e/2019actc-tickets-62827392422" rel="noopener noreferrer" target="_blank"></noscript>
+<a href="https://www.eventbrite.com.au/e/2019actc-tickets-62827392422" rel="noopener noreferrer" target="_blank"></noscript>
 <!-- You can customize this button any way you like -->
 <button id="eventbrite-widget-modal-trigger-62827392422" type="button">Buy Tickets</button>
-<noscript></a>Buy Tickets on Eventbrite</noscript>
-
-<script src="https://www.eventbrite.com.au/static/widgets/eb_widgets.js"></script>
-
-<script type="text/javascript">
-    var exampleCallback = function() {
-        console.log('Order complete!');
-    };
-
-    window.EBWidgets.createWidget({
-        widgetType: 'checkout',
-        eventId: '62827392422',
-        modal: true,
-        modalTriggerElementId: 'eventbrite-widget-modal-trigger-62827392422',
-        onOrderComplete: exampleCallback
-    });
-</script>
 
 * 赛会为参赛球员提供简易午餐
 
@@ -98,3 +80,19 @@ description: "Australian Chinese Tennis Club"
     <img class="img-responsive" src="https://c5.staticflickr.com/9/8179/28251007604_30faf539bc_z.jpg" alt="Chania" />
   </div>
 </div>
+
+<script src="https://www.eventbrite.com.au/static/widgets/eb_widgets.js"></script>
+
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '62827392422',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-62827392422',
+        onOrderComplete: exampleCallback
+    });
+</script>
