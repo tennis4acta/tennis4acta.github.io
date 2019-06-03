@@ -1056,3 +1056,19 @@ jQuery(document).ready(function($) {
             });
     }
 });
+
+<script src="https://www.eventbrite.com.au/static/widgets/eb_widgets.js"></script>
+
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '62827392422',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-62827392422',
+        onOrderComplete: exampleCallback
+    });
+</script>
