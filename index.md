@@ -77,7 +77,7 @@ description: "Australian Chinese Tennis Club"
 ### 抽签
 延续ACTC的抽签方法，按照队长名的字母顺序排列。<br>
 <img class="img-responsive" src="{{ site.baseurl }}/img/2019_2.jpg" alt="" /><br>
-<img class="img-responsive" src="{{ site.baseurl }}/img/2019_1.jpg" alt="" /><br>
+<a href="{{ site.baseurl }}/img/2019_1.jpg" target="new"><img class="img-responsive" src="{{ site.baseurl }}/img/2019_1.jpg" alt="" /></a><br>
 
 * （组委会保留对比赛规则的解释权，并有权根据实际情况调整。）
 
