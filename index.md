@@ -76,7 +76,7 @@ description: "Australian Chinese Tennis Club"
 3.如果出现6:6平分，第13局将为tiebreak，先赢7分者赢得比赛。如果出现6-6，仍然使用一分定胜负。双方在网前使用硬币或者转球拍来决定谁来发最后一分（猜赢方选择发球或者接发球，另外一方选择站位）。<br>
 ### 抽签
 延续ACTC的抽签方法，按照队长名的字母顺序排列。<br>
-<a href="{{ site.baseurl }}/img/2019_2.jpg" target="new"><img class="img-responsive" src="{{ site.baseurl }}/img/2019_2.jpg" alt="" /><a><br><br>
+<img class="img-responsive" src="{{ site.baseurl }}/img/2019_2.jpg" alt="" /><br><br>
 <img class="img-responsive" src="{{ site.baseurl }}/img/2019_1.jpg" alt="" /><br>
 
 * （组委会保留对比赛规则的解释权，并有权根据实际情况调整。）
