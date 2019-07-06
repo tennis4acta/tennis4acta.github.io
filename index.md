@@ -86,6 +86,10 @@ description: "Australian Chinese Tennis Club"
 
 <hr>
 <p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
+
+<div style="text-align:center;" ><iframe src="https://challonge.com/2019regional_rr/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe></div>
+
+
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
     <img class="img-responsive" src="https://c5.staticflickr.com/9/8179/28251007604_30faf539bc_z.jpg" alt="Chania" />
