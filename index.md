@@ -84,10 +84,12 @@ description: "Australian Chinese Tennis Club"
 
 * （组委会保留对比赛规则的解释权，并有权根据实际情况调整。）
 
+<div style="text-align:center;" ><iframe src="https://challonge.com/2019regional_rr/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe></div>
+
 <hr>
 <p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
 
-<div style="text-align:center;" ><iframe src="https://challonge.com/2019regional_rr/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe></div>
+
 
 
 <div class="row">
