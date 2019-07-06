@@ -25,6 +25,9 @@ description: "Australian Chinese Tennis Club"
 
 <div style="width:195px; text-align:center;" ><iframe  src="https://www.eventbrite.com.au/calendar-widget?eid=62827392422" frameborder="0" height="403" width="195" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:12px; padding:10px 0 5px; margin:2px; width:195px; text-align:center;" ><a class="powered-by-eb" style="color: #ADB0B6; text-decoration: none;" target="_blank" href="http://www.eventbrite.com.au/">Powered by Eventbrite</a></div></div>
 
+## 即时积分
+<div style="text-align:center;" ><iframe src="https://challonge.com/2019regional_rr/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe></div>
+
 ## 组队：
 #### 1.届省际赛将设12支参赛队。各省（直辖市）队先报名先得，超出的队伍列为候补。
 #### 2.来自中国某省(直辖市)的球员组队为原则。为避免混乱，除了有条件请一名外援球员，不接受跨省（市）组队。
@@ -83,8 +86,6 @@ description: "Australian Chinese Tennis Club"
 <a href="{{ site.baseurl }}/img/2019_1.jpg" target="new"><img class="img-responsive" src="{{ site.baseurl }}/img/2019_1.jpg" alt="" /></a><br>
 
 * （组委会保留对比赛规则的解释权，并有权根据实际情况调整。）
-
-<div style="text-align:center;" ><iframe src="https://challonge.com/2019regional_rr/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe></div>
 
 <hr>
 <p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
