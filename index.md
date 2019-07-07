@@ -28,7 +28,7 @@ description: "Australian Chinese Tennis Club"
 ## 即时积分：
 <div style="text-align:center;" ><iframe src="https://challonge.com/2019regional_rr/module" width="100%" height="1000" frameborder="0" scrolling="auto" allowtransparency="true"></iframe></div><br>
 
-<div style="text-align:center;" ><iframe src="https://challonge.com/2019regional_po/module" width="100%" height="1000" frameborder="0" scrolling="auto" allowtransparency="true"></iframe></div><br>
+<div style="text-align:center;" ><iframe src="https://challonge.com/2019regional_po/module" width="100%" height="550" frameborder="0" scrolling="auto" allowtransparency="true"></iframe></div><br>
 
 ## 组队：
 #### 1.届省际赛将设12支参赛队。各省（直辖市）队先报名先得，超出的队伍列为候补。
