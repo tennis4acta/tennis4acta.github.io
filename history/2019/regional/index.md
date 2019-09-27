@@ -17,6 +17,6 @@ header-img: "img/post-bg-01.jpg"
 
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <img class="img-responsive" src="https://farm2.staticflickr.com/1913/45145478572_4792d91310_o.jpg" alt="2018regional" />
+    <img class="img-responsive" src="img/2019_regional_2.jpg" alt="2019regional" />
   </div>
 </div>
