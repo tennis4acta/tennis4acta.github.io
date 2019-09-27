@@ -8,7 +8,7 @@ header-img: "img/history-bg.jpg"
 
 
 <div class="list-group">
-    <a href="{{ site.baseurl }}/history/2019/regional/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 201ACTC光明壹佰杯华人网球省际赛</a>
+    <a href="{{ site.baseurl }}/history/2019/regional/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2019ACTC光明壹佰杯华人网球省际赛</a>
     <a href="{{ site.baseurl }}/history/2018/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2018ACTC光明壹佰杯華人網球大獎賽</a>
     <a href="{{ site.baseurl }}/history/2018/regional/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2018ACTC光明壹佰杯華人網球地域賽</a>
     <a href="{{ site.baseurl }}/history/2017/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2017ACTC光明壹佰杯华人网球大奖赛</a>
