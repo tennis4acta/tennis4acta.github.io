@@ -17,6 +17,6 @@ header-img: "img/post-bg-01.jpg"
 
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <img class="img-responsive" src="img/2019_regional_2.jpg" alt="2019regional" />
+    <img class="img-responsive" src="{{ site.baseurl }}/img/2019_regional_2.jpg" alt="2019regional" />
   </div>
 </div>
