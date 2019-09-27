@@ -4,11 +4,11 @@ title:      "澳洲华人网球会"
 description: "Australian Chinese Tennis Club"
 ---
 
-# 2019年ACTC光明壹佰杯华人网球省际赛
+# 2019年ACTC皇族香米杯华人网球大奖赛
 
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <img class="img-responsive" src="{{ site.baseurl }}/img/2019-regional-poster.jpg" alt="2019regionalposter" />
+    <img class="img-responsive" src="{{ site.baseurl }}/img/2019-poster.jpg" alt="2019poster" />
   </div>
 </div>
 
