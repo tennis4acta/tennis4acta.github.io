@@ -16,11 +16,11 @@ description: "Australian Chinese Tennis Club"
 主办单位：澳洲华人网球会<br>
 冠名赞助：皇族牌泰国香米<br>
 比赛地点：FX Tennis Cintra Park，1B Gipps St, Concord NSW 2137</h3><br><br>
-
+AM
 <h3>比赛及报名日期</h3><br>
-2019年11月24日周日8pm开始：<br> 
+2019年11月24日周日8AM开始：<br> 
 男子A级别单打、男子B级别单打、女子单打，以及决三四名<br>
-2019年12月1日周日8pm开始： <br>
+2019年12月1日周日8AM开始： <br>
 男子A级别双打，中老年男子双打，男子B级别双打，女子双打，少年单打，男子A级别单打决赛，男子B级别单打决赛，女单决赛<br><br>
 注：<br>
 *赛会不提供午餐，请参赛球员自备。<br>
