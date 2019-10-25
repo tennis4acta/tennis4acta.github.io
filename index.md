@@ -18,6 +18,8 @@ description: "Australian Chinese Tennis Club"
 比赛地点：FX Tennis Cintra Park，1B Gipps St, Concord NSW 2137</h3><br><br>
 AM
 <h3>比赛及报名日期</h3><br>
+<a href="{{ site.baseurl }}/2019/tickets/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Press to register 点此报名</a>
+
 2019年11月24日周日8AM开始：<br> 
 男子A级别单打、男子B级别单打、女子单打，以及决三四名<br>
 2019年12月1日周日8AM开始： <br>
