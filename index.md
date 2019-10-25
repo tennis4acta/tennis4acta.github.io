@@ -16,7 +16,7 @@ description: "Australian Chinese Tennis Club"
 主办单位：澳洲华人网球会<br>
 冠名赞助：皇族牌泰国香米<br>
 比赛地点：FX Tennis Cintra Park，1B Gipps St, Concord NSW 2137</h3><br><br>
-AM
+
 <h3>比赛及报名日期</h3><br>
 <a href="{{ site.baseurl }}/2019/tickets/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Press to register 点此报名</a>
 
