@@ -5,7 +5,7 @@ description: "Registration"
 header-img: "img/home-bg.jpg"
 ---
 
-### 2019年10月26日周四 晚10时开放报名
+### 2019年10月26日周六 晚10时开放报名
 
 ## 2019年11月24日 
 
