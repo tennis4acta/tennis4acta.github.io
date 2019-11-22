@@ -17,13 +17,31 @@ description: "Australian Chinese Tennis Club"
 冠名赞助：皇族牌泰国香米<br>
 比赛地点：FX Tennis Cintra Park，1B Gipps St, Concord NSW 2137</h3><br><br>
 
-<h3>比赛及报名日期</h3><br>
-<a href="{{ site.baseurl }}/2019/tickets/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Press to register 点此报名</a>
+<h2>11月24日 分组及比分</h2>
+<h3> <a href="{{ site.baseurl }}/2019/draw/single_a" target="_blank" style="color:#005580">男子单打 A级别</a></h3>
+<h3> <a href="{{ site.baseurl }}/2019/draw/single_b" target="_blank" style="color:#005580">男子单打 B级别</a></h3>
+<h3> <a href="{{ site.baseurl }}/2019/draw/single_w" target="_blank" style="color:#005580">女子单打</a></h3>
 
-2019年11月24日周日8AM开始：<br> 
-男子A级别单打、男子B级别单打、女子单打，以及决三四名<br>
-2019年12月1日周日8AM开始： <br>
-男子A级别双打，中老年男子双打，男子B级别双打，女子双打，少年单打，男子A级别单打决赛，男子B级别单打决赛，女单决赛<br><br>
+
+<h2><p class="text-center">男子B级别单打</p></h2>
+<h3>首轮开赛时间：2019年11月24日 上午8:00AM</h3>
+* 上午7:45AM 以前签到
+<h3>淘汰赛</h3>
+* 8个小组前两名出线进入16强淘汰赛
+
+<h2><p class="text-center">男子A级别单打</p></h2>
+<h3>首轮开赛时间：2019年11月24日 上午8:30AM</h3>
+* 上午7:45AM 以前签到
+<h3>淘汰赛</h3>
+* 4个小组前两名出线进入8强淘汰赛
+
+<h2><p class="text-center">女子单打</p></h2>
+<h3>首轮开赛时间：2019年11月24日 上午8:00AM</h3>
+* 上午7:45AM 以前签到
+<h3>淘汰赛</h3>
+* 3个小组前两名出线进入8强淘汰赛
+* 两个小组成绩最好的第一名（总胜赛数，总胜局数，局数胜率为序决定小组间成绩）直接轮空进入半决赛；剩下的第一名和小组第二名打1/4决赛。
+
 注：<br>
 *赛会不提供午餐，请参赛球员自备。<br>
 *如遇大雨，比赛将延后，到时请留意球会网站和群里的消息。<br><br>
