@@ -4,7 +4,7 @@ title: "過往賽事"
 description: "History"
 header-img: "img/history-bg.jpg"
 ---
-<h2><a href="{{ site.baseurl }}/history/all_results/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 历史成绩</a></h2>
+<h2><a href="{{ site.baseurl }}/history/all_results/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 历史成绩 (请点击查看)</a></h2>
 
 
 <div class="list-group">
