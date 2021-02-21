@@ -91,6 +91,8 @@ Britannia Street Pennant Hills NSW 2120<br>
 <li>球员请购运动保险，以保证参赛中受伤等意外发生后，能有医疗等保证。球员一经报名，则认为选手已经购买了运动医疗保险，组委会对比赛期间出现的受伤一律不承担责任。</li>
 </ol>
 
+<h3>请扫描二维码加入球会群</h3>
+
 <a href="http://www.actc.org.au/img/actc_qr_code.png" target="_blank">
-      <img src="{{ site.baseurl }}/img/actc_qr_code.png" class="img-responsive" width="500px" alt="ACTC_QR">
-</a><br>请扫描二维码加入球会群
+      <img src="{{ site.baseurl }}/img/actc_qr_code.png" class="img-responsive" width="300px" alt="ACTC_QR">
+</a>
