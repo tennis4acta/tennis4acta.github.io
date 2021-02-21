@@ -20,3 +20,8 @@
     <img class="img-responsive" src="{{ site.baseurl }}/img/2019_3.jpg" alt="2019" />
   </div>
 </div>
+<div class="row text-center">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <img class="img-responsive" src="{{ site.baseurl }}/img/2019_4.jpg" alt="2019" />
+  </div>
+</div>
