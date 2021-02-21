@@ -92,5 +92,5 @@ Britannia Street Pennant Hills NSW 2120<br>
 </ol>
 
 <a href="http://www.actc.org.au/img/actc_qr_code.png" target="_blank">
-      <img src="{{ site.baseurl }}/img/actc_qr_code.png" class="img-responsive" alt="ACTC_QR">
+      <img src="{{ site.baseurl }}/img/actc_qr_code.png" class="img-responsive" width="500px" alt="ACTC_QR">
 </a><br>请扫描二维码加入球会群
