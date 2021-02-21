@@ -19,14 +19,12 @@ ACTC Cup 2021 Chinese Tennis Mixed doubles Competition
 Britannia Street Pennant Hills NSW 2120<br>
 
 报名日期：3月7日周六晚上10时起开放网上报名,www.actc.org.au<br>
+报名链接：<a href="https://www.eventbrite.com.au/e/2021actc-tickets-142373327455" rel="noopener noreferrer" target="_blank"><button id="eventbrite-widget-modal-trigger-142373327455" type="button">Buy Tickets</button></a>
 报名费：$15/人+手续费<br>
 截止报名：3月20日周六下午5时截止报名或额满提前截止<br>
 
 <!-- Noscript content for added SEO -->
-<noscript><a href="https://www.eventbrite.com.au/e/2021actc-tickets-142373327455" rel="noopener noreferrer" target="_blank"></noscript>
-<!-- You can customize this button any way you like -->
-<button id="eventbrite-widget-modal-trigger-142373327455" type="button">Buy Tickets</button>
-<noscript></a>Buy Tickets on Eventbrite</noscript>
+<noscript>Buy Tickets on Eventbrite</noscript>
 
 <script src="https://www.eventbrite.com.au/static/widgets/eb_widgets.js"></script>
 
