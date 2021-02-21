@@ -64,9 +64,11 @@ Britannia Street Pennant Hills NSW 2120<br>
 </ol>
 <h3>混双比赛赛制</h3>
 <ol>
-<li>如果有32对混双组合，则分A-H 8个小组进行循环赛，各小组前两名进入第二轮淘汰赛。如下图所示。</li>
+<li>如果有32对混双组合，则分A-H 8个小组进行循环赛，各小组前两名进入第二轮淘汰赛。如下图所示。<br>
+ <a href="{{ site.baseurl }}/img/2021_draws_1.jpg" target="new"><img class="img-responsive" src="{{ site.baseurl }}/img/2021_draws_1.jpg" width="600" /></a></li>
 
-<li>各小组后两名进入安慰赛的第二轮淘汰赛，如下图所示。</li>
+<li>各小组后两名进入安慰赛的第二轮淘汰赛，如下图所示。
+ <a href="{{ site.baseurl }}/img/2021_draws_2.jpg" target="new"><img class="img-responsive" src="{{ site.baseurl }}/img/2021_draws_2.jpg" width="600" /></a></li>
 
 <li>小组循环赛，以先赢到5局为胜方，每局平分后一球定胜负，由接发方选择接球区。如果局数打到4比4，则抢5。抢5打到4平，最后定胜负的一分，以掷币或转拍选择发或接球。第二轮开始的淘汰赛则采用正常赛制，每局平分后一球定胜负，由接发方选择接球区。如果局数打到6比6平，则抢7。抢7打到6平，最后定胜负的一分，以掷币或转拍选择发或接球。</li>
 </ol>
