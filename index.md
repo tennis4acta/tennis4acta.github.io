@@ -23,6 +23,10 @@ Britannia Street Pennant Hills NSW 2120<br>
 报名费：$15/人+手续费<br>
 截止报名：3月20日周六下午5时截止报名或额满提前截止<br>
 
+<h3>参赛名单</h3>
+<a href="www.actc.org.au/img/2021_mix_men.jpg" traget="new">男子球员名单</a><br>
+<a href="www.actc.org.au/img/2021_mix_ladies.jpg" traget="new">女子球员名单</a><br>
+
 <h3>注意事项</h3>
 <ul>
 <li>本次比赛是为华裔业余网球球员举办的赛事。</li>
