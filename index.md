@@ -25,8 +25,8 @@ Britannia Street Pennant Hills NSW 2120<br>
 
 <h3>参赛名单</h3>
 <ul>
- <li><a href="img/2021_mix_men.jpg" traget="new">男子球员名单</a></li>
- <li><a href="img/2021_mix_ladies.jpg" traget="new">女子球员名单</a></li>
+ <li><a href="img/2021_mix_men.jpg" traget="_blank">男子球员名单</a></li>
+ <li><a href="img/2021_mix_ladies.jpg" traget="_blank">女子球员名单</a></li>
 </ul>
 
 <h3>注意事项</h3>
