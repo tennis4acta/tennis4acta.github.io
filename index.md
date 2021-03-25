@@ -12,6 +12,7 @@ description: "Australian Chinese Tennis Club"
 ACTC Cup 2021 Chinese Tennis Mixed doubles Competition
 
 主办单位：澳洲华人网球会<br>
+赞助商：EZBOX SPORTS<br>
 独家保险赞助：澳保商业保险<br>
 比赛及报名日期<br>
 比赛日期：2021年3月28日周日8am-5pm。<br>
