@@ -16,8 +16,7 @@ description: "Australian Chinese Tennis Club"
 比赛地点：Pennant Hills Tennis Center（Brittania St Pennant Hills NSW 2120）<br><br>
 
 报名费用：$150/队<br>
-报名日期：2021年6月12日周六开始接受报名<br>
-2021年6月20日星期日5时截止或额满截止<br><br>
+报名日期：2021年6月12日周六开始接受报名。2021年6月20日星期日5时截止或额满截止<br><br>
 
 <h3>2021ACTC省际赛组队</h3><p><ul>
 <li>（1）本届省际赛设16支参赛队。各省（直辖市）队先报名先得，超出的队伍列为候补。</li>
