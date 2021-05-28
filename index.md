@@ -6,7 +6,7 @@ description: "Australian Chinese Tennis Club"
 
 # 2021年ACTC杯华人网球省际赛
 
-<img src="{{ site.baseurl }}/img/2021_regional_poster" class="img-responsive" width="600px" alt="2021年ACTC杯华人网球省际赛">
+<img src="{{ site.baseurl }}/img/2021_regional_poster.jpg" class="img-responsive" width="600px" alt="2021年ACTC杯华人网球省际赛">
 
 主 办：澳洲华人网球会Australian Chinese Tennis Club<br>
 协 办：悉尼华人网球会Sydney Chinese Tennis Club<br>
