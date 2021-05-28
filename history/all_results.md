@@ -14,3 +14,5 @@ header-img: "img/history-bg.jpg"
 <h2>省际赛</h2>
 <a href="{{ site.baseurl }}/img/regional.jpg" target="new"><img class="img-responsive" src="{{ site.baseurl }}/img/regional.jpg" alt="历届省际赛成绩" alt="double" width="1024" /></a>
 <br>
+<h2>混双赛</h2>
+<a href="{{ site.baseurl }}/img/mix_double_result.jpg" target="new"><img class="img-responsive" src="{{ site.baseurl }}/img/regional.jpg" alt="历届混双赛成绩" alt="double" width="1024" /></a>
