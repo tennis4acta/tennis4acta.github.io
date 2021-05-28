@@ -10,10 +10,9 @@ description: "Australian Chinese Tennis Club"
 
 主 办：澳洲华人网球会Australian Chinese Tennis Club<br>
 协 办：悉尼华人网球会Sydney Chinese Tennis Club<br>
-赞 助：澳保商业保险 FLP Insurance Solutions Pty Ltd。EZBox Sports<br>
+赞 助：<ul><li>澳保商业保险 FLP Insurance Solutions Pty Ltd</li><li>EZBox Sports</li></ul><br>
 日期时间：2021年7月4日周日8:00am<br>
-比赛地点：Pennant Hills Tennis Center（Brittania St Pennant Hills NSW 2120）<br><br>
-
+比赛地点：Pennant Hills Tennis Center（Brittania St Pennant Hills NSW 2120）<br>
 报名费用：$150/队<br>
 报名日期：2021年6月12日周六开始接受报名。2021年6月20日星期日5时截止或额满截止<br><br>
 
