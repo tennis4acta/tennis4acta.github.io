@@ -1,3 +1,10 @@
+---
+layout: page
+title: "2016地域赛"
+description: "2016 Regional"
+header-img: "img/history-bg.jpg"
+---
+
 <h2>首届悉尼华人网球“地域赛”圆满落下帷幕</h2>
 
 <h1>各省市网球队招兵买马高手尽出争夺激烈</h1>
