@@ -4,7 +4,7 @@ title:      "澳洲华人网球会"
 description: "Australian Chinese Tennis Club"
 ---
 
-# 2022年ACTC杯华人网球省际赛
+# 2021年ACTC杯华人网球省际赛
 
 <img src="{{ site.baseurl }}/img/2022_regional_poster.jpg" class="img-responsive" width="600px" alt="2022年ACTC杯华人网球省际赛">
 
@@ -16,7 +16,7 @@ description: "Australian Chinese Tennis Club"
 报名费用：$150/队<br>
 报名日期：2022年4月2日周六开始接受报名。2022年4月9日星期日5时截止或额满截止<br><br>
 
-<h3>2022ACTC省际赛组队</h3><p><ul>
+<h3>2021 ACTC省际赛组队</h3><p><ul>
 <li>（1）本届省际赛设16支参赛队。各省（直辖市）队先报名先得，超出的队伍列为候补。</li>
 <li>（2）组队以来自中国某省(直辖市)的球员为原则。为避免混乱，除了有条件请一名外援球员，一支队伍不能有不同省（市）的球员。</li>
 <li>（3）报名时，请写明每位球员和护照或驾照相同的姓名。参赛球员携带如护照等足以证明省籍证件的复印件或图。组委会有权查核球员的省籍资料，或根据举报而核查。如有不符，组委会有权处理。</li>
