@@ -8,9 +8,9 @@ description: "Australian Chinese Tennis Club"
 
 <img src="{{ site.baseurl }}/img/sponsors/2022-poster-3.jpg" class="img-responsive" width="800px" alt="2022年ACTC杯华人网球省际赛">
 
-<img src="{{ site.baseurl }}/img/sponsors/2022-interprov-fixture.jpg" class="img-responsive" width="600px" alt="2022年ACTC杯华人网球省际赛fixture">
+<img src="{{ site.baseurl }}/img/sponsors/2022-interprov-fixture.jpg" class="img-responsive" width="800px" alt="2022年ACTC杯华人网球省际赛fixture">
 
-<img src="{{ site.baseurl }}/img/sponsors/2022-interprov-schedule.jpg" class="img-responsive" width="600px" alt="2022年ACTC杯华人网球省际赛schedule">
+<img src="{{ site.baseurl }}/img/sponsors/2022-interprov-schedule.jpg" class="img-responsive" width="800px" alt="2022年ACTC杯华人网球省际赛schedule">
 
 主 办：澳洲华人网球会Australian Chinese Tennis Club<br>
 协 办：悉尼华人网球会Sydney Chinese Tennis Club<br>
