@@ -19,11 +19,16 @@ description: "Australian Chinese Tennis Club"
 <p>本届ACTC杯华人网球省际赛获得了FLP澳保商业保险、EZVIZ、EZBOX SPORTS和甜品屋食品的鼎力支持和赞助。这次比赛，有近20位志愿者参与赛会工作，他们坚守岗位，不辞辛劳勤奋工作，确保比赛顺利进行。两年疫情，澳洲华人网球会停办所有的活动。本届省际赛，是人们期待已久的华人网球大赛。球会组委会将认真总结经验，完善赛制，早日制定明年省际赛的计划。就近期而言，组委会将投入ACTC年终华人网球大奖赛的筹备工作。</p>
 
 
-<img src="{{ site.baseurl }}/img/2021-regional-01.jpg" class="img-responsive" width="800px" alt="2021年ACTC杯华人网球省际赛">
+<p><img src="{{ site.baseurl }}/img/2021-regional-01.jpg" class="img-responsive" width="800px" alt="2021年ACTC杯华人网球省际赛">
+图片说明：香港队、广东队和四川队分别获得第五届ACTC杯华人网球省际赛冠亚季军，香港二队获得第四名。图为颁奖仪式上，获奖球队和志愿者合影。</p>
 
-<img src="{{ site.baseurl }}/img/2021-regional-02.jpg" class="img-responsive" width="800px" alt="2021年ACTC杯华人网球省际赛">
+<p><img src="{{ site.baseurl }}/img/2021-regional-02.jpg" class="img-responsive" width="800px" alt="2021年ACTC杯华人网球省际赛">
+图片说明：香港队过关斩将，如愿摘得省际赛桂冠。图为颁奖礼上，香港队队员举起冠军奖杯和香槟酒，沉浸在欢庆之中。</p>
 
-
+<h3>媒体报道</h3><br>
+<p><a href="http://www.wesydney.com.au/202205131058/" target="new">微悉尼</a><br>
+<a href="http://www.tongchengaus.com/mag/info/v1/info/wapInfoView?id=263512&themecolor=f30c5c&p_u=0" target="new">澳洲同城</a><br>
+<a href="https://www.sydneytoday.com/content-1022445237265003" target="new">今日悉尼</a></p>
 
 <br><br>
 <h3>请扫描二维码加入球会群</h3>
