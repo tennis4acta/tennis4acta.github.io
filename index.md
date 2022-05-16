@@ -19,9 +19,9 @@ description: "Australian Chinese Tennis Club"
 <p>本届ACTC杯华人网球省际赛获得了FLP澳保商业保险、EZVIZ、EZBOX SPORTS和甜品屋食品的鼎力支持和赞助。这次比赛，有近20位志愿者参与赛会工作，他们坚守岗位，不辞辛劳勤奋工作，确保比赛顺利进行。两年疫情，澳洲华人网球会停办所有的活动。本届省际赛，是人们期待已久的华人网球大赛。球会组委会将认真总结经验，完善赛制，早日制定明年省际赛的计划。就近期而言，组委会将投入ACTC年终华人网球大奖赛的筹备工作。</p>
 
 
-<img src="{{ site.baseurl }}/img/2021-regional-01.jpg" class="img-responsive" width="800px" alt="2022年ACTC杯华人网球省际赛">
+<img src="{{ site.baseurl }}/img/2021-regional-01.jpg" class="img-responsive" width="800px" alt="2021年ACTC杯华人网球省际赛">
 
-<img src="{{ site.baseurl }}/img/2021-regional-02.jpg" class="img-responsive" width="800px" alt="2022年ACTC杯华人网球省际赛fixture">
+<img src="{{ site.baseurl }}/img/2021-regional-02.jpg" class="img-responsive" width="800px" alt="2021年ACTC杯华人网球省际赛">
 
 
 
