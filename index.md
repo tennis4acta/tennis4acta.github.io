@@ -25,8 +25,8 @@ description: "Australian Chinese Tennis Club"
 <p><img src="{{ site.baseurl }}/img/2021-regional-02.jpg" class="img-responsive" width="800px" alt="2021年ACTC杯华人网球省际赛">
 图片说明：香港队过关斩将，如愿摘得省际赛桂冠。图为颁奖礼上，香港队队员举起冠军奖杯和香槟酒，沉浸在欢庆之中。</p>
 
-<h3>媒体报道</h3><br>
-<p><a href="http://www.wesydney.com.au/202205131058/" target="new">微悉尼</a><br>
+<p><h3>媒体报道</h3><br>
+<a href="http://www.wesydney.com.au/202205131058/" target="new">微悉尼</a><br>
 <a href="http://www.tongchengaus.com/mag/info/v1/info/wapInfoView?id=263512&themecolor=f30c5c&p_u=0" target="new">澳洲同城</a><br>
 <a href="https://www.sydneytoday.com/content-1022445237265003" target="new">今日悉尼</a></p>
 
