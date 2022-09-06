@@ -13,7 +13,7 @@ description: "Australian Chinese Tennis Club"
 主办单位：澳洲华人网球会<br>
 冠名赞助：<b>融侨金融集团</b><br><br>
 
-比赛地点：<b>Parramatta City Tennis</b>   Barton St, North Parramatta NSW 2151
+比赛地点：<br><b>Parramatta City Tennis</b>   Barton St, North Parramatta NSW 2151<br><br>
 
 <h3>比赛及报名日期</h3>
 
