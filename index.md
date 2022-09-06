@@ -8,7 +8,7 @@ description: "Australian Chinese Tennis Club"
 
 <p align="center">2022ACTC RongQiao Financial Group Chinese Tennis Competition</p>
 
-<p><img src="{{ site.baseurl }}/img/2022_1.png" class="img-responsive" width="800px" alt="2022年ACTC融侨杯华人网球大奖赛"><p>
+<p><img src="{{ site.baseurl }}/img/2022_1.png" class="img-responsive" width="800px" align="center" alt="2022年ACTC融侨杯华人网球大奖赛"><p>
 
 主办单位：澳洲华人网球会<br>
 冠名赞助：<b>融侨金融集团</b><br><br>
