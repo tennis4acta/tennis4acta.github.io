@@ -11,7 +11,7 @@ description: "Australian Chinese Tennis Club"
 <p><img src="{{ site.baseurl }}/img/2022_1.png" class="img-responsive" width="800px" alt="2022年ACTC融侨杯华人网球大奖赛"><p>
 
 主办单位：澳洲华人网球会<br>
-冠名赞助：<b>融侨金融集团</>
+冠名赞助：<b>融侨金融集团</b>
 
 比赛地点：<b>Parramatta City Tennis</b>   Barton St, North Parramatta NSW 2151
 
