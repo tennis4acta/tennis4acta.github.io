@@ -11,15 +11,14 @@ description: "Australian Chinese Tennis Club"
 主办单位：澳洲华人网球会<br>
 冠名赞助：融侨金融集团
 
-比赛地点：Parramatta City Tennis
-Barton St, North Parramatta NSW 2151
+比赛地点：Parramatta City Tennis   Barton St, North Parramatta NSW 2151
 
 <h3>比赛及报名日期</h3>
 
-2022年11月27日周日8:30am开始：
+<b>2022年11月27日周日8:30am开始：</b><br>
 男子A级别单打,男子B级别单打(红宝石组和蓝宝石组),女子单打
 
-2022年12月4日周日8:30am开始：
+<b>2022年12月4日周日8:30am开始：</b><br>
 男子A级别双打,男子B级别双打,中年组双打,女子双打,少年单打
 
 注：<br>
