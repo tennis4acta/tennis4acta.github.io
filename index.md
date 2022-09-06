@@ -6,12 +6,14 @@ description: "Australian Chinese Tennis Club"
 
 # 2022年ACTC融侨杯华人网球大奖赛
 
-<h2>2022ACTC RongQiao Financial Group Chinese Tennis Competition</h2><br>
+2022ACTC RongQiao Financial Group Chinese Tennis Competition
+
+<p><img src="{{ site.baseurl }}/img/2022_1.png" class="img-responsive" width="800px" alt="2022年ACTC融侨杯华人网球大奖赛"><p>
 
 主办单位：澳洲华人网球会<br>
-冠名赞助：融侨金融集团
+冠名赞助：<b>融侨金融集团</>
 
-比赛地点：Parramatta City Tennis   Barton St, North Parramatta NSW 2151
+比赛地点：<b>Parramatta City Tennis</b>   Barton St, North Parramatta NSW 2151
 
 <h3>比赛及报名日期</h3>
 
@@ -110,16 +112,7 @@ description: "Australian Chinese Tennis Club"
 2）比赛当日报到时，请出示证明年龄的证件。<br>
 3）退役十年以上的专业球员和十年前在专业机构有排名的球员，必须和业余球员搭档才能参赛。<br>
 
-<p><img src="{{ site.baseurl }}/img/2021-regional-01.jpg" class="img-responsive" width="800px" alt="2021年ACTC杯华人网球省际赛">
-图片说明：香港队、广东队和四川队分别获得第五届ACTC杯华人网球省际赛冠亚季军，香港二队获得第四名。图为颁奖仪式上，获奖球队和志愿者合影。</p>
 
-<p><img src="{{ site.baseurl }}/img/2021-regional-02.jpg" class="img-responsive" width="800px" alt="2021年ACTC杯华人网球省际赛">
-图片说明：香港队过关斩将，如愿摘得省际赛桂冠。图为颁奖礼上，香港队队员举起冠军奖杯和香槟酒，沉浸在欢庆之中。</p>
-
-<p><h3>媒体报道</h3><br>
-<a href="http://www.wesydney.com.au/202205131058/" target="new">微悉尼</a><br>
-<a href="http://www.tongchengaus.com/mag/info/v1/info/wapInfoView?id=263512&themecolor=f30c5c&p_u=0" target="new">澳洲同城</a><br>
-<a href="https://www.sydneytoday.com/content-1022445237265003" target="new">今日悉尼</a></p>
 
 <br><br>
 <h3>请扫描二维码加入球会群</h3>
