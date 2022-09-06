@@ -4,7 +4,7 @@ title:      "澳洲华人网球会"
 description: "Australian Chinese Tennis Club"
 ---
 
-<h1 aligh="center">2022年ACTC融侨杯华人网球大奖赛</h1>
+<h1 align="center">2022年ACTC融侨杯华人网球大奖赛</h1>
 
 <p align="center">2022ACTC RongQiao Financial Group Chinese Tennis Competition</p>
 
