@@ -50,6 +50,9 @@ header-img: "img/history-bg.jpg"
       <dt>前中国国家网球队主力，澳洲华人网球协会名誉主席</dt>
       <dd>代表中国网球队参加戴维斯杯、亚洲杯</dd>
       <dd>多次获得全国团体冠军，全国双打冠军</dd>
+      <dd>国际网联ITF一级教练员</dd>
+      <dd>原上海网球队主教练</dd>
+      <dd>上海围城网球俱乐部</dd>
     </dl>
     <img class="img-responsive" src="https://c3.staticflickr.com/9/8858/28585938386_52113c8cf2.jpg" alt="lxc" />
   </div>
