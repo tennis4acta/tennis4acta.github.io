@@ -13,9 +13,7 @@ description: "Australian Chinese Tennis Club"
 主办单位：澳洲华人网球会<br>
 冠名赞助：<b>融侨金融集团</b><br><br>
       
-<h3> <a href="{{ site.baseurl }}/2022/tickets" style="color:#005580">点此报名 Registration</a></h3>
-
-<h3> <a href="{{ site.baseurl }}/2022/tickets" style="color:#005580">点此报名 Registration</a></h3>
+<h2> <a href="{{ site.baseurl }}/2022/1127" style="color:#005580"> 11月27日 赛程及分组已公布，点此查阅 </a></h2>
 
 比赛地点：<br><b>Parramatta City Tennis</b>   Barton St, North Parramatta NSW 2151<br><br>
 
