@@ -14,3 +14,4 @@ header-img: "img/home-bg.jpg"
 <h2> Update </h2>
 * 2022-11-20 Jack Yin 退赛，Eric Liu 递补进；
 * 2022-11-21 Fanson Ye 退赛；
+* 26/11/2022: Leo Zhao 退赛
