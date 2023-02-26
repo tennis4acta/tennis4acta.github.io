@@ -54,24 +54,24 @@
 <p>（善龙 文）</p>
 
 <h2>九个项目名次如下：</h2><br><br>
-<p><img src="https://actc.org.au/history/2022/Picture9.png"></p>
+<p><img src="https://actc.org.au/history/2022/Picture9.png" class="img-responsive" width="800px"></p>
 <p>男子A级别单打:冠军:Benson Huang,亚军:Ian Lin,并列第三名:Donny Jiang和Kane Duong。</p>
-<p><img src="https://actc.org.au/history/2022/Picture10.png"></p>
+<p><img src="https://actc.org.au/history/2022/Picture10.png" class="img-responsive" width="800px"></p>
 <p>男子B级别单打红宝石组:<br>
 冠军:Ran Li,亚军:Dongjie Zhang,并列第三名:Chance Qin和Nikolay Hsu。</p><br>
-<p><img src="https://actc.org.au/history/2022/Picture11.png"></p>
+<p><img src="https://actc.org.au/history/2022/Picture11.png" class="img-responsive" width="800px"></p>
 <p>男子B级别单打蓝宝石组:冠军：Yiou Tan,亚军：Roger Xie,并列第三名：James Ji和 Zhi Ju </p><br>
-<p><img src="https://actc.org.au/history/2022/Picture12.png"></p>
+<p><img src="https://actc.org.au/history/2022/Picture12.png" class="img-responsive" width="800px"></p>
 <p>女子单打:<br>
 冠军: Zilan Wu,亚军: Doris Teoh,并列第三名:Pam Qi和Yingxi Ma。</p><br>
-<p><img src="https://actc.org.au/history/2022/Picture13.png"></p>
+<p><img src="https://actc.org.au/history/2022/Picture13.png" class="img-responsive" width="800px"></p>
 <p>少年单打：冠军:Alicia Wang，亚军: Chloe Zhao，并列第三名:Ellie Zhao和Stephane Yin。</p><br>
-<p><img src="https://actc.org.au/history/2022/Picture14.png"></p>
+<p><img src="https://actc.org.au/history/2022/Picture14.png" class="img-responsive" width="800px"></p>
 <p>男子A级别双打:冠军: Benson Huang/Donny Jiang,亚军:James Lim/Kane Duong, 并列第三名:Xiaojun Yu/Austin Han和 Michael Wang/Simon Yu。</p><br>
-<p><img src="https://actc.org.au/history/2022/Picture15.png"></p>
+<p><img src="https://actc.org.au/history/2022/Picture15.png" class="img-responsive" width="800px"></p>
 <p>男子B级别双打:冠军:Gudi Li/Jay Qiu,亚军:Fan Wu/Dongjie Zhang,并列第三名:John Lu/Zhihong Gui和Dennis Teoh/Zengling Zhang。</p><br>
-<p><img src="https://actc.org.au/history/2022/Picture16.png"></p>
+<p><img src="https://actc.org.au/history/2022/Picture16.png" class="img-responsive" width="800px"></p>
 <p>女子双打：冠军:Doris Teoh/Kitty Yang，亚军:Angelique Lu/Pang Peng，并列第三名:Liang Shang/Yingxi Ma和Ying Li/Rachel Huang。</p><br>
-<p><img src="https://actc.org.au/history/2022/Picture17.png"></p>
+<p><img src="https://actc.org.au/history/2022/Picture17.png" class="img-responsive" width="800px"></p>
 <p>中年组双打：冠军:Edward Xu/Yongjian Zhan，亚军:Jimmy Yu/Jacky Leung，并列第三名:Xinrong Zhang/Sidong Pan和Ka Ho/Ka Siu Luk。</p>
 
