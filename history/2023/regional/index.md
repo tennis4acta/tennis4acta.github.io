@@ -28,3 +28,35 @@
 <p><img src="/history/2023/regional/02.jpg"></p>
 <p><img src="/history/2023/regional/03.jpg"></p>
 
+<h2>花落谁家终有主</h2>
+<p>经过一天紧张激烈的比赛，到下午五点，ACTC第六届融侨杯华人网球省际赛A、B两个级别组的比赛分别决出了名次。</p>
+<p>A级别组，四川队再夺得桂冠，北京队赢得亚军，浙江队和香港队分获三四名。</p>
+<p>B级别组，云南队夺得冠军，福建队获得亚军，湖北队和江苏队分获三四名。</p>
+<p><img src="/history/2023/regional/04.jpg"></p>
+
+<p>融侨金融集团的Joyce Yang杨总为获奖球队颁发奖牌和奖金，澳保商业保险的Lauren Shen沈总也为获奖球队颁奖。</p>
+
+<p>融侨金融集团冠名赞助，Medibank、澳保商业保险、悟空中文、EZBox Sports、Vmores、Dr.Nature的鼎力赞助，以及SCT的协助，加上天公作美，ACTC第六届融侨杯华人网球省际赛完美收官。这是华人网坛最高水准的团体赛。</p>
+
+<p>人说春花美，秋叶不也蕴含着隽永的诗意，不也叫人在咀嚼秋韵之余，勾起对未来的憧憬。</p>
+<p>纵观本届省际赛各参赛球队，有一个显著的特点，就是新秀的崛起。一批00后的后浪，给华人网坛注入新的血液，带来青春活力。</p>
+<p>后浪推着前浪，浪奔浪流，万里涛涛，江水永不休。</p>
+<p>期望华人网坛老中青球友携手，明年再战省际赛，一起编织秋天那色彩缤纷的传说。（善龙 文）</p>
+
+<h2>A级别冠军：四川队</h2>
+<p><img src="/history/2023/regional/05.jpg"></p>
+
+<h2>A级别亚军：北京队</h2>
+<p><img src="/history/2023/regional/06.jpg"></p>
+
+<h2>A级别季军：浙江队</h2>
+<p><img src="/history/2023/regional/07.jpg"></p>
+
+<h2>B级别冠军：云南队</h2>
+<p><img src="/history/2023/regional/08.jpg"></p>
+
+<h2>B级别亚军：福建队</h2>
+<p><img src="/history/2023/regional/09.jpg"></p>
+
+<h2>B级别季军：湖北队</h2>
+<p><img src="/history/2023/regional/10.jpg"></p>
