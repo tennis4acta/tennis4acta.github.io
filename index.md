@@ -15,7 +15,7 @@ description: "Australian Chinese Tennis Club"
 
 比赛地点：<br><b>Parramatta City Tennis</b>   Barton St, North Parramatta NSW 2151<br><br>
 
-<h3> <a href="{{ site.baseurl }}/2023/tickets" target="_blank" style="color:#005580">点此报名</a></h3>
+
 
 
 <h3>比赛及报名日期</h3><br>
