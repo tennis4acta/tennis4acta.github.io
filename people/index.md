@@ -82,10 +82,9 @@ header-img: "img/history-bg.jpg"
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
-      <dt>前中国国家网球队队员，澳洲华人网球协会名誉顾问</dt>
+      <dt>前中国国家网球队队员</dt>
       <dd>国际网联ITF二级教练员</dd>
-      <dd>退役后长期从事青少年网球教学</dd>
-      <dd>曾担任澳网温网女双冠军得主郑洁晏紫少年时的网球教练</dd>
+      <dd>原四川网球队教练</dd>
     </dl>
     <img class="img-responsive" src="https://c7.staticflickr.com/9/8886/28494934862_b0c4c8fcc2_c.jpg" alt="hb" />
   </div>
@@ -97,9 +96,10 @@ header-img: "img/history-bg.jpg"
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
     <dl>
-      <dt>前湖北省网球队专业运动员</dt>
-      <dd>代表湖北参加2013年全运会</dd>
-      <dd>2014年获得ptr国际教练员证书</dd>
+      <dt>赢得过ITF世界青少年巡回赛单打亚军和双打冠军，并在ITF青少年排名达到前500</dt>
+      <dd>前湖北省网球队队员，代表湖北队参加2013年全运会</dd>
+      <dd>两届澳洲大学生网球比赛冠军</dd>
+      <dd>2014年获得PTR国际教练员证书</dd>
     </dl>
     <img class="img-responsive" src="https://c1.staticflickr.com/9/8796/27945484784_3eac77efb5_z.jpg" alt="mjb" />
   </div>
