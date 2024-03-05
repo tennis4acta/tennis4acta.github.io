@@ -15,7 +15,7 @@ description: "Australian Chinese Tennis Club"
 
 日期时间：2024年5月19日周日8:00am<br>
 
-比赛地点：<br><b>Parramatta City Tennis</b>   Barton St, North Parramatta NSW 2151<br><br>
+比赛地点：<br><b>Parramatta City Tennis</b> <br>Barton St, North Parramatta NSW 2151<br><br>
 
 报名费用：$170/队<br>
 
