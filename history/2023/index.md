@@ -39,7 +39,7 @@
 <p>一年一度的华人网球大奖赛落下了帷幕，期待来年更精彩更刺激的大奖赛。</p>
 <p><img src="/history/2023/2023_actc_6.png" class="img-responsive" width="800px"></p>
 
-<p>八个项目名次如下：<br>
+<p>八个项目名次如下：<br><br>
 男子A级别单打：<br>
 冠军Jiacheng Xu，亚军Roger Yu，<br>
 并列第三名：Ian Lin，Kane Duong.<br><br>
