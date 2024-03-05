@@ -11,7 +11,7 @@ header-img: "img/post-bg-01.jpg"
 <p>澳洲华人网球会于2023年10月22日在Parramatta网球中心举行了女子网球单打比赛。近年来女球友越来越多，每年年终华人网球大奖赛的名额又有限，而且女子项目部分AB级别，一般业余女球友很难夺得好名次。基于这一情况，澳洲华人网球组委会决定在大奖赛之前，特别为水平在业余2.5至4级的女球友举办单打比赛。这一比赛就像男子B级别的单打，给水平一般的球友也有争名次的机会。</p>
 <p>女单比赛共有32位球友参赛，经过一天紧张激烈的比赛，Pei赢得了冠军，Pam夺得亚军，Ying Huang和Claudia获得第三名。</p>
 
-<img class="img-responsive" src="https://farm5.staticflickr.com/4342/36998687711_cbc8391f9f_c.jpg" alt="event1" width="800" />
+<img class="img-responsive" src="/_post_img/2023_lady_single.png" alt="event1" width="800" />
 
 <hr>
 <p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
