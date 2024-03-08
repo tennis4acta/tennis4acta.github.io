@@ -7,7 +7,7 @@ description: "Australian Chinese Tennis Club"
 <h1 align="center">2024年ACTC第六届融侨杯华人网球省际赛</h1>
 
 
-<p align="center"><img src="{{ site.baseurl }}/img/2024_regional_poster.jpg" class="img-responsive" width="800px" alt="2024年ACTC第六届融侨杯华人网球省际赛"></p>
+<p align="center"><img src="/img/2024_regional_poster.jpg" class="img-responsive" width="800px" alt="2024年ACTC第六届融侨杯华人网球省际赛"></p>
 
 主办单位：<b>澳洲华人网球会</b><br>
 冠名赞助：<b>融侨金融集团</b><br>
