@@ -18,7 +18,7 @@ description: "Australian Chinese Tennis Club"
 比赛地点：<br><b>Parramatta City Tennis</b> <br>Barton St, North Parramatta NSW 2151<br><br>
 
 <h2>赛程安排</h2><br><br>
-<p align="center"><a href="/img/2024_regional_courts.jpg" target="blank"><img src="/img/2024_regional_courts.jpg" class="img-responsive" width="800px" alt="2024年ACTC第六届融侨杯华人网球省际赛赛程"></a></p>
+<p align="center"><a href="/img/2024_regional_courts.jpg.png" target="blank"><img src="/img/2024_regional_courts.jpg.png" class="img-responsive" width="800px" alt="2024年ACTC第六届融侨杯华人网球省际赛赛程"></a></p>
 
 报名费用：$170/队<br>
 
