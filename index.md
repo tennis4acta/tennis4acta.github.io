@@ -20,6 +20,13 @@ description: "Australian Chinese Tennis Club"
 <h2>赛程安排</h2><br><br>
 <p align="center"><a href="/img/2024_regional_courts.png" target="blank"><img src="/img/2024_regional_courts.png" class="img-responsive" width="800px" alt="2024年ACTC第六届融侨杯华人网球省际赛赛程"></a></p>
 
+<h2>赛程</h2>
+<h3>A级别</h3>
+<iframe src="https://challonge.com/actc_interprov_a/module" width="100%" height="1200" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+<h3>B级别</h3>
+<iframe src="https://challonge.com/2024actc_interprov_b/module" width="100%" height="1200" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+
+
 报名费用：$170/队<br>
 
 报名日期：<br>
