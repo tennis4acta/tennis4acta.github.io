@@ -14,6 +14,8 @@
 
 <p>B级别球队：辽宁、湖北、湖南、台北、福建、广西、河北、河南、山东、安徽、黑龙江和江西。</p>
 
+<p><img src="/history/2024/regional/01.png" class="img-responsive" width="800px"></p>
+
 <p>这是澳洲华人网球最高水平的团体赛，也是华人网球群英会。赛前，各球队招兵买马，广募高手。强队到处寻找家乡新人，力保城池
 不失； 也有球队早早“签约”外援，誓言挑战强队；还有球队闭门集训，期望赛场上打出惊喜。</p>
 
@@ -35,13 +37,19 @@
 
 <p>一天的激战，场场溅出火花。江苏队，往届弱旅，此次有一高手加盟，便有意挑战圈内好手。在A级别a小组赛中，江苏队挑落了两支强队，着实让人刮目相看，只因小分之差遗憾没能出线，但未来可期。</p>
 
+<p><img src="/history/2024/regional/02.png" class="img-responsive" width="800px"></p>
+
 <p>A级别b小组，除了北京队三战全胜外，广东，香港和上海三队都是三战一胜两负。最后上海队以微弱优势出线，半决赛越战越勇闯入决赛。</p>
 
 <p>北京队去年小组赛到决赛被大逆转。今年，他们以原班人马卷土重来，半决赛再遇四川队，可谓冤家路窄。两队三场激战难解难分，北京队最终报了一箭之仇。决赛中，又凭借强大的实力战胜了上海队。</p>
 
 <p>台北队，一支实力不可小觑的球队。这次主力好手缺阵，但还是昂首挺进淘汰赛，夺得B级别殿军。</p>
 
+<p><img src="/history/2024/regional/03.png" class="img-responsive" width="800px"></p>
+
 <p>安徽队，第二次参加省际赛，好不容易召集到四位球员，加上一名外援勉强达到参赛人数。他们没有奢望，能赢一场就是胜利。他们做到了，给安徽队点个大赞。</p>
+
+<p><img src="/history/2024/regional/04.png" class="img-responsive" width="800px"></p>
 
 <p>广西队默默无闻，据说没有集训过一次。比赛当天有队员临阵退赛，给球队带来不确定因素。桂军素以勇谋兼备著称，从小组赛到淘汰赛，一路盘算一路搏杀，笑到最后，成了B级别大赢家。</p>
 
@@ -49,7 +57,11 @@
 
 <p>2024ACTC融侨杯华人网球省际赛，140位球员，20支球队，22位志愿者，108场比赛，顺利圆满！</p>
 
+<p><img src="/history/2024/regional/05.png" class="img-responsive" width="800px"></p>
+
 <p>管理员、协调员、裁判员和摄影师，这支志愿者队伍形成一个强大又高效的团队。这是大赛成功的保证。感恩有你！</p>
+
+<p><img src="/history/2024/regional/06.png" class="img-responsive" width="800px"></p>
 
 <p>衷心感谢融侨金融集团连续多年冠名赞助。衷心感谢Medibank、Ray’s Florist、澳保保险公司等商家长期支持赞助。</p>
 
@@ -68,3 +80,13 @@
 <p>一年好景君须记，正是省赛开打时。</p>
 
 <p>明年省际赛，又是一个阳光明媚的金秋日。（完）</p>
+
+<p><img src="/history/2024/regional/07.png" class="img-responsive" width="800px"></p>
+
+<p>上图为获奖球队、赞助商和志愿者合影。中间前排站立女士是融侨金融集团融侨速汇客户经理Suri Huang。</p>
+
+<p><img src="/history/2024/regional/08.png" class="img-responsive" width="800px"></p>
+
+<p><img src="/history/2024/regional/09.png" class="img-responsive" width="800px"></p>
+
+<p><img src="/history/2024/regional/10.png" class="img-responsive" width="800px"></p>
