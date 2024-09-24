@@ -7,7 +7,7 @@ description: "Australian Chinese Tennis Club"
 <h1 align="center">2024年ACTC融侨杯华人网球大奖赛</h1>
 
 
-<!-- <p align="center"><img src="/img/2024_regional_poster.jpg" class="img-responsive" width="800px" alt="2024年ACTC融侨杯华人网球大奖赛"></p> -->
+<p align="center"><img src="/img/2024_regional_poster.jpg" class="img-responsive" width="800px" alt="2024年ACTC融侨杯华人网球大奖赛"></p>
 
 主办单位：<b>澳洲华人网球会</b><br>
 冠名赞助：<b>融侨金融集团</b><br>
@@ -52,7 +52,7 @@ description: "Australian Chinese Tennis Club"
 
 <li>1，参赛球员请按照驾照或护照的姓和名填写报名表，并写上英文名。还请选择来自：港、澳、台、大陆。</li>
 <li>2，递交报名表后，不能擅自更换球员。如遇特殊情况，11月17日前通知组委会退赛并经回复核准，将给予退还报名费。11月17日之后退赛，不予退款。擅自换球员，将取消比赛资格。无故缺席和退赛，组委会将作进一步处理。</li>
-<li>3，项目报满，自动截止报名。逾期未报上名的球员请发邮件通知列为等候名单，info@actc.org.au。</li>
+<li>3，项目报满，自动截止。未报上的球员，列入等候名单。如有名额空出，赛会将发邮件通知，等候球员先报先得。</li>
 <li>4，11月24日单打比赛，球员只能参加一个项目的比赛。12月1日的双打项目，球员只能参加一个项目的比赛。一经发现重复参赛，将取消其所有比赛资格和成绩。</li>
 <li>5，赛会根据以往ACTC大奖赛的名次，列各项目种子。除非经查核实力，此外不接受列种子球员的要求。</li>
 <li>6，除了部分决赛设裁判外，其余比赛均采取信任制。但组委会裁判组安排场外裁判巡回查看，如发现球员乱判，将给予警告、扣分，严重者将进一步处理。</li>
