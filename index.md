@@ -14,7 +14,7 @@ description: "Australian Chinese Tennis Club"
 
 比赛地点：<br><b>Parramatta City Tennis</b> <br>Barton St, North Parramatta NSW 2151<br><br>
 
-<!--
+
 <h2><p>比赛报名链接</p></h2>
 <h3><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=F07C295D-8467-413F-AD1E-65891283CCB9" target="_blank"> <u>男子A级别单打</u></a></h3>
 <h3><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=157FCB76-DC5A-4B44-AE8A-0F06F87433A6" target="_blank"><u>男子B级别单打</u></a></h3>
@@ -23,7 +23,7 @@ description: "Australian Chinese Tennis Club"
 <h3><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=19FF36D7-D254-4AF2-953F-B88680B85DA1" target="_blank"><u>男子B级别双打</u></a></h3>
 <h3><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=29CC71B1-38FE-4C23-8ABA-305CF25C952D" target="_blank"><u>女子双打</u></a></h3>
 <h3><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=5DC0BA36-4971-47C2-B3EE-C6DB6BF0E9F0" target="_blank"><u>中年组双打（50-70岁）</u></a></h3>
--->
+
 
 
 <h2><p>比赛及报名日期</p></h2>
