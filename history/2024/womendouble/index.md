@@ -4,4 +4,4 @@
 
 <p>女双比赛共有20对，共40位球友参赛，经过一天的比赛，Pei/Ying Huang夺得了冠军，Pam/Lin获得亚军，Ying Li/Crystal和Chelsea/Lucy获得并列第三名。</p>
 
-
+<p><img src="/history/2024/womendouble/01.png" class="img-responsive" width="800px"></p>
