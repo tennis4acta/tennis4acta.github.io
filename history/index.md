@@ -4,6 +4,10 @@ title: "過往賽事"
 description: "History"
 header-img: "img/history-bg.jpg"
 ---
+<p align="center"><img src="/img/20_anniversary.png" class="img-responsive" width="800px" alt="澳洲华人网球大奖赛20周年"></p>
+
+<br>
+
 <h2><a href="{{ site.baseurl }}/history/all_results/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 历史成绩 (请点击查看)</a></h2>
 
 
