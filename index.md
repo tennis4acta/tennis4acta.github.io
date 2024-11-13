@@ -3,7 +3,7 @@ layout:     page
 title:      "澳洲华人网球会"
 description: "Australian Chinese Tennis Club"
 ---
-<p align="center"><img src="/img/20_anniversary.png" class="img-responsive" width="800px" alt="澳洲华人网球大奖赛20周年"></p>
+<p align="center"><img src="/img/20_anniversary.png" class="img-responsive" alt="澳洲华人网球大奖赛20周年"></p>
 
 <br>
 
