@@ -4,7 +4,7 @@ title: "過往賽事"
 description: "History"
 header-img: "img/history-bg.jpg"
 ---
-<p align="center"><img src="/img/20_anniversary.png" class="img-responsive" width="800px" alt="澳洲华人网球大奖赛20周年"></p>
+<p align="center"><img src="/img/20_anniversary.png" class="img-responsive" alt="澳洲华人网球大奖赛20周年"></p>
 
 <br>
 
