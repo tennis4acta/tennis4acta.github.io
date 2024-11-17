@@ -17,6 +17,7 @@ description: "Australian Chinese Tennis Club"
 
 比赛地点：<br><b>Parramatta City Tennis</b> <br>Barton St, North Parramatta NSW 2151<br><br>
 
+<h2><p><a href="{{ site.baseurl }}/2024/1124" target="_blank" style="color:#005580">11月24日 单打分组及赛程</a></p></h2>
 
 <h2><p>比赛报名链接</p></h2>
 <h3><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=F07C295D-8467-413F-AD1E-65891283CCB9" target="_blank"> <u>男子A级别单打</u></a></h3>
