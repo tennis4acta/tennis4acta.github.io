@@ -1,0 +1,31 @@
+---
+layout:     post
+title:      "2024 女子网球活动"
+date:       2024-12-31 12:00:00
+author:     "ACTC"
+header-img: "img/post-bg-01.jpg"
+---
+<h2>2024年女子双打比赛</h2>
+<p>澳洲华人网球会于2024年10月13日在Parramatta网球中心举行了女子网球双打比赛。这是为女子业余球员举办的比赛，由于有级别限制，使得业余网球手有争夺名次的机会。</p>
+
+<p>女双比赛共有20对，共40位球友参赛，经过一天的比赛，Pei/Ying Huang夺得了冠军，Pam/Lin获得亚军，Ying Li/Crystal和Chelsea/Lucy获得并列第三名。</p>
+
+<p><img src="/img/2024womendouble.png" class="img-responsive" width="800px"></p>
+
+
+<h2>首届华人女子省际赛举行</h2>
+
+<p>（悉尼讯）第一届华人女子网球省际赛于2024年3月10日周日在Parramatta网球场举行。辽宁、山东、广西、四川、福建、江苏、广东和北京共八支球队约40位球员参加了比赛。</p>
+
+<p>球会每年上半年举行年度华人网球省际赛，由于各队为了打出好成绩，都选拔好手入队，而多数业余女球员都无缘参赛。为了满足女球员打省际赛的愿望，球会特地举办了华人女子网球省际赛。年初公布了这项赛事，广大女球友的热情高涨，积极组队并投入训练。经过一天的激烈比赛，广西队夺得了冠军，山东队获亚军，广东队和北京队分别获得三四名。</p>
+
+<p><img src="/img/2024womenregional.png" class="img-responsive" width="800px"></p>
+
+<hr>
+<p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
+<div class="row">
+  <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+    <img class="img-responsive" src="https://c5.staticflickr.com/9/8179/28251007604_30faf539bc_z.jpg" alt="Chania" />
+  </div>
+</div>
+<hr>
