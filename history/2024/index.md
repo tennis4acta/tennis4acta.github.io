@@ -102,14 +102,29 @@
 
 <p align="center"><img src="/history/2024/10.png" class="img-responsive"></p>
 
-<p></p>
+<p>A级别男单(左至右)：冠军Delon Deng，亚军Kane Duong，季军Benson Huang和Aaron Tian</p>
 
 <p align="center"><img src="/history/2024/11.png" class="img-responsive"></p>
 
-<p></p>
+<p>女单(左至右)：亚军Crystal Ma，冠军Zijun Xia，季军（并列）Ying Li和Lucy Meng</p>
 
 <p align="center"><img src="/history/2024/12.png" class="img-responsive"></p>
 
-<p></p>
+<p>B级别男单红宝石(左至右)：亚军Zhihong Gui，冠军Andy Chiem<br>B级别男单蓝宝石(左至右)：亚军Mark Chen，冠军Eric Lu</p>
 
-<p></p>
+<p align="center"><img src="/history/2024/13.png" class="img-responsive"></p>
+
+<p>A级别男双(上左至右)：冠军James Lu/Benson Huang，亚军Affa Wu/Kimi Sun，季军Austin Han/Roger Yu(缺席)和Richard Gong/Brandon Liu</p>
+
+<p align="center"><img src="/history/2024/14.png" class="img-responsive"></p>
+
+<p>B级别男双(左至右)：季军Yu Han/Jucian Qin和Eric Lu/Yijin Lu， 冠军Zhao Guo/Taihao Wu，亚军Mingyang Gui/Zhihong Gui</p>
+
+<p align="center"><img src="/history/2024/15.png" class="img-responsive"></p>
+
+<p>女双(上左至右)：冠军Zijun Xia/Connie Wu，亚军Wendy Chan/Connie Ku，季军Ying Li/Vivian Sue和Pameia Qi/Crystal Ma</p>
+
+<p align="center"><img src="/history/2024/16.png" class="img-responsive"></p>
+
+<p>中年双打(上左至右)：亚军Robert Wang/Jizhong Wu，冠军Andrew Au/Ken Wu，季军Xinrong Zhang/Sidong Pan和Titus Chiu/Bill Peng</p>
+
