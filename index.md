@@ -111,8 +111,8 @@ description: "Australian Chinese Tennis Club"
 
 <p><h3>分组</h3></p>
 
-<iframe src="https://challonge.com/2025prov_a/module" width="100%" height="1200" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
-<iframe src="https://challonge.com/2025prov_b/module" width="100%" height="1200" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+<iframe src="https://challonge.com/2025prov_a/module" width="100%" height="800" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+<iframe src="https://challonge.com/2025prov_b/module" width="100%" height="800" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 
 <h3>请扫描二维码加入球会群</h3>
 
