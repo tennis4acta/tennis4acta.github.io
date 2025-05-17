@@ -31,7 +31,7 @@ description: "Australian Chinese Tennis Club"
 <iframe src="https://challonge.com/2025prov_b/module" width="100%" height="800" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 
 <h2>赛程表</h2>
-<iframe width="100%" frameborder="0" scrolling="auto" allowtransparency="true" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwCKLaWQyDsQcCkjMj5gFfMEcD9-WkF25pSAuZi4yk6HrLOZawFJEvuCi5jl5lQu_i_pfDaFFHFRUL/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+<iframe width="100%" height="100%" frameborder="0" scrolling="auto" allowtransparency="true" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwCKLaWQyDsQcCkjMj5gFfMEcD9-WkF25pSAuZi4yk6HrLOZawFJEvuCi5jl5lQu_i_pfDaFFHFRUL/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 <br><br>
 
 <p><h2>赛制</h2><br>
@@ -42,9 +42,9 @@ description: "Australian Chinese Tennis Club"
 <li>A和B级别组的球队，分别分组，进行小组循环赛。小组赛出线后进入淘汰赛。组委会将根据以往省际赛成绩以及评估实际实力列出种子队。</li>
 <li>每轮比赛（队与队）按双-单-双的顺序比赛，三场两胜为胜方。</li>
 <li>每支队伍的5-7名球员参赛要求：<ul>
-      <li>a, 小组三轮比赛中，每轮派5人参加双打-单打-双打的三场比赛。</li>
-      <li>b, 同轮比赛中，一位球员只能参加双单双三场比赛中的一场比赛。</li>
-      <li>c, 小组赛中一位球员最多只能参加一场单打。</li></ul>
+      <li>小组三轮比赛中，每轮派5人参加双打-单打-双打的三场比赛。</li>
+      <li>同轮比赛中，一位球员只能参加双单双三场比赛中的一场比赛。</li>
+      <li>小组赛中一位球员最多只能参加一场单打。</li></ul>
 </li>
 <li>一球员在小组赛中没参赛或弃权，该球员将无条件失去参加淘汰赛的资格。即使淘汰赛中有球员受伤退赛，小组赛没参赛的球员也不能替补上场。</li>
 <li>小组赛出线的球队，淘汰赛球员出场顺序将重新计。</li></ul><br>
@@ -52,10 +52,10 @@ description: "Australian Chinese Tennis Club"
 <h3>淘汰赛：</h3>
 <ul>
       
-<li>（6）进入后几轮淘汰赛，同一球员不能连续打两场单打。</li>
-<li>（7）淘汰赛的同轮比赛中，一位球员只能参加双单双三场比赛中的一场比赛。</li>
-<li>（8）对阵每支球队的比赛开打10分钟前，提交出场顺序的球员名单。球员名单提交后不得更换。出赛双方球员名单，将同时公布。</li>
-<li>（9）比赛采取信任制。赛会安排人员场外巡视，如发现球员乱判，将给予警告、扣分或进一步处理。如比赛场上争持不下，赛会视情派裁判进场监看，但还是信任制。</li>
+<li>进入后几轮淘汰赛，同一球员不能连续打两场单打。</li>
+<li>淘汰赛的同轮比赛中，一位球员只能参加双单双三场比赛中的一场比赛。</li>
+<li>对阵每支球队的比赛开打10分钟前，提交出场顺序的球员名单。球员名单提交后不得更换。出赛双方球员名单，将同时公布。</li>
+<li>比赛采取信任制。赛会安排人员场外巡视，如发现球员乱判，将给予警告、扣分或进一步处理。如比赛场上争持不下，赛会视情派裁判进场监看，但还是信任制。</li>
 <li>组委会保留解释权，并有权根据实际情况调整。</li>
 </ul></p>
 
