@@ -17,8 +17,19 @@ description: "Australian Chinese Tennis Club"
 
 <p><h3>比赛地点：<br><b>Parramatta City Tennis</b> <br>Barton St, North Parramatta NSW 2151<br><br>
 日期时间：<br>2025年5月18日周日8:00am<br><br>
-报名费用：$180/队<br><br>
-报名日期：<br>2025年4月12日周六开始报名<br>2025年4月26日周六5时截止或额满截止</h3></p>
+
+      
+<!-- 报名费用：$180/队<br><br>
+报名日期：<br>2025年4月12日周六开始报名<br>2025年4月26日周六5时截止或额满截止</h3></p> -->
+
+
+<p><h2>分组</h2></p>
+<h3>A 级别 </h3>
+<iframe src="https://challonge.com/2025prov_a/module" width="100%" height="800" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+
+<h3>B 级别 </h3>
+<iframe src="https://challonge.com/2025prov_b/module" width="100%" height="800" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+
 
 <br><br>
 
@@ -88,11 +99,11 @@ description: "Australian Chinese Tennis Club"
   小组赛规则<br>    
 <ul>
 <li>1）小组赛每轮比赛为双打-单打-双打，每轮比赛赢两场以上的球队赢得该轮比赛。小组循环赛每轮必须打完双单双的三场比赛。</li>
-<li>2）小组循环赛，以先赢到5局为胜方，每局平分后一球定胜负，由接发方选择接球区。如果局数打到4比4时抢5。（抢5中，双方比数加起来到4换一次边，然后不再换边）。抢5以先赢5分并领先2分者赢得比赛。</li>
-<li>3）小组赛三轮比赛，按照小组赛中获胜场数、获胜盘数、胜局数、负局数，来比较三个小组相同名次的球队的战绩。</li></ul><br>
+<li>2）小组循环赛，A级别以先赢到5局为胜方，B级别以先赢4局为胜方。每局平分后一球定胜负，由接发方选择接球区。A级别4平，B级别3平时抢5。（抢5中，双方比数加起来第一次到4时换一次边，然后不再换边）。抢5以先赢5分并领先2分者赢得比赛。</li>
+<li>3）小组赛三轮比赛，按照小组赛中获胜场数、获胜盘数、胜局数、球队间胜负关系，来比较小组名次。</li></ul><br>
 
 淘汰赛规则<br>
-<p>第二轮开始的淘汰赛则采用正常盘，每局平分后一球定胜负，由接发方选择接球区。如果局数打到6比6平时抢7。抢7以先赢7分并领先2分者赢得比赛。</p></p>
+<p>第二轮开始的淘汰赛使用与小组赛相同的5局规则。先赢到5局为胜方，每局平分后一球定胜负，由接发方选择接球区。4平时抢5。（抢5中，双方比数加起来第一次到4时换一次边，然后不再换边）。抢5以先赢5分并领先2分者赢得比赛。</p></p>
 <br><br>
 
 <p><h2>抽签</h2><br>
@@ -108,11 +119,6 @@ description: "Australian Chinese Tennis Club"
 <li>请各队长及队员详细了解各项规定和要求。参赛者一经出现在所属队的报明表里并参赛，赛会则认为队长和队员认可并会自觉遵守。</li></ul></p>
 
 <br><br>
-
-<p><h3>分组</h3></p>
-
-<iframe src="https://challonge.com/2025prov_a/module" width="100%" height="800" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
-<iframe src="https://challonge.com/2025prov_b/module" width="100%" height="800" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
 
 <h3>请扫描二维码加入球会群</h3>
 
