@@ -12,6 +12,7 @@ header-img: "img/history-bg.jpg"
 
 
 <div class="list-group">
+    <a href="{{ site.baseurl }}/history/2025/regional/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2025年ACTC融侨杯华人网球省际赛</a>
     <a href="{{ site.baseurl }}/history/2024/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2024年ACTC融侨杯华人网球大奖赛</a>
     <a href="{{ site.baseurl }}/history/2024/regional/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2024年ACTC融侨杯华人网球省际赛</a>
     <a href="{{ site.baseurl }}/history/2023/" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 2023年ACTC融侨杯华人网球大奖赛</a>
