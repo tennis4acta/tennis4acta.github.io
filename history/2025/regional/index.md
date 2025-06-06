@@ -67,34 +67,63 @@
 
 <p><img src="/history/2025/regional/04.png" class="img-responsive" width="800px"></p>
 
-<p></p>
+<p>（图为融侨金融集团市场经理Colin Song致辞）</p>
 
-<p></p>
+<p>感谢Medibank、澳保商业保险、康道国际等企业鼎力支持。</p>
+
+<p><img src="/history/2025/regional/05.png" class="img-responsive" width="800px"></p>
+
+<p>（图为获奖球队和工作团队志愿者合影）</p>
+
+<p>祝贺赢得A、B级别名次的球队，也祝贺所有为家乡赢得一份尊重的球队。</p>
+
+<p>更要感谢每一位志愿者，你们无私奉献，是本届比赛圆满成功的保证。</p>
+
+<p><img src="/history/2025/regional/06.png" class="img-responsive" width="800px"></p>
+
+<p>（图为最可爱的人：我们的志愿者）</p>
+
+<h3><p>雨缝完赛，圆满省际赛</p></h3>
+
+<p>从因雨延迟至上午10点钟开赛，到下午4点半结束比赛，六个半小时内完成了111场比赛。这是管理团队和志愿者又一次经受风雨考验而完成的大赛杰作。</p>
+
+<p>去年大奖赛因雨中断，志愿者和热心球员争相上场清理雨水的场景，被誉为“风雨过后一道美丽的风景”。而这道风景再现上周日的赛场上。</p>
+
+<p>人们更愿这道风景永不消失，因为这是用爱心善心编织的风景。</p>
+
+<p><img src="/history/2025/regional/07.png" class="img-responsive" width="800px"></p>
+
+<p>（图为省际赛再现一道美丽的风景）</p>
 
 
-<p></p>
+<p>ACTC融侨杯华人网球省际赛降下了帷幕，球员去各自的庆功宴。</p>
 
-<p></p>
+<p>细雨又起，随着轻风洒落球场。</p>
 
-<p></p>
+<p>球友笑言：这是在雨缝中圆满完成的比赛。球场经理短信祝贺，称赞团队专业精神，并夸道：You made good decision in the end.</p>
 
-<p></p>
+<p>下一程风雨路通向何方？有说，人生相逢有时尽，花开花落终有时。何不珍惜当下，珍惜网球缘的每一个瞬间。能在风雨中落幕，大概也是一种完美吧。</p>
 
-<p></p>
+<p>（文：善龙）</p>
 
-<p></p>
+<p><img src="/history/2025/regional/08.png" class="img-responsive" width="800px"></p>
 
-<p></p>
+<p>A级别冠军：北京队</p>
 
-<p></p>
+<p><img src="/history/2025/regional/09.png" class="img-responsive" width="800px"></p>
+<p>A级别亚军：四川队</p>
 
-<p></p>
+<p><img src="/history/2025/regional/10.png" class="img-responsive" width="800px"></p>
 
+<p>A级别季军：广西队</p>
 
-<p></p>
+<p><img src="/history/2025/regional/11.png" class="img-responsive" width="800px"></p>
 
-<p></p>
+<p>B级别冠军：河南队</p>
 
-<p></p>
+<p><img src="/history/2025/regional/12.png" class="img-responsive" width="800px"></p>
+<p>B级别亚军：黑龙江队</p>
 
-<p></p>
+<p><img src="/history/2025/regional/13.png" class="img-responsive" width="800px"></p>
+
+<p>B级别季军：辽宁队</p>
