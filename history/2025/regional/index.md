@@ -9,3 +9,5 @@
 <h3><p>从地域赛到省际赛</p></h3>
 
 <p>省际赛的前身，是2016年由热心球友东尼发起的“地域赛”。八支参赛队各自以家乡球员组成球队，进行友谊赛。</p>
+
+<p><img src="/history/2025/regional/01.png" class="img-responsive" width="800px"></p>
