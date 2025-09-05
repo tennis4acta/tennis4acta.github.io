@@ -8,8 +8,8 @@ description: "Australian Chinese Tennis Club"
 <p><img src="/img/2025_poster.jpg" class="img-responsive" width="800px"></p>
 <h2><p>2025年ACTC融侨速汇杯华人网球大奖赛</p></h2>
 <p>2025ACTC Money Chain World Remittance Chinese Tennis Competition</p>
-<h3></h3><p>冠名赞助：融侨速汇</p></h3>
-<h3></h3><p>主办单位：澳洲华人网球会</p></h3>
+<h3><p>冠名赞助：融侨速汇</p></h3>
+<h3><p>主办单位：澳洲华人网球会</p></h3>
 <p>比赛地点：Parramatta City Tennis<br>Barton St, North Parramatta NSW 2151</p>
 <h3><p>比赛及报名日期</p></h3>
 <h4><p>2025年11月16日周日8:00am开始：</p></h4>
