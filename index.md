@@ -106,7 +106,7 @@ description: "Australian Chinese Tennis Club"
 <h4><p><ls>
       <li>1）参赛球员请仔细阅读并了解各项要求等细则。如有球员不符合，组委会有权作出处理。</li>
       <li>2）组委会对有关规定和规则保留解释权和决定权。</li>
-</p></h4>
+</ls></p></h4>
 
 
 <br><br>
