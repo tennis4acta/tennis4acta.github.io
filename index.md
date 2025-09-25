@@ -12,7 +12,7 @@ description: "Australian Chinese Tennis Club"
 <h3><p>主办单位：澳洲华人网球会</p></h3>
 <p>比赛地点：Parramatta City Tennis<br>Barton St, North Parramatta NSW 2151</p>
 <h3><p>比赛及报名日期</p></h3>
-<h4><p>2025年11月23日周日8:00am开始：</p></h4>
+<h4><p>2025年11月23日周日8:00am：</p></h4>
 <h4><p>单打报名费$30/人+手续费：</p></h4>
 <p><ls>
       <li>男子A级别单打（20人）</li>
@@ -20,7 +20,7 @@ description: "Australian Chinese Tennis Club"
       <li>男子B级别单打（蓝宝石）（32人）</li>
       <li>女子单打（16人）</li>
 </ls></p>
-<h4><p>2025年11月30日周日8:00am开始：</p></h4>
+<h4><p>2025年11月30日周日8:00am：</p></h4>
 <h4><p>双打报名费$60/组合+手续费：</p></h4>
 <p><ls>
       <li>男子A级别双打（12对）</li>
