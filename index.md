@@ -25,8 +25,7 @@ description: "Australian Chinese Tennis Club"
       <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=A4B75705-CBD2-4114-BCDC-44E5E18BB748" target="_blank" style="color:#005580">女子双打（20对）</a></li>
       <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=15A7E3AF-7F11-4F57-9BC8-AF88CCE97F20" target="_blank" style="color:#005580">中年组双打（50-70岁）（10对）</a></li>
 </ls></p>
-<h4><p>2025年10月25日周六晚上10时起开放报名</p></h4>
-<h4><p>2025年11月8日周六下午5时截止报名或额满提前截止</p></h4>
+<h4><p>2025年10月25日周六晚上10时起开放报名；2025年11月8日周六下午5时截止报名或额满提前截止</p></h4>
 
 
 <h3><p>本届比赛仅限中国大陆及港澳台华人业余球友参赛</p></h3>
