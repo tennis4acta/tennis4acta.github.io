@@ -11,37 +11,24 @@ description: "Australian Chinese Tennis Club"
 <h3><p>冠名赞助：融侨速汇</p></h3>
 <h3><p>主办单位：澳洲华人网球会</p></h3>
 <p>比赛地点：Parramatta City Tennis<br>Barton St, North Parramatta NSW 2151</p>
-<h3><p>比赛及报名日期</p></h3>
+<h3><p>报名链接</p></h3>
 <h4><p>2025年11月23日周日8:00am：</p></h4>
 <h4><p>单打报名费$30/人+手续费：</p></h4>
 <p><ls>
-      <li>男子A级别单打（20人）</li>
-      <li>男子B级别单打（红宝石）（32人）</li>
-      <li>男子B级别单打（蓝宝石）（32人）</li>
-      <li>女子单打（16人）</li>
+      <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=D38DD7E0-65D4-49AB-AD99-811190F71133" target="_blank" style="color:#005580">男子双打 A级别（12对）</a></li>
+      <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=7700AF6A-C9A0-40C0-A3F5-2CA9B2AB70EF" target="_blank" style="color:#005580">男子单打 B级别（红蓝宝石）（各32人）</a></li>
+      <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=AB571909-B564-459D-8DE7-C676BF6E30FA" target="_blank" style="color:#005580">女子单打（16人）</a></li>
 </ls></p>
 <h4><p>2025年11月30日周日8:00am：</p></h4>
 <h4><p>双打报名费$60/组合+手续费：</p></h4>
 <p><ls>
-      <li>男子A级别双打（12对）</li>
-      <li>男子B级别双打（32对）</li>
-      <li>女子双打（20对）</li>
-      <li>中年组双打（50-70岁）（10对））</li>
+      <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=D38DD7E0-65D4-49AB-AD99-811190F71133" target="_blank" style="color:#005580">男子双打 A级别（12对）</a></li>
+      <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=8EA27ADC-DE8B-4635-9D35-D32553159DE3" target="_blank" style="color:#005580">男子双打 B级别（32对）</a></li>
+      <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=A4B75705-CBD2-4114-BCDC-44E5E18BB748" target="_blank" style="color:#005580">女子双打（20对）</a></li>
+      <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=15A7E3AF-7F11-4F57-9BC8-AF88CCE97F20" target="_blank" style="color:#005580">中年组双打（50-70岁）（10对）</a></li>
 </ls></p>
 <h4><p>2025年10月25日周六晚上10时起开放报名</p></h4>
 <h4><p>2025年11月8日周六下午5时截止报名或额满提前截止</p></h4>
-
-
-### 2025年11月23日周日8:00am开始
-<h3> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=EEE05A81-165B-49DB-9D60-6FBA2B66B093" target="_blank" style="color:#005580">男子单打 A级别</a></h3>
-<h3> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=7700AF6A-C9A0-40C0-A3F5-2CA9B2AB70EF" target="_blank" style="color:#005580">男子单打 B级别</a></h3>
-<h3> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=AB571909-B564-459D-8DE7-C676BF6E30FA" target="_blank" style="color:#005580">女子单打</a></h3>
-
-### 2025年11月30日周日8:00am开始
-<h3> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=D38DD7E0-65D4-49AB-AD99-811190F71133" target="_blank" style="color:#005580">男子双打 A级别</a></h3>
-<h3> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=8EA27ADC-DE8B-4635-9D35-D32553159DE3" target="_blank" style="color:#005580">男子双打 B级别</a></h3>
-<h3> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=A4B75705-CBD2-4114-BCDC-44E5E18BB748" target="_blank" style="color:#005580">女子双打</a></h3>
-<h3> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=15A7E3AF-7F11-4F57-9BC8-AF88CCE97F20" target="_blank" style="color:#005580">中年组双打（50-70岁）</a></h3>
 
 
 <h3><p>本届比赛仅限中国大陆及港澳台华人业余球友参赛</p></h3>
