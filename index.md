@@ -15,7 +15,7 @@ description: "Australian Chinese Tennis Club"
 
 <h4><p>2025年11月23日周日8:00am（单打报名费$30/人+手续费）：</p></h4>
 <p><ls>
-      <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=EEE05A81-165B-49DB-9D60-6FBA2B66B093" target="_blank" style="color:#005580">男子单打 A级别</a>    </li>
+      <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=EEE05A81-165B-49DB-9D60-6FBA2B66B093" target="_blank" style="color:#005580">男子单打 A级别（20人）</a>    </li>
       <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=7700AF6A-C9A0-40C0-A3F5-2CA9B2AB70EF" target="_blank" style="color:#005580">男子单打 B级别（红蓝宝石）（各32人）</a></li>
       <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=AB571909-B564-459D-8DE7-C676BF6E30FA" target="_blank" style="color:#005580">女子单打（16人）</a></li>
 </ls></p>
