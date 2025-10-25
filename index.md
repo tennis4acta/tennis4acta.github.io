@@ -13,14 +13,14 @@ description: "Australian Chinese Tennis Club"
 <p>比赛地点：Parramatta City Tennis<br>Barton St, North Parramatta NSW 2151</p>
 <h3><p>报名链接</p></h3>
 <h4><p>2025年11月23日周日8:00am：</p></h4>
-<h4><p>单打报名费$30/人+手续费：</p></h4>
+单打报名费$30/人+手续费：
 <p><ls>
       <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=D38DD7E0-65D4-49AB-AD99-811190F71133" target="_blank" style="color:#005580">男子双打 A级别（12对）</a></li>
       <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=7700AF6A-C9A0-40C0-A3F5-2CA9B2AB70EF" target="_blank" style="color:#005580">男子单打 B级别（红蓝宝石）（各32人）</a></li>
       <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=AB571909-B564-459D-8DE7-C676BF6E30FA" target="_blank" style="color:#005580">女子单打（16人）</a></li>
 </ls></p>
 <h4><p>2025年11月30日周日8:00am：</p></h4>
-<h4><p>双打报名费$60/组合+手续费：</p></h4>
+双打报名费$60/组合+手续费：
 <p><ls>
       <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=D38DD7E0-65D4-49AB-AD99-811190F71133" target="_blank" style="color:#005580">男子双打 A级别（12对）</a></li>
       <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=8EA27ADC-DE8B-4635-9D35-D32553159DE3" target="_blank" style="color:#005580">男子双打 B级别（32对）</a></li>
