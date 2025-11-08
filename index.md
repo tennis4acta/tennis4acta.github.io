@@ -13,7 +13,7 @@ description: "Australian Chinese Tennis Club"
 <p>比赛地点：Parramatta City Tennis<br>Barton St, North Parramatta NSW 2151</p>
 <h3><p>报名链接</p></h3>
 
-<h4><p>2025年11月23日周日8:00am（单打报名费$30/人+手续费）：</p></h4>
+<!-- <h4><p>2025年11月23日周日8:00am（单打报名费$30/人+手续费）：</p></h4>
 <p><ls>
       <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=EEE05A81-165B-49DB-9D60-6FBA2B66B093" target="_blank" style="color:#005580">男子单打 A级别（20人）</a>    </li>
       <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=7700AF6A-C9A0-40C0-A3F5-2CA9B2AB70EF" target="_blank" style="color:#005580">男子单打 B级别（红蓝宝石）（各32人）</a></li>
@@ -26,7 +26,7 @@ description: "Australian Chinese Tennis Club"
       <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=A4B75705-CBD2-4114-BCDC-44E5E18BB748" target="_blank" style="color:#005580">女子双打（20对）</a></li>
       <li><a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=15A7E3AF-7F11-4F57-9BC8-AF88CCE97F20" target="_blank" style="color:#005580">中年组双打（50-70岁）（10对）</a></li>
 </ls></p>
-<h4><p>2025年10月25日周六晚上10时起开放报名；2025年11月8日周六下午5时截止报名或额满提前截止</p></h4>
+<h4><p>2025年10月25日周六晚上10时起开放报名；2025年11月8日周六下午5时截止报名或额满提前截止</p></h4> -->
 
 <h3><p>本届比赛仅限中国大陆及港澳台华人业余球友参赛</p></h3>
 <p><ls>
