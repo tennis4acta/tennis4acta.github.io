@@ -5,7 +5,7 @@ description: "Australian Chinese Tennis Club"
 ---
 <!-- <p align="center"><img src="/img/20_anniversary.png" class="img-responsive" alt="澳洲华人网球大奖赛20周年"></p> -->
 
-<p><img src="/img/2025_poster.jpg" class="img-responsive" width="800px"></p>
+<p><img src="/img/2025_poster.png" class="img-responsive" width="800px"></p>
 <h2><p>2025年ACTC融侨速汇杯华人网球大奖赛</p></h2>
 <p>2025ACTC Money Chain World Remittance Chinese Tennis Competition</p>
 <h3><p>冠名赞助：融侨速汇</p></h3>
