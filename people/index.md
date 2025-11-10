@@ -104,49 +104,5 @@ header-img: "img/history-bg.jpg"
     <img class="img-responsive" src="https://c1.staticflickr.com/9/8796/27945484784_3eac77efb5_z.jpg" alt="mjb" />
   </div>
 </div>
-<br>
-<div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h3>張卓</h3>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
-    <dl>
-      <dt>前湖北省网球队专业运动员，职业球员</dt>
-      <dd>ITF青少年最高排名200</dd>
-    </dl>
-    <img class="img-responsive" src="https://c7.staticflickr.com/9/8898/28278468150_59df518355_z.jpg" alt="zz" />
-  </div>
-</div>
-<br>
-<div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h3>Jessica Zhu Stanmore</h3>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
-    <dl>
-      <dt>14岁，目前全澳女子排名176</dt>
-      <dd>2016年悉尼公开赛少年女子单打冠军</dd>
-      <dd>2016年悉尼少年女子单打双打冠军</dd>
-      <dd>2016年纽省锦标赛女子16岁组单打冠军</dd>
-      <dd>2015年纽省锦标赛女子14岁组单打冠军</dd>
-      <dd>2015年悉尼少年16岁组女子单打冠军</dd>
-    </dl>
-    <img class="img-responsive" src="https://c1.staticflickr.com/9/8611/28001613304_43f3d490fd.jpg" alt="jzs" />
-  </div>
-</div>
-<br>
-<div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h3>Jeremy Jin 金童</h3>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
-    <dl>
-      <dt>12岁，目前澳洲该年龄组排名第三</dt>
-      <dd>2017年代表澳大利亚赴法国参加浪琴杯13岁以下网球赛</dd>
-      <dd>2015年TCA少年网球大师赛冠军</dd>
-      <dd>2016年Nepean Easter网球赛冠军</dd>
-      <dd>2016年纽省网球锦标赛少年男子双打冠军</dd>
-    </dl>
-    <img class="img-responsive" src="https://c4.staticflickr.com/9/8307/28484548291_6876e77dba_z.jpg" alt="jt" />
-  </div>
-</div>
+
+
