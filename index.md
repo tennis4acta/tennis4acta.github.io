@@ -11,9 +11,14 @@ description: "Australian Chinese Tennis Club"
 <h3><p>冠名赞助：融侨速汇</p></h3>
 <h3><p>主办单位：澳洲华人网球会</p></h3>
 <p>比赛地点：Parramatta City Tennis<br>Barton St, North Parramatta NSW 2151</p>
-<h3><p>报名链接</p></h3>
 
-<!-- <h4><p>2025年11月23日周日8:00am（单打报名费$30/人+手续费）：</p></h4>
+<h2><p>a href="{{ site.baseurl }}/2025/1123" style="color:#005580">11月23日单打分组</p></h2>
+
+
+
+<!-- 
+<h3><p>报名链接</p></h3>
+<h4><p>2025年11月23日周日8:00am（单打报名费$30/人+手续费）：</p></h4>
 <p><ls>
       <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=EEE05A81-165B-49DB-9D60-6FBA2B66B093" target="_blank" style="color:#005580">男子单打 A级别（20人）</a>    </li>
       <li> <a href="https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=7700AF6A-C9A0-40C0-A3F5-2CA9B2AB70EF" target="_blank" style="color:#005580">男子单打 B级别（红蓝宝石）（各32人）</a></li>
