@@ -12,6 +12,7 @@ description: "Australian Chinese Tennis Club"
 <h3><p>主办单位：澳洲华人网球会</p></h3>
 <p>比赛地点：Parramatta City Tennis<br>Barton St, North Parramatta NSW 2151</p>
 
+<h2>天气更新：比赛不早于9点半开始。9点开赛签到。下次更新时间为8点</h2>
 <h2><p><a href="{{ site.baseurl }}/2025/1123" style="color:#005580">11月23日单打分组及赛程</a></p></h2>
 
 
