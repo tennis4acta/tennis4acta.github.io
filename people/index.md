@@ -8,22 +8,6 @@ header-img: "img/history-bg.jpg"
 <br>
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-    <h3>朱振华</h3>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
-    <dl>
-      <dt>中国网球名宿</dt>
-      <dd>50-60年代5次获得全国网球比赛男子单打冠军，三次男子双打冠军</dd>
-      <dd>1959年波兰索波特国际网球锦标赛男子双打冠军</dd>
-      <dd>1963年新兴力量运动会网球比赛男子单打亚军</dd>
-      <dd>1965年巴基斯坦网球公开赛男子单打和双打冠军</dd>
-    </dl>
-    <img class="img-responsive" src="https://c5.staticflickr.com/9/8615/28530030996_9cd93db86f_o.jpg" alt="zzh" />
-  </div>
-</div>
-<br>
-<div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
     <h3>陈娟</h3>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-8 col-lg-offset-1 col-lg-8">
