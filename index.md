@@ -13,7 +13,6 @@ description: "Australian Chinese Tennis Club"
 <p>比赛地点：Parramatta City Tennis<br>Barton St, North Parramatta NSW 2151</p>
 
 
-<!-- 
 <h3><p>比赛及报名日期</p></h3>
 <h4><p>2026年11月15日周日8:00am开始：<br>单打报名费$40 /人+手续费：</p></h4>
 <p><ls>
@@ -28,7 +27,7 @@ description: "Australian Chinese Tennis Club"
       <li>女子双打（20对）</li>
       <li>中年组双打（50-70岁）（10对）</li>
 </ls></p>
-<h4><p>2026年10月17日周六晚上10时起开放报名<br>2026年11月 7日周六下午5时截止报名或额满提前截止</p></h4> -->
+<h4><p>2026年10月17日周六晚上10时起开放报名<br>2026年11月 7日周六下午5时截止报名或额满提前截止</p></h4>
 
 <h3><p>本届比赛仅限中国大陆及港澳台华人业余球友参赛</p></h3>
 <p><ls>
