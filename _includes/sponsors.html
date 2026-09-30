@@ -1,0 +1,26 @@
+<section class="sponsors" aria-labelledby="sponsors-h">
+  <div class="container">
+    <h2 id="sponsors-h">Proudly Sponsored By</h2>
+
+    <h3>冠名赞助</h3>
+    <div class="sponsor-grid sponsor-grid--title">
+      {%- for id in site.data.sponsors.placements.title %}
+      <div class="sponsor">{% include sponsor.html id=id kind="logo" width=600 %}</div>
+      {%- endfor %}
+    </div>
+
+    <h3>赞助</h3>
+    <div class="sponsor-grid">
+      {%- for id in site.data.sponsors.placements.footer %}
+      <div class="sponsor">{% include sponsor.html id=id kind="logo" width=150 %}</div>
+      {%- endfor %}
+    </div>
+
+    <h3>媒体支持</h3>
+    <div class="sponsor-grid sponsor-grid--media">
+      {%- for id in site.data.sponsors.placements.media %}
+      <div class="sponsor">{% include sponsor.html id=id kind="logo" width=100 %}</div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

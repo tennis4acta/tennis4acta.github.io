@@ -1,83 +1,37 @@
-<!-- Footer -->
-<footer>
+<footer class="site-footer">
   <div class="container">
-    <h2 class="text-center">PROUDLY SPONSORED BY</h2>
-
-    <h3 class="text-center">冠名赞助</h3>
-    <div class="sponsor-grid sponsor-grid-title">
-      {%- for id in site.data.sponsors.placements.title %}
-      <div class="sponsor">{% include sponsor.html id=id kind="logo" width=600 %}</div>
-      {%- endfor %}
-    </div>
-
-    <h3 class="text-center">赞助</h3>
-    <div class="sponsor-grid">
-      {%- for id in site.data.sponsors.placements.footer %}
-      <div class="sponsor">{% include sponsor.html id=id kind="logo" width=150 %}</div>
-      {%- endfor %}
-    </div>
-
-    <h3 class="text-center">MEDIA</h3>
-    <div class="sponsor-grid sponsor-grid-media">
-      {%- for id in site.data.sponsors.placements.media %}
-      <div class="sponsor">{% include sponsor.html id=id kind="logo" width=100 %}</div>
-      {%- endfor %}
-    </div>
-    <br>
-
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center">
-          <li>
-            <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% if site.twitter_username %}
-            <li>
-              <a href="https://twitter.com/{{ site.twitter_username }}">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          {% endif %}
-          {% if site.facebook_username %}
-            <li>
-              <a href="https://www.facebook.com/{{ site.facebook_username }}">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          {% endif %}
-          {% if site.github_username %}
-            <li>
-              <a href="https://github.com/{{ site.github_username }}">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          {% endif %}
-        </ul>
-        <p class="copyright text-muted">Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="{{ '/img/logo.jpg' | prepend: site.baseurl }}" alt="" width="48" height="48" loading="lazy"><span>{{ site.title }}<br><small>Australian Chinese Tennis Club</small></span></div>
+        <p>非营利组织，凝聚网球爱好者，推动华人社区网球运动的普及和发展。</p>
       </div>
+      <div>
+        <h3>网站导航</h3>
+        <ul>
+          <li><a href="{{ site.baseurl }}/">首页</a></li>
+          <li><a href="{{ site.baseurl }}/about/">关于我们</a></li>
+          <li><a href="{{ site.baseurl }}/history/">过往赛事</a></li>
+          <li><a href="{{ site.baseurl }}/others/">华人网球活动</a></li>
+          <li><a href="{{ site.baseurl }}/people/">华人网球精英</a></li>
+          <li><a href="{{ site.baseurl }}/contact/">联络我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>联络我们</h3>
+        <address>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+          P.O. Box 363<br>Menai Central, NSW 2234
+        </address>
+        <p><a href="{{ '/feed.xml' | prepend: site.baseurl }}">RSS 订阅</a></p>
+      </div>
+      <div>
+        <h3>加入球会群</h3>
+        <a href="{{ site.baseurl }}/contact/#wechat"><img class="qr" src="{{ '/img/actc_qr_code.png' | prepend: site.baseurl }}" alt="ACTC 微信二维码" width="120" height="120" loading="lazy"></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</span>
+      <a href="#top">回到顶部</a>
     </div>
   </div>
 </footer>
-<!-- jQuery -->
-<script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
-<!-- Custom Theme JavaScript -->
-<script src="{{ "/js/clean-blog.min.js" | prepend: site.baseurl }}"></script>
-
-<script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-<script src="{{ "/js/bootstrap-image-gallery.min.js" | prepend: site.baseurl }}"></script>

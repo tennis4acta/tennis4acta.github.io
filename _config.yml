@@ -1,15 +1,11 @@
 # Site settings
-title: "澳洲華人网球會"
-header-img: img/home-bg.jpg
+title: "澳洲华人网球会"
 email: info@actc.org.au
 description: "Australian Chinese Tennis Club"
 baseurl: ""
 url: "https://actc.org.au"
 lang: zh-CN
 timezone: Australia/Sydney
-# twitter_username: SBootstrap
-# github_username:
-# facebook_username:  IronSummitMedia
 
 # Build settings
 markdown: kramdown

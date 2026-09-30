@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'zh-CN' }}">
+<html lang="{{ site.lang | default: 'zh-CN' }}" class="no-js">
 
 {% include head.html %}
 
 <body>
+  <a class="skip-link" href="#main">跳到正文</a>
 
-    {% include nav.html %}
+  {% include header.html %}
 
+  <main id="main">
     {{ content }}
+  </main>
 
-    {% include footer.html %}
+  {% include sponsors.html %}
+  {% include footer.html %}
 
+  <div class="cta-bar" data-cta-bar hidden><a class="btn btn--primary" href="{{ site.baseurl }}/#events" data-cta hidden></a></div>
+  <button class="icon-btn to-top" type="button" data-to-top aria-label="回到顶部">{% include icon.html name='up' %}</button>
+
+  <script src="{{ '/js/site.js' | prepend: site.baseurl }}" defer></script>
 </body>
 
 </html>

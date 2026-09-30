@@ -1,37 +1,47 @@
+{%- assign t = site.data.tournament -%}
+{%- capture page_title -%}{% if page.layout == 'home' %}{{ site.title }} · {{ site.description }}{% elsif page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}{%- endcapture -%}
+{%- capture page_desc -%}{% if page.layout == 'home' %}{{ t.title }}：{{ t.slogan }}。{{ t.venue.name }}，{{ t.days[0].date_text }}、{{ t.days[1].date_text }}。{% elsif page.description and page.description != '' %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{%- endcapture -%}
+{%- capture og_image -%}{% if page.layout == 'home' %}{{ t.poster }}{% else %}img/logo.jpg{% endif %}{%- endcapture -%}
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ page_title | strip | escape }}</title>
+  <meta name="description" content="{{ page_desc | strip | escape }}">
+  <meta name="theme-color" content="#0a4536">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:title" content="{{ page_title | strip | escape }}">
+  <meta property="og:description" content="{{ page_desc | strip | escape }}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:image" content="{{ og_image | strip | prepend: '/' | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="{{ '/img/ball.svg' | prepend: site.baseurl }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | prepend: site.baseurl }}">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{% if page.description %}{{ page.description | escape }}{% else %}{{ site.description | escape }}{% endif %}">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ site.title | escape }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="{{ '/css/actc.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/css/compat.css' | prepend: site.baseurl }}">
 
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
-
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
-
-    <!-- Bootstrap Image Gallary -->
-    <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <link rel="stylesheet" href="{{ "/css/bootstrap-image-gallery.min.css" | prepend: site.baseurl }}">
-
-    <!-- Custom Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&display=swap" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap" rel="stylesheet" type="text/css">
-
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.className = d.className.replace('no-js', 'js');
+      try {
+        var th = localStorage.getItem('actc-theme');
+        if (!th) th = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        d.dataset.theme = th;
+      } catch (e) {}
+    })();
+    window.ACTC = {
+      tz: "Australia/Sydney",
+      year: {{ t.year }},
+      reg: { opens: "{{ t.registration.opens }}", closes: "{{ t.registration.closes }}", override: "{{ t.registration.override }}", url: "{{ t.registration.url }}", opensText: "{{ t.registration.opens_text }}", opensShort: "{{ t.registration.opens_short }}", closesText: "{{ t.registration.closes_text }}" },
+      days: [{% for d in t.days %}{ id: "{{ d.id }}", name: "{{ d.name }}", start: "{{ d.start }}", end: "{{ d.end }}", dateText: "{{ d.date_text }}" }{% unless forloop.last %}, {% endunless %}{% endfor %}],
+      title: "{{ t.title }}",
+      venue: "{{ t.venue.name }}, {{ t.venue.address }}"
+    };
+  </script>
 </head>

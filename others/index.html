@@ -1,41 +1,23 @@
 ---
 layout: page
-title: "澳洲華人網球活動"
-description: "Others"
-header-img: "img/history-bg.jpg"
+title: "华人网球活动"
+description: "球会的活动与赛事报道"
+wide: true
 ---
-{% for post in paginator.posts %}
-  <div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-      <h2 class="post-title"> {{ post.title }}   </h2>
-      {% if post.subtitle %}
-        <h3 class="post-subtitle">
-        {{ post.subtitle }}
-        </h3>
-      {% endif %}
-      </a>
-      <p/>
-        {% if post.title == paginator.posts.first.title %}
-          {{ post.content }}
-        {% endif %}
+<div class="ncards">
+  {%- for post in paginator.posts %}
+  {% include post_card.html post=post %}
+  {%- endfor %}
+</div>
 
-    </div>
-    <hr>
-  {% endfor %}
-
-  <!-- Pager -->
-{% if paginator.total_pages > 1 %}
-    <ul class="pager">
-      {% if paginator.previous_page %}
-        <li class="previous">
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-        </li>
-      {% endif %}
-      {% if paginator.next_page %}
-        <li class="next">
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-        </li>
-      {% endif %}
-    </ul>
-  {% endif %}
-
+{%- if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="分页">
+  {%- if paginator.previous_page %}
+  <a class="btn btn--outline" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; 较新</a>
+  {%- else %}<span></span>{% endif %}
+  <span class="text-muted">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+  {%- if paginator.next_page %}
+  <a class="btn btn--outline" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">较早 &rarr;</a>
+  {%- else %}<span></span>{% endif %}
+</nav>
+{%- endif %}

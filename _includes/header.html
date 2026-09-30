@@ -1,0 +1,29 @@
+<header class="site-header" id="top">
+  <div class="container">
+    <a class="brand" href="{{ site.baseurl }}/">
+      <img src="{{ '/img/logo.jpg' | prepend: site.baseurl }}" alt="" width="40" height="40">
+      <span>{{ site.title }}<small>ACTC</small></span>
+    </a>
+
+    <nav class="nav" id="site-nav" aria-label="主导航">
+      {%- assign u = page.url -%}
+      <a class="nav__link" href="{{ site.baseurl }}/"{% if u == '/' %} aria-current="page"{% endif %}>首页</a>
+      <a class="nav__link" href="{{ site.baseurl }}/about/"{% if u contains '/about/' %} aria-current="page"{% endif %}>关于我们</a>
+      <a class="nav__link" href="{{ site.baseurl }}/history/"{% if u contains '/history/' %} aria-current="page"{% endif %}>过往赛事</a>
+      <a class="nav__link" href="{{ site.baseurl }}/others/"{% if u contains '/others/' or page.layout == 'post' %} aria-current="page"{% endif %}>华人网球活动</a>
+      <a class="nav__link" href="{{ site.baseurl }}/people/"{% if u contains '/people/' %} aria-current="page"{% endif %}>华人网球精英</a>
+      <a class="nav__link" href="{{ site.baseurl }}/contact/"{% if u contains '/contact/' %} aria-current="page"{% endif %}>联络我们</a>
+      <a class="btn btn--primary btn--sm nav__cta" href="{{ site.baseurl }}/#events" data-cta hidden></a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn--primary btn--sm" href="{{ site.baseurl }}/#events" data-cta hidden></a>
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="切换深色/浅色模式">
+        <span class="ico-moon">{% include icon.html name='moon' %}</span><span class="ico-sun">{% include icon.html name='sun' %}</span>
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="菜单">
+        <span class="ico-menu">{% include icon.html name='menu' %}</span><span class="ico-close">{% include icon.html name='close' %}</span>
+      </button>
+    </div>
+  </div>
+</header>

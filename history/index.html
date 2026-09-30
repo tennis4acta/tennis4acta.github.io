@@ -1,0 +1,33 @@
+---
+layout: page
+title: "过往赛事"
+description: "History"
+wide: true
+---
+{%- assign kinds = "main:大奖赛,regional:省际赛,women:女子赛事,other:其他" | split: "," -%}
+<a class="btn btn--dark btn--block" style="margin-bottom:24px" href="{{ site.baseurl }}/history/all_results/">历届大奖赛成绩汇总 {% include icon.html name='trophy' %}</a>
+
+<div class="filters" role="group" aria-label="筛选">
+  <button class="chip" type="button" data-kind="all" aria-pressed="true">全部</button>
+  {%- for k in kinds %}{% assign kv = k | split: ":" %}
+  <button class="chip" type="button" data-kind="{{ kv[0] }}" aria-pressed="false">{{ kv[1] }}</button>
+  {%- endfor %}
+  <input class="search" type="search" data-search placeholder="搜索年份或赛事名称" aria-label="搜索">
+</div>
+
+<div data-filter-list>
+  {%- assign years = site.data.history | map: "year" | uniq %}
+  {%- for y in years %}
+  <section class="hyear" data-group>
+    <div class="hyear__label">{{ y }}</div>
+    <div class="hitems">
+      {%- for h in site.data.history %}{% if h.year == y %}
+      {%- assign label = "" -%}
+      {%- for k in kinds %}{% assign kv = k | split: ":" %}{% if kv[0] == h.kind %}{% assign label = kv[1] %}{% endif %}{% endfor %}
+      <a class="hitem" href="{{ h.url | prepend: site.baseurl }}" data-item data-kind="{{ h.kind }}" data-year="{{ h.year }}"><span>{{ h.title }}</span><em>{{ label }}</em></a>
+      {%- endif %}{% endfor %}
+    </div>
+  </section>
+  {%- endfor %}
+</div>
+<p class="empty" data-empty hidden>没有找到匹配的赛事。</p>

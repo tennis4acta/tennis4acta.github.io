@@ -1,0 +1,190 @@
+---
+layout: default
+---
+{%- assign t = site.data.tournament -%}
+{%- assign first_day = t.days | first -%}
+{%- assign last_day = t.days | last -%}
+
+<div class="status" role="status">
+  <div class="container">
+    <p data-show="before_open" hidden><strong>报名将于{{ t.registration.opens_text }}开放。</strong>请提前阅读参赛规程与各项目要求。</p>
+    <p data-show="open" hidden><strong>报名进行中</strong>，{{ t.registration.closes_text }}截止，项目报满将提前截止。</p>
+    <p data-show="closed" hidden><strong>报名已截止。</strong>请留意本网站及球会群的赛程通知。</p>
+    <p data-show="running" hidden><strong>比赛进行中。</strong>赛程与比分请留意本网站及球会群的通知。</p>
+    <p data-show="finished" hidden><strong>本届比赛已圆满结束。</strong>感谢所有球员、志愿者与赞助商！</p>
+  </div>
+</div>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow"><span class="dot"></span> {{ t.year }} 年度大奖赛 · Sydney</p>
+        <h1 id="hero-title">{{ t.year }} ACTC<br><span class="grad">{{ t.short_title }}</span></h1>
+        <p class="hero__en">{{ t.title_en }}</p>
+        <p class="hero__slogan">{{ t.slogan }}</p>
+
+        <ul class="chips">
+          <li>{% include icon.html name='calendar' %}<span>{% for d in t.days %}{{ d.name }} {{ d.date_text | split: '（' | first }}{% unless forloop.last %} · {% endunless %}{% endfor %}</span></li>
+          <li>{% include icon.html name='pin' %}<a href="{{ t.venue.map_url }}" target="_blank" rel="noopener">{{ t.venue.name }}</a></li>
+          <li>{% include icon.html name='trophy' %}<span>{{ t.draw_count }}个项目</span></li>
+          <li>{% include icon.html name='rice' %}<span>冠名赞助：{{ t.title_sponsor }}</span></li>
+        </ul>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="{{ site.baseurl }}/#events" data-cta hidden></a>
+          <a class="btn btn--ghost" href="#rules">参赛规程</a>
+          <button class="btn btn--ghost" type="button" data-ics>{% include icon.html name='calendar' %}添加到日历</button>
+        </div>
+
+        <div class="countdown" data-countdown hidden>
+          <div class="countdown__label" data-cd-label></div>
+          <div class="countdown__grid">
+            <div class="cd"><b data-cd="d">0</b><span>天</span></div>
+            <div class="cd"><b data-cd="h">0</b><span>时</span></div>
+            <div class="cd"><b data-cd="m">0</b><span>分</span></div>
+            <div class="cd"><b data-cd="s">0</b><span>秒</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__poster">
+        <img class="hero__ball" src="{{ '/img/ball.svg' | prepend: site.baseurl }}" alt="" width="74" height="74">
+        <a href="{{ t.poster | prepend: '/' | prepend: site.baseurl }}" data-lightbox aria-label="查看海报大图">
+          <img src="{{ t.poster | prepend: '/' | prepend: site.baseurl }}" alt="{{ t.title }}海报" fetchpriority="high">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="facts" data-reveal>
+    <div class="fact">{% include icon.html name='calendar' %}<small>比赛日期</small><strong>{% for d in t.days %}{{ d.name }} {{ d.date_text | split: '（' | first }}<br>{% endfor %}</strong></div>
+    <div class="fact">{% include icon.html name='pin' %}<small>比赛地点</small><strong><a href="{{ t.venue.map_url }}" target="_blank" rel="noopener">{{ t.venue.name }}</a></strong><small>{{ t.venue.address }}</small></div>
+    <div class="fact">{% include icon.html name='ticket' %}<small>报名费</small><strong>{% for d in t.days %}{{ d.name }} {{ d.fee_text }}<br>{% endfor %}</strong></div>
+    <div class="fact">{% include icon.html name='clock' %}<small>报名时间</small><strong>{{ t.registration.opens_text }}开放</strong><small>{{ t.registration.closes_text }}截止或额满提前截止</small></div>
+  </div>
+</div>
+
+<section class="section" id="events">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="kicker">Events</span>
+      <h2>比赛项目</h2>
+      <p>{{ t.draw_count }}个项目，分两个周末进行，每位球员每个比赛日只能参加一个项目。点击「参赛要求」查看各项目资格。</p>
+    </div>
+
+    <div data-tabs data-reveal>
+      <div class="tabs__list" role="tablist" aria-label="比赛日">
+        {%- for d in t.days %}
+        <button role="tab" id="tab-{{ d.id }}" aria-controls="panel-{{ d.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">{{ d.name }} · {{ d.date_text | split: '（' | first }}</button>
+        {%- endfor %}
+      </div>
+      {%- for d in t.days %}
+      <div class="tabs__panel" role="tabpanel" id="panel-{{ d.id }}" aria-labelledby="tab-{{ d.id }}"{% unless forloop.first %} hidden{% endunless %}>
+        <p><strong>{{ d.date_text }}</strong> · {{ d.time_text }} · 报名费 {{ d.fee_text }}</p>
+        <div class="ecards">
+          {%- for e in t.events %}{% if e.day == d.id %}
+          {%- assign req = t.requirements[e.requirements] -%}
+          <article class="ecard">
+            <span class="ecard__day">{{ d.name }}</span>
+            <h3>{{ e.name }}</h3>
+            {%- if e.tag %}<span class="ecard__tag">{{ e.tag }}</span>{% endif %}
+            <ul class="ecard__meta"><li>{% include icon.html name='users' %} 名额 {{ e.capacity_text }}</li></ul>
+            <details>
+              <summary>参赛要求</summary>
+              <ol>{% for i in req.items %}<li>{{ i }}</li>{% endfor %}</ol>
+            </details>
+          </article>
+          {%- endif %}{% endfor %}
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="schedule">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="kicker">Timeline</span>
+      <h2>重要日期</h2>
+    </div>
+    <ol class="steps" data-steps data-reveal>
+      <li class="step" data-at="{{ t.registration.opens }}"><span class="step__dot"></span><h3>报名开放</h3><p>{{ t.registration.opens_text }}</p></li>
+      <li class="step" data-at="{{ t.registration.closes }}"><span class="step__dot"></span><h3>报名截止</h3><p>{{ t.registration.closes_text }}，或额满提前截止</p></li>
+      {%- for d in t.days %}
+      <li class="step" data-at="{{ d.start }}"><span class="step__dot"></span><h3>{{ d.name }}比赛日</h3><p>{{ d.date_text }} {{ d.time_text }}</p></li>
+      {%- endfor %}
+    </ol>
+    <p class="note" data-reveal>报名费：{% for d in t.days %}{{ d.name }} {{ d.fee_text }}{% unless forloop.last %}；{% endunless %}{% endfor %}。退赛政策与其他须知请见下方参赛规程。</p>
+  </div>
+</section>
+
+<section class="section" id="rules">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="kicker">Rules</span>
+      <h2>参赛规程</h2>
+      <p>请仔细阅读。报名即视为已阅读并同意以下全部内容。</p>
+    </div>
+    <div style="max-width: 900px" data-reveal>
+      {% include rules.html %}
+    </div>
+  </div>
+</section>
+
+{%- assign announcement = content | strip -%}
+{%- if announcement != '' %}
+<section class="section section--alt" id="announcements">
+  <div class="container">
+    <div class="section__head"><span class="kicker">News</span><h2>最新公告</h2></div>
+    <div class="prose">{{ content }}</div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section{% if announcement != '' %}{% else %} section--alt{% endif %}" id="news">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="kicker">Community</span>
+      <h2>华人网球活动</h2>
+      <p>球会的最新活动与赛事报道。</p>
+    </div>
+    <div class="ncards" data-reveal>
+      {%- for post in site.posts limit:3 %}
+      {% include post_card.html post=post %}
+      {%- endfor %}
+    </div>
+    <p style="margin-top:24px"><a class="btn btn--outline" href="{{ site.baseurl }}/others/">更多活动 {% include icon.html name='arrow' %}</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-panel" data-reveal>
+      <div>
+        <h2>加入球会群</h2>
+        <p>请扫描二维码加入球会群，第一时间获取赛事通知。也可添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您入群。</p>
+      </div>
+      <img src="{{ '/img/actc_qr_code.png' | prepend: site.baseurl }}" alt="ACTC 微信二维码" width="180" height="180" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsEvent",
+  "name": "{{ t.title }}",
+  "description": "{{ t.title_en }}",
+  "startDate": "{{ first_day.start }}",
+  "endDate": "{{ last_day.end }}",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": { "@type": "Place", "name": "{{ t.venue.name }}", "address": "{{ t.venue.address }}" },
+  "organizer": { "@type": "Organization", "name": "{{ t.organizer }}", "url": "{{ site.url }}" },
+  "image": "{{ t.poster | prepend: '/' | prepend: site.baseurl | prepend: site.url }}"
+}
+</script>

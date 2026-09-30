@@ -1,3 +1,8 @@
+---
+layout: page
+title: "2022年ACTC融侨杯华人网球大奖赛"
+description: "History"
+---
 <h1>2023ACTC融侨杯华人网球大奖赛</h1><br>
 <p><img src="https://actc.org.au/history/2022/Picture1.png" class="img-responsive" width="800px"></p>
 <p>初夏时节，悉尼城处处蓝花楹涌动，紫色飞扬。有人说，蓝花楹象征着冷漠，也给人带来淡淡的忧郁。而对经过疫情的网球人来说，蓝花楹却是希望，是一种美好的祝愿。</p>

@@ -1,0 +1,11 @@
+{%- assign img = include.post.content | split: 'src="' -%}
+{%- assign src = '' -%}
+{%- if img.size > 1 %}{% assign src = img[1] | split: '"' | first %}{% endif -%}
+<a class="ncard" href="{{ include.post.url | prepend: site.baseurl }}">
+  <div class="ncard__img">{% if src != '' %}<img src="{{ src }}" alt="" loading="lazy">{% endif %}</div>
+  <div class="ncard__body">
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%Y.%m.%d" }}</time>
+    <h3>{{ include.post.title }}</h3>
+    <p>{{ include.post.content | strip_html | strip_newlines | strip | truncate: 70 }}</p>
+  </div>
+</a>

@@ -1,0 +1,40 @@
+{%- assign r = site.data.tournament.rules -%}
+{%- assign t = site.data.tournament -%}
+<div class="note">
+  <strong>本届比赛仅限中国大陆及港澳台华人业余球友参赛</strong>
+  <ul>
+    {%- for c in r.constraints %}<li>{{ c }}</li>{% endfor %}
+  </ul>
+</div>
+
+<details class="acc" id="rule-excluded">
+  <summary>谢绝以下球员参赛</summary>
+  <div class="acc__body">
+    <ol>{% for e in r.excluded %}<li>{{ e }}</li>{% endfor %}</ol>
+    <p><small>注：{{ r.excluded_note }}</small></p>
+  </div>
+</details>
+
+<details class="acc" id="rule-notices">
+  <summary>参赛者须知</summary>
+  <div class="acc__body">
+    <ol>{% for n in r.notices %}<li>{{ n }}</li>{% endfor %}</ol>
+  </div>
+</details>
+
+<details class="acc" id="rule-requirements">
+  <summary>各项目要求</summary>
+  <div class="acc__body">
+    {%- for req in t.requirements %}
+    <h4>{{ req[1].title }}</h4>
+    <ol>{% for i in req[1].items %}<li>{{ i }}</li>{% endfor %}</ol>
+    {%- endfor %}
+  </div>
+</details>
+
+<details class="acc" id="rule-notes">
+  <summary>补充说明</summary>
+  <div class="acc__body">
+    <ol>{% for n in r.notes %}<li>{{ n }}</li>{% endfor %}</ol>
+  </div>
+</details>
