@@ -26,6 +26,6 @@ header-img: "img/post-bg-01.jpg"
 
 <p>带上你的家人，转告你的朋友。1月7日，一起追星，一起享受网球的欢乐。</p>
 
-<img class="img-responsive" src="https://c4.staticflickr.com/1/714/31323787083_393715651f_b.jpg" alt="zhangshuai" width="500" />
+<img class="img-responsive" src="/img/flickr/31323787083_393715651f_b.jpg" alt="zhangshuai" width="500" />
 <br>
-<img class="img-responsive" src="https://c1.staticflickr.com/1/709/32095020616_067f72cbef.jpg" alt="apia" width="500" />
+<img class="img-responsive" src="/img/flickr/32095020616_067f72cbef.jpg" alt="apia" width="500" />

@@ -13,4 +13,4 @@ header-img: "img/post-bg-01.jpg"
 
 <p>对于高校联盟的网球爱好者来说，网球公开赛不仅是一项业余活动，更像是一种增进亲子关系的活动，或者说是强身健体的良好习惯传承。</p>
 
-<img class="img-responsive" src="https://c7.staticflickr.com/9/8790/28577794710_ed2fb23cf9_c.jpg" alt="Chania" width="800" />
+<img class="img-responsive" src="/img/flickr/28577794710_ed2fb23cf9_c.jpg" alt="Chania" width="800" />

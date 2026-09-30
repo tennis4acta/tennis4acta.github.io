@@ -26,52 +26,52 @@ header-img: "img/post-bg-01.jpg"
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="https://c8.staticflickr.com/6/5701/31175517591_1f6916c3d9_h.jpg" alt="95">
+          <img src="/img/flickr/31175517591_1f6916c3d9_h.jpg" alt="95">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="https://c1.staticflickr.com/6/5614/30468465704_e44ae0872d_h.jpg" alt="71">
+          <img src="/img/flickr/30468465704_e44ae0872d_h.jpg" alt="71">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="https://c4.staticflickr.com/6/5697/31175516971_23148c8a50_h.jpg" alt="70">
+          <img src="/img/flickr/31175516971_23148c8a50_h.jpg" alt="70">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="https://c1.staticflickr.com/6/5746/30468465104_86079ab706_h.jpg" alt="69">
+          <img src="/img/flickr/30468465104_86079ab706_h.jpg" alt="69">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="https://c4.staticflickr.com/6/5568/30482575083_f7aa023619_h.jpg" alt="67">
+          <img src="/img/flickr/30482575083_f7aa023619_h.jpg" alt="67">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="https://c4.staticflickr.com/6/5696/31290494595_7d513ba19e_h.jpg" alt="66">
+          <img src="/img/flickr/31290494595_7d513ba19e_h.jpg" alt="66">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="https://c4.staticflickr.com/6/5633/31175516931_1bac7f1b87_h.jpg" alt="66">
+          <img src="/img/flickr/31175516931_1bac7f1b87_h.jpg" alt="66">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="https://c6.staticflickr.com/6/5461/31175516261_3b0b69d1a7_h.jpg" alt="66">
+          <img src="/img/flickr/31175516261_3b0b69d1a7_h.jpg" alt="66">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="https://c6.staticflickr.com/6/5549/31175516501_2d059a5ed9_h.jpg" alt="66">
+          <img src="/img/flickr/31175516501_2d059a5ed9_h.jpg" alt="66">
           <div class="carousel-caption">
           </div>
         </div>
         <div class="item">
-          <img src="https://c2.staticflickr.com/6/5528/31175518601_bedbdfef07_h.jpg" alt="66">
+          <img src="/img/flickr/31175518601_bedbdfef07_h.jpg" alt="66">
           <div class="carousel-caption">
           </div>
         </div>
@@ -113,6 +113,6 @@ header-img: "img/post-bg-01.jpg"
 <p>请扫描二维码，添加微信好友“澳洲华人网球会”（微信号：actc-org-au），我们将邀您加入“澳洲华人网球会微信群”。</p>
 <div class="row">
   <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
-    <img class="img-responsive" src="https://c5.staticflickr.com/9/8179/28251007604_30faf539bc_z.jpg" alt="Chania" />
+    <img class="img-responsive" src="/img/flickr/28251007604_30faf539bc_z.jpg" alt="Chania" />
   </div>
 </div>

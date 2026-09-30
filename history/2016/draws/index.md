@@ -7,7 +7,7 @@ header-img: "img/home-bg.jpg"
 
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <img class="img-responsive" src="https://c2.staticflickr.com/6/5457/30883334701_0acc2d860f_h.jpg" alt="2016 banner" />
+    <img class="img-responsive" src="/img/flickr/30883334701_0acc2d860f_h.jpg" alt="2016 banner" />
   </div>
 </div>
 <br>

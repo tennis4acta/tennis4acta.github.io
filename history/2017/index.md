@@ -22,6 +22,6 @@ header-img: "img/post-bg-01.jpg"
 
 <div class="row text-center">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <img class="img-responsive" src="https://farm2.staticflickr.com/1936/43381547530_9fcaf864e8_o.jpg" alt="2017final" />
+    <img class="img-responsive" src="/img/flickr/43381547530_9fcaf864e8_o.jpg" alt="2017final" />
   </div>
 </div>

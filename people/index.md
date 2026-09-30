@@ -21,7 +21,7 @@ header-img: "img/history-bg.jpg"
       <dd>1984年全国硬地网球冠军赛，和龚庆庆搭档女双冠军</dd>
       <dd>现在在墨尔本从事网球教学</dd>
     </dl>
-    <img class="img-responsive" src="https://c1.staticflickr.com/5/4240/34290459274_7093c6ae22_h.jpg" alt="chenjuan" />
+    <img class="img-responsive" src="/img/flickr/34290459274_7093c6ae22_h.jpg" alt="chenjuan" />
   </div>
 </div>
 <br>
@@ -38,7 +38,7 @@ header-img: "img/history-bg.jpg"
       <dd>原上海网球队主教练</dd>
       <dd>上海围城网球俱乐部</dd>
     </dl>
-    <img class="img-responsive" src="https://c3.staticflickr.com/9/8858/28585938386_52113c8cf2.jpg" alt="lxc" />
+    <img class="img-responsive" src="/img/flickr/28585938386_52113c8cf2.jpg" alt="lxc" />
   </div>
 </div>
 <br>
@@ -56,7 +56,7 @@ header-img: "img/history-bg.jpg"
       <dd>澳洲职业网球协会和教练协会会员</dd>
       <dd>澳洲职业网球俱乐部持二级教练员证书教练</dd>
     </dl>
-    <img class="img-responsive" src="https://c1.staticflickr.com/9/8770/28585938616_a6da232fd7.jpg" alt="zxy" />
+    <img class="img-responsive" src="/img/flickr/28585938616_a6da232fd7.jpg" alt="zxy" />
   </div>
 </div>
 <br>
@@ -70,7 +70,7 @@ header-img: "img/history-bg.jpg"
       <dd>国际网联ITF二级教练员</dd>
       <dd>原四川网球队教练</dd>
     </dl>
-    <img class="img-responsive" src="https://c7.staticflickr.com/9/8886/28494934862_b0c4c8fcc2_c.jpg" alt="hb" />
+    <img class="img-responsive" src="/img/flickr/28494934862_b0c4c8fcc2_c.jpg" alt="hb" />
   </div>
 </div>
 <br>
@@ -85,7 +85,7 @@ header-img: "img/history-bg.jpg"
       <dd>两届澳洲大学生网球比赛冠军</dd>
       <dd>2014年获得PTR国际教练员证书</dd>
     </dl>
-    <img class="img-responsive" src="https://c1.staticflickr.com/9/8796/27945484784_3eac77efb5_z.jpg" alt="mjb" />
+    <img class="img-responsive" src="/img/flickr/27945484784_3eac77efb5_z.jpg" alt="mjb" />
   </div>
 </div>
 

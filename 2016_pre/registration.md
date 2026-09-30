@@ -22,7 +22,7 @@ header-img: "img/home-bg.jpg"
 
 3. 请将转帐截图或者照片发送至
 
-   <img src="https://c2.staticflickr.com/6/5633/29374068973_dd66f02a83_o.png" class="img-responsive" alt="email">
+   <img src="/img/flickr/29374068973_dd66f02a83_o.png" class="img-responsive" alt="email">
 
    并在邮件中请注明球员姓名及参赛组别
 

@@ -11,4 +11,4 @@ header-img: "img/post-bg-01.jpg"
 
 <p>比赛过程中，SCT特设了自由挑战赛，让更多的选手展开交流。主办方呼吁，广大华人网球手坚强训练，提高球技。希望明年的业余网球单打积分赛，有更多球员的参赛。</p>
 
-<img class="img-responsive" src="https://c3.staticflickr.com/9/8776/28229078690_b439d7242b_c.jpg" alt="Chania" width="800" />
+<img class="img-responsive" src="/img/flickr/28229078690_b439d7242b_c.jpg" alt="Chania" width="800" />
