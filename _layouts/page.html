@@ -9,8 +9,18 @@ layout: default
   </div>
 </section>
 
-<div class="container page-body{% if page.wide %} page-body--wide{% endif %}">
-  <article class="prose">
-    {{ content }}
-  </article>
+<div class="rails">
+  <aside class="rail" aria-label="赞助商">
+    {% include sponsor_sidebar.html ids=site.data.sponsors.placements.page_left qr=true %}
+  </aside>
+  <div class="rails__main">
+    <div class="container page-body{% if page.wide %} page-body--wide{% endif %}">
+      <article class="prose">
+        {{ content }}
+      </article>
+    </div>
+  </div>
+  <aside class="rail" aria-label="赞助商">
+    {% include sponsor_sidebar.html ids=site.data.sponsors.placements.page_right qr=true %}
+  </aside>
 </div>

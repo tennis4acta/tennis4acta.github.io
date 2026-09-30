@@ -58,6 +58,11 @@ layout: default
   </div>
 </section>
 
+<div class="rails rails--home">
+<aside class="rail" aria-label="赞助商">
+  {% include sponsor_sidebar.html ids=site.data.sponsors.placements.page_left qr=true %}
+</aside>
+<div class="rails__main">
 <div class="container">
   <div class="facts" data-reveal>
     <div class="fact">{% include icon.html name='calendar' %}<small>比赛日期</small><strong>{% for d in t.days %}{{ d.name }} {{ d.date_text | split: '（' | first }}<br>{% endfor %}</strong></div>
@@ -172,6 +177,11 @@ layout: default
     </div>
   </div>
 </section>
+</div>
+<aside class="rail" aria-label="赞助商">
+  {% include sponsor_sidebar.html ids=site.data.sponsors.placements.page_right qr=true %}
+</aside>
+</div>
 
 <script type="application/ld+json">
 {

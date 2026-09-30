@@ -13,17 +13,27 @@ layout: default
   </div>
 </section>
 
-<div class="container page-body">
-  <article class="prose">
-    {{ content }}
-  </article>
+<div class="rails">
+  <aside class="rail" aria-label="赞助商">
+    {% include sponsor_sidebar.html ids=site.data.sponsors.placements.post_left %}
+  </aside>
+  <div class="rails__main">
+    <div class="container page-body">
+      <article class="prose">
+        {{ content }}
+      </article>
 
-  <nav class="pager-cards" aria-label="上下篇">
-    {%- if page.previous.url %}
-    <a class="prev" href="{{ page.previous.url | prepend: site.baseurl }}"><small>&larr; 上一篇</small>{{ page.previous.title }}</a>
-    {%- endif %}
-    {%- if page.next.url %}
-    <a class="next" href="{{ page.next.url | prepend: site.baseurl }}"><small>下一篇 &rarr;</small>{{ page.next.title }}</a>
-    {%- endif %}
-  </nav>
+      <nav class="pager-cards" aria-label="上下篇">
+        {%- if page.previous.url %}
+        <a class="prev" href="{{ page.previous.url | prepend: site.baseurl }}"><small>&larr; 上一篇</small>{{ page.previous.title }}</a>
+        {%- endif %}
+        {%- if page.next.url %}
+        <a class="next" href="{{ page.next.url | prepend: site.baseurl }}"><small>下一篇 &rarr;</small>{{ page.next.title }}</a>
+        {%- endif %}
+      </nav>
+    </div>
+  </div>
+  <aside class="rail" aria-label="赞助商">
+    {% include sponsor_sidebar.html ids=site.data.sponsors.placements.post_right %}
+  </aside>
 </div>

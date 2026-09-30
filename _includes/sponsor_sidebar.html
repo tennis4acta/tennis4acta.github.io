@@ -1,0 +1,8 @@
+{%- for id in include.ids %}
+<div class="rail__item">{% include sponsor.html id=id kind="ad" %}</div>
+{%- endfor %}
+{%- if include.qr %}
+<a class="rail__qr" href="{{ site.baseurl }}/img/actc_qr_code.png" target="_blank" rel="noopener">
+  <img src="{{ site.baseurl }}/img/actc_qr_code.png" alt="ACTC 球会群二维码" loading="lazy"><span>请扫描二维码加入球会群</span>
+</a>
+{%- endif %}

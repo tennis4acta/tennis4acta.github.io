@@ -1,12 +1,14 @@
-# Sponsor data used by _includes/sponsors.html (shown above the footer on every page).
+# Sponsor data used by _includes/sponsors.html (logo strip above the footer) and _includes/sponsor_sidebar.html (side banners on desktop).
 #
-# list:        one entry per sponsor. Fields:
+# list:        one entry per sponsor image. Fields:
 #                name  - alt text
 #                url   - optional; no link is rendered when omitted
-#                logo  - logo image
+#                logo  - image used in the footer logo strip
+#                ad    - image used in the desktop side banners
 #                width - optional; overrides the default logo width
 #              Image paths without "://" are relative to the site root.
-# placements:  ordered lists of ids (title / footer / media). Reorder, add or remove ids to update the site.
+# placements:  ordered lists of ids. title / footer / media = logo strip; page_left, page_right = home and content pages;
+#              post_left, post_right = event posts. Reorder, add or remove ids to update a placement.
 
 list:
   # --- Title sponsor ---
@@ -14,48 +16,62 @@ list:
     name: "皇族香米"
     url: "https://www.royalumbrella.com.au/quality.html"
     logo: "img/sponsors/ru_bag.jpg"
+  ru_rice:
+    name: "皇族香米"
+    url: "http://www.bestrice.com.au"
+    ad: "img/sponsors/Rice.jpg"
 
   # --- Sponsors ---
   swf:
     name: "SWF"
     url: "https://swfblinds.com.au/"
     logo: "img/sponsors/SWF_logo.jpg"
+    ad: "img/sponsors/SWF_ad.jpg"
   bestbuy:
     name: "Best Buy Lighting"
     url: "https://www.bestbuylighting.com.au/"
     logo: "img/sponsors/Best_Buy_Lighting.png"
+    ad: "img/sponsors/Best_Buy_Lighting_Ad.jpeg"
   tipco:
     name: "Tipco"
     url: "https://tipco.com.au/"
     logo: "img/sponsors/tipco_logo.jpg"
+    ad: "img/sponsors/tipco_side.jpg"
   flpins:
     name: "FLP Insurance"
     url: "http://www.flpinsurance.com.au/"
     logo: "img/flickr/29220669916_7c545cdf69.jpg"
+    ad: "img/flickr/29146560902_5c69cb10f3_z.jpg"
   concord:
     name: "康道 Concord Health"
     url: "http://www.concordhealth.com.au"
     logo: "img/flickr/36675040434_df544d0d78_b.jpg"
+    ad: "img/flickr/36675040434_df544d0d78_b.jpg"
   whiteglo:
     name: "White Glo"
     url: "http://www.whiteglo.com"
     logo: "img/flickr/36714082903_3116aafb0a.jpg"
+    ad: "img/sponsors/whiteglo.jpg"
   vita:
     name: "Vita Physio"
     url: "https://www.vitaphysio.com.au/"
     logo: "img/sponsors/Vita_1_logo.jpg"
+    ad: "img/sponsors/VITA_ad.jpg"
   flpinvest:
     name: "FLP Investment"
     url: "http://www.flpinvestment.com.au/"
     logo: "img/flickr/37421761755_07bb1d58a5_z.jpg"
+    ad: "img/flickr/37421763435_db968ed69d_b.jpg"
   ergolife:
     name: "Ergolife Physio"
     url: "https://www.ergolifephysio.com.au/"
     logo: "img/sponsors/Vita_2_logo.jpg"
+    ad: "img/sponsors/ERGOLIFE_ad.jpg"
   poweroll:
     name: "Poweroll"
     url: "http://www.poweroll.com.au"
     logo: "img/sponsors/Poweroll_logo.png"
+    ad: "img/sponsors/poweroll_logo.png"
   shuxiangfang:
     name: "蜀香坊"
     url: "https://www.chinachilli.com.au/"
@@ -63,30 +79,38 @@ list:
   sugarhoney:
     name: "Sugar Honey"
     logo: "img/sponsors/sugar_honey_logo.jpg"
+    ad: "img/sponsors/sugar_honey_logo.jpg"
   deej:
     name: "东阿阿胶"
     logo: "img/sponsors/DEEJ_logo.png"
+    ad: "img/sponsors/donge.png"
     width: 80
   honeylife:
     name: "Honeylife"
     logo: "img/sponsors/Honeylife_logo.png"
+    ad: "img/sponsors/Honeylife.jpg"
   glimlife:
     name: "Glimlife"
     logo: "img/sponsors/Glimlife_Llgo.png"
+    ad: "img/sponsors/Glimlife_Logo_Final.png"
   bawang:
     name: "霸王"
     logo: "img/sponsors/Bawang_logo.png"
+    ad: "img/sponsors/Bawang_logo.png"
     width: 80
   yukilove:
     name: "雪之恋"
     logo: "img/sponsors/yukilove_logo.png"
+    ad: "img/sponsors/yukilove_side.png"
   medibank:
     name: "Medibank"
     url: "https://www.medibank.com.au/"
     logo: "img/sponsors/medibank_logo.png"
+    ad: "img/sponsors/medibank_logo.png"
   wangwang:
     name: "旺旺"
     logo: "img/flickr/37355542362_de76c68ecf_z.jpg"
+    ad: "img/flickr/37355542362_de76c68ecf_z.jpg"
   tianbao:
     name: "天宝"
     logo: "img/flickr/36675040214_8141320888_b.jpg"
@@ -144,6 +168,36 @@ list:
     url: "https://qabwmobile.com.au/"
     logo: "img/sponsors/qabw_logo.png"
 
+  # --- 2016-17 side banners, only used by the post layout ---
+  westernunion:
+    name: "Western Union"
+    url: "https://www.westernunion.com/au/en/money-transfer-to-china-cn.html"
+    ad: "img/flickr/28345004110_d68ebdfaf0_o.jpg"
+  derucci:
+    name: "慕思 Derucci"
+    url: "http://www.derucci.com.au/"
+    ad: "img/flickr/28522314792_e71a8ac682.jpg"
+  spicyfood:
+    name: "蜀香坊"
+    url: "http://spicyfood.com.au/"
+    ad: "img/flickr/28577793900_6f97806712.jpg"
+  goodhealth:
+    name: "GoodHealth"
+    url: "http://www.goodhealth.co.nz/china/home"
+    ad: "img/flickr/38242154296_11ec31b114_c.jpg"
+  concord_nz:
+    name: "Concord NZ"
+    url: "http://www.nz.concordhealth.net"
+    ad: "img/flickr/29334989024_37c7c5e754_n.jpg"
+  poweroll_2016:
+    name: "Poweroll"
+    url: "http://www.poweroll.com.au"
+    ad: "img/flickr/29962010145_d5ff7259dd_n.jpg"
+  proracquets:
+    name: "Pro Racquets"
+    url: "http://proracquets.com.au/"
+    ad: "img/flickr/29453722006_aa42624a24_z.jpg"
+
 placements:
   title: [ru]
   footer:
@@ -181,3 +235,37 @@ placements:
     - iyingshi
     - ac878
     - qabw
+  page_left:
+    - ru_rice
+    - bestbuy
+    - vita
+    - yukilove
+    - whiteglo
+    - sugarhoney
+    - tipco
+    - wangwang
+    - deej
+  page_right:
+    - ru_rice
+    - swf
+    - flpins
+    - ergolife
+    - medibank
+    - concord
+    - poweroll
+    - bawang
+    - glimlife
+    - honeylife
+  post_left:
+    - ru_rice
+    - spicyfood
+    - goodhealth
+    - flpinvest
+  post_right:
+    - westernunion
+    - derucci
+    - flpins
+    - concord_nz
+    - poweroll_2016
+    - proracquets
+    - whiteglo
