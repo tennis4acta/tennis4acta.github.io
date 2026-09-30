@@ -1,24 +1,23 @@
-#Clean Blog by Start Bootstrap - Jekyll Version
+# 澳洲华人网球会 (ACTC) website
 
-The official Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
+Jekyll site hosted on GitHub Pages at https://actc.org.au. Based on the [Clean Blog](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll) theme (Bootstrap 3).
 
-###[View Live Demo &rarr;](http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/)
+## Local preview
 
-## Before You Begin
+```
+bundle install
+bundle exec jekyll serve
+```
 
-In the _config.yml file, the base URL is set to /startbootstrap-clean-blog-jekyll which is this themes gh-pages preview. It's recommended that you remove the base URL before working with this theme locally!
+## Layout
 
-It should look like this:
-`baseurl: ""`
+- `index.md` - current year's competition page
+- `20xx/` - per-year registration, draws, ticket pages
+- `_posts/` - events listed under `/others/`
+- `history/` - past results
+- `_includes/footer.html` - sponsor logos and scripts; `_layouts/page.html`, `post.html` - side sponsor banners
+- `img/` - images (sponsor logos in `img/sponsors/`)
 
-## What's Included
+## Assets
 
-A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run `jekyll serve` in your command line and preview the build in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
-
-A Grunt environment is also included. There are a number of tasks it performs like minification of the JavaScript, compiling of the LESS files, adding banners to keep the Apache 2.0 license intact, and watching for changes. Run the grunt default task by entering `grunt` into your command line which will build the files. You can use `grunt watch` if you are working on the JavaScript or the LESS.
-
-You can run `jekyll serve --watch` and `grunt watch` at the same time to watch for changes and then build them all at once.
-
-## Support
-
-Visit Clean Blog's template overview page on Start Bootstrap at http://startbootstrap.com/template-overviews/clean-blog/ and leave a comment, email feedback@startbootstrap.com, or open an issue here on GitHub for support.
+`less/` and `Gruntfile.js` compile `css/clean-blog.css` and minify `js/clean-blog.js` (`npm install`, then `grunt`). Optional; the compiled files are committed.

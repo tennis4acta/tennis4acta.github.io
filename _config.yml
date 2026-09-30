@@ -4,7 +4,9 @@ header-img: img/home-bg.jpg
 email: info@actc.org.au
 description: "Australian Chinese Tennis Club"
 baseurl: ""
-url: "http://actc.org.au"
+url: "https://actc.org.au"
+lang: zh-CN
+timezone: Australia/Sydney
 # twitter_username: SBootstrap
 # github_username:
 # facebook_username:  IronSummitMedia
@@ -15,7 +17,26 @@ highlighter: rouge
 permalink: pretty
 paginate: 5
 paginate_path: /others/page:num
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+plugins:
+  - jekyll-paginate
+exclude:
+  - less
+  - node_modules
+  - Gruntfile.js
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - ipynb
+  - mail
+  - params.json
+  - Untitled.ipynb
+  - index.html.bak1
+  - test1.txt
+  - test_frame.html
+  - "*.bak"
+  - vendor
 
 category-list: [history]
 excerpt_separator: <!--more-->
