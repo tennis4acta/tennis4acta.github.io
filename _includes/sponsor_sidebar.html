@@ -1,0 +1,9 @@
+{%- for id in include.ids -%}
+{% include sponsor.html id=id kind="ad" %}
+<br>
+{% endfor -%}
+{%- if include.qr %}
+<a href="{{ site.baseurl }}/img/actc_qr_code.png" target="_blank" rel="noopener">
+  <img src="{{ site.baseurl }}/img/actc_qr_code.png" class="img-responsive" alt="ACTC QR code"><p style="font-size:13px">请扫描二维码加入球会群</p>
+</a>
+{% endif -%}

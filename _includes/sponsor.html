@@ -1,0 +1,7 @@
+{%- assign s = site.data.sponsors.list[include.id] -%}
+{%- if include.kind == 'ad' -%}{%- assign src = s.ad -%}{%- else -%}{%- assign src = s.logo -%}{%- endif -%}
+{%- unless src contains '://' -%}{%- capture src -%}{{ site.baseurl }}/{{ src }}{%- endcapture -%}{%- endunless -%}
+{%- assign w = s.width | default: include.width -%}
+{%- if s.url %}<a href="{{ s.url }}" target="_blank" rel="noopener">{% endif -%}
+<img src="{{ src }}"{% if w %} width="{{ w }}"{% endif %} class="img-responsive" alt="{{ s.name | escape }}" loading="lazy">
+{%- if s.url %}</a>{% endif -%}

@@ -1,273 +1,30 @@
 <!-- Footer -->
 <footer>
   <div class="container">
-    <!-- Sponsors -->
     <h2 class="text-center">PROUDLY SPONSORED BY</h2>
-    <br>
-    <div class="row text-center">
-      <!-- 冠名赞助 -->
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-centered vcenter">
-        <h3 class="text-center">冠名赞助</h3>
-        <br>
-        <div class="col-xs-offset-3 col-xs-6 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-centered vcenter">
-          <!-- 皇族香米 -->
-            <a href="https://www.royalumbrella.com.au/quality.html" target="_blank">
-              <img src="/img/sponsors/ru_bag.jpg" width="600" align="center" class="img-responsive" alt="皇族香米">
-            </a>
-          <br>
-        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
- 
-     <!-- Associate sponsors -->
-      
-        <h3 class="text-center">赞助</h3>
-        <br>
-        <div class="row text-center">
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-            <!-- SWF -->
-            <a href="https://swfblinds.com.au/" target="_blank">
-              <img src="/img/sponsors/SWF_logo.jpg" width="150" class="img-responsive" alt="SWF">
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-            <!-- Best Buy Lighitng -->
-             <br>
-             <a href="https://www.bestbuylighting.com.au/" target="_blank">
-               <img src="/img/sponsors/Best_Buy_Lighting.png" width="150" class="img-responsive" alt="Best Buy Lighting">
-             </a>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-          <!-- Tipco -->
-           <a href="https://tipco.com.au/" target="_blank">
-              <img src="/img/sponsors/tipco_logo.jpg" width="150" class="img-responsive" alt="Tipco">
-           </a>
-          </div>
 
-      </div>
-      <div class="row text-center">
-           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-            <!-- FLP 保险 -->
-             <a href="http://www.flpinsurance.com.au/" target="_blank">
-               <img src="https://c5.staticflickr.com/9/8129/29220669916_7c545cdf69.jpg" width="150" class="img-responsive" alt="FLP_insurance">
-             </a>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-            <br>
-            <br>
-            <a href="http://www.concordhealth.com.au" target="_blank">
-              <img src="https://farm5.staticflickr.com/4362/36675040434_df544d0d78_b.jpg" width="150" class="img-responsive" alt="康道logo2017">
-            </a>
-          </div>
-          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-              <!-- White Glo -->
-              <br>
-              <br>
-              <a href="http://www.whiteglo.com" target="_blank">
-              <img src="https://farm5.staticflickr.com/4426/36714082903_3116aafb0a.jpg" width="150" class="img-responsive" alt="WuKong">
-               </a>
-          </div>
-      </div>
+    <h3 class="text-center">冠名赞助</h3>
+    <div class="sponsor-grid sponsor-grid-title">
+      {%- for id in site.data.sponsors.placements.title %}
+      <div class="sponsor">{% include sponsor.html id=id kind="logo" width=600 %}</div>
+      {%- endfor %}
+    </div>
 
+    <h3 class="text-center">赞助</h3>
+    <div class="sponsor-grid">
+      {%- for id in site.data.sponsors.placements.footer %}
+      <div class="sponsor">{% include sponsor.html id=id kind="logo" width=150 %}</div>
+      {%- endfor %}
+    </div>
 
-    <br>
-          
-  
-   
-    <br>
-    <div class="row text-center">
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-        <br/>
-        <a href="https://www.vitaphysio.com.au/" target="_blank">
-        <img src="/img/sponsors/Vita_1_logo.jpg" width="150" class="img-responsive" alt="Vita_1">
-        </a>
-      </div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-        <a href="http://www.flpinvestment.com.au/" target="_blank">
-          <img src="https://farm5.staticflickr.com/4345/37421761755_07bb1d58a5_z.jpg" width="150" class="img-responsive" alt="flp-investment">
-        </a>
-      </div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-        <br>
-        <a href="https://www.ergolifephysio.com.au/" target="_blank">
-        <img src="/img/sponsors/Vita_2_logo.jpg" width="150" class="img-responsive" alt="Ergolife Physio">
-        </a>
-      </div> 
-    </div>
-    <br>
-      
-    <div class="row text-center"> 
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-        <a href="http://www.concordhealth.com.au" target="_blank">
-          <img src="/img/sponsors/Poweroll_logo.png" width="150" class="img-responsive" alt="poweroll">
-        </a>
-      </div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-         <a href="https://www.chinachilli.com.au/" target="_blank">
-          <img src="/img/sponsors/logos/shuxiangfang.png" width="150" class="img-responsive" alt="蜀香坊">
-        </a>       
-      </div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-        <!-- BMI21 -->
-        <a href="https://actc.org.au" target="_blank">
-          <img src="/img/sponsors/sugar_honey_logo.jpg" width="150" class="img-responsive" alt="Sugar Honey">
-        </a>
-      </div>  
-    </div>
-    <br>
-      
-    <div class="row text-center"> 
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-        <a href="https://actc.org.au" target="_blank">
-          <img src="/img/sponsors/DEEJ_logo.png" width="80" class="img-responsive" alt="东阿阿胶">
-        </a>
-      </div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-         <a href="https://actc.org.au" target="_blank">
-          <img src="/img/sponsors/Honeylife_logo.png" width="150" class="img-responsive" alt="Honeylife">
-        </a>       
-      </div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-        <a href="https://actc.org.au" target="_blank">
-          <img src="/img/sponsors/Glimlife_Llgo.png" width="150" class="img-responsive" alt="Glimlife">
-        </a>
-      </div>  
-    </div>
-    <br>
-      
-    <div class="row text-center"> 
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-        <a href="https://actc.org.au" target="_blank">
-          <br>
-          <br>
-          <img src="/img/sponsors/Bawang_logo.png" width="80" class="img-responsive" alt="霸王">
-        </a>
-      </div>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-              <!-- 雪之恋 -->
-               <br>
-               <br>
-               <a href="https://actc.org.au" target="_blank">
-                 <img src="/img/sponsors/yukilove_logo.png" width="150" class="img-responsive" alt="雪之恋">
-               </a>
-     </div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-        <!-- Medibank -->
-             <br>
-               <br>
-               <a href="https://www.medibank.com.au/" target="_blank">
-                 <img src="/img/sponsors/medibank_logo.png" width="150" class="img-responsive" alt="Medibank">
-               </a>
-      </div>  
-    </div>
-    <br>
-
-    <div class="row text-center"> 
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-        <a href="https://actc.org.au" target="_blank">
-          <br>
-          <br>
-          <img src="https://farm5.staticflickr.com/4467/37355542362_de76c68ecf_z.jpg" width="150" class="img-responsive" alt="wangwang">
-        </a>
-      </div>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-              <br>
-               <br>
-               <a href="https://actc.org.au" target="_blank">
-                 <img src="https://farm5.staticflickr.com/4438/36675040214_8141320888_b.jpg" width="150" class="img-responsive" alt="tianbao">
-               </a>
-     </div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-centered vcenter">
-             <br>
-               <br>
-              <!---Empty --->
-      </div>  
-    </div>
-    <br>
-    <!-- End of Associate sponsors -->
-
-      
     <h3 class="text-center">MEDIA</h3>
-    <br>
-    <div class="row text-center">
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="http://www.tvb.com.au/" target="_blank">
-          <img src="https://farm2.staticflickr.com/1943/44284596585_1dc4b63656_o.png" width="100" class="img-responsive" alt="TVBA">
-        </a>
-      </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="http://www.5xini.com" target="_blank">
-          <img src="https://farm2.staticflickr.com/1925/31322091738_6acc6ab934_z.jpg" width="100" class="img-responsive" alt="悉尼印象">
-        </a>
-      </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="https://afndaily.com/" target="_blank">
-          <img src="/img/sponsors/Australian_Financial_logo.jpg" width="100" class="img-responsive"  alt="澳洲财经见闻">
-        </a>
-      </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="#" target="_blank">
-          <img src="/img/sponsors/TM_Media.png" width="100" class="img-responsive"  alt="TM Media">
-        </a>
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="https://www.1688.com.au/" target="_blank">
-          <img src="https://farm2.staticflickr.com/1940/43404097840_7d29a48c5a_o.jpg" width="100" class="img-responsive"  alt="澳洲日报">
-        </a>
-      </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="https://www.acd.com.au/" target="_blank">
-          <img src="https://farm2.staticflickr.com/1904/43382504430_3414648627_m.jpg" width="100" class="img-responsive"  alt="澳洲新报">
-        </a>
-      </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="http://www.sydneytoday.com/" target="_blank">
-          <img src="https://farm2.staticflickr.com/1907/44306184135_2d955ebed2_o.png" width="100" class="img-responsive"  alt="今日澳洲">
-        </a>
-      </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="https://www.1688.com.au/" target="_blank">
-          <img src="https://farm2.staticflickr.com/1932/43404098320_b863a18eaf_o.jpg" width="100" class="img-responsive"  alt="1688">
-        </a>
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="https://www.wesydney.com.au/" target="_blank">
-          <img src="/img/sponsors/Wesydney_logo.jpg" width="100" class="img-responsive" alt="微悉尼">
-        </a>
-      </div>
-     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="https://www.tongchengau.com/list-56-1.html" target="_blank">
-          <img src="/img/sponsors/Tongcheng_logo.jpg" width="100" class="img-responsive" alt="澳洲同城">
-        </a>
-      </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="http://www.localmv1.com/" target="_blank">
-          <img src="/img/sponsors/iyingshi_logo.png" width="100" class="img-responsive" alt="爱影视">
-        </a>
-      </div>
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="https://ac878.com.au" target="_blank">
-          <img src="/img/sponsors/ac878_logo.jpg" width="100" class="img-responsive" alt="AC878">
-        </a>
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-centered vcenter">
-        <a href="https://qabwmobile.com.au/" target="_blank">
-          <img src="/img/sponsors/qabw_logo.png" width="100" class="img-responsive" alt="华商周报">
-        </a>
-      </div>
+    <div class="sponsor-grid sponsor-grid-media">
+      {%- for id in site.data.sponsors.placements.media %}
+      <div class="sponsor">{% include sponsor.html id=id kind="logo" width=100 %}</div>
+      {%- endfor %}
     </div>
     <br>
-      
-    <br>
+
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center">

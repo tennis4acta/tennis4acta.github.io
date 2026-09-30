@@ -15,7 +15,7 @@ bundle exec jekyll serve
 - `20xx/` - per-year registration, draws, ticket pages
 - `_posts/` - events listed under `/others/`
 - `history/` - past results
-- `_includes/footer.html` - sponsor logos and scripts; `_layouts/page.html`, `post.html` - side sponsor banners
+- `_data/sponsors.yml` - all sponsors and where they appear (footer, media, side banners); edit this for yearly updates
 - `img/` - images (sponsor logos in `img/sponsors/`)
 
 ## Assets

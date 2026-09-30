@@ -22,25 +22,7 @@ layout: default
 <div class="row">
   <!-- LEFT BANNERS -->
   <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
-    <!-- 皇族香米 -->
-    <a href="http://www.bestrice.com.au" target="_blank">
-      <img src="{{ site.baseurl }}/img/sponsors/Rice.jpg" class="img-responsive" />
-    </a>
-    <br>
-    <!-- 蜀香坊 -->
-    <a href="http://spicyfood.com.au/" target="_blank">
-      <img src="https://c5.staticflickr.com/9/8782/28577793900_6f97806712.jpg" class="img-responsive" />
-    </a>
-    <br>
-    <!-- GoodHealth -->
-    <a href="http://www.goodhealth.co.nz/china/home" target="_blank">
-      <img src="https://farm5.staticflickr.com/4575/38242154296_11ec31b114_c.jpg" class="img-responsive" alt="GoodHealth">
-    </a>
-    <br>
-    <!-- FLP Investment -->
-    <a href="http://www.flpinvestment.com.au" target="_blank">
-      <img src="https://farm5.staticflickr.com/4509/37421763435_db968ed69d_b.jpg" class="img-responsive" />
-    </a>
+    {% include sponsor_sidebar.html ids=site.data.sponsors.placements.post_left %}
   </div>
 
   <!-- CONTENTS -->
@@ -67,39 +49,7 @@ layout: default
 
   <!-- RIGHT BANNERS -->
   <div class="hidden-xs col-sm-2 col-md-2 col-lg-2">
-    <!-- WESTERN UNION -->
-    <a href="https://www.westernunion.com/au/en/money-transfer-to-china-cn.html" target="_blank">
-      <img src="https://c7.staticflickr.com/9/8277/28345004110_d68ebdfaf0_o.jpg" class="img-responsive" />
-    </a>
-    <br>
-    <!-- 慕思 -->
-    <a href="http://www.derucci.com.au/" target="_blank">
-      <img src="https://c1.staticflickr.com/9/8571/28522314792_e71a8ac682.jpg" class="img-responsive" />
-    </a>
-    <br>
-    <!-- FLP 保险 -->
-    <a href="http://www.flpinsurance.com.au/" target="_blank">
-      <img src="https://c7.staticflickr.com/9/8792/29146560902_5c69cb10f3_z.jpg" class="img-responsive" />
-    </a>
-    <br>
-    <!-- Concord -->
-    <a href="http://www.nz.concordhealth.net" target="_blank">
-      <img src="https://c1.staticflickr.com/9/8119/29334989024_37c7c5e754_n.jpg" class="img-responsive" alt="concord" />
-    </a>
-    <br />
-    <!-- Poweroll -->
-    <a href="http://www.poweroll.com.au" target="_blank">
-      <img src="https://c2.staticflickr.com/9/8334/29962010145_d5ff7259dd_n.jpg" class="img-responsive" alt="poweroll">
-    </a>
-    <br>
-    <a href="http://proracquets.com.au/" target="_blank">
-      <img src="https://farm9.staticflickr.com/8129/29453722006_aa42624a24_z.jpg" class="img-responsive" alt="proracquets">
-    </a>
-    <br>
-    <!-- white glo -->
-    <a href="http://www.Whiteglo.com" target="_blank">
-      <img src="{{ site.baseurl }}/img/sponsors/whiteglo.jpg" class="img-responsive" />
-    </a>
+    {% include sponsor_sidebar.html ids=site.data.sponsors.placements.post_right %}
   </div>
 
 </div>
