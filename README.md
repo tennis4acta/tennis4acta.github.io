@@ -20,4 +20,6 @@ bundle exec jekyll serve
 
 ## Assets
 
-`less/` and `Gruntfile.js` compile `css/clean-blog.css` and minify `js/clean-blog.js` (`npm install`, then `grunt`). Optional; the compiled files are committed.
+`npm install`, then `npm run build` (Grunt) minifies `js/clean-blog.js` and compiles `less/clean-blog.less`. Requires Node 18+.
+
+Note: the committed `css/clean-blog.css` has been edited by hand and no longer matches what `less/` compiles to. Running the build overwrites it, so review the visual diff first.

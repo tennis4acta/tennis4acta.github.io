@@ -1,37 +1,40 @@
 module.exports = function(grunt) {
 
-    // Project configuration.
+    // Base name of the theme assets in less/, css/ and js/.
+    var name = 'clean-blog';
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             main: {
-                src: 'js/<%= pkg.name %>.js',
-                dest: 'js/<%= pkg.name %>.min.js'
+                src: 'js/' + name + '.js',
+                dest: 'js/' + name + '.min.js'
             }
         },
         less: {
             expanded: {
                 options: {
-                    paths: ["css"]
+                    paths: ['css']
                 },
                 files: {
-                    "css/<%= pkg.name %>.css": "less/<%= pkg.name %>.less"
+                    'css/<%= name %>.css': 'less/<%= name %>.less'
                 }
             },
             minified: {
                 options: {
-                    paths: ["css"],
-                    cleancss: true
+                    paths: ['css'],
+                    compress: true
                 },
                 files: {
-                    "css/<%= pkg.name %>.min.css": "less/<%= pkg.name %>.less"
+                    'css/<%= name %>.min.css': 'less/<%= name %>.less'
                 }
             }
         },
+        name: name,
         banner: '/*!\n' +
-            ' * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
+            ' * Clean Blog (https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)\n' +
+            ' * Copyright <%= grunt.template.today("yyyy") %> Start Bootstrap\n' +
+            ' * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)\n' +
             ' */\n',
         usebanner: {
             dist: {
@@ -40,35 +43,33 @@ module.exports = function(grunt) {
                     banner: '<%= banner %>'
                 },
                 files: {
-                    src: ['css/<%= pkg.name %>.css', 'css/<%= pkg.name %>.min.css', 'js/<%= pkg.name %>.min.js']
+                    src: ['css/<%= name %>.css', 'css/<%= name %>.min.css', 'js/<%= name %>.min.js']
                 }
             }
         },
         watch: {
             scripts: {
-                files: ['js/<%= pkg.name %>.js'],
+                files: ['js/' + name + '.js'],
                 tasks: ['uglify'],
                 options: {
-                    spawn: false,
-                },
+                    spawn: false
+                }
             },
             less: {
                 files: ['less/*.less'],
                 tasks: ['less'],
                 options: {
-                    spawn: false,
+                    spawn: false
                 }
-            },
-        },
+            }
+        }
     });
 
-    // Load the plugins.
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    // Default task(s).
     grunt.registerTask('default', ['uglify', 'less', 'usebanner']);
 
 };
