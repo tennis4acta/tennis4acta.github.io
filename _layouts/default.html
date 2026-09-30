@@ -18,7 +18,7 @@
   <div class="cta-bar" data-cta-bar hidden><a class="btn btn--primary" href="{{ site.baseurl }}/#events" data-cta hidden></a></div>
   <button class="icon-btn to-top" type="button" data-to-top aria-label="回到顶部">{% include icon.html name='up' %}</button>
 
-  <script src="{{ '/js/site.js' | prepend: site.baseurl }}" defer></script>
+  <script src="{{ '/js/site.js' | prepend: site.baseurl }}?v={{ site.time | date: '%s' }}" defer></script>
 </body>
 
 </html>
