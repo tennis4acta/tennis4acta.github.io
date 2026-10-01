@@ -9,8 +9,7 @@
       {%- assign u = page.url -%}
       <a class="nav__link" href="{{ site.baseurl }}/"{% if u == '/' %} aria-current="page"{% endif %}>首页</a>
       <a class="nav__link" href="{{ site.baseurl }}/about/"{% if u contains '/about/' %} aria-current="page"{% endif %}>关于我们</a>
-      <a class="nav__link" href="{{ site.baseurl }}/history/"{% if u contains '/history/' %} aria-current="page"{% endif %}>过往赛事</a>
-      <a class="nav__link" href="{{ site.baseurl }}/others/"{% if u contains '/others/' or page.layout == 'post' %} aria-current="page"{% endif %}>华人网球活动</a>
+      <a class="nav__link" href="{{ site.baseurl }}/history/"{% if u contains '/history/' or page.layout == 'post' %} aria-current="page"{% endif %}>过往赛事</a>
       <a class="nav__link" href="{{ site.baseurl }}/people/"{% if u contains '/people/' %} aria-current="page"{% endif %}>华人网球精英</a>
       <a class="nav__link" href="{{ site.baseurl }}/contact/"{% if u contains '/contact/' %} aria-current="page"{% endif %}>联络我们</a>
       <a class="btn btn--primary btn--sm nav__cta" href="{{ site.baseurl }}/#events" data-cta hidden></a>

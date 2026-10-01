@@ -5,7 +5,11 @@ description: "History"
 wide: true
 ---
 {%- assign kinds = "main:大奖赛,regional:省际赛,women:女子赛事,other:其他" | split: "," -%}
-<a class="btn btn--dark btn--block" style="margin-bottom:24px" href="{{ site.baseurl }}/history/all_results/">历届大奖赛成绩汇总 {% include icon.html name='trophy' %}</a>
+<a class="feature-link" href="{{ site.baseurl }}/history/all_results/">
+  <span class="feature-link__icon">{% include icon.html name='trophy' %}</span>
+  <span class="feature-link__text"><b>历届大奖赛成绩汇总</b><small>单打、双打、省际赛、混双历届成绩，点击查看</small></span>
+  <span class="feature-link__go">查看 {% include icon.html name='arrow' %}</span>
+</a>
 
 <div class="filters" role="group" aria-label="筛选">
   <button class="chip" type="button" data-kind="all" aria-pressed="true">全部</button>

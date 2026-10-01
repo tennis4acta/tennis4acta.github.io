@@ -7,7 +7,7 @@
   </ul>
 </div>
 
-<details class="acc" id="rule-excluded">
+<details class="acc" id="rule-excluded" open>
   <summary>谢绝以下球员参赛</summary>
   <div class="acc__body">
     <ol>{% for e in r.excluded %}<li>{{ e }}</li>{% endfor %}</ol>
@@ -15,14 +15,14 @@
   </div>
 </details>
 
-<details class="acc" id="rule-notices">
+<details class="acc" id="rule-notices" open>
   <summary>参赛者须知</summary>
   <div class="acc__body">
     <ol>{% for n in r.notices %}<li>{{ n }}</li>{% endfor %}</ol>
   </div>
 </details>
 
-<details class="acc" id="rule-requirements">
+<details class="acc" id="rule-requirements" open>
   <summary>各项目要求</summary>
   <div class="acc__body">
     {%- for req in t.requirements %}
@@ -32,7 +32,7 @@
   </div>
 </details>
 
-<details class="acc" id="rule-notes">
+<details class="acc" id="rule-notes" open>
   <summary>补充说明</summary>
   <div class="acc__body">
     <ol>{% for n in r.notes %}<li>{{ n }}</li>{% endfor %}</ol>

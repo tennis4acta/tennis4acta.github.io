@@ -150,22 +150,6 @@ layout: default
 </section>
 {%- endif %}
 
-<section class="section{% if announcement != '' %}{% else %} section--alt{% endif %}" id="news">
-  <div class="container">
-    <div class="section__head" data-reveal>
-      <span class="kicker">Community</span>
-      <h2>华人网球活动</h2>
-      <p>球会的最新活动与赛事报道。</p>
-    </div>
-    <div class="ncards" data-reveal>
-      {%- for post in site.posts limit:3 %}
-      {% include post_card.html post=post %}
-      {%- endfor %}
-    </div>
-    <p style="margin-top:24px"><a class="btn btn--outline" href="{{ site.baseurl }}/others/">更多活动 {% include icon.html name='arrow' %}</a></p>
-  </div>
-</section>
-
 <section class="section">
   <div class="container">
     <div class="cta-panel" data-reveal>
