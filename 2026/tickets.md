@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2026 ACTC皇族香米杯华人网球大奖赛"
+title: "2026 ACTC皇族香米杯华人网球大奖赛 报名页"
 description: "Registration"
 ---
 
@@ -14,9 +14,15 @@ description: "Registration"
 
 报名费：{{ t.days[0].fee_text }}。比赛地点：{{ t.venue.name }}，{{ t.venue.address }}。
 
+- 男子单打 A级别
+- 男子单打 B级别（红宝石 / 蓝宝石）
+- 女子单打
+
+{% comment %}
 - [男子单打 A级别](https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=410D8541-E32C-491F-BE3F-F3B27515A997)
 - [男子单打 B级别（红宝石 / 蓝宝石）](https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=F769A019-4AB4-4551-854F-1C3245B245C7)
 - [女子单打](https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=D8582621-E7D7-47D9-8EE6-17B4B143D76F)
+{% endcomment %}
 
 [单打赛程与比赛规则]({{ '/2026/1115/' | relative_url }})
 
@@ -24,9 +30,16 @@ description: "Registration"
 
 报名费：{{ t.days[1].fee_text }}。比赛地点：{{ t.venue.name }}，{{ t.venue.address }}。
 
+- 男子双打 A级别
+- 男子双打 B级别
+- 女子双打
+- 中年组双打（50-70岁）
+
+{% comment %}
 - [男子双打 A级别](https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=95FA8568-52FC-4984-BFDF-A46B047AC185)
 - [男子双打 B级别](https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=9C947EFC-08F2-4FD7-8E6E-1E92BEB45151)
 - [女子双打](https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=DB5E2D51-282E-43F8-AB50-3FC451C0339B)
 - [中年组双打（50-70岁）](https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=9EE80B94-8F41-40C0-B1C5-DAE0CD896414)
+{% endcomment %}
 
 [双打赛程与比赛规则]({{ '/2026/1122/' | relative_url }})
