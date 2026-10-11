@@ -27,7 +27,7 @@ registration:
   # Set to "closed" or "full" to stop registration early (额满提前截止), or "open" to open it early. Leave empty for automatic.
   override: ""
   # Registration link (e.g. ClassHub or a /2026/register/ page). While empty, the home page shows the dates only.
-  url: ""
+  url: "/2026/tickets/"
   provider: "ClassHub"
 
 days:
