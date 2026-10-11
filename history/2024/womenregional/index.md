@@ -9,4 +9,4 @@ description: "History"
 
 <p>球会每年上半年举行年度华人网球省际赛，由于各队为了打出好成绩，都选拔好手入队，而多数业余女球员都无缘参赛。为了满足女球员打省际赛的愿望，球会特地举办了华人女子网球省际赛。年初公布了这项赛事，广大女球友的热情高涨，积极组队并投入训练。经过一天的激烈比赛，广西队夺得了冠军，山东队获亚军，广东队和北京队分别获得三四名。</p>
 
-<p><img src="/history/2024/womenregional/01.png" class="img-responsive" width="800px"></p>
+<p><img src="{{ '/img/2024女省赛.jpg' | relative_url }}" alt="2024年华人女子网球省际赛" class="img-responsive" width="800px"></p>
