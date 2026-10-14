@@ -26,7 +26,7 @@ wide: true
     <img src="/img/flickr/28585938386_52113c8cf2.jpg" alt="刘晓成">
     <div class="pcard__body">
       <h3>刘晓成</h3>
-      <p class="role">前中国国家网球队主力，澳洲华人网球协会名誉主席</p>
+      <p class="role">前中国国家网球队主力，澳洲华人网球协会名誉顾问</p>
       <ul>
         <li>代表中国网球队参加戴维斯杯、亚洲杯</li>
         <li>多次获得全国团体冠军，全国双打冠军</li>

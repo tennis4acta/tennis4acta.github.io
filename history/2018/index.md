@@ -22,7 +22,7 @@ header-img: "img/post-bg-01.jpg"
 * 男子B级别双打冠军:Jianming Lin/Wei Fei 亚军:Haihao Lu/Zhiwei Cen 并列第三名:David Zhou/张东杰
 * 女子双打冠军:Doris Teoh/May Lee 亚军:Gloria Zhang/Lin Xue 并列第三名:Crystal Ma/Liang Shang和Jian Wen/Marie Wong
 
-<p>光明壹佰董事长James朱，澳保商业保险公司的Lauren Shen，澳洲华人网球会主席刘晓成和顾问韩蓓为获奖球员颁奖。James朱祝贺大赛圆满成功，并表示将继续与球会合作，参与支持华人网球大赛。</p>
+<p>光明壹佰董事长James朱，澳保商业保险公司的Lauren Shen，澳洲华人网球会顾问刘晓成和韩蓓为获奖球员颁奖。James朱祝贺大赛圆满成功，并表示将继续与球会合作，参与支持华人网球大赛。</p>
 
 <p>今年大奖赛由光明壹佰Be100物业公司再度冠名赞助，也得到了2019年澳网合作伙伴慕思寝具的特别赞助。同时得到了皇族牌泰国香米、康道国际、蜀香坊、澳保商业保险公司、澳保投资理财和White Glo等公司的鼎力支持和赞助。</p>
 

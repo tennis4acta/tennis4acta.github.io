@@ -16,7 +16,7 @@ header-img: "img/post-bg-01.jpg"
 
 <p>经过近300场比赛的激烈拼杀，最终决出了各项目的名次。Doris Teoh和May Lee战胜了Gloria Zhuang和Lin Xue赢得了女双冠军，后者组合获亚军。中老年双打项目中，桂志鸿和KiYin Mak组合获得冠军，Zenging Zhang和Chen Jian屈居亚军。Zhongshan Wu和Xiaojun Yu赢得了男子B级别双打的冠军，Robert Wang和Chien Chen获得亚军。标志着男双最高水准的A级别双打决赛中，来自墨尔本的组合Honghui Guan和Xufeng Der战胜了Wei Han和Aaron Cao，获得冠军。当天还进行了男子AB级别的单打决赛，老将Willlie Hong赢得了男子A级别的单打冠军，Michael Wang获得亚军。男子B级别单打决赛中，Lewis Lu战胜了Alfred Wei获得冠军，Alfred Wei屈居亚军。</p>
 
-<p>颁奖典礼上，冠名赞助大奖赛的光明壹佰物业公司董事长James朱，西联汇款市场部经理Wendy傅，以及网坛名宿陈娟、刘晓成和韩蓓，为各项目前三名球员颁发了奖杯和奖金。澳洲华人网球会主席刘晓成在发言中，感谢商家鼎力赞助，感谢义工的无私奉献，感谢墨尔本网球队前来参赛。</p>
+<p>颁奖典礼上，冠名赞助大奖赛的光明壹佰物业公司董事长James朱，西联汇款市场部经理Wendy傅，以及网坛名宿陈娟、刘晓成和韩蓓，为各项目前三名球员颁发了奖杯和奖金。刘晓成在发言中，感谢商家鼎力赞助，感谢义工的无私奉献，感谢墨尔本网球队前来参赛。</p>
 
 <p>据悉，本届赛事得到了光明壹佰Be100物业公司倾情冠名赞助，也得到了皇族牌泰国香米、西联汇款、慕思寝具、Goodhealth、蜀香坊、澳保商业保险公司、康道国际、white Glo、澳保投资理财和Pro Racquet Sports等公司的鼎力支持和赞助。</p>
 
