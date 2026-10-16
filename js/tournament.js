@@ -97,7 +97,30 @@
       }
     }
     const ranked = rankPlayers(players, games, st, rules.tiebreakers || DEFAULT_TIEBREAKERS);
-    return { name, players, st, games, done, total: games.length, complete: done === games.length, ranked };
+    return { name, players, st, games, done, total: games.length, complete: done === games.length, ranked, rounds: roundRobin(players) };
+  }
+
+  // Circle (Berger) method: everyone plays once per round, odd groups give each player exactly one bye,
+  // and seeds 1 and 2 meet in the last round.
+  function roundRobin(players) {
+    const list = players.slice();
+    if (list.length % 2) list.push(null);
+    const n = list.length;
+    const rounds = [];
+    let arr = list.map((_, i) => i);
+    for (let r = 0; r < n - 1; r++) {
+      const pairs = [];
+      let bye = null;
+      for (let i = 0; i < n / 2; i++) {
+        const x = arr[i], y = arr[n - 1 - i];
+        if (list[x] === null) bye = list[y];
+        else if (list[y] === null) bye = list[x];
+        else pairs.push(x < y ? [list[x], list[y]] : [list[y], list[x]]);
+      }
+      rounds.push({ pairs, bye });
+      arr = [arr[0], arr[n - 1]].concat(arr.slice(1, n - 1));
+    }
+    return rounds;
   }
 
   function metric(c, p, st, subset, games) {
@@ -441,7 +464,39 @@
       h('header', { class: 'tm-card__head' },
         h('h4', { text: G.name + '组' }),
         h('span', { class: 'tm-muted', text: G.complete ? '已完赛' : G.done + '/' + G.total + ' 场' })),
-      h('div', { class: 'table-scroll' }, h('table', { class: 'tm-table' }, h('thead', null, head), h('tbody', null, rows))));
+      h('div', { class: 'table-scroll' }, h('table', { class: 'tm-table' }, h('thead', null, head), h('tbody', null, rows))),
+      inst.cfg.rules.show_order ? renderOrder(inst, G, lookup, admin) : null);
+  }
+
+  function renderOrder(inst, G, lookup, admin) {
+    const seq = new Map(G.players.map((p, i) => [p, i + 1]));
+    const who = (p) => h('span', { class: 'tm-order__p' }, h('small', { text: String(seq.get(p)) }), ' ' + p);
+    const items = G.rounds.map((rd, ri) => h('li', null,
+      h('div', { class: 'tm-order__round', text: '第' + (ri + 1) + '轮' }),
+      h('ul', null, rd.pairs.map(([a, b]) => {
+        const g = lookup.get(a + '\u0000' + b);
+        const r = g.r ? orient(g, a) : null;
+        const line = [
+          h('span', { class: r && r.winner === a ? 'is-w' : null }, who(a)),
+          h('span', { class: 'tm-muted', text: ' vs ' }),
+          h('span', { class: r && r.winner === b ? 'is-w' : null }, who(b)),
+          h('span', { class: 'tm-order__score', text: r ? cellText(r) : '' }),
+        ];
+        if (!admin) return h('li', { class: r ? 'is-done' : null }, line);
+        return h('li', { class: r ? 'is-done' : null }, h('button', {
+          type: 'button', class: 'tm-order__btn',
+          onclick: () => openEditor(inst, { key: g.key, a, b, title: G.name + '组 第' + (ri + 1) + '轮' }),
+        }, line));
+      })),
+      rd.bye ? h('div', { class: 'tm-muted tm-order__bye' }, '轮空：', who(rd.bye)) : null));
+
+    const key = G.name;
+    const open = inst.orderOpen[key] === true;
+    const det = h('details', { class: 'tm-order', open },
+      h('summary', { text: '比赛顺序（' + G.rounds.length + ' 轮）' }),
+      h('ol', null, items));
+    det.addEventListener('toggle', () => { inst.orderOpen[key] = det.open; });
+    return det;
   }
 
   function orient(g, p) {
@@ -689,6 +744,7 @@
       path: root.dataset.path || 'events/scores',
       cfg: normalizeConfig(JSON.parse(cfgEl ? cfgEl.textContent : '{}')),
       scores: emptyScores(),
+      orderOpen: {},
       busy: false, error: '',
     };
     instances.push(inst);

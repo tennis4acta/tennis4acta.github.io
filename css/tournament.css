@@ -31,6 +31,22 @@
 .tm-cell-btn { all: unset; box-sizing: border-box; display: block; width: 100%; min-height: 1.8em; padding: 2px 4px; border-radius: 6px; cursor: pointer; border: 1px dashed var(--line); }
 .tm-cell-btn:hover, .tm-cell-btn:focus-visible { border-color: var(--court); background: var(--surface-2); }
 
+.tm-order { margin: 4px 0 10px; font-size: .9rem; }
+.tm-order summary { cursor: pointer; font-weight: 700; color: var(--court); padding: 4px 0; }
+.tm-order > ol { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); }
+.tm-order > ol > li { margin: 0; padding: 8px 10px; border-radius: 10px; background: var(--surface-2); }
+.tm-order__round { font: 700 .8rem/1.2 var(--display); color: var(--muted); margin-bottom: 4px; }
+.tm-order ul { list-style: none; margin: 0; padding: 0; }
+.tm-order ul li { margin: 2px 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 4px; }
+.tm-order ul li + li { border-top: 1px solid var(--line); padding-top: 4px; margin-top: 4px; }
+.tm-order ul li.is-done { opacity: .8; }
+.tm-order .is-w { font-weight: 700; color: var(--ok); }
+.tm-order__p small { display: inline-block; min-width: 1.3em; text-align: center; font-size: .7rem; border-radius: 4px; background: var(--surface); color: var(--muted); }
+.tm-order__score { margin-left: auto; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.tm-order__bye { margin-top: 4px; font-size: .85rem; }
+.tm-order__btn { all: unset; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 4px; width: 100%; padding: 2px 4px; border-radius: 6px; cursor: pointer; }
+.tm-order__btn:hover, .tm-order__btn:focus-visible { background: var(--surface); outline: 1px dashed var(--court); }
+
 .tm-bracket { display: flex; gap: 22px; overflow-x: auto; padding: 4px 2px 12px; -webkit-overflow-scrolling: touch; }
 .tm-round { display: flex; flex-direction: column; min-width: 210px; flex: 1 0 210px; }
 .tm-round__title { font: 700 .85rem/1.2 var(--display); color: var(--court); text-align: center; margin-bottom: 8px; }

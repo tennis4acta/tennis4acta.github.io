@@ -31,4 +31,6 @@ rules:
   #   - [B1, D2]
   #   - [C1, A2]
   third_place: true
+  # 是否在小组表下方显示“比赛顺序”（默认收起）；true 显示，false 或不填则不显示
+  show_order: true
   score_hint: "如 6-4 或 7-6(5)，三盘：6-4 3-6 [10-8]"

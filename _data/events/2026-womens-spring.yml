@@ -27,5 +27,16 @@ rules:
   advance: 2
   points: { win: 1, loss: 0, wo_loss: 0 }
   # 获胜轮数 → 获胜盘数 → 胜局数 → 负局数 → 组合间比赛成绩
+
+  # 可选：淘汰赛首轮对阵。A1 = A组第1名，BYE = 轮空，也可直接写选手姓名。
+  # 不填则自动生成（各组第1名为种子，同组选手尽量分在不同半区）。
+  draw:
+    - [A1, B2]
+    - [D1, C2]
+    - [C1, D2]
+    - [B1, A2]
+
   tiebreakers: [wins, sets_won, games_won, games_lost, h2h]
   third_place: false
+  # 是否在小组表下方显示“比赛顺序”（默认收起）
+  show_order: true
