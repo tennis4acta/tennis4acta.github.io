@@ -1,0 +1,31 @@
+name: 女子双打
+
+groups:
+  A:
+    - Pei Zou & Ying Huang
+    - Linda Zhou & Jenny Wan
+    - Jiayu Gao & Esther Dong
+    - Sandy Li & Jessica Miao
+  B:
+    - Lin Xue & Yingxi Ma
+    - Chelsea He & Ye Li
+    - Helen Yang & Lili Fu
+    - Kelly Xie & Krystal Zhang
+  C:
+    - Kiki Law & Luna Liu
+    - Jun Jiang & Jackie Xu
+    - Pam Qi & Ying Li
+    - Wendy Wang & Sienna Li
+  D:
+    - Sammy Gan & Connie Wang
+    - Lei Huang & Evelyn Qin
+    - Monica Ye & Heli Yang
+    - Bing Liang & Kate Li
+    - Lauren Shen & Claudia
+
+rules:
+  advance: 2
+  points: { win: 1, loss: 0, wo_loss: 0 }
+  # 获胜轮数 → 获胜盘数 → 胜局数 → 负局数 → 组合间比赛成绩
+  tiebreakers: [wins, sets_won, games_won, games_lost, h2h]
+  third_place: false

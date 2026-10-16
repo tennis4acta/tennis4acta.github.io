@@ -33,6 +33,13 @@ exclude:
   - test_frame.html
   - "*.bak"
   - vendor
+  - score_board/score_system.md
+
+# Tournament score storage (read/written via the GitHub API by js/tournament.js)
+tournament_scores:
+  repo: tennis4acta/tennis4acta.github.io
+  branch: master
+  path: events/scores
 
 category-list: [history]
 excerpt_separator: <!--more-->

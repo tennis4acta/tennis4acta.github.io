@@ -1,0 +1,15 @@
+{%- assign ev = site.data.events[include.id] -%}
+{%- assign store = site.tournament_scores -%}
+{%- if ev -%}
+<div class="tm" data-tm data-event="{{ include.id | escape }}" data-repo="{{ store.repo | escape }}" data-branch="{{ store.branch | default: 'master' | escape }}" data-path="{{ store.path | default: 'events/scores' | escape }}">
+<link rel="stylesheet" href="{{ '/css/tournament.css' | prepend: site.baseurl }}?v={{ site.time | date: '%s' }}">
+{%- if ev.name %}
+<h2 class="tm-title" id="event-{{ include.id | escape }}">{{ ev.name | escape }}</h2>
+{%- endif %}
+<script type="application/json" data-tm-config>{{ ev | jsonify | replace: '<', '\u003c' }}</script>
+<noscript><p>请启用 JavaScript 以查看分组及比分。</p></noscript>
+</div>
+<script src="{{ '/js/tournament.js' | prepend: site.baseurl }}?v={{ site.time | date: '%s' }}" defer></script>
+{%- else -%}
+<p class="note">未找到赛事配置：_data/events/{{ include.id | escape }}.yml</p>
+{%- endif -%}

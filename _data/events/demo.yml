@@ -1,0 +1,34 @@
+# 赛事配置示例。每个项目一个文件：_data/events/<id>.yml
+# 页面中使用：{% include event.html id="<id>" %}
+# 比分自动保存到 events/scores/<id>.json（无需手动创建）。
+# 注意：开赛后请勿修改选手姓名，否则该选手已录入的比分将失效。
+
+# 赛事名称，显示为页面中该项目的标题
+name: A级别男子单打
+
+# 小组：组名建议用字母；双打可写作 "张三 / 李四"
+groups:
+  A: [张伟, 王磊, 李强, 刘洋]
+  B: [陈杰, 杨帆, 赵鹏, 黄涛]
+  C: [周斌, 吴昊, 徐亮, 孙浩]
+  D: [马超, 胡军, 郭峰, 何勇]
+
+rules:
+  # 每组前 N 名进入淘汰赛；0 = 只打循环赛
+  advance: 2
+  # 积分：胜 / 负 / 弃权负
+  points: { win: 1, loss: 0, wo_loss: 0 }
+  # 排名依据（依次比较）：points 积分, wins 胜场, h2h 相互战绩,
+  # set_diff 净胜盘, game_diff 净胜局, set_ratio 胜盘率, game_ratio 胜局率,
+  # sets_won 胜盘数, games_won 胜局数, games_lost 负局数（少者优先）
+  # 多人同分时按 ITF 方式处理：分出一人后，剩余同分者从头重新比较；仍无法区分则按上方名单顺序
+  tiebreakers: [points, h2h, set_diff, game_diff]
+  # 可选：淘汰赛首轮对阵。A1 = A组第1名，BYE = 轮空，也可直接写选手姓名。
+  # 不填则自动生成（各组第1名为种子，同组选手尽量分在不同半区）。
+  # draw:
+  #   - [A1, C2]
+  #   - [D1, B2]
+  #   - [B1, D2]
+  #   - [C1, A2]
+  third_place: true
+  score_hint: "如 6-4 或 7-6(5)，三盘：6-4 3-6 [10-8]"
