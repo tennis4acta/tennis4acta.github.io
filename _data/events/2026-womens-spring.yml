@@ -42,4 +42,5 @@ rules:
   tiebreakers: [wins, games_won, game_diff, h2h]
   third_place: false
   # 是否在小组表下方显示“比赛顺序”（默认收起）
-  show_order: true
+  show_set_column: false
+  show_order: false
