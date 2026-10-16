@@ -65,11 +65,13 @@ events:
     day: singles
     name: "女子单打"
     capacity_text: "16人"
+    surface: "硬地"
     requirements: singles_w
   - id: doubles_a
     day: doubles
     name: "男子双打 A级别"
     capacity_text: "12对"
+    surface: "硬地"
     requirements: doubles_a
   - id: doubles_b
     day: doubles
@@ -87,6 +89,18 @@ events:
     tag: "50-70岁"
     capacity_text: "10对"
     requirements: doubles_s
+
+# Notice shown between 重要日期 and 参赛规程 on the home page. Remove or leave title empty to hide.
+notice:
+  title: "2026ACTC皇族香米杯华人网球大奖赛报名及场地调整公告"
+  intro:
+    - "2026ACTC皇族香米杯华人网球大奖赛报名系统将于本周六晚10点正式开放。本届赛事将在Parramatta网球中心（1-13号场地）举行。"
+    - "因Parramatta网球中心场地升级，现将本届赛事的场地安排及备战注意事项通知如下："
+  items:
+    - "<b>常规场地安排：</b>鉴于7-8号球场已改建为硬地，两个比赛日中的女子单打与男子A级别双打赛事将安排在硬地球场进行。"
+    - "<b>天气应急预案：</b>若比赛当天遭遇阵雨，组委会将视实际情况，决定是否将部分比赛调整至人工草场地进行。"
+    - "<b>组委会特别声明：</b>组委会将根据具体报名人数及天气变化，保留最终调整比赛场地的权利。"
+  tip: "<b>温馨提示：</b>请广大参赛球员务必提早准备好适应不同场地（硬地及假草）的比赛球鞋，并随时持续关注赛会官网的最新公告，以免错过重要赛事信息。"
 
 rules:
   constraints:

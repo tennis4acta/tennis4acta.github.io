@@ -96,7 +96,7 @@ layout: default
             <span class="ecard__day">{{ d.name }}</span>
             <h3>{{ e.name }}</h3>
             {%- if e.tag %}<span class="ecard__tag">{{ e.tag }}</span>{% endif %}
-            <ul class="ecard__meta"><li>{% include icon.html name='users' %} 名额 {{ e.capacity_text }}</li></ul>
+            <ul class="ecard__meta"><li>{% include icon.html name='users' %} 名额 {{ e.capacity_text }}</li>{% if e.surface %}<li>{% include icon.html name='pin' %} 计划比赛场地：{{ e.surface }}</li>{% endif %}</ul>
             <details>
               <summary>参赛要求</summary>
               <ol>{% for i in req.items %}<li>{{ i }}</li>{% endfor %}</ol>
@@ -127,7 +127,28 @@ layout: default
   </div>
 </section>
 
-<section class="section" id="rules">
+{%- if t.notice.title %}
+<section class="section" id="notice">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <span class="kicker">Notice</span>
+      <h2>通知</h2>
+    </div>
+    <div class="note note--warn" style="max-width: 900px" data-reveal>
+      <h3>{{ t.notice.title }}</h3>
+      {%- for p in t.notice.intro %}
+      <p>{{ p }}</p>
+      {%- endfor %}
+      <ul>{% for i in t.notice.items %}<li>{{ i }}</li>{% endfor %}</ul>
+      {%- if t.notice.tip %}
+      <p>{{ t.notice.tip }}</p>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="section{% if t.notice.title %} section--alt{% endif %}" id="rules">
   <div class="container">
     <div class="section__head" data-reveal>
       <span class="kicker">Rules</span>
