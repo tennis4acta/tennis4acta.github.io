@@ -400,6 +400,13 @@
     } catch (e) { return iso; }
   }
 
+  // Doubles teams are written "A & B"; show each player on its own line.
+  function nameNode(name) {
+    const parts = String(name).split('&').map((s) => s.trim()).filter(Boolean);
+    if (parts.length < 2) return String(name);
+    return h('span', { class: 'tm-pair' }, parts.map((p) => h('span', { text: p })));
+  }
+
   function cellText(r) {
     if (r.note === 'W/O') return 'W/O';
     return r.score + (r.note === 'RET' ? ' ret' : '');
@@ -425,6 +432,7 @@
   }
 
   function renderGroup(inst, G, advance, admin) {
+    const showSets = inst.cfg.rules.show_set_column !== false;
     const rankOf = new Map(G.ranked.map((p, i) => [p, i + 1]));
     const lookup = new Map();
     G.games.forEach((g) => { lookup.set(g.a + '\u0000' + g.b, g); lookup.set(g.b + '\u0000' + g.a, g); });
@@ -432,7 +440,7 @@
     const head = h('tr', null,
       h('th', { text: '#' }), h('th', { class: 'tm-name', text: '选手' }),
       G.players.map((p, i) => h('th', { class: 'tm-x', title: p, text: String(i + 1) })),
-      h('th', { text: '胜-负' }), h('th', { text: '积分' }), h('th', { text: '盘' }), h('th', { text: '局' }), h('th', { text: '名次' }));
+      h('th', { text: '胜-负' }), showSets ? h('th', { text: '盘' }) : null, h('th', { text: '局' }), h('th', { text: '名次' }));
 
     const rows = G.players.map((p, i) => {
       const s = G.st[p];
@@ -451,11 +459,10 @@
       });
       return h('tr', { class: G.complete && rank <= advance ? 'is-q' : null },
         h('td', { class: 'tm-muted', text: String(i + 1) }),
-        h('td', { class: 'tm-name', text: p }),
+        h('td', { class: 'tm-name', title: p }, nameNode(p)),
         cells,
         h('td', { text: s.wins + '-' + s.losses }),
-        h('td', { class: 'tm-strong', text: String(s.points) }),
-        h('td', { text: s.sw + '-' + s.sl }),
+        showSets ? h('td', { text: s.sw + '-' + s.sl }) : null,
         h('td', { text: s.gw + '-' + s.gl }),
         h('td', { class: G.complete ? 'tm-strong' : 'tm-muted', text: s.played ? String(rank) : '–' }));
     });
@@ -470,7 +477,7 @@
 
   function renderOrder(inst, G, lookup, admin) {
     const seq = new Map(G.players.map((p, i) => [p, i + 1]));
-    const who = (p) => h('span', { class: 'tm-order__p' }, h('small', { text: String(seq.get(p)) }), ' ' + p);
+    const who = (p) => h('span', { class: 'tm-order__p' }, h('small', { text: String(seq.get(p)) }), nameNode(p));
     const items = G.rounds.map((rd, ri) => h('li', null,
       h('div', { class: 'tm-order__round', text: '第' + (ri + 1) + '轮' }),
       h('ul', null, rd.pairs.map(([a, b]) => {
@@ -517,7 +524,7 @@
     let tag = null;
     if (m.r && m.r.note && slot.name === m.r.loser) tag = h('em', { text: m.r.note });
     return h('div', { class: 'tm-slot' + (done && isWin ? ' is-win' : '') + (slot.name ? '' : ' is-tbd') },
-      h('span', { class: 'tm-slot__name', text: name }), tag, h('span', { class: 'tm-slot__games' }, games));
+      h('span', { class: 'tm-slot__name', title: name }, slot.name ? nameNode(slot.name) : name), tag, h('span', { class: 'tm-slot__games' }, games));
   }
 
   function renderMatch(inst, m, admin, roundLabel) {

@@ -95,6 +95,7 @@ rules:
     - [B1, A2]
   third_place: true          # 是否打三四名决赛
   show_order: true           # 是否显示小组赛"比赛顺序"（默认收起），不填 = 不显示
+  show_set_column: false     # 是否显示"盘"列（一盘制可关），不填 = 显示
   score_hint: "如 6-4 或 6-4 3-6 [10-8]"     # 录入框提示文字
 ```
 
@@ -356,3 +357,6 @@ GitHub → Settings → Developer settings → Personal access tokens → **Fine
 | 10. 首个正式项目 | 2026 春季女双：`_data/events/2026-womens-spring.yml` + 页面 `2026/womens_spring.md`；17 对分 4 组（D 组 5 对），每组前 2 名出线，不打三四名；为其排名规则新增指标 `sets_won`、`games_won`、`games_lost`，排名依据为 `[wins, sets_won, games_won, games_lost, h2h]` |
 | 11. 小组赛比赛顺序 | 新增 `roundRobin()`（圆周法）按轮次生成对阵，奇数队每队轮空 1 次；每组表格下方显示可收起的"比赛顺序"，含比分和轮空，裁判可直接点击录入 |
 | 12. 比赛顺序开关 | 新增 `rules.show_order`：`true` 显示且默认收起；`false` 或不填则不显示 |
+| 13. 双打姓名分行 | 姓名中含 `&` 视为双打，在小组表、比赛顺序、淘汰赛对阵中每位球员各占一行（`nameNode()`），避免被列宽截断 |
+| 14. 精简小组表 | 删除"积分"列（名次列已足够）；`points` 仍可作为排名依据使用 |
+| 15. 盘列开关 | 新增 `rules.show_set_column`：`false` 隐藏"盘"列（一盘制时与胜-负重复），不填默认显示；盘数仍参与排名计算 |

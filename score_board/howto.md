@@ -56,6 +56,7 @@ rules:
   tiebreakers: [points, h2h, set_diff, game_diff]
   third_place: true
   show_order: true
+  show_set_column: true
   score_hint: "如 6-4 或 7-6(5)"
 ```
 
@@ -66,6 +67,7 @@ rules:
 | `tiebreakers` | 小组排名依据，按顺序比较（见下表） |
 | `third_place` | `true` 加打三四名决赛，`false` 不打 |
 | `show_order` | `true` 在每组下方显示"比赛顺序"（默认收起，点击展开）；`false` 或不填则不显示 |
+| `show_set_column` | 是否在小组表中显示"盘"列。一盘制时与"胜-负"列相同，可设为 `false` 隐藏；不填则显示 |
 | `score_hint` | 录入比分时的提示文字（可选） |
 
 排名依据可选值：

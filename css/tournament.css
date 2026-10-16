@@ -22,7 +22,9 @@
 .tm-table { width: 100%; border-collapse: collapse; font-size: .9rem; white-space: nowrap; }
 .tm-table th, .tm-table td { padding: 6px 6px; border-bottom: 1px solid var(--line); text-align: center; }
 .tm-table th { font-weight: 700; color: var(--muted); font-size: .8rem; }
-.tm-table .tm-name { text-align: left; max-width: 9em; overflow: hidden; text-overflow: ellipsis; }
+.tm-table .tm-name { text-align: left; max-width: 10em; overflow: hidden; text-overflow: ellipsis; }
+.tm-pair { display: inline-flex; flex-direction: column; max-width: 100%; vertical-align: middle; line-height: 1.25; }
+.tm-pair > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .tm-table tr.is-q td { background: color-mix(in srgb, var(--ok) 12%, transparent); }
 .tm-table .tm-x { min-width: 3.4em; }
 .tm-table .tm-diag { background: var(--surface-2); }
@@ -37,14 +39,15 @@
 .tm-order > ol > li { margin: 0; padding: 8px 10px; border-radius: 10px; background: var(--surface-2); }
 .tm-order__round { font: 700 .8rem/1.2 var(--display); color: var(--muted); margin-bottom: 4px; }
 .tm-order ul { list-style: none; margin: 0; padding: 0; }
-.tm-order ul li { margin: 2px 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 4px; }
+.tm-order ul li { margin: 2px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 4px; }
 .tm-order ul li + li { border-top: 1px solid var(--line); padding-top: 4px; margin-top: 4px; }
 .tm-order ul li.is-done { opacity: .8; }
 .tm-order .is-w { font-weight: 700; color: var(--ok); }
+.tm-order__p { display: inline-flex; align-items: center; gap: 4px; }
 .tm-order__p small { display: inline-block; min-width: 1.3em; text-align: center; font-size: .7rem; border-radius: 4px; background: var(--surface); color: var(--muted); }
 .tm-order__score { margin-left: auto; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
 .tm-order__bye { margin-top: 4px; font-size: .85rem; }
-.tm-order__btn { all: unset; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 4px; width: 100%; padding: 2px 4px; border-radius: 6px; cursor: pointer; }
+.tm-order__btn { all: unset; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 0 4px; width: 100%; padding: 2px 4px; border-radius: 6px; cursor: pointer; }
 .tm-order__btn:hover, .tm-order__btn:focus-visible { background: var(--surface); outline: 1px dashed var(--court); }
 
 .tm-bracket { display: flex; gap: 22px; overflow-x: auto; padding: 4px 2px 12px; -webkit-overflow-scrolling: touch; }

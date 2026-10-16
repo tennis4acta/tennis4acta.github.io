@@ -35,8 +35,11 @@ rules:
     - [D1, C2]
     - [C1, D2]
     - [B1, A2]
-
-  tiebreakers: [wins, sets_won, games_won, games_lost, h2h]
+  # 排名依据（依次比较）：points 积分, wins 胜场, h2h 相互战绩,
+  # set_diff 净胜盘, game_diff 净胜局, set_ratio 胜盘率, game_ratio 胜局率,
+  # sets_won 胜盘数, games_won 胜局数, games_lost 负局数（少者优先）
+  # 多人同分时按 ITF 方式处理：分出一人后，剩余同分者从头重新比较；仍无法区分则按上方名单顺序
+  tiebreakers: [wins, games_won, game_diff, h2h]
   third_place: false
   # 是否在小组表下方显示“比赛顺序”（默认收起）
   show_order: true
