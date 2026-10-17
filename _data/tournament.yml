@@ -27,7 +27,7 @@ registration:
   # Set to "closed" or "full" to stop registration early (额满提前截止), or "open" to open it early. Leave empty for automatic.
   override: ""
   # Registration link (e.g. ClassHub or a /2026/register/ page). While empty, the home page shows the dates only.
-  url: "/2026/tickets/"
+  url: "/2026/registration/"
   provider: "ClassHub"
 
 days:
@@ -35,6 +35,7 @@ days:
     name: "单打"
     date_text: "11月15日（周日）"
     time_text: "上午8:00 开始"
+    url: "/2026/1115/"
     start: "2026-11-15T08:00:00+11:00"
     end: "2026-11-15T19:00:00+11:00"
     fee: 40
@@ -43,6 +44,7 @@ days:
     name: "双打"
     date_text: "11月22日（周日）"
     time_text: "上午8:00 开始"
+    url: "/2026/1122/"
     start: "2026-11-22T08:00:00+11:00"
     end: "2026-11-22T19:00:00+11:00"
     fee: 60

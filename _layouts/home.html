@@ -88,7 +88,7 @@ layout: default
       </div>
       {%- for d in t.days %}
       <div class="tabs__panel" role="tabpanel" id="panel-{{ d.id }}" aria-labelledby="tab-{{ d.id }}"{% unless forloop.first %} hidden{% endunless %}>
-        <p><strong>{{ d.date_text }}</strong> · {{ d.time_text }} · 报名费 {{ d.fee_text }}</p>
+        <p><strong>{{ d.date_text }}</strong> · {{ d.time_text }} · 报名费 {{ d.fee_text }}{% if d.url %} · <a href="{{ d.url | relative_url }}">赛程与比赛规则</a>{% endif %}</p>
         <div class="ecards">
           {%- for e in t.events %}{% if e.day == d.id %}
           {%- assign req = t.requirements[e.requirements] -%}

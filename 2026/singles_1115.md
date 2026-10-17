@@ -2,6 +2,7 @@
 layout: page
 title: "2026 ACTC皇族香米杯华人网球大奖赛"
 description: "11月15日 单打赛程"
+permalink: /2026/1115/
 ---
 
 {%- assign t = site.data.tournament -%}
@@ -11,7 +12,7 @@ description: "11月15日 单打赛程"
 
 地址：{{ t.venue.address }}。报名费：{{ day.fee_text }}。
 
-[赛事报名]({{ '/2026/tickets/' | relative_url }}) · [参赛规程]({{ '/#rules' | relative_url }}) · [双打赛程]({{ '/2026/1122/' | relative_url }})
+[赛事报名]({{ t.registration.url | relative_url }}) · [参赛规程]({{ '/#rules' | relative_url }}) · [双打赛程]({{ t.days[1].url | relative_url }})
 
 ## 赛程表
 
