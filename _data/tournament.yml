@@ -29,6 +29,9 @@ registration:
   # Registration link (e.g. ClassHub or a /2026/register/ page). While empty, the home page shows the dates only.
   url: "/2026/registration/"
   provider: "ClassHub"
+  waitlist_url: "/2026/waitlist/"
+  # Google Apps Script web app URL that appends waiting-list submissions to a Google Sheet (see scripts/waitlist.gs).
+  waitlist_endpoint: "https://script.google.com/macros/s/AKfycbyJRgfFpGXAmf2tHgiLsNBY3Oenj_36U6hj6Tovic6tjNODzFTkExBDb4uGlpb-7KdO/exec"
 
 days:
   - id: singles
@@ -50,47 +53,62 @@ days:
     fee: 60
     fee_text: "$60 /组合 + 手续费"
 
-# Competition categories shown on the home page.
+# Competition categories shown on the home page. Set full: true when an event is full to swap its
+# registration link for a waiting-list link.
 events:
   - id: singles_a
     day: singles
     name: "男子单打 A级别"
     capacity_text: "20人"
     requirements: singles_a
+    reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=410D8541-E32C-491F-BE3F-F3B27515A997"
+    full: false
   - id: singles_b
     day: singles
     name: "男子单打 B级别"
     tag: "红宝石 / 蓝宝石"
     capacity_text: "红宝石 32人 + 蓝宝石 32人"
     requirements: singles_b
+    reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=F769A019-4AB4-4551-854F-1C3245B245C7"
+    full: false
   - id: singles_w
     day: singles
     name: "女子单打"
     capacity_text: "16人"
     surface: "硬地"
     requirements: singles_w
+    reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=D8582621-E7D7-47D9-8EE6-17B4B143D76F"
+    full: false
   - id: doubles_a
     day: doubles
     name: "男子双打 A级别"
     capacity_text: "12对"
     surface: "硬地"
     requirements: doubles_a
+    reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=95FA8568-52FC-4984-BFDF-A46B047AC185"
+    full: false
   - id: doubles_b
     day: doubles
     name: "男子双打 B级别"
     capacity_text: "32对"
     requirements: doubles_b
+    reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=9C947EFC-08F2-4FD7-8E6E-1E92BEB45151"
+    full: false
   - id: doubles_w
     day: doubles
     name: "女子双打"
     capacity_text: "20对"
     requirements: doubles_w
+    reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=DB5E2D51-282E-43F8-AB50-3FC451C0339B"
+    full: false
   - id: doubles_s
     day: doubles
     name: "中年组双打"
     tag: "50-70岁"
     capacity_text: "10对"
     requirements: doubles_s
+    reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=9EE80B94-8F41-40C0-B1C5-DAE0CD896414"
+    full: false
 
 # Notice shown between 重要日期 and 参赛规程 on the home page. Remove or leave title empty to hide.
 notice:
@@ -118,7 +136,7 @@ rules:
   notices:
     - "参赛球员请按照驾照或护照的姓和名填写报名表，并写上英文名。还请选择来自：港、澳、台、大陆。"
     - "递交报名表后，不能擅自更换球员。如遇特殊情况，11月7日前通知组委会退赛并经回复核准，将给予退还报名费。11月7日之后退赛，不予退款。擅自换球员，将取消比赛资格。无故缺席和退赛，组委会将作进一步处理。"
-    - "项目报满，自动截止报名。逾期未报上名的球员请发邮件通知列为等候名单，info@actc.org.au。"
+    - "项目报满，自动截止报名。逾期未报上名的球员请在<a href=\"/2026/waitlist/\">等候名单页面</a>登记，或发邮件至 info@actc.org.au。"
     - "11月15日单打比赛，球员只能参加一个项目的比赛。11月22日的双打项目，球员只能参加一个项目的比赛。一经发现重复参赛，将取消其所有比赛资格和成绩，并不予退款。"
     - "赛会根据以往ACTC大奖赛的名次，列各项目种子。除非经查核实力，此外不接受列种子球员的要求。"
     - "除了部分决赛设裁判外，其余比赛均采取信任制。但组委会裁判组安排场外裁判巡回查看，如发现球员乱判，将给予警告、扣分，严重者将进一步处理。"

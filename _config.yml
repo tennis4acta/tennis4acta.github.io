@@ -34,6 +34,7 @@ exclude:
   - "*.bak"
   - vendor
   - score_board/score_system.md
+  - scripts
 
 # Tournament score storage (read/written via the GitHub API by js/tournament.js)
 tournament_scores:

@@ -9,7 +9,7 @@ layout: default
   <div class="container">
     <p data-show="before_open" hidden><strong>报名将于{{ t.registration.opens_text }}开放。</strong>请提前阅读参赛规程与各项目要求。</p>
     <p data-show="open" hidden><strong>报名进行中</strong>，{{ t.registration.closes_text }}截止，项目报满将提前截止。</p>
-    <p data-show="closed" hidden><strong>报名已截止。</strong>请留意本网站及球会群的赛程通知。</p>
+    <p data-show="closed" hidden><strong>报名已截止。</strong>如需列入等候名单，请<a href="{{ t.registration.waitlist_url | relative_url }}">填写等候名单</a>。请留意本网站及球会群的赛程通知。</p>
     <p data-show="running" hidden><strong>比赛进行中。</strong>赛程与比分请留意本网站及球会群的通知。</p>
     <p data-show="finished" hidden><strong>本届比赛已圆满结束。</strong>感谢所有球员、志愿者与赞助商！</p>
   </div>
@@ -96,7 +96,7 @@ layout: default
             <span class="ecard__day">{{ d.name }}</span>
             <h3>{{ e.name }}</h3>
             {%- if e.tag %}<span class="ecard__tag">{{ e.tag }}</span>{% endif %}
-            <ul class="ecard__meta"><li>{% include icon.html name='users' %} 名额 {{ e.capacity_text }}</li>{% if e.surface %}<li>{% include icon.html name='pin' %} 计划比赛场地：{{ e.surface }}</li>{% endif %}</ul>
+            <ul class="ecard__meta"><li>{% include icon.html name='users' %} 名额 {{ e.capacity_text }}</li>{% if e.surface %}<li>{% include icon.html name='pin' %} 计划比赛场地：{{ e.surface }}</li>{% endif %}{% if e.full %}<li><a href="{{ t.registration.waitlist_url | relative_url }}?event={{ e.id }}">已报满 · 加入等候名单</a></li>{% endif %}</ul>
             <details>
               <summary>参赛要求</summary>
               <ol>{% for i in req.items %}<li>{{ i }}</li>{% endfor %}</ol>
