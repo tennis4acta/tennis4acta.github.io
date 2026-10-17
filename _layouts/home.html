@@ -8,7 +8,7 @@ layout: default
 <div class="status" role="status">
   <div class="container">
     <p data-show="before_open" hidden><strong>报名将于{{ t.registration.opens_text }}开放。</strong>请提前阅读参赛规程与各项目要求。</p>
-    <p data-show="open" hidden><strong>报名进行中</strong>，{{ t.registration.closes_text }}截止，项目报满将提前截止。</p>
+    <p data-show="open" hidden><strong>报名进行中</strong>，{{ t.registration.closes_text }}截止，项目报满将提前截止。如项目已满，请在<a href="{{ t.registration.waitlist_url | relative_url }}">等候名单页面</a>填写登记。</p>
     <p data-show="closed" hidden><strong>报名已截止。</strong>如需列入等候名单，请<a href="{{ t.registration.waitlist_url | relative_url }}">填写等候名单</a>。请留意本网站及球会群的赛程通知。</p>
     <p data-show="running" hidden><strong>比赛进行中。</strong>赛程与比分请留意本网站及球会群的通知。</p>
     <p data-show="finished" hidden><strong>本届比赛已圆满结束。</strong>感谢所有球员、志愿者与赞助商！</p>
@@ -78,6 +78,7 @@ layout: default
       <span class="kicker">Events</span>
       <h2>比赛项目</h2>
       <p>{{ t.draw_count }}个项目，分两个周末进行，每位球员每个比赛日只能参加一个项目。点击「参赛要求」查看各项目资格。</p>
+      <p class="note">如项目已满，请在<a href="{{ t.registration.waitlist_url | relative_url }}">等候名单页面</a>填写登记。如有球员退赛，组委会将按登记先后顺序联系您。</p>
     </div>
 
     <div data-tabs data-reveal>

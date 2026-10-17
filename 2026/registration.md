@@ -12,7 +12,7 @@ permalink: /2026/registration/
 请先阅读[参赛规程]({{ '/#rules' | relative_url }})及各项目要求。每位球员每个比赛日只能参加一个项目。
 
 <p class="note note--warn" data-show="before_open" hidden>报名链接将于<strong>{{ t.registration.opens_text }}</strong>在本页开放，届时请刷新本页面。</p>
-<p class="note" data-show="open" hidden>项目已报满？请<a href="{{ t.registration.waitlist_url | relative_url }}">加入等候名单</a>，如有空位组委会将按登记先后联系您。</p>
+<p class="note note--warn" data-show="before_open open" hidden><strong>如项目已满，请在<a href="{{ t.registration.waitlist_url | relative_url }}">等候名单页面</a>填写登记。</strong>如有球员退赛，组委会将按登记先后顺序联系您。</p>
 <p class="note note--warn" data-show="closed running finished" hidden>报名已截止。如需列入等候名单，请<a href="{{ t.registration.waitlist_url | relative_url }}">填写等候名单</a>。</p>
 {% for d in t.days %}
 ## 2026年{{ d.date_text }}{{ d.time_text | remove: ' ' }} · {{ d.name }}

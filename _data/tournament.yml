@@ -78,7 +78,7 @@ events:
     surface: "硬地"
     requirements: singles_w
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=D8582621-E7D7-47D9-8EE6-17B4B143D76F"
-    full: false
+    full: true
   - id: doubles_a
     day: doubles
     name: "男子双打 A级别"
