@@ -1,5 +1,15 @@
 {
   "matches": {
+    "RR|B|Chelsea He & Ye Li|Helen Yang & Lili Fu": {
+      "p": [
+        "Chelsea He & Ye Li",
+        "Helen Yang & Lili Fu"
+      ],
+      "s": "5-0",
+      "w": "Chelsea He & Ye Li",
+      "t": "2026-10-18T00:42:17.280Z",
+      "by": "sheenzhaox"
+    },
     "RR|B|Chelsea He & Ye Li|Lin Xue & Yingxi Ma": {
       "p": [
         "Lin Xue & Yingxi Ma",
@@ -31,5 +41,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-10-18T00:41:53.377Z"
+  "updated": "2026-10-18T00:42:17.851Z"
 }
