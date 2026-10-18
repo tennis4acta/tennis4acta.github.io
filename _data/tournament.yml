@@ -62,7 +62,7 @@ events:
     capacity_text: "20人"
     requirements: singles_a
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=410D8541-E32C-491F-BE3F-F3B27515A997"
-    full: false
+    full: true
   - id: singles_b
     day: singles
     name: "男子单打 B级别"
@@ -86,7 +86,7 @@ events:
     surface: "硬地"
     requirements: doubles_a
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=95FA8568-52FC-4984-BFDF-A46B047AC185"
-    full: false
+    full: true
   - id: doubles_b
     day: doubles
     name: "男子双打 B级别"
