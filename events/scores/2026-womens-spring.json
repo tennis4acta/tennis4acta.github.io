@@ -1,5 +1,15 @@
 {
   "matches": {
+    "RR|A|Jiayu Gao & Esther Dong|Linda Zhou & Jenny Wan": {
+      "p": [
+        "Linda Zhou & Jenny Wan",
+        "Jiayu Gao & Esther Dong"
+      ],
+      "s": "5-1",
+      "w": "Linda Zhou & Jenny Wan",
+      "t": "2026-10-18T00:45:59.943Z",
+      "by": "sheenzhaox"
+    },
     "RR|A|Jiayu Gao & Esther Dong|Pei Zou & Ying Huang": {
       "p": [
         "Pei Zou & Ying Huang",
@@ -81,5 +91,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-10-18T00:45:40.207Z"
+  "updated": "2026-10-18T00:46:00.752Z"
 }
