@@ -70,8 +70,8 @@ list:
   poweroll:
     name: "Poweroll"
     url: "http://www.poweroll.com.au"
-    logo: "img/sponsors/Poweroll_logo.png"
-    ad: "img/sponsors/poweroll_logo.png"
+    logo: "img/sponsors/poweroll.png"
+    ad: "img/sponsors/poweroll.png"
   shuxiangfang:
     name: "蜀香坊"
     url: "https://www.chinachilli.com.au/"
