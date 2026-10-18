@@ -1,5 +1,15 @@
 {
   "matches": {
+    "KO|1|1": {
+      "p": [
+        "Pei Zou & Ying Huang",
+        "Chelsea He & Ye Li"
+      ],
+      "s": "5-2",
+      "w": "Pei Zou & Ying Huang",
+      "t": "2026-10-18T02:39:00.987Z",
+      "by": "sheenzhaox"
+    },
     "RR|A|Jiayu Gao & Esther Dong|Linda Zhou & Jenny Wan": {
       "p": [
         "Linda Zhou & Jenny Wan",
@@ -281,5 +291,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-10-18T01:39:36.292Z"
+  "updated": "2026-10-18T02:39:01.633Z"
 }
