@@ -59,7 +59,7 @@ events:
   - id: singles_a
     day: singles
     name: "男子单打 A级别"
-    capacity_text: "20人"
+    capacity_text: "24人"
     requirements: singles_a
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=410D8541-E32C-491F-BE3F-F3B27515A997"
     full: true
