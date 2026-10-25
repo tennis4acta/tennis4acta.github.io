@@ -1,5 +1,6 @@
 _site
 node_modules
+.vscode/settings.json
 *~lock*
 .ipynb_checkpoints/
 .jekyll-cache/
