@@ -1,4 +1,355 @@
 {
-  "matches": {},
-  "updated": "2026-10-16T06:01:24.945Z"
+  "matches": {
+    "KO|1|1": {
+      "p": [
+        "Pei Zou & Ying Huang",
+        "Chelsea He & Ye Li"
+      ],
+      "s": "5-2",
+      "w": "Pei Zou & Ying Huang",
+      "t": "2026-10-18T02:39:00.987Z",
+      "by": "sheenzhaox"
+    },
+    "KO|1|2": {
+      "p": [
+        "Bing Liang & Kate Li",
+        "Wendy Wang & Sienna Li"
+      ],
+      "s": "5-0",
+      "w": "Bing Liang & Kate Li",
+      "t": "2026-10-18T02:39:09.967Z",
+      "by": "sheenzhaox"
+    },
+    "KO|1|3": {
+      "p": [
+        "Pam Qi & Ying Li",
+        "Lei Huang & Evelyn Qin"
+      ],
+      "s": "5-1",
+      "w": "Pam Qi & Ying Li",
+      "t": "2026-10-18T02:39:24.706Z",
+      "by": "sheenzhaox"
+    },
+    "KO|1|4": {
+      "p": [
+        "Lin Xue & Yingxi Ma",
+        "Linda Zhou & Jenny Wan"
+      ],
+      "s": "5-0",
+      "w": "Lin Xue & Yingxi Ma",
+      "t": "2026-10-18T02:39:32.837Z",
+      "by": "sheenzhaox"
+    },
+    "KO|2|1": {
+      "p": [
+        "Pei Zou & Ying Huang",
+        "Bing Liang & Kate Li"
+      ],
+      "s": "3-5",
+      "w": "Bing Liang & Kate Li",
+      "t": "2026-10-18T03:30:25.138Z",
+      "by": "sheenzhaox"
+    },
+    "KO|2|2": {
+      "p": [
+        "Pam Qi & Ying Li",
+        "Lin Xue & Yingxi Ma"
+      ],
+      "s": "1-5",
+      "w": "Lin Xue & Yingxi Ma",
+      "t": "2026-10-18T03:23:27.828Z",
+      "by": "sheenzhaox"
+    },
+    "KO|3|1": {
+      "p": [
+        "Bing Liang & Kate Li",
+        "Lin Xue & Yingxi Ma"
+      ],
+      "s": "1-5",
+      "w": "Lin Xue & Yingxi Ma",
+      "t": "2026-10-18T04:10:29.899Z",
+      "by": "sheenzhaox"
+    },
+    "RR|A|Jiayu Gao & Esther Dong|Linda Zhou & Jenny Wan": {
+      "p": [
+        "Linda Zhou & Jenny Wan",
+        "Jiayu Gao & Esther Dong"
+      ],
+      "s": "5-1",
+      "w": "Linda Zhou & Jenny Wan",
+      "t": "2026-10-18T00:45:59.943Z",
+      "by": "sheenzhaox"
+    },
+    "RR|A|Jiayu Gao & Esther Dong|Pei Zou & Ying Huang": {
+      "p": [
+        "Pei Zou & Ying Huang",
+        "Jiayu Gao & Esther Dong"
+      ],
+      "s": "5-0",
+      "w": "Pei Zou & Ying Huang",
+      "t": "2026-10-18T00:44:38.736Z",
+      "by": "sheenzhaox"
+    },
+    "RR|A|Jiayu Gao & Esther Dong|Sandy Li & Jessica Miao": {
+      "p": [
+        "Jiayu Gao & Esther Dong",
+        "Sandy Li & Jessica Miao"
+      ],
+      "s": "5-4",
+      "w": "Jiayu Gao & Esther Dong",
+      "t": "2026-10-18T00:48:21.808Z",
+      "by": "sheenzhaox"
+    },
+    "RR|A|Linda Zhou & Jenny Wan|Pei Zou & Ying Huang": {
+      "p": [
+        "Pei Zou & Ying Huang",
+        "Linda Zhou & Jenny Wan"
+      ],
+      "s": "5-2",
+      "w": "Pei Zou & Ying Huang",
+      "t": "2026-10-18T01:16:37.479Z",
+      "by": "sheenzhaox"
+    },
+    "RR|A|Linda Zhou & Jenny Wan|Sandy Li & Jessica Miao": {
+      "p": [
+        "Linda Zhou & Jenny Wan",
+        "Sandy Li & Jessica Miao"
+      ],
+      "s": "5-0",
+      "w": "Linda Zhou & Jenny Wan",
+      "t": "2026-10-18T00:46:21.251Z",
+      "by": "sheenzhaox"
+    },
+    "RR|A|Pei Zou & Ying Huang|Sandy Li & Jessica Miao": {
+      "p": [
+        "Pei Zou & Ying Huang",
+        "Sandy Li & Jessica Miao"
+      ],
+      "s": "5-0",
+      "w": "Pei Zou & Ying Huang",
+      "t": "2026-10-18T00:45:39.402Z",
+      "by": "sheenzhaox"
+    },
+    "RR|B|Chelsea He & Ye Li|Helen Yang & Lili Fu": {
+      "p": [
+        "Chelsea He & Ye Li",
+        "Helen Yang & Lili Fu"
+      ],
+      "s": "5-0",
+      "w": "Chelsea He & Ye Li",
+      "t": "2026-10-18T00:42:17.280Z",
+      "by": "sheenzhaox"
+    },
+    "RR|B|Chelsea He & Ye Li|Kelly Xie & Krystal Zhang": {
+      "p": [
+        "Chelsea He & Ye Li",
+        "Kelly Xie & Krystal Zhang"
+      ],
+      "s": "5-0",
+      "w": "Chelsea He & Ye Li",
+      "t": "2026-10-18T00:42:30.250Z",
+      "by": "sheenzhaox"
+    },
+    "RR|B|Chelsea He & Ye Li|Lin Xue & Yingxi Ma": {
+      "p": [
+        "Lin Xue & Yingxi Ma",
+        "Chelsea He & Ye Li"
+      ],
+      "s": "5-1",
+      "w": "Lin Xue & Yingxi Ma",
+      "t": "2026-10-18T00:40:58.860Z",
+      "by": "sheenzhaox"
+    },
+    "RR|B|Helen Yang & Lili Fu|Kelly Xie & Krystal Zhang": {
+      "p": [
+        "Helen Yang & Lili Fu",
+        "Kelly Xie & Krystal Zhang"
+      ],
+      "s": "5-3",
+      "w": "Helen Yang & Lili Fu",
+      "t": "2026-10-18T00:43:27.412Z",
+      "by": "sheenzhaox"
+    },
+    "RR|B|Helen Yang & Lili Fu|Lin Xue & Yingxi Ma": {
+      "p": [
+        "Lin Xue & Yingxi Ma",
+        "Helen Yang & Lili Fu"
+      ],
+      "s": "5-1",
+      "w": "Lin Xue & Yingxi Ma",
+      "t": "2026-10-18T00:41:38.978Z",
+      "by": "sheenzhaox"
+    },
+    "RR|B|Kelly Xie & Krystal Zhang|Lin Xue & Yingxi Ma": {
+      "p": [
+        "Lin Xue & Yingxi Ma",
+        "Kelly Xie & Krystal Zhang"
+      ],
+      "s": "5-1",
+      "w": "Lin Xue & Yingxi Ma",
+      "t": "2026-10-18T00:41:52.718Z",
+      "by": "sheenzhaox"
+    },
+    "RR|C|Jun Jiang & Jackie Xu|Kiki Law & Luna Liu": {
+      "p": [
+        "Kiki Law & Luna Liu",
+        "Jun Jiang & Jackie Xu"
+      ],
+      "s": "0-5",
+      "w": "Jun Jiang & Jackie Xu",
+      "t": "2026-10-18T01:18:27.853Z",
+      "by": "sheenzhaox"
+    },
+    "RR|C|Jun Jiang & Jackie Xu|Pam Qi & Ying Li": {
+      "p": [
+        "Jun Jiang & Jackie Xu",
+        "Pam Qi & Ying Li"
+      ],
+      "s": "0-5",
+      "w": "Pam Qi & Ying Li",
+      "t": "2026-10-18T01:19:21.322Z",
+      "by": "sheenzhaox"
+    },
+    "RR|C|Jun Jiang & Jackie Xu|Wendy Wang & Sienna Li": {
+      "p": [
+        "Jun Jiang & Jackie Xu",
+        "Wendy Wang & Sienna Li"
+      ],
+      "s": "3-5",
+      "w": "Wendy Wang & Sienna Li",
+      "t": "2026-10-18T01:19:41.370Z",
+      "by": "sheenzhaox"
+    },
+    "RR|C|Kiki Law & Luna Liu|Pam Qi & Ying Li": {
+      "p": [
+        "Kiki Law & Luna Liu",
+        "Pam Qi & Ying Li"
+      ],
+      "s": "1-5",
+      "w": "Pam Qi & Ying Li",
+      "t": "2026-10-18T01:18:40.694Z",
+      "by": "sheenzhaox"
+    },
+    "RR|C|Kiki Law & Luna Liu|Wendy Wang & Sienna Li": {
+      "p": [
+        "Kiki Law & Luna Liu",
+        "Wendy Wang & Sienna Li"
+      ],
+      "s": "5-4",
+      "w": "Kiki Law & Luna Liu",
+      "t": "2026-10-18T01:19:02.294Z",
+      "by": "sheenzhaox"
+    },
+    "RR|C|Pam Qi & Ying Li|Wendy Wang & Sienna Li": {
+      "p": [
+        "Pam Qi & Ying Li",
+        "Wendy Wang & Sienna Li"
+      ],
+      "s": "5-0",
+      "w": "Pam Qi & Ying Li",
+      "t": "2026-10-18T01:19:57.035Z",
+      "by": "sheenzhaox"
+    },
+    "RR|D|Bing Liang & Kate Li|Lauren Shen & Claudia": {
+      "p": [
+        "Lauren Shen & Claudia",
+        "Bing Liang & Kate Li"
+      ],
+      "s": "2-4",
+      "w": "Bing Liang & Kate Li",
+      "t": "2026-10-18T01:23:03.910Z",
+      "by": "sheenzhaox"
+    },
+    "RR|D|Bing Liang & Kate Li|Lei Huang & Evelyn Qin": {
+      "p": [
+        "Lei Huang & Evelyn Qin",
+        "Bing Liang & Kate Li"
+      ],
+      "s": "1-4",
+      "w": "Bing Liang & Kate Li",
+      "t": "2026-10-18T01:21:47.564Z",
+      "by": "sheenzhaox"
+    },
+    "RR|D|Bing Liang & Kate Li|Monica Ye & Heli Yang": {
+      "p": [
+        "Monica Ye & Heli Yang",
+        "Bing Liang & Kate Li"
+      ],
+      "s": "1-4",
+      "w": "Bing Liang & Kate Li",
+      "t": "2026-10-18T01:22:00.297Z",
+      "by": "sheenzhaox"
+    },
+    "RR|D|Bing Liang & Kate Li|Sammy Gan & Connie Wang": {
+      "p": [
+        "Bing Liang & Kate Li",
+        "Sammy Gan & Connie Wang"
+      ],
+      "s": "4-0",
+      "w": "Bing Liang & Kate Li",
+      "t": "2026-10-18T01:38:24.246Z",
+      "by": "sheenzhaox"
+    },
+    "RR|D|Lauren Shen & Claudia|Lei Huang & Evelyn Qin": {
+      "p": [
+        "Lei Huang & Evelyn Qin",
+        "Lauren Shen & Claudia"
+      ],
+      "s": "4-0",
+      "w": "Lei Huang & Evelyn Qin",
+      "t": "2026-10-18T01:39:35.550Z",
+      "by": "sheenzhaox"
+    },
+    "RR|D|Lauren Shen & Claudia|Monica Ye & Heli Yang": {
+      "p": [
+        "Monica Ye & Heli Yang",
+        "Lauren Shen & Claudia"
+      ],
+      "s": "4-0",
+      "w": "Monica Ye & Heli Yang",
+      "t": "2026-10-18T01:22:11.658Z",
+      "by": "sheenzhaox"
+    },
+    "RR|D|Lauren Shen & Claudia|Sammy Gan & Connie Wang": {
+      "p": [
+        "Sammy Gan & Connie Wang",
+        "Lauren Shen & Claudia"
+      ],
+      "s": "4-2",
+      "w": "Sammy Gan & Connie Wang",
+      "t": "2026-10-18T01:21:08.020Z",
+      "by": "sheenzhaox"
+    },
+    "RR|D|Lei Huang & Evelyn Qin|Monica Ye & Heli Yang": {
+      "p": [
+        "Lei Huang & Evelyn Qin",
+        "Monica Ye & Heli Yang"
+      ],
+      "s": "4-2",
+      "w": "Lei Huang & Evelyn Qin",
+      "t": "2026-10-18T01:21:36.209Z",
+      "by": "sheenzhaox"
+    },
+    "RR|D|Lei Huang & Evelyn Qin|Sammy Gan & Connie Wang": {
+      "p": [
+        "Sammy Gan & Connie Wang",
+        "Lei Huang & Evelyn Qin"
+      ],
+      "s": "2-4",
+      "w": "Lei Huang & Evelyn Qin",
+      "t": "2026-10-18T01:20:19.120Z",
+      "by": "sheenzhaox"
+    },
+    "RR|D|Monica Ye & Heli Yang|Sammy Gan & Connie Wang": {
+      "p": [
+        "Sammy Gan & Connie Wang",
+        "Monica Ye & Heli Yang"
+      ],
+      "s": "4-3",
+      "w": "Sammy Gan & Connie Wang",
+      "t": "2026-10-18T01:20:30.366Z",
+      "by": "sheenzhaox"
+    }
+  },
+  "updated": "2026-10-18T04:10:31.013Z"
 }
