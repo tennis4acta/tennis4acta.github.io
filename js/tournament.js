@@ -294,7 +294,8 @@
       groups[g] = computeGroup(g, cfg.groups[g], matches, cfg.rules);
       done += groups[g].done; total += groups[g].total;
     }
-    const ko = cfg.rules.advance > 0 ? computeKO(cfg, groups, matches) : null;
+    const direct = Object.keys(groups).length === 0 && Array.isArray(cfg.rules.draw) && cfg.rules.draw.length > 0;
+    const ko = cfg.rules.advance > 0 || direct ? computeKO(cfg, groups, matches) : null;
     return { groups, done, total, rrComplete: done === total, ko };
   }
 
@@ -579,9 +580,9 @@
     const groups = Object.keys(view.groups).map((g) => renderGroup(inst, view.groups[g], advance, admin));
     const body = h('div', { class: 'tm-body' },
       renderBar(inst, view),
-      h('h3', { text: '小组循环赛' }),
-      h('p', { class: 'tm-muted tm-hint', text: '表格中比分为该行选手视角' + (advance > 0 ? '；小组赛结束后每组前 ' + advance + ' 名自动进入淘汰赛（绿色行）。' : '。') }),
-      h('div', { class: 'tm-groups' }, groups),
+      groups.length ? [h('h3', { text: '小组循环赛' }),
+        h('p', { class: 'tm-muted tm-hint', text: '表格中比分为该行选手视角' + (advance > 0 ? '；小组赛结束后每组前 ' + advance + ' 名自动进入淘汰赛（绿色行）。' : '。') }),
+        h('div', { class: 'tm-groups' }, groups)] : null,
       view.ko ? [h('h3', { text: '淘汰赛' }), view.rrComplete ? null : h('p', { class: 'tm-muted tm-hint', text: '各小组完赛后，出线选手将自动填入对阵表。' }), renderKO(inst, view.ko, admin)] : null);
     if (inst.body) inst.body.replaceWith(body); else inst.root.append(body);
     inst.body = body;

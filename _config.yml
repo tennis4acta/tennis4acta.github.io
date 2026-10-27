@@ -35,6 +35,9 @@ exclude:
   - vendor
   - score_board/score_system.md
   - ai_tools
+  - AGENTS.md
+  - workflow.md
+  - skills
   - scripts
 
 # Tournament score storage (read/written via the GitHub API by js/tournament.js)

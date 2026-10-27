@@ -11,8 +11,8 @@ assert(boundary > 0);
 const context = { window: {} };
 vm.createContext(context);
 vm.runInContext(source.slice(0, boundary) +
-  '\nwindow.test = { roundRobin, seedOrder, autoDraw, computeGroup, computeKO }; })();', context);
-const { roundRobin, seedOrder, autoDraw, computeGroup, computeKO } = context.window.test;
+  '\nwindow.test = { roundRobin, seedOrder, autoDraw, computeGroup, computeKO, compute }; })();', context);
+const { roundRobin, seedOrder, autoDraw, computeGroup, computeKO, compute } = context.window.test;
 
 for (let count = 2; count <= 32; count++) {
   const players = Array.from({ length: count }, (_, index) => 'P' + index);
@@ -78,5 +78,15 @@ const completed = computeGroup('A', ['A-first', 'A-second'], {
 assert(completed.complete);
 assert.equal(completed.ranked[0], 'A-first');
 assert.equal(completed.games[0].r.score, '6-4');
+
+const direct = compute({
+  cfg: { groups: {}, rules: { advance: 0, draw: [['Alice', 'BYE'], ['Bob', 'Carol']] } },
+  scores: { matches: {} },
+});
+assert(direct.ko);
+assert.equal(Object.keys(direct.groups).length, 0);
+assert.equal(direct.ko.rounds[1].matches[0].a.name, 'Alice');
+assert.equal(direct.ko.rounds[0].matches[1].playable, true);
+assert.equal(compute({ cfg: { groups: { A: ['Alice', 'Bob'] }, rules: { advance: 0 } }, scores: { matches: {} } }).ko, null);
 
 console.log('PASS: round robin 2-32 players; opposite halves 1-64 groups; seed positions; manual draw; existing scores.');
