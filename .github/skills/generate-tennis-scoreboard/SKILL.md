@@ -11,14 +11,14 @@ user-invocable: true
 
 ## 工作流程
 
-1. **定位目标页面和现有赛事。** 查看用户指定的比赛资料和页面；检查 `_data/events/` 中的配置、`events/scores/` 中的比分文件，以及页面中已有的 `{% include event.html id="..." %}`。参考 `_data/events/demo.yml` 的字段和同类型正式赛事配置。阅读 `score_board/score_system.md` 了解完整计分规则。保留工作区已有改动。
+1. **定位目标页面和现有赛事。** 查看用户指定的比赛资料和页面；检查 `_data/events/` 中的配置、`events/scores/` 中的比分文件，以及页面中已有的 `{% include event.html id="..." %}`。参考 `_data/events/demo.yml` 的字段和同类型正式赛事配置。先阅读 `ai_tools/scoreboard.md` 了解现行设计、使用和计分规则。保留工作区已有改动。
 
 2. **确认必要输入。** 从用户提供的资料提取赛事名称、唯一 ID、分组与名单、每组出线人数、计分规则、排名顺序、淘汰赛规则，以及要接入的页面。资料没有明确的赛制参数时，先询问缺少的信息；不要自行推断或更改比赛规则。若分组名单尚未确定，可以先做用户明确要求的配置部分，并说明未完成项。
 
 3. **生成赛事配置。** 新增 `_data/events/<id>.yml`，配置结构遵循 `demo.yml`：
    - `name` 是页面标题；`groups` 将组名映射到选手名单。双打组合按系统约定写为一个名称，例如 `张三 & 李四`。
    - `rules.advance` 表示每组出线人数，`0` 表示只进行小组循环赛。
-   - `rules.points`、`rules.tiebreakers`、可选的 `rules.draw`、`rules.third_place`、`rules.show_order`、`rules.show_set_column` 和 `rules.score_hint` 必须与主办方给出的规则一致。只有在规则已确认或用户明确授权采用模板默认值时才填默认值。
+   - `rules.points`、`rules.tiebreakers`、可选的 `rules.draw`、`rules.third_place`、`rules.show_set_column` 和 `rules.score_hint` 必须与主办方给出的规则一致。每组固定提供 Table / Match 切换，旧 `rules.show_order` 已忽略，不再为新项目添加。只有在规则已确认或用户明确授权采用模板默认值时才填默认值。
    - `id` 使用唯一的小写英文字母、数字和连字符；先检查配置文件和比分文件，不能覆盖已存在或正在使用的赛事 ID。
    - 保持姓名稳定、准确。赛事开始后改动姓名会使相应旧比分无法匹配。
 
@@ -32,4 +32,4 @@ user-invocable: true
 
 ## 赛制参考
 
-赛事配置的数据结构、比分解析、排名指标和淘汰赛行为以 `score_board/score_system.md` 及当前 `js/tournament.js` 实现为准。常见排名指标包括 `points`、`wins`、`h2h`、`set_diff`、`game_diff`、`set_ratio`、`game_ratio`、`sets_won`、`games_won` 和 `games_lost`。不要把系统不支持的规则写进配置；遇到跨组排名等不支持的晋级规则时，说明限制并先与用户确认处理方案。
+赛事配置的数据结构、比分解析、排名指标和淘汰赛行为以 `ai_tools/scoreboard.md` 及当前 `js/tournament.js` 实现为准；修改系统设计、规则约定或使用流程时，必须在同一次变更中同步更新该文档和相关公开指南。`score_board/score_system.md` 仅作历史参考。常见排名指标包括 `points`、`wins`、`h2h`、`set_diff`、`game_diff`、`set_ratio`、`game_ratio`、`sets_won`、`games_won` 和 `games_lost`。不要把系统不支持的规则写进配置；遇到跨组排名等不支持的晋级规则时，说明限制并先与用户确认处理方案。

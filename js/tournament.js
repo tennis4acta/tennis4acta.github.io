@@ -170,6 +170,18 @@
     for (let pos = 1; pos <= advance; pos++) groupNames.forEach((g) => seeds.push({ g, pos }));
     const size = nextPow2(seeds.length);
     const slots = seedOrder(size).map((s) => seeds[s - 1] || null);
+    if (advance === 2) {
+      const half = (i) => i < size / 2 ? 0 : 1;
+      const winners = new Map();
+      slots.forEach((slot, i) => { if (slot && slot.pos === 1) winners.set(slot.g, half(i)); });
+      for (let i = 0; i < size; i++) {
+        const slot = slots[i];
+        if (!slot || slot.pos !== 2 || winners.get(slot.g) !== half(i)) continue;
+        const other = slots.findIndex((candidate, j) => half(j) !== half(i) &&
+          (!candidate || (candidate.pos === 2 && winners.get(candidate.g) === half(j))));
+        if (other !== -1) { slots[i] = slots[other]; slots[other] = slot; }
+      }
+    }
     const R = Math.log2(size);
     const meetRound = (i, j) => Math.floor(Math.log2(i ^ j)) + 1;
     const cost = () => {
@@ -467,12 +479,27 @@
         h('td', { class: G.complete ? 'tm-strong' : 'tm-muted', text: s.played ? String(rank) : '–' }));
     });
 
+    const mode = inst.groupViews[G.name] || 'table';
+    const table = h('div', { class: 'table-scroll', hidden: mode !== 'table' },
+      h('table', { class: 'tm-table' }, h('thead', null, head), h('tbody', null, rows)));
+    const order = renderOrder(inst, G, lookup, admin);
+    order.hidden = mode !== 'match';
+    const buttons = ['table', 'match'].map((value) => h('button', {
+      type: 'button', 'aria-pressed': String(mode === value),
+      onclick: () => {
+        inst.groupViews[G.name] = value;
+        table.hidden = value !== 'table';
+        order.hidden = value !== 'match';
+        buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(['table', 'match'][i] === value)));
+      },
+    }, value === 'table' ? 'Table' : 'Match'));
+
     return h('section', { class: 'tm-card' },
       h('header', { class: 'tm-card__head' },
         h('h4', { text: G.name + '组' }),
-        h('span', { class: 'tm-muted', text: G.complete ? '已完赛' : G.done + '/' + G.total + ' 场' })),
-      h('div', { class: 'table-scroll' }, h('table', { class: 'tm-table' }, h('thead', null, head), h('tbody', null, rows))),
-      inst.cfg.rules.show_order ? renderOrder(inst, G, lookup, admin) : null);
+        h('div', { class: 'tm-view-switch', role: 'group', 'aria-label': G.name + '组视图' }, buttons)),
+      h('p', { class: 'tm-group-status tm-muted', text: G.complete ? '已完赛' : G.done + '/' + G.total + ' 场' }),
+      table, order);
   }
 
   function renderOrder(inst, G, lookup, admin) {
@@ -497,13 +524,7 @@
       })),
       rd.bye ? h('div', { class: 'tm-muted tm-order__bye' }, '轮空：', who(rd.bye)) : null));
 
-    const key = G.name;
-    const open = inst.orderOpen[key] === true;
-    const det = h('details', { class: 'tm-order', open },
-      h('summary', { text: '比赛顺序（' + G.rounds.length + ' 轮）' }),
-      h('ol', null, items));
-    det.addEventListener('toggle', () => { inst.orderOpen[key] = det.open; });
-    return det;
+    return h('div', { class: 'tm-order' }, h('ol', null, items));
   }
 
   function orient(g, p) {
@@ -751,7 +772,7 @@
       path: root.dataset.path || 'events/scores',
       cfg: normalizeConfig(JSON.parse(cfgEl ? cfgEl.textContent : '{}')),
       scores: emptyScores(),
-      orderOpen: {},
+      groupViews: {},
       busy: false, error: '',
     };
     instances.push(inst);
