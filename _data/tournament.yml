@@ -93,7 +93,7 @@ events:
     capacity_text: "32对"
     requirements: doubles_b
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=9C947EFC-08F2-4FD7-8E6E-1E92BEB45151"
-    full: false
+    full: true
   - id: doubles_w
     day: doubles
     name: "女子双打"
