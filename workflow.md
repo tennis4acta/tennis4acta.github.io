@@ -93,3 +93,11 @@
 - 新增 `_data/events/2026-womens-singles.yml`（ID `2026-womens-singles`，固定 `rules.draw`）和页面 `2026/matches/womens_singles.md`。C 组含占位名 `To Be Added`，确定姓名后须在开赛前直接替换。
 - 验证：`node scripts/test-tournament.js` 通过；未运行 Jekyll 构建，未创建比分或调用 GitHub API。`git diff --check` 仅提示非本次改动的 `about/index.html`。
 - 补充：该页面仅作测试用途，不添加站内链接；页面标题和提示已标明测试页。
+
+## 2026-11-07：B 级别红宝石区/蓝宝石区及取消三四名赛
+
+- 51 名 B 级别球员随机分为红宝石区 24 人、蓝宝石区 27 人（名单 `tmp/b_ruby.txt`、`tmp/b_sapphire.txt`，草稿 `tmp/b_*_draw.yml`），两区独立，无种子；各 8 组，每组前 2 名出线，使用工具固定的 16 人 `rules.draw`。红宝石区 8 组各 3 人；蓝宝石区 A～E 组 3 人、F～H 组 4 人。
+- 排名为胜场、胜局、净胜局、h2h；`score_hint` 写明 3 人组 11 局制（先胜 6 局）、4 人组 9 局制（先胜 5 局）。该提示仅为文字，系统不按组人数校验比分。
+- `third_place` 对两区和女子单打均设为 `false`（用户要求不打三四名赛）；女子单打 tmp 草稿同步。
+- 新增 `_data/events/2026-b-ruby.yml`、`2026-b-sapphire.yml`，测试页 `2026/matches/b_ruby.md`、`b_sapphire.md`，不添加站内链接。
+- 验证：见本次汇报；未创建比分、未调用 GitHub API、未运行 Jekyll 构建。

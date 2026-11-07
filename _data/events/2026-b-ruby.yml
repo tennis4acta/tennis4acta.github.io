@@ -1,0 +1,27 @@
+name: "B Grade Mens Singles - Ruby"
+groups:
+  "A": ["Terrence Zhong","Eric Wong","Darren Zhong"]
+  "B": ["Jifan Zhang","Chenxiao Xu","David Cheung"]
+  "C": ["Xi Yin","Gordon Ge","Yi Li"]
+  "D": ["Patrick Tsai","Zim Li","Cham Chen"]
+  "E": ["Keli Hu","Kimi Wenwen Cheng","Josh Zhu"]
+  "F": ["Zanbing Dai","Chun Hei Denis To To","Yiou Xie"]
+  "G": ["Jay Wu","Derek Chung","Cheuk Nam Ip"]
+  "H": ["Alex Zhao","Paipai Liu","Ronnie Tse"]
+seeds: {}
+rules:
+  advance: 2
+  points: {"win":1,"loss":0,"wo_loss":0}
+  tiebreakers: ["wins","games_won","game_diff","h2h"]
+  third_place: false
+  show_set_column: false
+  score_hint: "3 人小组 11 局制（先胜 6 局），如 6-4；4 人小组 9 局制（先胜 5 局），如 5-3"
+  draw:
+    - ["A1","B2"]
+    - ["H1","C2"]
+    - ["D1","F2"]
+    - ["E1","G2"]
+    - ["B1","A2"]
+    - ["G1","D2"]
+    - ["C1","E2"]
+    - ["F1","H2"]

@@ -9,7 +9,7 @@ rules:
   advance: 2
   points: {"win":1,"loss":0,"wo_loss":0}
   tiebreakers: ["wins","games_won","game_diff","h2h"]
-  third_place: true
+  third_place: false
   show_set_column: false
   score_hint: "9 局制，先胜 5 局，如 5-3、5-4"
   draw:
