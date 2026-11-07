@@ -28,7 +28,6 @@ permalink: /2026/1115/
       <li><b>8</b><span>小组</span></li>
       <li><b>4</b><span>种子</span></li>
     </ul>
-    <p>每组 3 人 · 11 局制 · 前 2 名晋级 16 强</p>
     <span class="mcard__go">查看分组及比分 →</span>
   </a>
   <a class="mcard mcard--ruby" href="{{ '/2026/matches/b_ruby/' | relative_url }}">
@@ -39,7 +38,6 @@ permalink: /2026/1115/
       <li><b>8</b><span>小组</span></li>
       <li><b>3</b><span>人/组</span></li>
     </ul>
-    <p>11 局制 · 前 2 名晋级 16 强</p>
     <span class="mcard__go">查看分组及比分 →</span>
   </a>
   <a class="mcard mcard--sapphire" href="{{ '/2026/matches/b_sapphire/' | relative_url }}">
@@ -50,7 +48,6 @@ permalink: /2026/1115/
       <li><b>8</b><span>小组</span></li>
       <li><b>3–4</b><span>人/组</span></li>
     </ul>
-    <p>3 人组 11 局制，4 人组 9 局制 · 前 2 名晋级 16 强</p>
     <span class="mcard__go">查看分组及比分 →</span>
   </a>
   <a class="mcard mcard--women" href="{{ '/2026/matches/womens_singles/' | relative_url }}">
@@ -61,7 +58,6 @@ permalink: /2026/1115/
       <li><b>4</b><span>小组</span></li>
       <li><b>4</b><span>人/组</span></li>
     </ul>
-    <p>9 局制 · 前 2 名晋级 8 强</p>
     <span class="mcard__go">查看分组及比分 →</span>
   </a>
 </div>
