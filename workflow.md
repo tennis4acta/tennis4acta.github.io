@@ -86,3 +86,10 @@
 - 按用户指示，将 `_data/tournament.yml` 中 `doubles_b` 的 `full` 设为 `true`。现有报名页逻辑会显示“已报满”并提供该项目的等候名单入口。
 - 未核查 Classhub 外部报名系统的实际人数；本次只更新网站配置状态，不修改名单或比分。
 - 验证：检查配置变更及 `git diff --check`；未验证线上页面或外部报名系统。
+
+## 2026-11-07：女子单打赛事页面
+
+- 按名单分 4 组、每组前 2 名出线，无种子；规则为胜场、胜局、净胜局、h2h 排名，9 局制先胜 5 局，不显示盘数列。
+- 新增 `_data/events/2026-womens-singles.yml`（ID `2026-womens-singles`，固定 `rules.draw`）和页面 `2026/matches/womens_singles.md`。C 组含占位名 `To Be Added`，确定姓名后须在开赛前直接替换。
+- 验证：`node scripts/test-tournament.js` 通过；未运行 Jekyll 构建，未创建比分或调用 GitHub API。`git diff --check` 仅提示非本次改动的 `about/index.html`。
+- 补充：该页面仅作测试用途，不添加站内链接；页面标题和提示已标明测试页。

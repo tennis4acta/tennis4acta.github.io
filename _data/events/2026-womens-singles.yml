@@ -1,0 +1,19 @@
+name: "Womens Singles"
+groups:
+  "A": ["Alicia Wang","Haiyan Huang","Linda Zhou","Jo Zhang"]
+  "B": ["Heli Yang","Riley Liu","Yingxi Ma","Meizhu Li"]
+  "C": ["Lei Ye","Lauren Shen","To Be Added","June Jiang"]
+  "D": ["Shan Li","Jiayu Gao","Ye Li","Pamela Qi"]
+seeds: {}
+rules:
+  advance: 2
+  points: {"win":1,"loss":0,"wo_loss":0}
+  tiebreakers: ["wins","games_won","game_diff","h2h"]
+  third_place: true
+  show_set_column: false
+  score_hint: "9 局制，先胜 5 局，如 5-3、5-4"
+  draw:
+    - ["A1","B2"]
+    - ["D1","C2"]
+    - ["B1","A2"]
+    - ["C1","D2"]
