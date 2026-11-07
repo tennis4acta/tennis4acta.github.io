@@ -487,3 +487,19 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0 0 .6em; font-weight: 700; letter-s
 @media (min-width: 1400px) {
   .rails { grid-template-columns: 180px minmax(0, 1fr) 180px; }
 }
+
+/* Match entry cards (e.g. singles draw page) */
+.mcards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); margin: 16px 0 12px; }
+.mcard { --accent: var(--court); position: relative; display: flex; flex-direction: column; gap: 10px; padding: 20px 20px 18px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--accent); border-radius: var(--radius); box-shadow: var(--shadow-1); color: var(--ink); text-decoration: none; transition: transform .2s, border-color .2s; }
+.mcard:hover { transform: translateY(-4px); border-color: var(--accent); text-decoration: none; }
+.mcard--ruby { --accent: #d6285a; }
+.mcard--sapphire { --accent: #2a5bd7; }
+.mcard--women { --accent: #b04fd0; }
+.mcard__badge { align-self: flex-start; padding: 5px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); font: 700 .78rem/1 var(--display); letter-spacing: .06em; }
+.mcard h3 { margin: 0; font-size: 1.5rem; }
+.mcard__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0; padding: 12px 0; list-style: none; border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); text-align: center; }
+.mcard__stats li { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; }
+.mcard__stats b { font: 800 1.5rem/1.1 var(--display); color: var(--accent); }
+.mcard__stats span { font-size: .78rem; color: var(--muted); }
+.mcard p { margin: 0; font-size: .88rem; color: var(--ink-soft); }
+.mcard__go { margin-top: auto; font-weight: 700; color: var(--accent); }

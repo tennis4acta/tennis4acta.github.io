@@ -6,13 +6,12 @@ permalink: /2026/1115/
 ---
 
 {%- assign t = site.data.tournament -%}
-{%- assign day = t.days[0] -%}
 
 **2026年11月15日（周日）上午8:30开始** · {{ t.venue.name }}
 
-地址：{{ t.venue.address }}。报名费：{{ day.fee_text }}。
+地址：{{ t.venue.address }}。
 
-[赛事报名]({{ t.registration.url | relative_url }}) · [参赛规程]({{ '/#rules' | relative_url }}) · [双打赛程]({{ t.days[1].url | relative_url }})
+[参赛规程]({{ '/#rules' | relative_url }}) · [双打赛程]({{ t.days[1].url | relative_url }})
 
 ## 赛程表
 
@@ -20,11 +19,54 @@ permalink: /2026/1115/
 
 ## 分组及比分
 
-- [男子单打 A级别：分组、比分及淘汰赛]({{ '/2026/matches/a_grade/' | relative_url }})
-- 男子单打 B级别：[红宝石区]({{ '/2026/matches/b_ruby/' | relative_url }}) · [蓝宝石区]({{ '/2026/matches/b_sapphire/' | relative_url }})
-- [女子单打：分组、比分及淘汰赛]({{ '/2026/matches/womens_singles/' | relative_url }})
+<div class="mcards">
+  <a class="mcard" href="{{ '/2026/matches/a_grade/' | relative_url }}">
+    <span class="mcard__badge">男子单打</span>
+    <h3>A 级别</h3>
+    <ul class="mcard__stats">
+      <li><b>24</b><span>球员</span></li>
+      <li><b>8</b><span>小组</span></li>
+      <li><b>4</b><span>种子</span></li>
+    </ul>
+    <p>每组 3 人 · 11 局制 · 前 2 名晋级 16 强</p>
+    <span class="mcard__go">查看分组及比分 →</span>
+  </a>
+  <a class="mcard mcard--ruby" href="{{ '/2026/matches/b_ruby/' | relative_url }}">
+    <span class="mcard__badge">男子单打 B 级别</span>
+    <h3>红宝石区</h3>
+    <ul class="mcard__stats">
+      <li><b>24</b><span>球员</span></li>
+      <li><b>8</b><span>小组</span></li>
+      <li><b>3</b><span>人/组</span></li>
+    </ul>
+    <p>11 局制 · 前 2 名晋级 16 强</p>
+    <span class="mcard__go">查看分组及比分 →</span>
+  </a>
+  <a class="mcard mcard--sapphire" href="{{ '/2026/matches/b_sapphire/' | relative_url }}">
+    <span class="mcard__badge">男子单打 B 级别</span>
+    <h3>蓝宝石区</h3>
+    <ul class="mcard__stats">
+      <li><b>27</b><span>球员</span></li>
+      <li><b>8</b><span>小组</span></li>
+      <li><b>3–4</b><span>人/组</span></li>
+    </ul>
+    <p>3 人组 11 局制，4 人组 9 局制 · 前 2 名晋级 16 强</p>
+    <span class="mcard__go">查看分组及比分 →</span>
+  </a>
+  <a class="mcard mcard--women" href="{{ '/2026/matches/womens_singles/' | relative_url }}">
+    <span class="mcard__badge">女子单打</span>
+    <h3>女子单打</h3>
+    <ul class="mcard__stats">
+      <li><b>16</b><span>球员</span></li>
+      <li><b>4</b><span>小组</span></li>
+      <li><b>4</b><span>人/组</span></li>
+    </ul>
+    <p>9 局制 · 前 2 名晋级 8 强</p>
+    <span class="mcard__go">查看分组及比分 →</span>
+  </a>
+</div>
 
-各项目均设小组赛，每组前 2 名晋级淘汰赛，不设三四名赛；以组委会最终公布为准。
+各项目均设小组赛，每组前 2 名晋级淘汰赛，不设三四名赛；红宝石区与蓝宝石区各自独立；以组委会最终公布为准。
 
 <h2 id="singles-a">男子A级别单打</h2>
 
