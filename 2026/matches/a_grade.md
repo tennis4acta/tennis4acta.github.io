@@ -1,11 +1,9 @@
 ---
 layout: page
-title: "2026年ACTC男子单打A级别（测试页）"
-description: "分组、比分及淘汰赛对阵（测试用途，未链接）"
+title: "2026年ACTC男子单打A级别"
+description: "分组、比分及淘汰赛对阵"
 wide: true
 ---
-
-> 本页为测试用途，未在站内添加链接。
 
 ### 赛制
 

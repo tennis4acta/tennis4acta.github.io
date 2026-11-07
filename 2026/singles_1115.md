@@ -8,7 +8,7 @@ permalink: /2026/1115/
 {%- assign t = site.data.tournament -%}
 {%- assign day = t.days[0] -%}
 
-**2026年11月15日（周日）上午8:00开始** · {{ t.venue.name }}
+**2026年11月15日（周日）上午8:30开始** · {{ t.venue.name }}
 
 地址：{{ t.venue.address }}。报名费：{{ day.fee_text }}。
 
@@ -20,15 +20,15 @@ permalink: /2026/1115/
 
 ## 分组及比分
 
-- [男子单打 A级别](#singles-a)
-- [男子单打 B级别（红宝石 / 蓝宝石）](#singles-b)
-- [女子单打](#singles-w)
+- [男子单打 A级别：分组、比分及淘汰赛]({{ '/2026/matches/a_grade/' | relative_url }})
+- 男子单打 B级别：[红宝石区]({{ '/2026/matches/b_ruby/' | relative_url }}) · [蓝宝石区]({{ '/2026/matches/b_sapphire/' | relative_url }})
+- [女子单打：分组、比分及淘汰赛]({{ '/2026/matches/womens_singles/' | relative_url }})
 
-分组、晋级安排及比分待公布，以组委会最终公布为准。
+各项目均设小组赛，每组前 2 名晋级淘汰赛，不设三四名赛；以组委会最终公布为准。
 
 <h2 id="singles-a">男子A级别单打</h2>
 
-### 首轮开赛时间：2026年11月15日 上午8:00
+### 首轮开赛时间：2026年11月15日 上午8:30
 
 - 请在首场比赛前15分钟签到。
 - 名额：{{ t.events[0].capacity_text }}。
@@ -41,7 +41,7 @@ permalink: /2026/1115/
 
 ### 淘汰赛
 
-小组出线及淘汰赛安排待公布。
+每组前 2 名晋级 16 人淘汰赛，对阵见[分组及比分页面]({{ '/2026/matches/a_grade/' | relative_url }})，不设三四名赛。
 
 ### Update
 
@@ -49,7 +49,7 @@ permalink: /2026/1115/
 
 <h2 id="singles-b">男子B级别单打 红宝石 / 蓝宝石区</h2>
 
-### 首轮开赛时间：2026年11月15日 上午8:00
+### 首轮开赛时间：2026年11月15日 上午8:30
 
 - 请在首场比赛前15分钟签到。
 - 名额：{{ t.events[1].capacity_text }}。
@@ -62,11 +62,11 @@ permalink: /2026/1115/
 
 ### 淘汰赛
 
-红宝石和蓝宝石两个区分别决出名次，小组出线及淘汰赛安排待公布。
+红宝石和蓝宝石两个区各自独立，分别决出名次；各区每组前 2 名晋级 16 人淘汰赛，不设三四名赛。对阵见 [红宝石区]({{ '/2026/matches/b_ruby/' | relative_url }}) 和 [蓝宝石区]({{ '/2026/matches/b_sapphire/' | relative_url }}) 页面。
 
 <h2 id="singles-w">女子单打</h2>
 
-### 首轮开赛时间：2026年11月15日 上午8:00
+### 首轮开赛时间：2026年11月15日 上午8:30
 
 - 请在首场比赛前15分钟签到。
 - 名额：{{ t.events[2].capacity_text }}。
@@ -79,12 +79,12 @@ permalink: /2026/1115/
 
 ### 淘汰赛
 
-小组出线及淘汰赛安排待公布。
+每组前 2 名晋级 8 人淘汰赛，对阵见[分组及比分页面]({{ '/2026/matches/womens_singles/' | relative_url }})，不设三四名赛。
 
 ## 比赛规则 Competition Rules
 
-0. 小组赛按总胜赛数、总胜局数、胜负局数差、球员间比赛成绩为序决定小组内成绩。
-1. **Match winning rule:** If there are 3 players in a group, first to 6 games wins (tiebreak at 5 all); if there are 4 players, first to 5 games wins (tiebreak at 4 all); if there are 5 players, first to 4 games wins (tiebreak at 3 all).<br>如果小组有3位球员，比赛先赢6局者获胜（5平时抢五）；如果小组有4位球员，比赛先赢5局者获胜（4平时抢五）；如果小组有5位球员，比赛先赢4局者获胜（3平时抢五）。
+0. 小组赛按总胜赛数、总胜局数、胜负局数差、球员间比赛成绩为序决定小组内成绩。每组前2名晋级淘汰赛，不设三四名赛。
+1. **Match winning rule:** If there are 3 players in a group, first to 6 games wins (tiebreak at 5 all); if there are 4 players, first to 5 games wins (tiebreak at 4 all).<br>如果小组有3位球员，比赛先赢6局者获胜（5平时抢五）；如果小组有4位球员，比赛先赢5局者获胜（4平时抢五）。
 2. **No AD scoring (Short Deuce):** At deuce, the next point wins. The receiving player decides the receiving court.<br>如果双方出现第一次DEUCE平分，赢得下一分的一方赢得本局。由接发球方选择接球区。
 3. **Tiebreak (finals excepted):** First to 5 points wins, with a two-point lead required. At 4:4, play continues until one player leads by two points.<br>除决赛外的所有比赛采用short tie-break，先赢5分并领先两分者获胜。
 4. **Finals:** A normal tiebreak rule applies to all finals.<br>决赛使用常规抢七规则。
