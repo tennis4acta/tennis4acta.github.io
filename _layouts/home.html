@@ -7,13 +7,19 @@ layout: default
 
 <div class="status" role="status">
   <div class="container">
-    <p data-show="before_open" hidden><strong>报名将于{{ t.registration.opens_text }}开放。</strong>请提前阅读参赛规程与各项目要求。</p>
-    <p data-show="open" hidden><strong>报名进行中</strong>，{{ t.registration.closes_text }}截止，项目报满将提前截止。如项目已满，请在<a href="{{ t.registration.waitlist_url | relative_url }}">等候名单页面</a>填写登记。</p>
-    <p data-show="closed" hidden><strong>报名已截止。</strong>如需列入等候名单，请<a href="{{ t.registration.waitlist_url | relative_url }}">填写等候名单</a>。请留意本网站及球会群的赛程通知。</p>
     <p data-show="running" hidden><strong>比赛进行中。</strong>赛程与比分请留意本网站及球会群的通知。</p>
     <p data-show="finished" hidden><strong>本届比赛已圆满结束。</strong>感谢所有球员、志愿者与赞助商！</p>
   </div>
 </div>
+
+{%- if t.announcement.title %}
+<a class="announce" href="{{ t.announcement.url | relative_url }}" aria-label="{{ t.announcement.title }}">
+  <div class="container announce__inner">
+    <div class="announce__text"><strong>{{ t.announcement.title }}</strong><span>{{ t.announcement.text }}</span></div>
+    <span class="btn">{{ t.announcement.button }}</span>
+  </div>
+</a>
+{%- endif %}
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="container">
@@ -90,16 +96,10 @@ layout: default
         <div class="ecards">
           {%- for e in t.events %}{% if e.day == d.id %}
           {%- assign req = t.requirements[e.requirements] -%}
-          <article class="ecard">
-            <span class="ecard__day">{{ d.name }}</span>
-            <h3>{{ e.name }}</h3>
-            {%- if e.tag %}<span class="ecard__tag">{{ e.tag }}</span>{% endif %}
-            <ul class="ecard__meta"><li>{% include icon.html name='users' %} 名额 {{ e.capacity_text }}</li>{% if e.surface %}<li>{% include icon.html name='pin' %} 计划比赛场地：{{ e.surface }}</li>{% endif %}            </ul>
-            <details>
-              <summary>参赛要求</summary>
-              <ol>{% for i in req.items %}<li>{{ i }}</li>{% endfor %}</ol>
-            </details>
-          </article>
+          {%- if e.match_cards %}
+          {%- for c in e.match_cards %}{% include event_card.html day=d.name name=c.name tag=c.tag capacity=c.capacity_text surface=e.surface url=c.url req=req %}{% endfor %}
+          {%- else %}{% include event_card.html day=d.name name=e.name tag=e.tag capacity=e.capacity_text surface=e.surface url=e.match_url req=req %}
+          {%- endif %}
           {%- endif %}{% endfor %}
         </div>
       </div>

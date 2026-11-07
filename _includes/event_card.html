@@ -1,0 +1,11 @@
+<article class="ecard{% if include.url %} ecard--link{% endif %}">
+  <span class="ecard__day">{{ include.day }}</span>
+  <h3>{% if include.url %}<a class="ecard__link" href="{{ include.url | relative_url }}">{{ include.name }}</a>{% else %}{{ include.name }}{% endif %}</h3>
+  {%- if include.tag %}<span class="ecard__tag">{{ include.tag }}</span>{% endif %}
+  <ul class="ecard__meta"><li>{% include icon.html name='users' %} 名额 {{ include.capacity }}</li>{% if include.surface %}<li>{% include icon.html name='pin' %} 计划比赛场地：{{ include.surface }}</li>{% endif %}</ul>
+  {%- if include.url %}<span class="ecard__go">查看分组及比分 →</span>{% endif %}
+  <details>
+    <summary>参赛要求</summary>
+    <ol>{% for i in include.req.items %}<li>{{ i }}</li>{% endfor %}</ol>
+  </details>
+</article>

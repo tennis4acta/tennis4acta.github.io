@@ -53,6 +53,13 @@ days:
     fee: 60
     fee_text: "$60 /组合 + 手续费"
 
+# Prominent banner at the top of the home page. Remove or leave title empty to hide.
+announcement:
+  title: "11月15日单打分组已公布"
+  text: "男子单打 A级别、B级别（红宝石区 / 蓝宝石区）及女子单打的分组与淘汰赛对阵已公布。"
+  button: "查看分组及赛程"
+  url: "/2026/1115/"
+
 # Competition categories shown on the home page. Set full: true when an event is full to swap its
 # registration link for a waiting-list link.
 events:
@@ -61,6 +68,7 @@ events:
     name: "男子单打 A级别"
     capacity_text: "24人"
     requirements: singles_a
+    match_url: "/2026/matches/a_grade/"
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=410D8541-E32C-491F-BE3F-F3B27515A997"
     full: true
   - id: singles_b
@@ -69,6 +77,15 @@ events:
     tag: "红宝石 / 蓝宝石"
     capacity_text: "红宝石 32人 + 蓝宝石 32人"
     requirements: singles_b
+    match_cards:
+      - name: "男子单打 B级别"
+        tag: "红宝石区"
+        capacity_text: "24人"
+        url: "/2026/matches/b_ruby/"
+      - name: "男子单打 B级别"
+        tag: "蓝宝石区"
+        capacity_text: "27人"
+        url: "/2026/matches/b_sapphire/"
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=F769A019-4AB4-4551-854F-1C3245B245C7"
     full: false
   - id: singles_w
@@ -77,6 +94,7 @@ events:
     capacity_text: "16人"
     surface: "硬地"
     requirements: singles_w
+    match_url: "/2026/matches/womens_singles/"
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=D8582621-E7D7-47D9-8EE6-17B4B143D76F"
     full: true
   - id: doubles_a

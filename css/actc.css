@@ -210,6 +210,24 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0 0 .6em; font-weight: 700; letter-s
 .status p { margin: 0; flex: 1 1 260px; }
 .status strong { color: var(--ball); }
 .status .btn { flex: none; }
+.status:not(:has(p:not([hidden]))) { display: none; }
+
+/* Announcement banner */
+.announce { display: block; background: var(--ball); color: #11351f; border-bottom: 3px solid var(--court-deep); text-decoration: none; transition: filter .2s; }
+.announce:hover { filter: brightness(1.05); text-decoration: none; }
+.announce:hover .btn { transform: translateY(-2px); }
+.announce__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding-top: 16px; padding-bottom: 16px; }
+.announce__text { flex: 1 1 320px; display: flex; flex-direction: column; gap: 4px; }
+.announce__text strong { font-size: 1.25rem; }
+.announce .btn { flex: none; background: var(--court-deep); color: #fff; border-color: var(--court-deep); }
+
+/* Clickable event cards */
+.ecard--link { position: relative; cursor: pointer; }
+.ecard--link:hover { border-color: var(--link); }
+.ecard__link { color: inherit; text-decoration: none; }
+.ecard__link::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.ecard__go { font-weight: 700; color: var(--link); font-size: .92rem; }
+.ecard--link details { position: relative; z-index: 1; }
 
 /* Facts */
 .facts { display: grid; gap: 14px; grid-template-columns: repeat(2, 1fr); margin-top: -36px; position: relative; z-index: 2; }
