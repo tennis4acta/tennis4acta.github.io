@@ -1,0 +1,27 @@
+name: "A Grade Mens Singles"
+groups:
+  "A": ["Benson Huang [1]","Frank Zhang","Simon Yu"]
+  "B": ["Roger Yu [2]","Michael Zishan Deng","Timothy Chen"]
+  "C": ["Austin Han [3]","Roger Cheung","Tony Liu"]
+  "D": ["Haowen Deng [4]","Dingkun Wu","Joseph Shao"]
+  "E": ["Richard Gong","Marcus Gock","Donny Jiang"]
+  "F": ["James Yuan","Luming Qiu","Chong Shi"]
+  "G": ["RunTing Zheng","Kuan Hua Wu","Danny Zhang"]
+  "H": ["Xinhao Li","Sizhe Tu","Andrew Zhao"]
+seeds: {"Benson Huang [1]":1,"Roger Yu [2]":2,"Austin Han [3]":3,"Haowen Deng [4]":4}
+rules:
+  advance: 2
+  points: {"win":1,"loss":0,"wo_loss":0}
+  tiebreakers: ["wins","games_won","game_diff","h2h"]
+  third_place: false
+  show_set_column: false
+  score_hint: "11 局制，先胜 6 局，如 6-4"
+  draw:
+    - ["A1","B2"]
+    - ["H1","C2"]
+    - ["D1","F2"]
+    - ["E1","G2"]
+    - ["B1","A2"]
+    - ["G1","D2"]
+    - ["C1","E2"]
+    - ["F1","H2"]

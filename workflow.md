@@ -101,3 +101,9 @@
 - `third_place` 对两区和女子单打均设为 `false`（用户要求不打三四名赛）；女子单打 tmp 草稿同步。
 - 新增 `_data/events/2026-b-ruby.yml`、`2026-b-sapphire.yml`，测试页 `2026/matches/b_ruby.md`、`b_sapphire.md`，不添加站内链接。
 - 验证：见本次汇报；未创建比分、未调用 GitHub API、未运行 Jekyll 构建。
+
+## 2026-11-07：A 级别男单分组与签表
+
+- 24 人（含 Sponsors Only 2 人）、种子 1～4（Benson Huang、Roger Yu、Austin Han、Haowen Deng）分入 A～D 组，8 组各 3 人，每组前 2 名出线（出线数按其他项目约定假定为 2），不设三四名赛，11 局制先胜 6 局，排名规则同其他单打。
+- 固定 16 人签表：A1/D1 在上半区不同四分之一，B1/C1 在下半区不同四分之一；若四位种子均为小组第一，则 1/4 号、2/3 号半决赛相遇，1/2 号决赛相遇。
+- 新增 `_data/events/2026-a-grade.yml`（ID `2026-a-grade`）、测试页 `2026/matches/a_grade.md`（无站内链接）；草稿 `tmp/a_grade_draw.yml`。人工核对签表位置，未新增自动化测试，未创建比分或调用 GitHub API。
