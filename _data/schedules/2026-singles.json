@@ -24,67 +24,67 @@
       "time": "8:30AM",
       "matches": [
         {
-          "label": "Ruby-A-R1",
+          "label": "红宝石-A-R1",
           "player1": "Terrence Zhong",
           "player2": "Eric Wong"
         },
         {
-          "label": "Ruby-C-R1",
+          "label": "红宝石-C-R1",
           "player1": "Xi Yin",
           "player2": "Gordon Ge"
         },
         {
-          "label": "Ruby-E-R1",
+          "label": "红宝石-E-R1",
           "player1": "Keli Hu",
           "player2": "Kimi Wenwen Cheng"
         },
         {
-          "label": "Ruby-G-R1",
+          "label": "红宝石-G-R1",
           "player1": "Jay Wu",
           "player2": "Derek Chung"
         },
         {
-          "label": "Sapphire-A-R1",
+          "label": "蓝宝石-A-R1",
           "player1": "Ruyi Liu",
           "player2": "Xiugui Tang"
         },
         {
-          "label": "Sapphire-D-R1",
+          "label": "蓝宝石-D-R1",
           "player1": "Martin Liu",
           "player2": "Howard Cai"
         },
         {
-          "label": "A-R1",
+          "label": "女子-A-R1",
           "player1": "Alicia Wang",
           "player2": "Jie Deng"
         },
         {
-          "label": "A-R1",
+          "label": "女子-A-R1",
           "player1": "Haiyan Huang",
           "player2": "Linda Zhou"
         },
         {
-          "label": "A-A-R1",
+          "label": "A级别-A-R1",
           "player1": "Benson Huang [1]",
           "player2": "Frank Zhang"
         },
         {
-          "label": "A-B-R1",
+          "label": "A级别-B-R1",
           "player1": "Roger Yu [2]",
           "player2": "Michael Zishan Deng"
         },
         {
-          "label": "A-C-R1",
+          "label": "A级别-C-R1",
           "player1": "Austin Han [3]",
           "player2": "Roger Cheung"
         },
         {
-          "label": "Sapphire-F-R1",
+          "label": "蓝宝石-F-R1",
           "player1": "Sheng Lin",
           "player2": "Connor Zhou"
         },
         {
-          "label": "Sapphire-F-R1",
+          "label": "蓝宝石-F-R1",
           "player1": "Biyou Ma",
           "player2": "Andy Xing"
         }
@@ -94,67 +94,67 @@
       "time": null,
       "matches": [
         {
-          "label": "Ruby-B-R1",
+          "label": "红宝石-B-R1",
           "player1": "Jifan Zhang",
           "player2": "Chenxiao Xu"
         },
         {
-          "label": "Ruby-D-R1",
+          "label": "红宝石-D-R1",
           "player1": "Patrick Tsai",
           "player2": "Zim Li"
         },
         {
-          "label": "Ruby-F-R1",
+          "label": "红宝石-F-R1",
           "player1": "Zanbing Dai",
           "player2": "Chun Hei Denis To To"
         },
         {
-          "label": "Ruby-H-R1",
+          "label": "红宝石-H-R1",
           "player1": "Alex Zhao",
           "player2": "Paipai Liu"
         },
         {
-          "label": "Sapphire-B-R1",
+          "label": "蓝宝石-B-R1",
           "player1": "Jason Juncong Zhao",
           "player2": "Wei Peng"
         },
         {
-          "label": "Sapphire-E-R1",
+          "label": "蓝宝石-E-R1",
           "player1": "Kelvin Zhang",
           "player2": "Hua En Chang"
         },
         {
-          "label": "B-R1",
+          "label": "女子-B-R1",
           "player1": "Heli Yang",
           "player2": "Meizhu Li"
         },
         {
-          "label": "B-R1",
+          "label": "女子-B-R1",
           "player1": "Riley Liu",
           "player2": "Yingxi Ma"
         },
         {
-          "label": "A-D-R1",
+          "label": "A级别-D-R1",
           "player1": "Haowen Deng [4]",
           "player2": "Dingkun Wu"
         },
         {
-          "label": "A-E-R1",
+          "label": "A级别-E-R1",
           "player1": "Richard Gong",
           "player2": "Marcus Gock"
         },
         {
-          "label": "A-F-R1",
+          "label": "A级别-F-R1",
           "player1": "James Yuan",
           "player2": "Luming Qiu"
         },
         {
-          "label": "Sapphire-G-R1",
+          "label": "蓝宝石-G-R1",
           "player1": "Yun Chen",
           "player2": "Qiang Li"
         },
         {
-          "label": "Sapphire-G-R1",
+          "label": "蓝宝石-G-R1",
           "player1": "Simon Kwok",
           "player2": "Eric Qu"
         }
@@ -164,67 +164,67 @@
       "time": "Not before\n9:30AM",
       "matches": [
         {
-          "label": "Ruby-A-R2",
+          "label": "红宝石-A-R2",
           "player1": "Eric Wong",
           "player2": "Darren Zhong"
         },
         {
-          "label": "Ruby-C-R2",
+          "label": "红宝石-C-R2",
           "player1": "Gordon Ge",
           "player2": "Yi Li"
         },
         {
-          "label": "Ruby-E-R2",
+          "label": "红宝石-E-R2",
           "player1": "Kimi Wenwen Cheng",
           "player2": "Josh Zhu"
         },
         {
-          "label": "Ruby-G-R2",
+          "label": "红宝石-G-R2",
           "player1": "Derek Chung",
           "player2": "Cheuk Nam Ip"
         },
         {
-          "label": "Sapphire-C-R1",
+          "label": "蓝宝石-C-R1",
           "player1": "Jesse Chan",
           "player2": "Hansheng Chen"
         },
         {
-          "label": "Sapphire-D-R2",
+          "label": "蓝宝石-D-R2",
           "player1": "Howard Cai",
           "player2": "Jianzhong Yin"
         },
         {
-          "label": "C-R1",
+          "label": "女子-C-R1",
           "player1": "Lei Ye",
           "player2": "June Jiang"
         },
         {
-          "label": "C-R1",
+          "label": "女子-C-R1",
           "player1": "Lauren Shen",
           "player2": "Tracy Zhang"
         },
         {
-          "label": "A-G-R1",
+          "label": "A级别-G-R1",
           "player1": "RunTing Zheng",
           "player2": "Kuan Hua Wu"
         },
         {
-          "label": "A-A-R2",
+          "label": "A级别-A-R2",
           "player1": "Frank Zhang",
           "player2": "Simon Yu"
         },
         {
-          "label": "A-H-R1",
+          "label": "A级别-H-R1",
           "player1": "Xinhao Li",
           "player2": "Sizhe Tu"
         },
         {
-          "label": "Sapphire-H-R1",
+          "label": "蓝宝石-H-R1",
           "player1": "Kevin Huang",
           "player2": "Chris Yu"
         },
         {
-          "label": "Sapphire-H-R1",
+          "label": "蓝宝石-H-R1",
           "player1": "Jan Luk",
           "player2": "Jiaxin Shen"
         }
@@ -234,67 +234,67 @@
       "time": null,
       "matches": [
         {
-          "label": "Ruby-B-R2",
+          "label": "红宝石-B-R2",
           "player1": "Chenxiao Xu",
           "player2": "David Cheung"
         },
         {
-          "label": "Ruby-D-R2",
+          "label": "红宝石-D-R2",
           "player1": "Zim Li",
           "player2": "Cham Chen"
         },
         {
-          "label": "Ruby-F-R2",
+          "label": "红宝石-F-R2",
           "player1": "Chun Hei Denis To To",
           "player2": "Yiou Xie"
         },
         {
-          "label": "Ruby-H-R2",
+          "label": "红宝石-H-R2",
           "player1": "Paipai Liu",
           "player2": "Ronnie Tse"
         },
         {
-          "label": "Sapphire-A-R2",
+          "label": "蓝宝石-A-R2",
           "player1": "Xiugui Tang",
           "player2": "Yongji Liu"
         },
         {
-          "label": "Sapphire-E-R2",
+          "label": "蓝宝石-E-R2",
           "player1": "Hua En Chang",
           "player2": "Song Chen"
         },
         {
-          "label": "D-R1",
+          "label": "女子-D-R1",
           "player1": "Shan Li",
           "player2": "Pamela Qi"
         },
         {
-          "label": "D-R1",
+          "label": "女子-D-R1",
           "player1": "Jiayu Gao",
           "player2": "Ye Li"
         },
         {
-          "label": "A-D-R2",
+          "label": "A级别-D-R2",
           "player1": "Dingkun Wu",
           "player2": "Joseph Shao"
         },
         {
-          "label": "A-B-R2",
+          "label": "A级别-B-R2",
           "player1": "Michael Zishan Deng",
           "player2": "Timothy Chen"
         },
         {
-          "label": "A-C-R2",
+          "label": "A级别-C-R2",
           "player1": "Roger Cheung",
           "player2": "Tony Liu"
         },
         {
-          "label": "Sapphire-F-R2",
+          "label": "蓝宝石-F-R2",
           "player1": "Sheng Lin",
           "player2": "Andy Xing"
         },
         {
-          "label": "Sapphire-F-R2",
+          "label": "蓝宝石-F-R2",
           "player1": "Connor Zhou",
           "player2": "Biyou Ma"
         }
@@ -304,67 +304,67 @@
       "time": null,
       "matches": [
         {
-          "label": "Ruby-A-R3",
+          "label": "红宝石-A-R3",
           "player1": "Terrence Zhong",
           "player2": "Darren Zhong"
         },
         {
-          "label": "Ruby-C-R3",
+          "label": "红宝石-C-R3",
           "player1": "Xi Yin",
           "player2": "Yi Li"
         },
         {
-          "label": "Ruby-E-R3",
+          "label": "红宝石-E-R3",
           "player1": "Keli Hu",
           "player2": "Josh Zhu"
         },
         {
-          "label": "Ruby-G-R3",
+          "label": "红宝石-G-R3",
           "player1": "Jay Wu",
           "player2": "Cheuk Nam Ip"
         },
         {
-          "label": "Sapphire-B-R2",
+          "label": "蓝宝石-B-R2",
           "player1": "Wei Peng",
           "player2": "Jiancheng Feng"
         },
         {
-          "label": "Sapphire-D-R3",
+          "label": "蓝宝石-D-R3",
           "player1": "Martin Liu",
           "player2": "Jianzhong Yin"
         },
         {
-          "label": "A-R2",
+          "label": "女子-A-R2",
           "player1": "Alicia Wang",
           "player2": "Linda Zhou"
         },
         {
-          "label": "A-R2",
+          "label": "女子-A-R2",
           "player1": "Jie Deng",
           "player2": "Haiyan Huang"
         },
         {
-          "label": "A-G-R2",
+          "label": "A级别-G-R2",
           "player1": "Kuan Hua Wu",
           "player2": "Danny Zhang"
         },
         {
-          "label": "A-E-R2",
+          "label": "A级别-E-R2",
           "player1": "Marcus Gock",
           "player2": "Donny Jiang"
         },
         {
-          "label": "A-F-R2",
+          "label": "A级别-F-R2",
           "player1": "Luming Qiu",
           "player2": "Chong Shi"
         },
         {
-          "label": "Sapphire-G-R2",
+          "label": "蓝宝石-G-R2",
           "player1": "Yun Chen",
           "player2": "Eric Qu"
         },
         {
-          "label": "Sapphire-G-R2",
+          "label": "蓝宝石-G-R2",
           "player1": "Qiang Li",
           "player2": "Simon Kwok"
         }
@@ -374,67 +374,67 @@
       "time": null,
       "matches": [
         {
-          "label": "Ruby-B-R3",
+          "label": "红宝石-B-R3",
           "player1": "Jifan Zhang",
           "player2": "David Cheung"
         },
         {
-          "label": "Ruby-D-R3",
+          "label": "红宝石-D-R3",
           "player1": "Patrick Tsai",
           "player2": "Cham Chen"
         },
         {
-          "label": "Ruby-F-R3",
+          "label": "红宝石-F-R3",
           "player1": "Zanbing Dai",
           "player2": "Yiou Xie"
         },
         {
-          "label": "Ruby-H-R3",
+          "label": "红宝石-H-R3",
           "player1": "Alex Zhao",
           "player2": "Ronnie Tse"
         },
         {
-          "label": "Sapphire-C-R2",
+          "label": "蓝宝石-C-R2",
           "player1": "Hansheng Chen",
           "player2": "Gui Zhihong"
         },
         {
-          "label": "Sapphire-E-R3",
+          "label": "蓝宝石-E-R3",
           "player1": "Kelvin Zhang",
           "player2": "Song Chen"
         },
         {
-          "label": "B-R2",
+          "label": "女子-B-R2",
           "player1": "Heli Yang",
           "player2": "Yingxi Ma"
         },
         {
-          "label": "B-R2",
+          "label": "女子-B-R2",
           "player1": "Meizhu Li",
           "player2": "Riley Liu"
         },
         {
-          "label": "A-A-R3",
+          "label": "A级别-A-R3",
           "player1": "Benson Huang [1]",
           "player2": "Simon Yu"
         },
         {
-          "label": "A-B-R3",
+          "label": "A级别-B-R3",
           "player1": "Roger Yu [2]",
           "player2": "Timothy Chen"
         },
         {
-          "label": "A-H-R2",
+          "label": "A级别-H-R2",
           "player1": "Sizhe Tu",
           "player2": "Andrew Zhao"
         },
         {
-          "label": "Sapphire-H-R2",
+          "label": "蓝宝石-H-R2",
           "player1": "Kevin Huang",
           "player2": "Jiaxin Shen"
         },
         {
-          "label": "Sapphire-H-R2",
+          "label": "蓝宝石-H-R2",
           "player1": "Chris Yu",
           "player2": "Jan Luk"
         }
@@ -448,47 +448,47 @@
         null,
         null,
         {
-          "label": "Sapphire-A-R3",
+          "label": "蓝宝石-A-R3",
           "player1": "Ruyi Liu",
           "player2": "Yongji Liu"
         },
         {
-          "label": "Sapphire-B-R3",
+          "label": "蓝宝石-B-R3",
           "player1": "Jason Juncong Zhao",
           "player2": "Jiancheng Feng"
         },
         {
-          "label": "C-R2",
+          "label": "女子-C-R2",
           "player1": "Lei Ye",
           "player2": "Tracy Zhang"
         },
         {
-          "label": "C-R2",
+          "label": "女子-C-R2",
           "player1": "June Jiang",
           "player2": "Lauren Shen"
         },
         {
-          "label": "A-D-R3",
+          "label": "A级别-D-R3",
           "player1": "Haowen Deng [4]",
           "player2": "Joseph Shao"
         },
         {
-          "label": "A-E-R3",
+          "label": "A级别-E-R3",
           "player1": "Richard Gong",
           "player2": "Donny Jiang"
         },
         {
-          "label": "A-C-R3",
+          "label": "A级别-C-R3",
           "player1": "Austin Han [3]",
           "player2": "Tony Liu"
         },
         {
-          "label": "Sapphire-F-R3",
+          "label": "蓝宝石-F-R3",
           "player1": "Sheng Lin",
           "player2": "Biyou Ma"
         },
         {
-          "label": "Sapphire-F-R3",
+          "label": "蓝宝石-F-R3",
           "player1": "Andy Xing",
           "player2": "Connor Zhou"
         }
@@ -503,42 +503,42 @@
         null,
         null,
         {
-          "label": "Sapphire-C-R3",
+          "label": "蓝宝石-C-R3",
           "player1": "Jesse Chan",
           "player2": "Gui Zhihong"
         },
         {
-          "label": "D-R2",
+          "label": "女子-D-R2",
           "player1": "Shan Li",
           "player2": "Ye Li"
         },
         {
-          "label": "D-R2",
+          "label": "女子-D-R2",
           "player1": "Pamela Qi",
           "player2": "Jiayu Gao"
         },
         {
-          "label": "A-G-R3",
+          "label": "A级别-G-R3",
           "player1": "RunTing Zheng",
           "player2": "Danny Zhang"
         },
         {
-          "label": "A-F-R3",
+          "label": "A级别-F-R3",
           "player1": "James Yuan",
           "player2": "Chong Shi"
         },
         {
-          "label": "A-H-R3",
+          "label": "A级别-H-R3",
           "player1": "Xinhao Li",
           "player2": "Andrew Zhao"
         },
         {
-          "label": "Sapphire-G-R3",
+          "label": "蓝宝石-G-R3",
           "player1": "Yun Chen",
           "player2": "Simon Kwok"
         },
         {
-          "label": "Sapphire-G-R3",
+          "label": "蓝宝石-G-R3",
           "player1": "Eric Qu",
           "player2": "Qiang Li"
         }
@@ -554,12 +554,12 @@
         null,
         null,
         {
-          "label": "A-R3",
+          "label": "女子-A-R3",
           "player1": "Alicia Wang",
           "player2": "Haiyan Huang"
         },
         {
-          "label": "A-R3",
+          "label": "女子-A-R3",
           "player1": "Linda Zhou",
           "player2": "Jie Deng"
         },
@@ -567,12 +567,12 @@
         null,
         null,
         {
-          "label": "Sapphire-H-R3",
+          "label": "蓝宝石-H-R3",
           "player1": "Kevin Huang",
           "player2": "Jan Luk"
         },
         {
-          "label": "Sapphire-H-R3",
+          "label": "蓝宝石-H-R3",
           "player1": "Jiaxin Shen",
           "player2": "Chris Yu"
         }
@@ -588,12 +588,12 @@
         null,
         null,
         {
-          "label": "B-R3",
+          "label": "女子-B-R3",
           "player1": "Heli Yang",
           "player2": "Riley Liu"
         },
         {
-          "label": "B-R3",
+          "label": "女子-B-R3",
           "player1": "Yingxi Ma",
           "player2": "Meizhu Li"
         },
@@ -614,12 +614,12 @@
         null,
         null,
         {
-          "label": "C-R3",
+          "label": "女子-C-R3",
           "player1": "Lei Ye",
           "player2": "Lauren Shen"
         },
         {
-          "label": "C-R3",
+          "label": "女子-C-R3",
           "player1": "Tracy Zhang",
           "player2": "June Jiang"
         },
@@ -640,12 +640,12 @@
         null,
         null,
         {
-          "label": "D-R3",
+          "label": "女子-D-R3",
           "player1": "Shan Li",
           "player2": "Jiayu Gao"
         },
         {
-          "label": "D-R3",
+          "label": "女子-D-R3",
           "player1": "Ye Li",
           "player2": "Pamela Qi"
         },

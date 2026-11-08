@@ -49,7 +49,7 @@ wide: true
             <td{% if match %} data-match data-court="{{ court }}" data-label="{{ match.label | escape }}" data-player1="{{ match.player1 | escape }}" data-player2="{{ match.player2 | escape }}"{% endif %}>
               {% if match %}
               {% assign division = match.label | split: '-' | first %}
-              <div class="schedule-match{% if court == 7 or court == 8 %} schedule-match--women{% elsif division == 'Ruby' %} schedule-match--ruby{% elsif division == 'Sapphire' %} schedule-match--sapphire{% else %} schedule-match--a{% endif %}">
+              <div class="schedule-match{% if court == 7 or court == 8 %} schedule-match--women{% elsif division == '红宝石' %} schedule-match--ruby{% elsif division == '蓝宝石' %} schedule-match--sapphire{% else %} schedule-match--a{% endif %}">
                 <span class="schedule-match__label">{{ match.label | escape }}</span>
                 <span>{{ match.player1 | escape }} <span class="schedule-match__vs">vs</span> {{ match.player2 | escape }}</span>
               </div>

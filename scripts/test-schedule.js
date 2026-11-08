@@ -66,10 +66,23 @@ test('page omits womens playoffs and empty rows but preserves group matches and 
     { time: '4:00PM', matches: [null, { ...playoff, label: 'F' }, null] }
   ] };
   assert.deepEqual(pageSchedule(source), { courts: [1, 7, 8], rows: [
-    { time: null, matches: [null, group, null] },
-    { time: null, matches: [men, null, null] }
+    { time: null, matches: [null, { ...group, label: '女子-A-R1' }, null] },
+    { time: null, matches: [{ ...men, label: '红宝石-QF1' }, null, null] }
   ] });
   assert.equal(source.rows[1].matches[1], playoff);
+});
+
+test('localizes all division labels without changing source labels or repeating localized prefixes', () => {
+  const source = { courts: [1, 5, 7, 9], rows: [
+    { time: '8:30AM', matches: ['Ruby-A-R1', 'Sapphire-B-R2', 'C-R3', 'A-D-R1'].map(label => ({
+      label, player1: 'Player One', player2: 'Player Two'
+    })) }
+  ] };
+  const localized = pageSchedule(source);
+  assert.deepEqual(localized.rows[0].matches.map(match => match.label),
+    ['红宝石-A-R1', '蓝宝石-B-R2', '女子-C-R3', 'A级别-D-R1']);
+  assert.equal(source.rows[0].matches[0].label, 'Ruby-A-R1');
+  assert.deepEqual(pageSchedule(localized), localized);
 });
 
 test('court filter preserves scheduled match order without including other or blank courts', () => {

@@ -54,12 +54,22 @@ function readSchedule(sheet) {
 }
 
 function pageSchedule(schedule) {
+  const divisions = { Ruby: '红宝石', Sapphire: '蓝宝石', A: 'A级别' };
   const rows = schedule.rows.map(row => ({
     time: row.time,
     matches: row.matches.map((match, index) => {
+      if (!match) return null;
       const court = schedule.courts[index];
-      if (match && (court === 7 || court === 8) && !/^[A-Z]+-R\d+$/.test(match.label)) return null;
-      return match;
+      let label = match.label;
+      if (court === 7 || court === 8) {
+        const groupLabel = label.replace(/^女子-/, '');
+        if (!/^[A-Z]+-R\d+$/.test(groupLabel)) return null;
+        label = '女子-' + groupLabel;
+      } else {
+        const prefix = label.split('-')[0];
+        if (divisions[prefix]) label = divisions[prefix] + label.slice(prefix.length);
+      }
+      return { ...match, label };
     })
   })).filter(row => row.matches.some(Boolean));
   return { courts: schedule.courts, rows };
