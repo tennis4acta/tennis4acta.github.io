@@ -60,7 +60,7 @@ announcements:
     button: "查看分组及赛程"
     url: "/2026/1115/"
   - title: "11月15日单打赛程已公布"
-    text: "单打比赛场地赛程已发布，可按球员姓名或场地查看比赛安排。"
+    text: ""
     button: "查看单打赛程"
     url: "/2026/schedule/singles/"
 
