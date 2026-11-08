@@ -1,0 +1,57 @@
+'use strict';
+
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const ExcelJS = require('exceljs');
+const { readSchedule } = require('./import-schedule');
+const { playerNames, suggestions, matchesForPlayer } = require('../js/schedule');
+
+function sheet() {
+  const workbook = new ExcelJS.Workbook();
+  const result = workbook.addWorksheet('All Courts');
+  result.addRow(['Timestamp', ...Array.from({ length: 13 }, (_, index) => `Court ${index + 1}`)]);
+  return result;
+}
+
+test('imports blank following times, not-before times and rich-text match cells without inventing times', () => {
+  const source = sheet();
+  source.addRow(['8:30AM', 'A-A-R1\nBenson Huang [1] vs Frank Zhang']);
+  source.addRow([null, { richText: [{ text: 'A-A-R2\n' }, { text: 'Frank Zhang vs Simon Yu' }] }]);
+  source.addRow(['Not before\n9:30AM', 'A-A-R3\nBenson Huang [1] vs Simon Yu']);
+  const schedule = readSchedule(source);
+  assert.equal(schedule.rows[1].time, null);
+  assert.equal(schedule.rows[2].time, 'Not before\n9:30AM');
+  assert.deepEqual(schedule.rows[1].matches[0], { label: 'A-A-R2', player1: 'Frank Zhang', player2: 'Simon Yu' });
+  assert.equal(schedule.rows[0].matches[1], null);
+});
+
+test('rejects invalid workbook headers or match cells rather than silently skipping them', () => {
+  const source = sheet();
+  source.addRow(['8:30AM', 'Invalid match']);
+  assert.throws(() => readSchedule(source), /Expected match label/);
+  source.getCell(1, 3).value = 'Court 1';
+  assert.throws(() => readSchedule(source), /duplicate court/);
+  assert.throws(() => readSchedule(null), /All Courts/);
+});
+
+test('suggests only real, unique players after at least three characters, ignoring case', () => {
+  const matches = [
+    { player1: 'Benson Huang [1]', player2: 'Frank Zhang' },
+    { player1: 'Benson Huang [1]', player2: 'Simon Yu' },
+    { player1: 'A1', player2: 'B2' },
+    { player1: 'Winner QF1', player2: 'Winner QF2' }
+  ];
+  const players = playerNames(matches);
+  assert.deepEqual(players, ['Benson Huang [1]', 'Frank Zhang', 'Simon Yu']);
+  assert.deepEqual(suggestions(players, 'be'), []);
+  assert.deepEqual(suggestions(players, ' BEN '), ['Benson Huang [1]']);
+  assert.deepEqual(suggestions(players, 'ZHANG'), ['Frank Zhang']);
+  assert.deepEqual(suggestions(players, 'xyz'), []);
+});
+
+test('personal schedule uses exact player identity and matches both sides in original order', () => {
+  const first = { player1: 'Lei Ye', player2: 'Ye Li', time: '8:30AM', court: '7' };
+  const second = { player1: 'June Jiang', player2: 'Lei Ye', time: '接前场', court: '8' };
+  const unrelated = { player1: 'Lauren Shen', player2: 'Ye Li' };
+  assert.deepEqual(matchesForPlayer([first, unrelated, second], 'Lei Ye'), [first, second]);
+});

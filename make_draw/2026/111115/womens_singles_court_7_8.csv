@@ -1,0 +1,48 @@
+Timestamp,Court 7,Court 8
+8:30AM,"A-R1
+Alicia Wang vs Jie Deng","A-R1
+Haiyan Huang vs Linda Zhou"
+9:00AM,"B-R1
+Heli Yang vs Meizhu Li","B-R1
+Riley Liu vs Yingxi Ma"
+9:30AM,"C-R1
+Lei Ye vs June Jiang","C-R1
+Lauren Shen vs Tracy Zhang"
+10:00AM,"D-R1
+Shan Li vs Pamela Qi","D-R1
+Jiayu Gao vs Ye Li"
+10:30AM,"A-R2
+Alicia Wang vs Linda Zhou","A-R2
+Jie Deng vs Haiyan Huang"
+11:00AM,"B-R2
+Heli Yang vs Yingxi Ma","B-R2
+Meizhu Li vs Riley Liu"
+11:30AM,"C-R2
+Lei Ye vs Tracy Zhang","C-R2
+June Jiang vs Lauren Shen"
+12:00PM,"D-R2
+Shan Li vs Ye Li","D-R2
+Pamela Qi vs Jiayu Gao"
+12:30PM,"A-R3
+Alicia Wang vs Haiyan Huang","A-R3
+Linda Zhou vs Jie Deng"
+1:00PM,"B-R3
+Heli Yang vs Riley Liu","B-R3
+Yingxi Ma vs Meizhu Li"
+1:30PM,"C-R3
+Lei Ye vs Lauren Shen","C-R3
+Tracy Zhang vs June Jiang"
+2:00PM,"D-R3
+Shan Li vs Jiayu Gao","D-R3
+Ye Li vs Pamela Qi"
+2:30PM,"QF1
+A1 vs B2","QF2
+D1 vs C2"
+3:00PM,"QF3
+B1 vs A2","QF4
+C1 vs D2"
+3:30PM,"SF1
+Winner QF1 vs Winner QF2","SF2
+Winner QF3 vs Winner QF4"
+4:00PM,"F
+Winner SF1 vs Winner SF2",

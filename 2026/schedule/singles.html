@@ -1,0 +1,59 @@
+---
+layout: page
+title: "2026 年单打赛程"
+description: "11 月 15 日 · 球场 1–13 · 搜索球员查看个人赛程"
+permalink: /2026/schedule/singles/
+wide: true
+---
+{% assign schedule = site.data.schedules['2026-singles'] %}
+<link rel="stylesheet" href="{{ '/css/schedule.css' | relative_url }}">
+<section class="schedule" data-schedule>
+  <p class="schedule__notice">空白时间显示为“接前场”：本场接在该场地上一场比赛之后进行，并非固定的半小时开赛时间。保留 Excel 中的最早开赛限制；实际安排以现场通知为准。</p>
+  <div class="schedule-search" data-schedule-search hidden>
+    <label for="schedule-player">查找球员</label>
+    <div class="schedule-search__controls">
+      <div class="schedule-search__field">
+        <input id="schedule-player" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="schedule-suggestions" aria-describedby="schedule-status" autocomplete="off" spellcheck="false" placeholder="输入至少 3 个字母，如 ben">
+        <ul id="schedule-suggestions" class="schedule-search__suggestions" role="listbox" aria-label="匹配球员" hidden></ul>
+      </div>
+      <button type="button" data-schedule-clear>显示全部</button>
+    </div>
+    <p id="schedule-status" class="schedule-search__status" role="status" aria-live="polite">输入至少 3 个字母，再选择球员。</p>
+  </div>
+  <noscript><p>启用 JavaScript 后可搜索球员；完整赛程仍可在下表查看。</p></noscript>
+  <section data-schedule-personal hidden aria-label="个人赛程">
+    <h2 data-schedule-personal-title></h2>
+    <ol class="schedule-personal" data-schedule-personal-list></ol>
+    <p>仅显示 Excel 中已经填写姓名的比赛；晋级后对阵以赛会公布为准。</p>
+  </section>
+  <div data-schedule-full>
+    <p class="schedule__scroll-hint">左右滑动查看全部场地；时间列固定在左侧。A 级别、红宝石区、蓝宝石区和女子单打以比赛标识区分。</p>
+    <div class="schedule__scroll table-responsive" role="region" aria-label="完整单打赛程，可左右滚动" tabindex="0">
+      <table class="schedule-table" data-schedule-table>
+        <caption class="sr-only">2026 年 11 月 15 日单打赛程，按 Excel 行序及场地排列</caption>
+        <thead><tr><th scope="col">开赛时间</th>{% for court in schedule.courts %}<th scope="col">{{ court }} 号场地</th>{% endfor %}</tr></thead>
+        <tbody>
+          {% for row in schedule.rows %}
+          <tr data-time="{{ row.time | default: '接前场' | escape }}">
+            <th scope="row">{{ row.time | default: '接前场' | escape }}</th>
+            {% for match in row.matches %}
+            {% assign court_index = forloop.index0 %}
+            {% assign court = schedule.courts[court_index] %}
+            <td{% if match %} data-match data-court="{{ court }}" data-label="{{ match.label | escape }}" data-player1="{{ match.player1 | escape }}" data-player2="{{ match.player2 | escape }}"{% endif %}>
+              {% if match %}
+              {% assign division = match.label | split: '-' | first %}
+              <div class="schedule-match{% if court == 7 or court == 8 %} schedule-match--women{% elsif division == 'Ruby' %} schedule-match--ruby{% elsif division == 'Sapphire' %} schedule-match--sapphire{% else %} schedule-match--a{% endif %}">
+                <span class="schedule-match__label">{{ match.label | escape }}</span>
+                <span>{{ match.player1 | escape }} <span class="schedule-match__vs">vs</span> {{ match.player2 | escape }}</span>
+              </div>
+              {% else %}<span class="schedule-table__empty" aria-label="未安排比赛">—</span>{% endif %}
+            </td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<script src="{{ '/js/schedule.js' | relative_url }}" defer></script>

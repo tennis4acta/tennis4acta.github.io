@@ -12,6 +12,7 @@
         "node": ">=18"
     },
     "devDependencies": {
+        "exceljs": "^4.4.0",
         "grunt": "^1.6.1",
         "grunt-banner": "^0.6.0",
         "grunt-contrib-less": "^3.0.0",
