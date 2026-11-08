@@ -53,11 +53,23 @@ function readSchedule(sheet) {
   return { courts, rows };
 }
 
+function pageSchedule(schedule) {
+  const rows = schedule.rows.map(row => ({
+    time: row.time,
+    matches: row.matches.map((match, index) => {
+      const court = schedule.courts[index];
+      if (match && (court === 7 || court === 8) && !/^[A-Z]+-R\d+$/.test(match.label)) return null;
+      return match;
+    })
+  })).filter(row => row.matches.some(Boolean));
+  return { courts: schedule.courts, rows };
+}
+
 async function main() {
   const bytes = await fs.readFile(sourcePath);
   const workbook = new ExcelJS.Workbook();
   await workbook.xlsx.load(bytes);
-  const schedule = readSchedule(workbook.getWorksheet('All Courts'));
+  const schedule = pageSchedule(readSchedule(workbook.getWorksheet('All Courts')));
   const data = {
     source: { file: path.basename(sourcePath), sheet: 'All Courts', sha256: crypto.createHash('sha256').update(bytes).digest('hex') },
     ...schedule
@@ -67,7 +79,7 @@ async function main() {
   console.log(`Imported ${schedule.rows.length} rows and ${schedule.courts.length} courts into ${outputPath}`);
 }
 
-module.exports = { readSchedule };
+module.exports = { readSchedule, pageSchedule };
 if (require.main === module) {
   main().catch(error => { console.error(error.message); process.exitCode = 1; });
 }

@@ -2,13 +2,17 @@
 .schedule__notice { padding: 16px; background: var(--surface-2); border-radius: var(--radius); color: var(--ink-soft); }
 .schedule-search { margin: 24px 0; }
 .schedule-search label { display: block; margin-bottom: 8px; font-weight: 700; }
-.schedule-search__controls { display: flex; align-items: start; gap: 12px; }
+.schedule-search__controls { display: flex; align-items: end; gap: 12px; }
 .schedule-search__field { position: relative; flex: 1; min-width: 0; }
+.schedule-search__court { width: 170px; }
 .schedule-search input,
+.schedule-search select,
 .schedule-search button { min-height: 48px; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--muted); border-radius: 8px; padding: 10px 12px; }
-.schedule-search input { width: 100%; font-size: 16px; }
+.schedule-search input,
+.schedule-search select { width: 100%; font-size: 16px; }
 .schedule-search button { cursor: pointer; }
 .schedule-search input:focus-visible,
+.schedule-search select:focus-visible,
 .schedule-search button:focus-visible,
 .schedule__scroll:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; }
 .schedule-search__status { color: var(--ink-soft); min-height: 1.75em; }
@@ -37,6 +41,7 @@
 .schedule-personal { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; list-style: none; padding: 0; }
 .schedule-personal > li { margin: 0; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
 .schedule-personal h3 { margin: 0 0 12px; white-space: pre-line; }
+.schedule-court-line { overflow-wrap: anywhere; }
 .schedule-personal dl { margin: 0; }
 .schedule-personal dt { font-weight: 700; }
 .schedule-personal dd { margin: 0 0 8px; overflow-wrap: anywhere; }
@@ -46,6 +51,7 @@
 @media (max-width: 600px) {
   .schedule-search__controls { flex-wrap: wrap; }
   .schedule-search__field { flex-basis: 100%; }
+  .schedule-search__court { flex: 1; }
   .schedule-personal { grid-template-columns: minmax(0, 1fr); }
   .schedule-table tr > th:first-child { min-width: 96px; max-width: 110px; }
 }

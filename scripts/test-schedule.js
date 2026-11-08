@@ -3,8 +3,8 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const ExcelJS = require('exceljs');
-const { readSchedule } = require('./import-schedule');
-const { playerNames, suggestions, matchesForPlayer } = require('../js/schedule');
+const { readSchedule, pageSchedule } = require('./import-schedule');
+const { playerNames, suggestions, matchesForPlayer, matchesForCourt } = require('../js/schedule');
 
 function sheet() {
   const workbook = new ExcelJS.Workbook();
@@ -51,7 +51,31 @@ test('suggests only real, unique players after at least three characters, ignori
 
 test('personal schedule uses exact player identity and matches both sides in original order', () => {
   const first = { player1: 'Lei Ye', player2: 'Ye Li', time: '8:30AM', court: '7' };
-  const second = { player1: 'June Jiang', player2: 'Lei Ye', time: '接前场', court: '8' };
+  const second = { player1: 'June Jiang', player2: 'Lei Ye', time: '', court: '8' };
   const unrelated = { player1: 'Lauren Shen', player2: 'Ye Li' };
   assert.deepEqual(matchesForPlayer([first, unrelated, second], 'Lei Ye'), [first, second]);
+});
+
+test('page omits womens playoffs and empty rows but preserves group matches and mens matches', () => {
+  const group = { label: 'A-R1', player1: 'Alicia Wang', player2: 'Jie Deng' };
+  const playoff = { label: 'QF1', player1: 'A1', player2: 'B2' };
+  const men = { label: 'Ruby-QF1', player1: 'A1', player2: 'B2' };
+  const source = { courts: [1, 7, 8], rows: [
+    { time: null, matches: [null, group, null] },
+    { time: null, matches: [men, playoff, { ...playoff, label: 'SF1' }] },
+    { time: '4:00PM', matches: [null, { ...playoff, label: 'F' }, null] }
+  ] };
+  assert.deepEqual(pageSchedule(source), { courts: [1, 7, 8], rows: [
+    { time: null, matches: [null, group, null] },
+    { time: null, matches: [men, null, null] }
+  ] });
+  assert.equal(source.rows[1].matches[1], playoff);
+});
+
+test('court filter preserves scheduled match order without including other or blank courts', () => {
+  const first = { player1: 'Alicia Wang', player2: 'Jie Deng', court: '7' };
+  const second = { player1: 'Lei Ye', player2: 'June Jiang', court: '7' };
+  const other = { player1: 'Haiyan Huang', player2: 'Linda Zhou', court: '8' };
+  assert.deepEqual(matchesForCourt([first, other, second], 7), [first, second]);
+  assert.deepEqual(matchesForCourt([first, other, second], 13), []);
 });

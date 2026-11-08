@@ -1,27 +1,34 @@
 ---
 layout: page
 title: "2026 年单打赛程"
-description: "11 月 15 日 · 球场 1–13 · 搜索球员查看个人赛程"
+description: "11 月 15 日 · 球场 1–13 · 按球员或场地查看赛程"
 permalink: /2026/schedule/singles/
 wide: true
 ---
 {% assign schedule = site.data.schedules['2026-singles'] %}
 <link rel="stylesheet" href="{{ '/css/schedule.css' | relative_url }}">
 <section class="schedule" data-schedule>
-  <p class="schedule__notice">空白时间显示为“接前场”：本场接在该场地上一场比赛之后进行，并非固定的半小时开赛时间。保留 Excel 中的最早开赛限制；实际安排以现场通知为准。</p>
+  <p class="schedule__notice">保留 Excel 中的开赛时间及最早开赛限制；未填写的时间保持空白。女子单打仅显示小组赛，实际安排以现场通知为准。</p>
   <div class="schedule-search" data-schedule-search hidden>
-    <label for="schedule-player">查找球员</label>
     <div class="schedule-search__controls">
       <div class="schedule-search__field">
+        <label for="schedule-player">查找球员</label>
         <input id="schedule-player" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="schedule-suggestions" aria-describedby="schedule-status" autocomplete="off" spellcheck="false" placeholder="输入至少 3 个字母，如 ben">
         <ul id="schedule-suggestions" class="schedule-search__suggestions" role="listbox" aria-label="匹配球员" hidden></ul>
+      </div>
+      <div class="schedule-search__court">
+        <label for="schedule-court">查找场地</label>
+        <select id="schedule-court" aria-describedby="schedule-status">
+          <option value="">全部场地</option>
+          {% for court in schedule.courts %}<option value="{{ court }}">{{ court }} 号场地</option>{% endfor %}
+        </select>
       </div>
       <button type="button" data-schedule-clear>显示全部</button>
     </div>
     <p id="schedule-status" class="schedule-search__status" role="status" aria-live="polite">输入至少 3 个字母，再选择球员。</p>
   </div>
   <noscript><p>启用 JavaScript 后可搜索球员；完整赛程仍可在下表查看。</p></noscript>
-  <section data-schedule-personal hidden aria-label="个人赛程">
+  <section data-schedule-personal hidden aria-label="筛选赛程">
     <h2 data-schedule-personal-title></h2>
     <ol class="schedule-personal" data-schedule-personal-list></ol>
     <p>仅显示 Excel 中已经填写姓名的比赛；晋级后对阵以赛会公布为准。</p>
@@ -34,8 +41,8 @@ wide: true
         <thead><tr><th scope="col">开赛时间</th>{% for court in schedule.courts %}<th scope="col">{{ court }} 号场地</th>{% endfor %}</tr></thead>
         <tbody>
           {% for row in schedule.rows %}
-          <tr data-time="{{ row.time | default: '接前场' | escape }}">
-            <th scope="row">{{ row.time | default: '接前场' | escape }}</th>
+          <tr data-time="{{ row.time | escape }}">
+            <th scope="row">{{ row.time | escape }}</th>
             {% for match in row.matches %}
             {% assign court_index = forloop.index0 %}
             {% assign court = schedule.courts[court_index] %}

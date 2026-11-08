@@ -25,13 +25,21 @@
     return matches.filter(function (match) { return match.player1 === player || match.player2 === player; });
   }
 
+  function matchesForCourt(matches, court) {
+    return matches.filter(function (match) { return String(match.court) === String(court); });
+  }
+
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { playerNames: playerNames, suggestions: suggestions, matchesForPlayer: matchesForPlayer };
+    module.exports = {
+      playerNames: playerNames, suggestions: suggestions,
+      matchesForPlayer: matchesForPlayer, matchesForCourt: matchesForCourt
+    };
   }
   if (typeof document === 'undefined') return;
   var root = document.querySelector('[data-schedule]');
   if (!root) return;
   var input = root.querySelector('#schedule-player');
+  var courtSelect = root.querySelector('#schedule-court');
   var list = root.querySelector('#schedule-suggestions');
   var status = root.querySelector('#schedule-status');
   var full = root.querySelector('[data-schedule-full]');
@@ -64,38 +72,69 @@
     personal.hidden = true;
   }
 
-  function selectPlayer(player) {
-    var selected = matchesForPlayer(matches, player);
-    input.value = player;
-    closeSuggestions();
+  function showMatches(selected, headingText, player) {
     personalList.replaceChildren();
-    title.textContent = player + ' 的赛程';
+    title.textContent = headingText;
     selected.forEach(function (match) {
       var card = document.createElement('li');
-      var heading = document.createElement('h3');
-      heading.textContent = match.time;
-      card.appendChild(heading);
-      var details = document.createElement('dl');
-      [
-        ['场地', match.court + ' 号场地 · 该场地第 ' + match.order + ' 场'],
-        ['比赛', match.label],
-        ['对手', match.player1 === player ? match.player2 : match.player1]
-      ].forEach(function (detail) {
-        var term = document.createElement('dt');
-        var value = document.createElement('dd');
-        term.textContent = detail[0];
-        value.textContent = detail[1];
-        details.append(term, value);
-      });
-      card.appendChild(details);
+      card.dataset.court = match.court;
+      if (match.time) {
+        var heading = document.createElement('h3');
+        heading.textContent = match.time;
+        card.appendChild(heading);
+      }
+      if (player) {
+        var details = document.createElement('dl');
+        [
+          ['场地', match.court + ' 号场地 · 该场地第 ' + match.order + ' 场'],
+          ['比赛', match.label],
+          ['对手', match.player1 === player ? match.player2 : match.player1]
+        ].forEach(function (detail) {
+          var term = document.createElement('dt');
+          var value = document.createElement('dd');
+          term.textContent = detail[0];
+          value.textContent = detail[1];
+          details.append(term, value);
+        });
+        card.appendChild(details);
+      } else {
+        ['第 ' + match.order + ' 场', match.label, match.player1 + ' vs ' + match.player2].forEach(function (text) {
+          var line = document.createElement('div');
+          line.className = 'schedule-court-line';
+          line.textContent = text;
+          card.appendChild(line);
+        });
+      }
       personalList.appendChild(card);
     });
     full.hidden = true;
     personal.hidden = false;
+  }
+
+  function selectPlayer(player) {
+    var selected = matchesForPlayer(matches, player);
+    input.value = player;
+    courtSelect.value = '';
+    closeSuggestions();
+    showMatches(selected, player + ' 的赛程', player);
     status.textContent = '已选择 ' + player + '，共 ' + selected.length + ' 场比赛。';
   }
 
+  courtSelect.addEventListener('change', function () {
+    input.value = '';
+    closeSuggestions();
+    if (!courtSelect.value) {
+      showAll();
+      status.textContent = '输入至少 3 个字母，再选择球员。';
+      return;
+    }
+    var selected = matchesForCourt(matches, courtSelect.value);
+    showMatches(selected, courtSelect.value + ' 号场地的赛程');
+    status.textContent = courtSelect.value + ' 号场地共 ' + selected.length + ' 场比赛。';
+  });
+
   function updateSuggestions() {
+    courtSelect.value = '';
     showAll();
     options = suggestions(players, input.value);
     list.replaceChildren();
