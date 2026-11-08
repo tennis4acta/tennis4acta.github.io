@@ -6,9 +6,14 @@ permalink: /2026/schedule/singles/
 wide: true
 ---
 {% assign schedule = site.data.schedules['2026-singles'] %}
-<link rel="stylesheet" href="{{ '/css/schedule.css' | relative_url }}">
-<section class="schedule" data-schedule>
+{% assign store = site.tournament_scores %}
+<link rel="stylesheet" href="{{ '/css/schedule.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<section class="schedule" data-schedule data-repo="{{ store.repo | escape }}" data-branch="{{ store.branch | default: 'master' | escape }}" data-path="{{ store.path | default: 'events/scores' | escape }}">
   <p><a class="btn btn--primary btn-lg btn--block" href="{{ '/2026/1115/' | relative_url }}">返回赛程表</a></p>
+  <div class="schedule-sync" data-schedule-sync hidden>
+    <button type="button" class="btn btn--outline btn--sm" data-schedule-refresh>刷新比分</button>
+    <p data-schedule-score-status role="status" aria-live="polite">正在同步比分…</p>
+  </div>
   <div class="schedule-search" data-schedule-search hidden>
     <div class="schedule-search__controls">
       <div class="schedule-search__field">
@@ -47,13 +52,14 @@ wide: true
             {% for match in row.matches %}
             {% assign court_index = forloop.index0 %}
             {% assign court = schedule.courts[court_index] %}
-            <td{% if match %} data-match data-court="{{ court }}" data-label="{{ match.label | escape }}" data-player1="{{ match.player1 | escape }}" data-player2="{{ match.player2 | escape }}"{% endif %}>
+            <td{% if match %} data-match data-court="{{ court }}" data-event="{{ match.eventId | escape }}" data-group="{{ match.group | escape }}" data-label="{{ match.label | escape }}" data-player1="{{ match.player1 | escape }}" data-player2="{{ match.player2 | escape }}"{% endif %}>
               {% if match %}
               {% assign division = match.label | split: '-' | first %}
               <div class="schedule-match{% if court == 7 or court == 8 %} schedule-match--women{% elsif division == '红宝石' %} schedule-match--ruby{% elsif division == '蓝宝石' %} schedule-match--sapphire{% else %} schedule-match--a{% endif %}">
                 <span class="schedule-match__label">{{ match.label | escape }}</span>
                 <span><strong>{{ match.player1 | escape }}</strong> <span class="schedule-match__vs">vs</span></span>
                 <span><strong>{{ match.player2 | escape }}</strong></span>
+                <span class="schedule-score" data-schedule-score hidden></span>
               </div>
               {% else %}<span class="schedule-table__empty" aria-label="未安排比赛">—</span>{% endif %}
             </td>
@@ -65,4 +71,5 @@ wide: true
     </div>
   </div>
 </section>
-<script src="{{ '/js/schedule.js' | relative_url }}" defer></script>
+<script src="{{ '/js/tournament.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+<script src="{{ '/js/schedule.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

@@ -29,10 +29,30 @@
     return matches.filter(function (match) { return String(match.court) === String(court); });
   }
 
+  function scoreForMatch(match, scores, tools, player) {
+    var first = player || match.player1;
+    var second = first === match.player1 ? match.player2 : match.player1;
+    var key = tools.pairKey('RR|' + match.group, first, second);
+    return tools.result(scores.matches, key, first, second);
+  }
+
+  async function updateScores(clients, tools) {
+    await Promise.all(clients.map(async function (client) {
+      try {
+        client.scores = await tools.loadScores(client);
+        client.loadedAt = Date.now();
+        client.error = '';
+      } catch (error) {
+        client.error = error.message || String(error);
+      }
+    }));
+  }
+
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
       playerNames: playerNames, suggestions: suggestions,
-      matchesForPlayer: matchesForPlayer, matchesForCourt: matchesForCourt
+      matchesForPlayer: matchesForPlayer, matchesForCourt: matchesForCourt,
+      scoreForMatch: scoreForMatch, updateScores: updateScores
     };
   }
   if (typeof document === 'undefined') return;
@@ -52,12 +72,21 @@
     courtCounts[court] = (courtCounts[court] || 0) + 1;
     return {
       time: cell.closest('tr').dataset.time, court: court, order: courtCounts[court],
-      label: cell.dataset.label, player1: cell.dataset.player1, player2: cell.dataset.player2
+      label: cell.dataset.label, player1: cell.dataset.player1, player2: cell.dataset.player2,
+      eventId: cell.dataset.event, group: cell.dataset.group, cell: cell
     };
   });
   var players = playerNames(matches);
   var options = [];
   var active = -1;
+  var selectedPlayer = '';
+  var selectedCourt = '';
+  var tools = window.ACTCTournamentScores;
+  var clients = [];
+  var byEvent = Object.create(null);
+  var scoreStatus = root.querySelector('[data-schedule-score-status]');
+  var refreshButton = root.querySelector('[data-schedule-refresh]');
+  var scoreBusy = false;
   root.querySelector('[data-schedule-search]').hidden = false;
 
   function closeSuggestions() {
@@ -68,8 +97,15 @@
   }
 
   function showAll() {
+    selectedPlayer = '';
+    selectedCourt = '';
     full.hidden = false;
     personal.hidden = true;
+  }
+
+  function scoreText(result) {
+    return '比分：' + tools.cellText(result) +
+      (result.note ? '（胜者：' + result.winner + '）' : '') + ' · 已结束';
   }
 
   function showMatches(selected, headingText, player) {
@@ -100,6 +136,15 @@
         opponent.append(opponentLabel, document.createTextNode(': ' + (match.player1 === player ? match.player2 : match.player1)));
         card.appendChild(opponent);
       }
+      var result = tools && byEvent[match.eventId] ?
+        scoreForMatch(match, byEvent[match.eventId].scores, tools, player) : null;
+      card.classList.toggle('schedule-complete', !!result);
+      if (result) {
+        var score = document.createElement('div');
+        score.className = 'schedule-score';
+        score.textContent = scoreText(result);
+        card.appendChild(score);
+      }
       personalList.appendChild(card);
     });
     full.hidden = true;
@@ -110,6 +155,8 @@
     var selected = matchesForPlayer(matches, player);
     input.value = player;
     courtSelect.value = '';
+    selectedPlayer = player;
+    selectedCourt = '';
     closeSuggestions();
     showMatches(selected, player + ' 的赛程', player);
     status.textContent = '已选择 ' + player + '，共 ' + selected.length + ' 场比赛。';
@@ -123,6 +170,8 @@
       status.textContent = '输入至少 3 个字母，再选择球员。';
       return;
     }
+    selectedPlayer = '';
+    selectedCourt = courtSelect.value;
     var selected = matchesForCourt(matches, courtSelect.value);
     showMatches(selected, courtSelect.value + ' 号场地的赛程');
     status.textContent = courtSelect.value + ' 号场地共 ' + selected.length + ' 场比赛。';
@@ -185,4 +234,66 @@
   document.addEventListener('click', function (event) {
     if (!root.querySelector('.schedule-search__field').contains(event.target)) closeSuggestions();
   });
+
+  function renderScores() {
+    var completed = 0;
+    matches.forEach(function (match) {
+      var result = scoreForMatch(match, byEvent[match.eventId].scores, tools);
+      match.cell.classList.toggle('schedule-complete', !!result);
+      var score = match.cell.querySelector('[data-schedule-score]');
+      score.hidden = !result;
+      score.textContent = result ? scoreText(result) : '';
+      if (result) completed += 1;
+    });
+    if (selectedPlayer) showMatches(matchesForPlayer(matches, selectedPlayer), selectedPlayer + ' 的赛程', selectedPlayer);
+    else if (selectedCourt) showMatches(matchesForCourt(matches, selectedCourt), selectedCourt + ' 号场地的赛程');
+    var failed = clients.filter(function (client) { return client.error; });
+    var loaded = clients.filter(function (client) { return client.loadedAt; });
+    var time = loaded.length ? new Date(Math.min.apply(null, loaded.map(function (client) { return client.loadedAt; })))
+      .toLocaleTimeString('zh-CN', { timeZone: 'Australia/Sydney', hour12: false }) : '';
+    scoreStatus.textContent = failed.length ?
+      '比分同步失败：' + failed.map(function (client) { return client.name + '（' + client.error + '）'; }).join('、') +
+        '。' + (time ? '保留已读取的比分，最早一次成功读取：' + time + '。' : '尚未成功读取比分。') :
+      '比分已同步，读取时间：' + time + '；已结束 ' + completed + ' 场。';
+    scoreStatus.textContent += '每 60 秒自动同步，可点击“刷新比分”。';
+    if (clients.some(function (client) { return client.scoreSource === 'cdn'; })) {
+      scoreStatus.textContent += '部分比分通过缓存读取，可能延迟数分钟。';
+    }
+  }
+
+  async function refreshScores(force) {
+    if (scoreBusy || (!force && document.hidden)) return;
+    scoreBusy = true;
+    refreshButton.disabled = true;
+    scoreStatus.textContent = '正在同步比分，保留当前已显示的结果…';
+    try {
+      await updateScores(clients, tools);
+      renderScores();
+    } finally {
+      scoreBusy = false;
+      refreshButton.disabled = false;
+    }
+  }
+
+  root.querySelector('[data-schedule-sync]').hidden = false;
+  if (!tools || !/^[\w.-]+\/[\w.-]+$/.test(root.dataset.repo || '') ||
+      matches.some(function (match) { return !/^[\w.-]+$/.test(match.eventId || '') || !match.group; })) {
+    scoreStatus.textContent = '比分同步配置或组件缺失；球员及场地搜索仍可使用，请刷新页面或联系赛会。';
+    refreshButton.disabled = true;
+    return;
+  }
+  matches.forEach(function (match) {
+    if (byEvent[match.eventId]) return;
+    var client = {
+      id: match.eventId, name: match.label.split('-')[0],
+      repo: root.dataset.repo, branch: root.dataset.branch, path: root.dataset.path,
+      scores: { matches: {} }, error: '', loadedAt: null
+    };
+    clients.push(client);
+    byEvent[match.eventId] = client;
+  });
+  refreshButton.addEventListener('click', function () { refreshScores(true); });
+  setInterval(function () { refreshScores(false); }, 60000);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) refreshScores(false); });
+  refreshScores(true);
 })();

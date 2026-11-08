@@ -332,8 +332,10 @@
 
   const emptyScores = () => ({ matches: {} });
   function normalizeScores(d) {
-    d = d && typeof d === 'object' ? d : {};
-    if (!d.matches || typeof d.matches !== 'object') d.matches = {};
+    if (!d || typeof d !== 'object' || Array.isArray(d) ||
+        !d.matches || typeof d.matches !== 'object' || Array.isArray(d.matches)) {
+      throw new Error('比分文件格式无效。');
+    }
     return d;
   }
 
@@ -355,21 +357,41 @@
 
   async function loadScores(inst) {
     const token = getToken();
-    if (token) return (await readWithSha(inst, token)).data;
+    if (token) {
+      const data = (await readWithSha(inst, token)).data;
+      inst.scoreSource = 'api';
+      return data;
+    }
+    let apiFailure;
     if (!rawOnly) {
       try {
         const res = await gh(contentsUrl(inst) + '?ref=' + encodeURIComponent(inst.branch), { headers: { Accept: 'application/vnd.github.raw+json' } });
-        return normalizeScores(await res.json());
+        const data = normalizeScores(await res.json());
+        inst.scoreSource = 'api';
+        return data;
       } catch (e) {
-        if (e.status === 404) return emptyScores();
+        if (e.status === 404) {
+          inst.scoreSource = 'api';
+          return emptyScores();
+        }
         if (e.status === 403 || e.status === 429) rawOnly = true;
+        else apiFailure = e;
       }
     }
     // CDN copy; may lag a few minutes behind the latest commit.
     const res = await fetch('https://raw.githubusercontent.com/' + inst.repo + '/' + encodeURIComponent(inst.branch) + '/' + filePath(inst) + '?t=' + Date.now(), { cache: 'no-store' });
-    if (res.status === 404) return emptyScores();
+    if (res.status === 404) {
+      if (apiFailure) throw apiFailure;
+      if (inst.scores && Object.keys(inst.scores.matches).length) {
+        throw new Error('缓存比分暂不可用，请稍后重试。');
+      }
+      inst.scoreSource = 'cdn';
+      return emptyScores();
+    }
     if (!res.ok) throw new Error('raw ' + res.status);
-    return normalizeScores(await res.json());
+    const data = normalizeScores(await res.json());
+    inst.scoreSource = 'cdn';
+    return data;
   }
 
   function sortedMatches(m) {
@@ -729,6 +751,8 @@
     try { localStorage.removeItem(TOKEN_KEY); localStorage.removeItem(USER_KEY); } catch (e) { /* ignore */ }
     instances.forEach(render);
   }
+
+  window.ACTCTournamentScores = { pairKey, result, loadScores, cellText };
 
   // ---------- Lifecycle ----------
   async function refresh(inst, force) {

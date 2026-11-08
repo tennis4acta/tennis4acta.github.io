@@ -1,6 +1,6 @@
 # 实时记分板：设计、使用与维护记录
 
-最后更新：2026-10-27。
+最后更新：2026-11-08。
 
 本文是 ACTC 实时记分板的统一技术与使用记录。修改记分板实现、赛事配置约定、操作流程或测试方式时，必须在同一次变更中同步更新本文。公开使用指南为 [howto.md](../score_board/howto.md)；旧设计与早期开发记录见 [score_system.md](../score_board/score_system.md)。本文所在的 `ai_tools` 目录不发布到 Jekyll 网站。
 
@@ -25,6 +25,9 @@
 | [_config.yml](../_config.yml) | 比分仓库、分支、路径及构建排除项 |
 | `events/scores/<id>.json` | 原始比赛结果，由首次保存自动创建 |
 | [scripts/test-tournament.js](../scripts/test-tournament.js) | 无第三方依赖的算法回归测试 |
+| [2026/schedule/singles.html](../2026/schedule/singles.html)、[js/schedule.js](../js/schedule.js)、[css/schedule.css](../css/schedule.css) | 单打赛程、球员/场地筛选和只读比分同步 |
+| [scripts/import-schedule.js](../scripts/import-schedule.js)、[_data/schedules/2026-singles.json](../_data/schedules/2026-singles.json) | 从源 Excel 导入赛程，保留赛事 ID 和组别用于比分匹配 |
+| [scripts/test-schedule.js](../scripts/test-schedule.js) | 赛程导入、筛选、身份核对和模拟比分读写测试 |
 | [skills/generate_draw/generate_draw.js](../skills/generate_draw/generate_draw.js) | 赛前名单解析、种子分组、直接淘汰赛及 YAML 生成 |
 | [skills/generate_draw/README.md](../skills/generate_draw/README.md) | 抽签工具输入、命令、默认值与限制 |
 | [AGENTS.md](../AGENTS.md)、[workflow.md](../workflow.md) | agent/skill 入口、后续设计开发和更改记录 |
@@ -243,13 +246,25 @@ tournament_scores:
 
 ### 8.1 读取
 
-裁判使用带令牌的 Contents API；观众先用匿名 API，403/429 限流后转 raw CDN，后续优先走 CDN。404 视为空赛事。每 60 秒尝试刷新，页面在后台或录入弹窗打开时暂停常规刷新，回到前台再次刷新；手动刷新可立即请求。
+裁判使用带令牌的 Contents API；观众先用匿名 API，403/429 限流后转 raw CDN，后续优先走 CDN。API 404 视为尚无比分文件；其他 API 失败也可尝试 CDN。每 60 秒尝试刷新，记分板在后台或录入弹窗打开时暂停常规刷新，回到前台再次刷新；手动刷新可立即请求。
+
+成功响应必须是带对象型 `matches` 的比分对象，数组或无效结构会明确报错。若 API 非限流错误后 CDN 又返回 404，保留原错误；若已有非空比分而 CDN 返回 404，提示缓存不可用，不将旧成绩清空。没有已缓存成绩且 API 因限流转 CDN 时，CDN 404 仍视为空赛事。读取器通过 `scoreSource` 标识 API/CDN 来源；CDN 成功读取仍可能落后数分钟。
 
 ### 8.2 保存与并发
 
 每次保存先获取最新文件和 SHA，只合并当前一场，再以 SHA 写回。遇到 409/422 冲突最多重试两次；不同场次的并发操作尽量保留彼此结果。同一场并发编辑没有人工冲突合并界面，仍需裁判协调。
 
 写入按键排序，中文通过 UTF-8 / Base64 编码。每次保存生成 GitHub commit，可在仓库提交历史中追踪。比分提交可能触发 Pages 构建，但比分读取不等待构建。若改用独立比分分支，先创建该分支并设置 `tournament_scores.branch`。
+
+### 8.3 单打赛程只读同步
+
+- [单打赛程页](../2026/schedule/singles.html) 读取与分组记分板相同的四个赛事比分文件，沿用 `tournament_scores` 仓库、分支和路径，不新增比分副本或写入入口。当前代码开发分支不改变比分存储分支。
+- 导入时给循环赛记录添加稳定的 `eventId`、`group`；运行时按赛事、组别和双方完整姓名匹配，不解析中文显示编号，姓名中的种子标记也必须一致。当前 105 场均为已实名的小组赛；未来淘汰赛赛程同步不在本次范围。
+- `window.ACTCTournamentScores` 仅公开 `pairKey`、`result`、`loadScores`、`cellText`，赛程复用现有读取、校验与比分方向规则，不公开写入方法。
+- 首次打开、每 60 秒、回到可见标签页及“刷新比分”时读取；后台暂停常规轮询，重叠请求被阻止。比分保存后的同步不依赖网站重建，但不是即时推送。
+- 完整表格和场地卡片按第一位选手视角显示比分，球员卡片按所选球员视角显示。匹配到有效结果后，三种视图都显示“已结束”及浅灰背景；W/O、RET 同时显示胜者。成功读取已清除的成绩后移除比分和结束标记，恢复原背景。
+- 每个赛事独立更新；读取失败保留该赛事此前的比分和成功读取时间，其他赛事仍可更新。状态栏明确列出失败项目、最早成功读取时间及 CDN 延迟提示。首次读取失败时不伪造成绩。
+- 比分刷新保留球员/场地选择，不替换完整表格 DOM；这项功能仅用于网页，已有 Excel 导出不会动态同步。
 
 ## 9. 组织者、裁判和观众操作
 
@@ -299,6 +314,7 @@ tournament_scores:
 ```powershell
 node --check js/tournament.js
 node scripts/test-tournament.js
+node --test scripts\test-schedule.js
 node --test skills/generate_draw/generate_draw.test.js
 git diff --check
 ```
@@ -312,6 +328,8 @@ git diff --check
 2026-10-27 实际验证：上述算法回归、编辑器诊断和差异检查通过。使用 git 忽略的 `_site/preview/tournament.html`，模拟 fetch 而不连接真实比分；浏览器检查 Table / Match、5 人轮次、比分显示、组间独立状态、刷新后保持选择、桌面及 375px 窄屏布局，均通过。预览不随仓库发布；需要时重新建立隔离预览，不将测试结果写入正式比分。
 
 早期设计文档记载了模拟 API 下的录入、W/O、RET、抢十、排名及淘汰赛推进测试，属于历史记录，不代表本次重新执行。
+
+2026-11-08 单打赛程同步实际验证：13 项赛程测试和既有记分板算法回归通过，覆盖模拟提交/读取、双方方向、赛事独立更新、失败保留、清除、W/O/RET、无效身份/胜者、格式错误和 CDN 404 保护；核对全部 105 场与四个赛事的完整名单。JS 语法检查通过。隔离浏览器使用生产 JS/CSS 和内存模拟 API，由实际比分编辑器提交、清除、重新提交，确认完整表格、球员卡、场地卡比分及浅灰状态同步、失败保留和筛选保持；375/812/1440px、浅色/深色卡片检查通过。浏览器轮询由捕获的 60 秒回调触发，不是实测等待一分钟；没有写入真实 GitHub 比分，预览也不是 Jekyll 构建。
 
 **尚未验证的外部流程**：真实 GitHub API 写入、令牌权限、真实并发冲突、CDN 限流回退，以及 Jekyll 实际构建。当前本机没有 Jekyll；正式比赛前仍需由管理员在测试项目中做端到端演练。
 
@@ -327,6 +345,7 @@ git diff --check
 | 2026-10-27：保留种子标记 | 抽签输出姓名保留 `[编号]`，小组、实名签表及 seeds 键一致；现有测试分组仅补标记，不重新抽签；新增标记保留测试，抽签回归 9 组通过 |
 | 2026-10-27：高顺位保护 | 额外种子始终优先进入低种子组；两人出线时生成固定签表，先保护高种子组第一，按 10/12 人规则分配轮空并保持同组半区分离；新增第三层种子与 1～64 组签表测试，抽签回归 14 组通过 |
 | 2026-10-27：后续种子层随机化 | 首层按顺位，其后每层随机分配到预定种子名额；保留高顺位种子的种子轮空与容量约束，不再固定反向或蛇形；15 组抽签测试通过，既有配置不重抽 |
+| 2026-11-08：赛程比分同步 | 单打完整表格和球员/场地卡片共用分组比分，结束场次浅灰；新增只读接口、稳定赛事/组别身份、60 秒及手动/前台刷新、失败保留和 CDN 404 保护；13 项聚焦测试及隔离浏览器模拟流程通过，未验证真实写入或部署 |
 
 后续每次修改时：
 

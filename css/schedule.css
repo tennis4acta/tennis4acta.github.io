@@ -1,4 +1,12 @@
 .schedule { min-width: 0; }
+.schedule-sync { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 20px 0; }
+.schedule-sync p { margin: 0; }
+.schedule-sync button { min-height: 48px; }
+.schedule-score { margin-top: 8px; font-weight: 700; color: var(--ink); overflow-wrap: anywhere; }
+.schedule-table td.schedule-complete,
+.schedule-personal > li.schedule-complete { background: #eef0f2; color: #0b1f2a; }
+.schedule-complete .schedule-score { color: #0b1f2a; }
+.schedule-complete .schedule-match__vs { color: #5d7079; }
 .schedule-search { margin: 24px 0; }
 .schedule-search label { display: block; margin-bottom: 8px; font-weight: 700; }
 .schedule-search__controls { display: flex; align-items: end; gap: 12px; }

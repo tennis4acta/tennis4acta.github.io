@@ -2,9 +2,29 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
 const ExcelJS = require('exceljs');
 const { readSchedule, pageSchedule } = require('./import-schedule');
-const { playerNames, suggestions, matchesForPlayer, matchesForCourt } = require('../js/schedule');
+const { playerNames, suggestions, matchesForPlayer, matchesForCourt, scoreForMatch, updateScores } = require('../js/schedule');
+
+function scoreTools(fetch) {
+  const context = {
+    window: {},
+    document: { readyState: 'complete', querySelectorAll: () => [], addEventListener() {} },
+    localStorage: { getItem: () => '' },
+    TextEncoder, TextDecoder, btoa, atob, fetch, setInterval() {}
+  };
+  vm.createContext(context);
+  const source = fs.readFileSync(path.join(__dirname, '../js/tournament.js'), 'utf8');
+  vm.runInContext(source.replace('  window.ACTCTournamentScores =', '  window.testWriteMatch = writeMatch;\n  window.ACTCTournamentScores ='), context);
+  return { ...context.window.ACTCTournamentScores, writeMatch: context.window.testWriteMatch };
+}
+
+function jsonResponse(data, status = 200) {
+  return new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json' } });
+}
 
 function sheet() {
   const workbook = new ExcelJS.Workbook();
@@ -66,7 +86,7 @@ test('page omits womens playoffs and empty rows but preserves group matches and 
     { time: '4:00PM', matches: [null, { ...playoff, label: 'F' }, null] }
   ] };
   assert.deepEqual(pageSchedule(source), { courts: [1, 7, 8], rows: [
-    { time: null, matches: [null, { ...group, label: '女子-A组-第1轮' }, null] },
+    { time: null, matches: [null, { ...group, label: '女子-A组-第1轮', eventId: '2026-womens-singles', group: 'A' }, null] },
     { time: null, matches: [{ ...men, label: '红宝石-QF1' }, null, null] }
   ] });
   assert.equal(source.rows[1].matches[1], playoff);
@@ -81,6 +101,8 @@ test('localizes all division labels without changing source labels or repeating 
   const localized = pageSchedule(source);
   assert.deepEqual(localized.rows[0].matches.map(match => match.label),
     ['红宝石-A组-第1轮', '蓝宝石-B组-第2轮', '女子-C组-第3轮', 'A级别-D组-第1轮']);
+  assert.deepEqual(localized.rows[0].matches.map(match => [match.eventId, match.group]),
+    [['2026-b-ruby', 'A'], ['2026-b-sapphire', 'B'], ['2026-womens-singles', 'C'], ['2026-a-grade', 'D']]);
   assert.equal(source.rows[0].matches[0].label, 'Ruby-A-R1');
   assert.deepEqual(pageSchedule(localized), localized);
 });
@@ -104,4 +126,104 @@ test('court filter preserves scheduled match order without including other or bl
   const other = { player1: 'Haiyan Huang', player2: 'Linda Zhou', court: '8' };
   assert.deepEqual(matchesForCourt([first, other, second], 7), [first, second]);
   assert.deepEqual(matchesForCourt([first, other, second], 13), []);
+});
+
+test('a mocked scoreboard submission is read by the schedule with correct table and player score directions', async () => {
+  let stored = { matches: { 'RR|B|Alice|Bob': { p: ['Alice', 'Bob'], s: '5-3', w: 'Alice' } } };
+  let writes = 0;
+  const tools = scoreTools(async (url, options = {}) => {
+    assert.ok(url.startsWith('https://api.github.com/repos/example/test/contents/scores/test-event.json'));
+    if (options.method === 'PUT') {
+      stored = JSON.parse(Buffer.from(JSON.parse(options.body).content, 'base64').toString('utf8'));
+      writes += 1;
+      return jsonResponse({ content: { sha: 'next-sha' } });
+    }
+    if (options.headers.Accept === 'application/vnd.github.raw+json') return jsonResponse(stored);
+    return jsonResponse({ sha: 'current-sha', content: Buffer.from(JSON.stringify(stored)).toString('base64') });
+  });
+  const client = { id: 'test-event', repo: 'example/test', branch: 'test', path: 'scores', scores: { matches: {} } };
+  const match = { eventId: 'test-event', group: 'A', player1: 'Alice', player2: 'Bob' };
+  const key = tools.pairKey('RR|A', match.player1, match.player2);
+  await tools.writeMatch(client, key, { p: ['Bob', 'Alice'], s: '4-6', w: 'Alice' }, 'test submission');
+  await updateScores([client], tools);
+  assert.equal(writes, 1);
+  assert.equal(scoreForMatch(match, client.scores, tools).score, '6-4');
+  assert.equal(scoreForMatch(match, client.scores, tools, 'Bob').score, '4-6');
+  assert.ok(stored.matches['RR|B|Alice|Bob']);
+  assert.equal(scoreForMatch({ ...match, group: 'C' }, client.scores, tools), null);
+  assert.equal(scoreForMatch(match, { matches: {} }, tools), null);
+});
+
+test('refresh preserves failed event scores and last-read time, updates other events, and handles a cleared score', async () => {
+  const tools = scoreTools(async () => { throw new Error('Unexpected fetch'); });
+  const old = { matches: { 'RR|A|Alice|Bob': { p: ['Alice', 'Bob'], s: '6-4', w: 'Alice' } } };
+  const clients = [
+    { id: 'failed', scores: old, loadedAt: 123 },
+    { id: 'ok', scores: { matches: {} }, loadedAt: null }
+  ];
+  await updateScores(clients, { loadScores: async client => {
+    if (client.id === 'failed') throw new Error('Network unavailable');
+    return old;
+  } });
+  assert.equal(clients[0].scores, old);
+  assert.equal(clients[0].loadedAt, 123);
+  assert.equal(clients[0].error, 'Network unavailable');
+  assert.equal(clients[1].scores, old);
+  assert.ok(clients[1].loadedAt);
+  await updateScores(clients, { loadScores: async () => ({ matches: {} }) });
+  assert.equal(clients[0].error, '');
+  assert.equal(scoreForMatch({ group: 'A', player1: 'Alice', player2: 'Bob' }, clients[0].scores, tools), null);
+});
+
+test('shared result matching accepts W/O and RET and rejects scores for changed participants or invalid winners', () => {
+  const tools = scoreTools(async () => { throw new Error('Unexpected fetch'); });
+  const match = { group: 'A', player1: 'Alice', player2: 'Bob' };
+  const key = tools.pairKey('RR|A', 'Alice', 'Bob');
+  const scores = { matches: { [key]: { p: ['Bob', 'Alice'], s: '', w: 'Bob', n: 'W/O' } } };
+  const walkover = scoreForMatch(match, scores, tools);
+  assert.equal(walkover.winner, 'Bob');
+  assert.equal(tools.cellText(walkover), 'W/O');
+  scores.matches[key] = { p: ['Bob', 'Alice'], s: '2-4', w: 'Alice', n: 'RET' };
+  assert.equal(tools.cellText(scoreForMatch(match, scores, tools)), '4-2 ret');
+  scores.matches[key].p = ['Carol', 'Alice'];
+  assert.equal(scoreForMatch(match, scores, tools), null);
+  scores.matches[key] = { p: ['Alice', 'Bob'], s: '6-4', w: 'Carol' };
+  assert.equal(scoreForMatch(match, scores, tools), null);
+});
+
+test('shared score loading reports CDN fallback, treats 404 as no scores and rejects malformed files', async () => {
+  const client = { id: 'test-event', repo: 'example/test', branch: 'test', path: 'scores' };
+  const tools = scoreTools(async url => url.startsWith('https://api.github.com') ?
+    jsonResponse({}, 429) : jsonResponse({ matches: {} }));
+  assert.deepEqual(JSON.parse(JSON.stringify(await tools.loadScores(client))), { matches: {} });
+  assert.equal(client.scoreSource, 'cdn');
+  const missing = scoreTools(async url => {
+    assert.ok(url.startsWith('https://api.github.com'));
+    return jsonResponse({}, 404);
+  });
+  assert.deepEqual(JSON.parse(JSON.stringify(await missing.loadScores(client))), { matches: {} });
+  assert.equal(client.scoreSource, 'api');
+  const malformed = scoreTools(async () => jsonResponse({ matches: [] }));
+  await assert.rejects(malformed.loadScores(client), /比分文件格式无效/);
+  const unavailable = scoreTools(async url => jsonResponse({}, url.startsWith('https://api.github.com') ? 503 : 404));
+  await assert.rejects(unavailable.loadScores(client), /GitHub API 503/);
+  const cached = scoreTools(async url => jsonResponse({}, url.startsWith('https://api.github.com') ? 429 : 404));
+  await assert.rejects(cached.loadScores({ ...client, scores: { matches: { existing: {} } } }), /缓存比分暂不可用/);
+});
+
+test('all published schedule identities match the exact event group players including seed markers', () => {
+  const yaml = require('js-yaml');
+  const data = require('../_data/schedules/2026-singles.json');
+  const events = new Map();
+  const matches = data.rows.flatMap(row => row.matches).filter(Boolean);
+  for (const match of matches) {
+    assert.match(match.eventId, /^2026-/);
+    if (!events.has(match.eventId)) events.set(match.eventId, yaml.load(fs.readFileSync(
+      path.join(__dirname, '../_data/events', match.eventId + '.yml'), 'utf8')));
+    const players = events.get(match.eventId).groups[match.group];
+    assert.ok(players.includes(match.player1), match.player1);
+    assert.ok(players.includes(match.player2), match.player2);
+  }
+  assert.equal(matches.length, 105);
+  assert.equal(events.size, 4);
 });

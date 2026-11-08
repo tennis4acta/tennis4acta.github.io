@@ -55,6 +55,7 @@ function readSchedule(sheet) {
 
 function pageSchedule(schedule) {
   const divisions = { Ruby: '红宝石', Sapphire: '蓝宝石', A: 'A级别' };
+  const events = { 红宝石: '2026-b-ruby', 蓝宝石: '2026-b-sapphire', A级别: '2026-a-grade', 女子: '2026-womens-singles' };
   const rows = schedule.rows.map(row => ({
     time: row.time,
     matches: row.matches.map((match, index) => {
@@ -69,7 +70,12 @@ function pageSchedule(schedule) {
         const prefix = label.split('-')[0];
         if (divisions[prefix]) label = divisions[prefix] + label.slice(prefix.length);
       }
-      return { ...match, label: label.replace(/-([A-Z]+)-R(\d+)$/, '-$1组-第$2轮') };
+      label = label.replace(/-([A-Z]+)-R(\d+)$/, '-$1组-第$2轮');
+      const group = /-([A-Z]+)组-第\d+轮$/.exec(label);
+      if (!group) return { ...match, label };
+      const eventId = events[label.split('-')[0]];
+      if (!eventId) throw new Error(`Unknown schedule division: ${label}`);
+      return { ...match, label, eventId, group: group[1] };
     })
   })).filter(row => row.matches.some(Boolean));
   return { courts: schedule.courts, rows };
