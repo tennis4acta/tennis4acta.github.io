@@ -10,10 +10,6 @@ wide: true
 <link rel="stylesheet" href="{{ '/css/schedule.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <section class="schedule" data-schedule data-repo="{{ store.repo | escape }}" data-branch="{{ store.branch | default: 'master' | escape }}" data-path="{{ store.path | default: 'events/scores' | escape }}">
   <p><a class="btn btn--primary btn-lg btn--block" href="{{ '/2026/1115/' | relative_url }}">返回赛程表</a></p>
-  <div class="schedule-sync" data-schedule-sync hidden>
-    <button type="button" class="btn btn--outline btn--sm" data-schedule-refresh>刷新比分</button>
-    <p data-schedule-score-status role="status" aria-live="polite">正在同步比分…</p>
-  </div>
   <div class="schedule-search" data-schedule-search hidden>
     <div class="schedule-search__controls">
       <div class="schedule-search__field">
@@ -36,7 +32,7 @@ wide: true
   <section data-schedule-personal hidden aria-label="筛选赛程">
     <h2 data-schedule-personal-title></h2>
     <ol class="schedule-personal" data-schedule-personal-list></ol>
-    <p>仅显示 Excel 中已经填写姓名的比赛；晋级后对阵以赛会公布为准。</p>
+    <p>晋级后对阵以赛会公布为准。</p>
   </section>
   <div data-schedule-full>
     <p class="schedule__scroll-hint">左右滑动查看全部场地；时间列固定在左侧。A 级别、红宝石区、蓝宝石区和女子单打以比赛标识区分。</p>
@@ -69,6 +65,10 @@ wide: true
         </tbody>
       </table>
     </div>
+  </div>
+  <div class="schedule-sync" data-schedule-sync hidden>
+    <button type="button" class="btn btn--outline btn--sm" data-schedule-refresh>刷新比分</button>
+    <p data-schedule-score-status role="status" aria-live="polite">正在同步比分…</p>
   </div>
 </section>
 <script src="{{ '/js/tournament.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
