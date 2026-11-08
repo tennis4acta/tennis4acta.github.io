@@ -66,7 +66,7 @@ test('page omits womens playoffs and empty rows but preserves group matches and 
     { time: '4:00PM', matches: [null, { ...playoff, label: 'F' }, null] }
   ] };
   assert.deepEqual(pageSchedule(source), { courts: [1, 7, 8], rows: [
-    { time: null, matches: [null, { ...group, label: '女子-A-R1' }, null] },
+    { time: null, matches: [null, { ...group, label: '女子-A组-第1轮' }, null] },
     { time: null, matches: [{ ...men, label: '红宝石-QF1' }, null, null] }
   ] });
   assert.equal(source.rows[1].matches[1], playoff);
@@ -80,9 +80,22 @@ test('localizes all division labels without changing source labels or repeating 
   ] };
   const localized = pageSchedule(source);
   assert.deepEqual(localized.rows[0].matches.map(match => match.label),
-    ['红宝石-A-R1', '蓝宝石-B-R2', '女子-C-R3', 'A级别-D-R1']);
+    ['红宝石-A组-第1轮', '蓝宝石-B组-第2轮', '女子-C组-第3轮', 'A级别-D组-第1轮']);
   assert.equal(source.rows[0].matches[0].label, 'Ruby-A-R1');
   assert.deepEqual(pageSchedule(localized), localized);
+});
+
+test('converts previously localized group labels including later rounds without hiding womens matches', () => {
+  const source = { courts: [1, 5, 7, 9], rows: [
+    { time: null, matches: ['红宝石-A-R1', '蓝宝石-B-R6', '女子-C-R12', 'A级别-D-R3'].map(label => ({
+      label, player1: 'Player One', player2: 'Player Two'
+    })) }
+  ] };
+  const localized = pageSchedule(source);
+  assert.deepEqual(localized.rows[0].matches.map(match => match.label),
+    ['红宝石-A组-第1轮', '蓝宝石-B组-第6轮', '女子-C组-第12轮', 'A级别-D组-第3轮']);
+  assert.deepEqual(pageSchedule(localized), localized);
+  assert.equal(source.rows[0].matches[2].label, '女子-C-R12');
 });
 
 test('court filter preserves scheduled match order without including other or blank courts', () => {

@@ -63,13 +63,13 @@ function pageSchedule(schedule) {
       let label = match.label;
       if (court === 7 || court === 8) {
         const groupLabel = label.replace(/^女子-/, '');
-        if (!/^[A-Z]+-R\d+$/.test(groupLabel)) return null;
+        if (!/^(?:[A-Z]+-R\d+|[A-Z]+组-第\d+轮)$/.test(groupLabel)) return null;
         label = '女子-' + groupLabel;
       } else {
         const prefix = label.split('-')[0];
         if (divisions[prefix]) label = divisions[prefix] + label.slice(prefix.length);
       }
-      return { ...match, label };
+      return { ...match, label: label.replace(/-([A-Z]+)-R(\d+)$/, '-$1组-第$2轮') };
     })
   })).filter(row => row.matches.some(Boolean));
   return { courts: schedule.courts, rows };
