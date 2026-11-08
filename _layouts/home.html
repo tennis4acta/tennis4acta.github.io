@@ -12,14 +12,16 @@ layout: default
   </div>
 </div>
 
-{%- if t.announcement.title %}
-<a class="announce" href="{{ t.announcement.url | relative_url }}" aria-label="{{ t.announcement.title }}">
+{%- for announcement in t.announcements %}
+{%- if announcement.title and announcement.title != '' %}
+<a class="announce" href="{{ announcement.url | relative_url }}" aria-label="{{ announcement.title }}">
   <div class="container announce__inner">
-    <div class="announce__text"><strong>{{ t.announcement.title }}</strong><span>{{ t.announcement.text }}</span></div>
-    <span class="btn">{{ t.announcement.button }}</span>
+    <div class="announce__text"><strong>{{ announcement.title }}</strong><span>{{ announcement.text }}</span></div>
+    <span class="btn">{{ announcement.button }}</span>
   </div>
 </a>
 {%- endif %}
+{%- endfor %}
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="container">

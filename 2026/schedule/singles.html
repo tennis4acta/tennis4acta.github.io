@@ -8,7 +8,7 @@ wide: true
 {% assign schedule = site.data.schedules['2026-singles'] %}
 <link rel="stylesheet" href="{{ '/css/schedule.css' | relative_url }}">
 <section class="schedule" data-schedule>
-  <p><a href="{{ '/2026/1115/' | relative_url }}">返回 2026 ACTC皇族香米杯华人网球大奖赛</a></p>
+  <p><a class="btn btn--primary btn-lg btn--block" href="{{ '/2026/1115/' | relative_url }}">返回赛程表</a></p>
   <div class="schedule-search" data-schedule-search hidden>
     <div class="schedule-search__controls">
       <div class="schedule-search__field">
@@ -51,7 +51,8 @@ wide: true
               {% assign division = match.label | split: '-' | first %}
               <div class="schedule-match{% if court == 7 or court == 8 %} schedule-match--women{% elsif division == '红宝石' %} schedule-match--ruby{% elsif division == '蓝宝石' %} schedule-match--sapphire{% else %} schedule-match--a{% endif %}">
                 <span class="schedule-match__label">{{ match.label | escape }}</span>
-                <span>{{ match.player1 | escape }} <span class="schedule-match__vs">vs</span> {{ match.player2 | escape }}</span>
+                <span><strong>{{ match.player1 | escape }}</strong> <span class="schedule-match__vs">vs</span></span>
+                <span><strong>{{ match.player2 | escape }}</strong></span>
               </div>
               {% else %}<span class="schedule-table__empty" aria-label="未安排比赛">—</span>{% endif %}
             </td>

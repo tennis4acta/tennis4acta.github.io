@@ -15,7 +15,7 @@ permalink: /2026/1115/
 
 ## 赛程表
 
-单打赛程表已发布：[查看场地赛程与球员搜索]({{ '/2026/schedule/singles/' | relative_url }})。
+<p><a class="btn btn--primary btn-lg btn--block" href="{{ '/2026/schedule/singles/' | relative_url }}">查看单打赛程表 · 按球员或场地搜索</a></p>
 
 ## 分组及比分
 
