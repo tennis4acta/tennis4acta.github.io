@@ -1,5 +1,4 @@
 .schedule { min-width: 0; }
-.schedule__notice { padding: 16px; background: var(--surface-2); border-radius: var(--radius); color: var(--ink-soft); }
 .schedule-search { margin: 24px 0; }
 .schedule-search label { display: block; margin-bottom: 8px; font-weight: 700; }
 .schedule-search__controls { display: flex; align-items: end; gap: 12px; }
@@ -41,10 +40,7 @@
 .schedule-personal { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; list-style: none; padding: 0; }
 .schedule-personal > li { margin: 0; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
 .schedule-personal h3 { margin: 0 0 12px; white-space: pre-line; }
-.schedule-court-line { overflow-wrap: anywhere; }
-.schedule-personal dl { margin: 0; }
-.schedule-personal dt { font-weight: 700; }
-.schedule-personal dd { margin: 0 0 8px; overflow-wrap: anywhere; }
+.schedule-card-line { overflow-wrap: anywhere; }
 :root[data-theme="dark"] .schedule-match--ruby { border-color: #ff8da6; }
 :root[data-theme="dark"] .schedule-match--sapphire { border-color: #8fd3ff; }
 :root[data-theme="dark"] .schedule-match--women { border-color: #d3a6ef; }

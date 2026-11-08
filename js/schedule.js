@@ -83,27 +83,22 @@
         heading.textContent = match.time;
         card.appendChild(heading);
       }
+      var lines = player ?
+        [match.court + ' 号场地 · 第 ' + match.order + ' 场', match.label] :
+        ['第 ' + match.order + ' 场', match.label, match.player1 + ' vs ' + match.player2];
+      lines.forEach(function (text) {
+        var line = document.createElement('div');
+        line.className = 'schedule-card-line';
+        line.textContent = text;
+        card.appendChild(line);
+      });
       if (player) {
-        var details = document.createElement('dl');
-        [
-          ['场地', match.court + ' 号场地 · 该场地第 ' + match.order + ' 场'],
-          ['比赛', match.label],
-          ['对手', match.player1 === player ? match.player2 : match.player1]
-        ].forEach(function (detail) {
-          var term = document.createElement('dt');
-          var value = document.createElement('dd');
-          term.textContent = detail[0];
-          value.textContent = detail[1];
-          details.append(term, value);
-        });
-        card.appendChild(details);
-      } else {
-        ['第 ' + match.order + ' 场', match.label, match.player1 + ' vs ' + match.player2].forEach(function (text) {
-          var line = document.createElement('div');
-          line.className = 'schedule-court-line';
-          line.textContent = text;
-          card.appendChild(line);
-        });
+        var opponent = document.createElement('div');
+        opponent.className = 'schedule-card-line';
+        var opponentLabel = document.createElement('strong');
+        opponentLabel.textContent = '对手';
+        opponent.append(opponentLabel, document.createTextNode(': ' + (match.player1 === player ? match.player2 : match.player1)));
+        card.appendChild(opponent);
       }
       personalList.appendChild(card);
     });
