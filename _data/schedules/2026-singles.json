@@ -2,7 +2,7 @@
   "source": {
     "file": "singles_combined_schedule.xlsx",
     "sheet": "All Courts",
-    "sha256": "99021c6802e5115c23377f73f30c131bf726d77847a834bdd399c55051304ecb"
+    "sha256": "2bbe56e38b2564250423b02ef2720ccd95ef79763234df826b182596b0f53808"
   },
   "courts": [
     1,
@@ -106,7 +106,7 @@
         {
           "label": "红宝石-F组-第1轮",
           "player1": "Zanbing Dai",
-          "player2": "Chun Hei Denis To To"
+          "player2": "Chun Hei Denis To"
         },
         {
           "label": "红宝石-H组-第1轮",
@@ -245,7 +245,7 @@
         },
         {
           "label": "红宝石-F组-第2轮",
-          "player1": "Chun Hei Denis To To",
+          "player1": "Chun Hei Denis To",
           "player2": "Yiou Xie"
         },
         {
