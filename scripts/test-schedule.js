@@ -268,4 +268,12 @@ test('schedule snapshot identities match current event group players including s
   assert.equal(womensMatches.some(match => ['Heli Yang', 'Pamela Qi'].includes(match.player1)
     || ['Heli Yang', 'Pamela Qi'].includes(match.player2)), false);
   assert.equal(events.size, 4);
+
+  const rubyBMatch = (player1, player2) => data.rows.flatMap(row => row.matches
+    .map((match, index) => match && match.eventId === '2026-b-ruby' && match.group === 'B'
+      && match.player1 === player1 && match.player2 === player2
+      ? { time: row.time, court: data.courts[index] }
+      : null)).find(Boolean);
+  assert.deepEqual(rubyBMatch('Jifan Zhang', 'Chenxiao Xu'), { time: '10:00AM', court: 1 });
+  assert.deepEqual(rubyBMatch('Chenxiao Xu', 'David Cheung'), { time: '8:30AM', court: 1 });
 });

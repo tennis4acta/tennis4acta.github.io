@@ -389,3 +389,9 @@
 - 扩展 [赛程导入器](scripts/import-schedule.js)，支持传入工作簿路径并优先读取 `Match List`，原有 `All Courts` 导入仍保留；补充相应导入测试，女子样式依据比赛标识而非旧场地编号。
 - 验证：从指定工作簿重新生成 JSON；`node --test scripts/test-schedule.js` 15 项通过，`node scripts/test-tournament.js` 通过；ExcelJS 对照工作簿核对 99 场、12 个场地、女子 18 场及赛事配置中的球员身份。`git diff --check` 通过。
 - 未修改工作簿、赛事配置或真实比分；尝试运行 `bundle exec jekyll build`，但环境未识别 `bundle`，因此未能验证 Jekyll 构建；未验证线上发布，未提交或推送 Git。
+
+## 2026-11-10：红宝石 B 组轮次时段对调
+
+- 按用户要求交换红宝石 B 组第 1、2 轮的赛程时段：第 2 轮改为 8:30AM、Court 1；第 1 轮改为 10:00AM、Court 1。第 3 轮仍为 11:30AM、Court 14；两场间相关球员均保留至少 60 分钟休息。
+- 同步更新工作簿 `All Courts`、`Match List`、`Group Assignments` 和说明备注，并从工作簿重新生成 [赛程快照](_data/schedules/2026-singles.json)；公开赛程页自动显示更新后的轮次时段。
+- 验证：赛程测试 15 项及记分板回归测试通过；核对工作簿与快照中 B 组对阵、轮次、时间、场地一致，其他比赛数量及总场数 99 不变。Jekyll 构建未运行（环境缺少 `bundle`）；未修改比分、未提交或推送 Git。

@@ -2,7 +2,7 @@
   "source": {
     "file": "singles_backup_no_court_7_8.xlsx",
     "sheet": "Match List",
-    "sha256": "f83309e7c460808b49b7d38a31c8222d1561c555d54513056e03d5f48bb8fddc"
+    "sha256": "5c4681f6939276525e5ed5a6eabd64c409d8363b7eabf950d6406cc68747c74a"
   },
   "courts": [
     1,
@@ -106,9 +106,9 @@
       "time": "8:30AM",
       "matches": [
         {
-          "label": "红宝石-B组-第1轮",
-          "player1": "Jifan Zhang",
-          "player2": "Chenxiao Xu",
+          "label": "红宝石-B组-第2轮",
+          "player1": "Chenxiao Xu",
+          "player2": "David Cheung",
           "eventId": "2026-b-ruby",
           "group": "B"
         },
@@ -355,9 +355,9 @@
       "time": "10:00AM",
       "matches": [
         {
-          "label": "红宝石-B组-第2轮",
-          "player1": "Chenxiao Xu",
-          "player2": "David Cheung",
+          "label": "红宝石-B组-第1轮",
+          "player1": "Jifan Zhang",
+          "player2": "Chenxiao Xu",
           "eventId": "2026-b-ruby",
           "group": "B"
         },
