@@ -1,8 +1,9 @@
 ---
 layout: page
-title: "2026 年单打赛程"
-description: "11 月 15 日 · 球场 1–13 · 按球员或场地查看赛程"
-permalink: /2026/schedule/singles/
+title: "2026 年单打赛程（旧版备份）"
+description: "场地调整前的旧赛程备份，不作现行安排"
+permalink: /2026/schedule/singles_backup/
+published: false
 wide: true
 ---
 {% assign schedule = site.data.schedules['2026-singles'] %}

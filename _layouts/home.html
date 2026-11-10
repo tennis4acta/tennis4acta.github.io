@@ -14,12 +14,22 @@ layout: default
 
 {%- for announcement in t.announcements %}
 {%- if announcement.title and announcement.title != '' %}
+{% if announcement.url and announcement.url != '' %}
 <a class="announce" href="{{ announcement.url | relative_url }}" aria-label="{{ announcement.title }}">
+{% else %}
+<aside class="announce" aria-label="{{ announcement.title }}">
+{% endif %}
   <div class="container announce__inner">
     <div class="announce__text"><strong>{{ announcement.title }}</strong><span>{{ announcement.text }}</span></div>
+    {% if announcement.url and announcement.url != '' %}
     <span class="btn">{{ announcement.button }}</span>
+    {% endif %}
   </div>
+{% if announcement.url and announcement.url != '' %}
 </a>
+{% else %}
+</aside>
+{% endif %}
 {%- endif %}
 {%- endfor %}
 
