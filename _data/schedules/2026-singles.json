@@ -1,8 +1,8 @@
 {
   "source": {
-    "file": "singles_combined_schedule.xlsx",
-    "sheet": "All Courts",
-    "sha256": "2bbe56e38b2564250423b02ef2720ccd95ef79763234df826b182596b0f53808"
+    "file": "singles_backup_no_court_7_8.xlsx",
+    "sheet": "Match List",
+    "sha256": "f83309e7c460808b49b7d38a31c8222d1561c555d54513056e03d5f48bb8fddc"
   },
   "courts": [
     1,
@@ -11,13 +11,12 @@
     4,
     5,
     6,
-    7,
-    8,
     9,
     10,
     11,
     12,
-    13
+    13,
+    14
   ],
   "rows": [
     {
@@ -38,18 +37,18 @@
           "group": "C"
         },
         {
-          "label": "红宝石-E组-第1轮",
-          "player1": "Keli Hu",
-          "player2": "Kimi Wenwen Cheng",
-          "eventId": "2026-b-ruby",
-          "group": "E"
+          "label": "女子-A组-第1轮",
+          "player1": "Alicia Wang",
+          "player2": "Jie Deng",
+          "eventId": "2026-womens-singles",
+          "group": "A"
         },
         {
-          "label": "红宝石-G组-第1轮",
-          "player1": "Jay Wu",
-          "player2": "Derek Chung",
-          "eventId": "2026-b-ruby",
-          "group": "G"
+          "label": "女子-A组-第1轮",
+          "player1": "Haiyan Huang",
+          "player2": "Linda Zhou",
+          "eventId": "2026-womens-singles",
+          "group": "A"
         },
         {
           "label": "蓝宝石-A组-第1轮",
@@ -64,20 +63,6 @@
           "player2": "Howard Cai",
           "eventId": "2026-b-sapphire",
           "group": "D"
-        },
-        {
-          "label": "女子-A组-第1轮",
-          "player1": "Alicia Wang",
-          "player2": "Jie Deng",
-          "eventId": "2026-womens-singles",
-          "group": "A"
-        },
-        {
-          "label": "女子-A组-第1轮",
-          "player1": "Haiyan Huang",
-          "player2": "Linda Zhou",
-          "eventId": "2026-womens-singles",
-          "group": "A"
         },
         {
           "label": "A级别-A组-第1轮",
@@ -113,11 +98,12 @@
           "player2": "Andy Xing",
           "eventId": "2026-b-sapphire",
           "group": "F"
-        }
+        },
+        null
       ]
     },
     {
-      "time": null,
+      "time": "8:30AM",
       "matches": [
         {
           "label": "红宝石-B组-第1轮",
@@ -134,18 +120,18 @@
           "group": "D"
         },
         {
-          "label": "红宝石-F组-第1轮",
-          "player1": "Zanbing Dai",
-          "player2": "Chun Hei Denis To",
-          "eventId": "2026-b-ruby",
-          "group": "F"
+          "label": "女子-B组-第1轮",
+          "player1": "Riley Liu",
+          "player2": "Yingxi Ma",
+          "eventId": "2026-womens-singles",
+          "group": "B"
         },
         {
-          "label": "红宝石-H组-第1轮",
-          "player1": "Alex Zhao",
-          "player2": "Paipai Liu",
-          "eventId": "2026-b-ruby",
-          "group": "H"
+          "label": "女子-D组-第1轮",
+          "player1": "Jiayu Gao",
+          "player2": "Ye Li",
+          "eventId": "2026-womens-singles",
+          "group": "D"
         },
         {
           "label": "蓝宝石-B组-第1轮",
@@ -160,20 +146,6 @@
           "player2": "Hua En Chang",
           "eventId": "2026-b-sapphire",
           "group": "E"
-        },
-        {
-          "label": "女子-B组-第1轮",
-          "player1": "Heli Yang",
-          "player2": "Meizhu Li",
-          "eventId": "2026-womens-singles",
-          "group": "B"
-        },
-        {
-          "label": "女子-B组-第1轮",
-          "player1": "Riley Liu",
-          "player2": "Yingxi Ma",
-          "eventId": "2026-womens-singles",
-          "group": "B"
         },
         {
           "label": "A级别-D组-第1轮",
@@ -209,53 +181,26 @@
           "player2": "Eric Qu",
           "eventId": "2026-b-sapphire",
           "group": "G"
-        }
+        },
+        null
       ]
     },
     {
-      "time": "Not before\n9:00AM",
+      "time": "9:00AM",
       "matches": [
         {
-          "label": "红宝石-A组-第2轮",
-          "player1": "Eric Wong",
-          "player2": "Darren Zhong",
-          "eventId": "2026-b-ruby",
-          "group": "A"
-        },
-        {
-          "label": "红宝石-C组-第2轮",
-          "player1": "Gordon Ge",
-          "player2": "Yi Li",
-          "eventId": "2026-b-ruby",
-          "group": "C"
-        },
-        {
-          "label": "红宝石-E组-第2轮",
-          "player1": "Kimi Wenwen Cheng",
-          "player2": "Josh Zhu",
+          "label": "红宝石-E组-第1轮",
+          "player1": "Keli Hu",
+          "player2": "Kimi Wenwen Cheng",
           "eventId": "2026-b-ruby",
           "group": "E"
         },
         {
-          "label": "红宝石-G组-第2轮",
-          "player1": "Derek Chung",
-          "player2": "Cheuk Nam Ip",
+          "label": "红宝石-G组-第1轮",
+          "player1": "Jay Wu",
+          "player2": "Derek Chung",
           "eventId": "2026-b-ruby",
           "group": "G"
-        },
-        {
-          "label": "蓝宝石-C组-第1轮",
-          "player1": "Jesse Chan",
-          "player2": "Hansheng Chen",
-          "eventId": "2026-b-sapphire",
-          "group": "C"
-        },
-        {
-          "label": "蓝宝石-D组-第2轮",
-          "player1": "Howard Cai",
-          "player2": "Jianzhong Yin",
-          "eventId": "2026-b-sapphire",
-          "group": "D"
         },
         {
           "label": "女子-C组-第1轮",
@@ -270,6 +215,20 @@
           "player2": "Tracy Zhang",
           "eventId": "2026-womens-singles",
           "group": "C"
+        },
+        {
+          "label": "蓝宝石-C组-第1轮",
+          "player1": "Jesse Chan",
+          "player2": "Hansheng Chen",
+          "eventId": "2026-b-sapphire",
+          "group": "C"
+        },
+        {
+          "label": "蓝宝石-D组-第2轮",
+          "player1": "Howard Cai",
+          "player2": "Jianzhong Yin",
+          "eventId": "2026-b-sapphire",
+          "group": "D"
         },
         {
           "label": "A级别-G组-第1轮",
@@ -305,39 +264,40 @@
           "player2": "Jiaxin Shen",
           "eventId": "2026-b-sapphire",
           "group": "H"
-        }
+        },
+        null
       ]
     },
     {
-      "time": null,
+      "time": "9:30AM",
       "matches": [
         {
-          "label": "红宝石-B组-第2轮",
-          "player1": "Chenxiao Xu",
-          "player2": "David Cheung",
-          "eventId": "2026-b-ruby",
-          "group": "B"
-        },
-        {
-          "label": "红宝石-D组-第2轮",
-          "player1": "Zim Li",
-          "player2": "Cham Chen",
-          "eventId": "2026-b-ruby",
-          "group": "D"
-        },
-        {
-          "label": "红宝石-F组-第2轮",
-          "player1": "Chun Hei Denis To",
-          "player2": "Yiou Xie",
+          "label": "红宝石-F组-第1轮",
+          "player1": "Zanbing Dai",
+          "player2": "Chun Hei Denis To",
           "eventId": "2026-b-ruby",
           "group": "F"
         },
         {
-          "label": "红宝石-H组-第2轮",
-          "player1": "Paipai Liu",
-          "player2": "Ronnie Tse",
+          "label": "红宝石-H组-第1轮",
+          "player1": "Alex Zhao",
+          "player2": "Paipai Liu",
           "eventId": "2026-b-ruby",
           "group": "H"
+        },
+        {
+          "label": "女子-A组-第2轮",
+          "player1": "Alicia Wang",
+          "player2": "Linda Zhou",
+          "eventId": "2026-womens-singles",
+          "group": "A"
+        },
+        {
+          "label": "女子-A组-第2轮",
+          "player1": "Jie Deng",
+          "player2": "Haiyan Huang",
+          "eventId": "2026-womens-singles",
+          "group": "A"
         },
         {
           "label": "蓝宝石-A组-第2轮",
@@ -352,20 +312,6 @@
           "player2": "Song Chen",
           "eventId": "2026-b-sapphire",
           "group": "E"
-        },
-        {
-          "label": "女子-D组-第1轮",
-          "player1": "Shan Li",
-          "player2": "Pamela Qi",
-          "eventId": "2026-womens-singles",
-          "group": "D"
-        },
-        {
-          "label": "女子-D组-第1轮",
-          "player1": "Jiayu Gao",
-          "player2": "Ye Li",
-          "eventId": "2026-womens-singles",
-          "group": "D"
         },
         {
           "label": "A级别-D组-第2轮",
@@ -401,39 +347,40 @@
           "player2": "Biyou Ma",
           "eventId": "2026-b-sapphire",
           "group": "F"
-        }
+        },
+        null
       ]
     },
     {
-      "time": null,
+      "time": "10:00AM",
       "matches": [
         {
-          "label": "红宝石-A组-第3轮",
-          "player1": "Terrence Zhong",
-          "player2": "Darren Zhong",
+          "label": "红宝石-B组-第2轮",
+          "player1": "Chenxiao Xu",
+          "player2": "David Cheung",
           "eventId": "2026-b-ruby",
-          "group": "A"
+          "group": "B"
         },
         {
-          "label": "红宝石-C组-第3轮",
-          "player1": "Xi Yin",
+          "label": "红宝石-C组-第2轮",
+          "player1": "Gordon Ge",
           "player2": "Yi Li",
           "eventId": "2026-b-ruby",
           "group": "C"
         },
         {
-          "label": "红宝石-E组-第3轮",
-          "player1": "Keli Hu",
-          "player2": "Josh Zhu",
-          "eventId": "2026-b-ruby",
-          "group": "E"
+          "label": "女子-B组-第2轮",
+          "player1": "Meizhu Li",
+          "player2": "Riley Liu",
+          "eventId": "2026-womens-singles",
+          "group": "B"
         },
         {
-          "label": "红宝石-G组-第3轮",
-          "player1": "Jay Wu",
-          "player2": "Cheuk Nam Ip",
-          "eventId": "2026-b-ruby",
-          "group": "G"
+          "label": "女子-D组-第2轮",
+          "player1": "Shan Li",
+          "player2": "Ye Li",
+          "eventId": "2026-womens-singles",
+          "group": "D"
         },
         {
           "label": "蓝宝石-B组-第2轮",
@@ -448,20 +395,6 @@
           "player2": "Jianzhong Yin",
           "eventId": "2026-b-sapphire",
           "group": "D"
-        },
-        {
-          "label": "女子-A组-第2轮",
-          "player1": "Alicia Wang",
-          "player2": "Linda Zhou",
-          "eventId": "2026-womens-singles",
-          "group": "A"
-        },
-        {
-          "label": "女子-A组-第2轮",
-          "player1": "Jie Deng",
-          "player2": "Haiyan Huang",
-          "eventId": "2026-womens-singles",
-          "group": "A"
         },
         {
           "label": "A级别-G组-第2轮",
@@ -497,39 +430,46 @@
           "player2": "Simon Kwok",
           "eventId": "2026-b-sapphire",
           "group": "G"
+        },
+        {
+          "label": "红宝石-A组-第2轮",
+          "player1": "Eric Wong",
+          "player2": "Darren Zhong",
+          "eventId": "2026-b-ruby",
+          "group": "A"
         }
       ]
     },
     {
-      "time": null,
+      "time": "10:30AM",
       "matches": [
         {
-          "label": "红宝石-B组-第3轮",
-          "player1": "Jifan Zhang",
-          "player2": "David Cheung",
+          "label": "红宝石-E组-第2轮",
+          "player1": "Kimi Wenwen Cheng",
+          "player2": "Josh Zhu",
           "eventId": "2026-b-ruby",
-          "group": "B"
+          "group": "E"
         },
         {
-          "label": "红宝石-D组-第3轮",
-          "player1": "Patrick Tsai",
-          "player2": "Cham Chen",
-          "eventId": "2026-b-ruby",
-          "group": "D"
-        },
-        {
-          "label": "红宝石-F组-第3轮",
-          "player1": "Zanbing Dai",
+          "label": "红宝石-F组-第2轮",
+          "player1": "Chun Hei Denis To",
           "player2": "Yiou Xie",
           "eventId": "2026-b-ruby",
           "group": "F"
         },
         {
-          "label": "红宝石-H组-第3轮",
-          "player1": "Alex Zhao",
-          "player2": "Ronnie Tse",
-          "eventId": "2026-b-ruby",
-          "group": "H"
+          "label": "女子-C组-第2轮",
+          "player1": "Lei Ye",
+          "player2": "Tracy Zhang",
+          "eventId": "2026-womens-singles",
+          "group": "C"
+        },
+        {
+          "label": "女子-C组-第2轮",
+          "player1": "June Jiang",
+          "player2": "Lauren Shen",
+          "eventId": "2026-womens-singles",
+          "group": "C"
         },
         {
           "label": "蓝宝石-C组-第2轮",
@@ -544,20 +484,6 @@
           "player2": "Song Chen",
           "eventId": "2026-b-sapphire",
           "group": "E"
-        },
-        {
-          "label": "女子-B组-第2轮",
-          "player1": "Heli Yang",
-          "player2": "Yingxi Ma",
-          "eventId": "2026-womens-singles",
-          "group": "B"
-        },
-        {
-          "label": "女子-B组-第2轮",
-          "player1": "Meizhu Li",
-          "player2": "Riley Liu",
-          "eventId": "2026-womens-singles",
-          "group": "B"
         },
         {
           "label": "A级别-A组-第3轮",
@@ -593,16 +519,47 @@
           "player2": "Jan Luk",
           "eventId": "2026-b-sapphire",
           "group": "H"
+        },
+        {
+          "label": "红宝石-D组-第2轮",
+          "player1": "Zim Li",
+          "player2": "Cham Chen",
+          "eventId": "2026-b-ruby",
+          "group": "D"
         }
       ]
     },
     {
-      "time": null,
+      "time": "11:00AM",
       "matches": [
-        null,
-        null,
-        null,
-        null,
+        {
+          "label": "红宝石-H组-第2轮",
+          "player1": "Paipai Liu",
+          "player2": "Ronnie Tse",
+          "eventId": "2026-b-ruby",
+          "group": "H"
+        },
+        {
+          "label": "红宝石-A组-第3轮",
+          "player1": "Terrence Zhong",
+          "player2": "Darren Zhong",
+          "eventId": "2026-b-ruby",
+          "group": "A"
+        },
+        {
+          "label": "女子-A组-第3轮",
+          "player1": "Alicia Wang",
+          "player2": "Haiyan Huang",
+          "eventId": "2026-womens-singles",
+          "group": "A"
+        },
+        {
+          "label": "女子-A组-第3轮",
+          "player1": "Linda Zhou",
+          "player2": "Jie Deng",
+          "eventId": "2026-womens-singles",
+          "group": "A"
+        },
         {
           "label": "蓝宝石-A组-第3轮",
           "player1": "Ruyi Liu",
@@ -616,20 +573,6 @@
           "player2": "Jiancheng Feng",
           "eventId": "2026-b-sapphire",
           "group": "B"
-        },
-        {
-          "label": "女子-C组-第2轮",
-          "player1": "Lei Ye",
-          "player2": "Tracy Zhang",
-          "eventId": "2026-womens-singles",
-          "group": "C"
-        },
-        {
-          "label": "女子-C组-第2轮",
-          "player1": "June Jiang",
-          "player2": "Lauren Shen",
-          "eventId": "2026-womens-singles",
-          "group": "C"
         },
         {
           "label": "A级别-D组-第3轮",
@@ -665,16 +608,47 @@
           "player2": "Connor Zhou",
           "eventId": "2026-b-sapphire",
           "group": "F"
+        },
+        {
+          "label": "红宝石-G组-第2轮",
+          "player1": "Derek Chung",
+          "player2": "Cheuk Nam Ip",
+          "eventId": "2026-b-ruby",
+          "group": "G"
         }
       ]
     },
     {
-      "time": null,
+      "time": "11:30AM",
       "matches": [
-        null,
-        null,
-        null,
-        null,
+        {
+          "label": "红宝石-C组-第3轮",
+          "player1": "Xi Yin",
+          "player2": "Yi Li",
+          "eventId": "2026-b-ruby",
+          "group": "C"
+        },
+        {
+          "label": "红宝石-D组-第3轮",
+          "player1": "Patrick Tsai",
+          "player2": "Cham Chen",
+          "eventId": "2026-b-ruby",
+          "group": "D"
+        },
+        {
+          "label": "女子-B组-第3轮",
+          "player1": "Yingxi Ma",
+          "player2": "Meizhu Li",
+          "eventId": "2026-womens-singles",
+          "group": "B"
+        },
+        {
+          "label": "女子-D组-第3轮",
+          "player1": "Shan Li",
+          "player2": "Jiayu Gao",
+          "eventId": "2026-womens-singles",
+          "group": "D"
+        },
         null,
         {
           "label": "蓝宝石-C组-第3轮",
@@ -682,20 +656,6 @@
           "player2": "Gui Zhihong",
           "eventId": "2026-b-sapphire",
           "group": "C"
-        },
-        {
-          "label": "女子-D组-第2轮",
-          "player1": "Shan Li",
-          "player2": "Ye Li",
-          "eventId": "2026-womens-singles",
-          "group": "D"
-        },
-        {
-          "label": "女子-D组-第2轮",
-          "player1": "Pamela Qi",
-          "player2": "Jiayu Gao",
-          "eventId": "2026-womens-singles",
-          "group": "D"
         },
         {
           "label": "A级别-G组-第3轮",
@@ -731,90 +691,33 @@
           "player2": "Qiang Li",
           "eventId": "2026-b-sapphire",
           "group": "G"
+        },
+        {
+          "label": "红宝石-B组-第3轮",
+          "player1": "Jifan Zhang",
+          "player2": "David Cheung",
+          "eventId": "2026-b-ruby",
+          "group": "B"
         }
       ]
     },
     {
-      "time": null,
+      "time": "12:00PM",
       "matches": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         {
-          "label": "女子-A组-第3轮",
-          "player1": "Alicia Wang",
-          "player2": "Haiyan Huang",
-          "eventId": "2026-womens-singles",
-          "group": "A"
+          "label": "红宝石-F组-第3轮",
+          "player1": "Zanbing Dai",
+          "player2": "Yiou Xie",
+          "eventId": "2026-b-ruby",
+          "group": "F"
         },
         {
-          "label": "女子-A组-第3轮",
-          "player1": "Linda Zhou",
-          "player2": "Jie Deng",
-          "eventId": "2026-womens-singles",
-          "group": "A"
+          "label": "红宝石-G组-第3轮",
+          "player1": "Jay Wu",
+          "player2": "Cheuk Nam Ip",
+          "eventId": "2026-b-ruby",
+          "group": "G"
         },
-        null,
-        null,
-        null,
-        {
-          "label": "蓝宝石-H组-第3轮",
-          "player1": "Kevin Huang",
-          "player2": "Jan Luk",
-          "eventId": "2026-b-sapphire",
-          "group": "H"
-        },
-        {
-          "label": "蓝宝石-H组-第3轮",
-          "player1": "Jiaxin Shen",
-          "player2": "Chris Yu",
-          "eventId": "2026-b-sapphire",
-          "group": "H"
-        }
-      ]
-    },
-    {
-      "time": null,
-      "matches": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        {
-          "label": "女子-B组-第3轮",
-          "player1": "Heli Yang",
-          "player2": "Riley Liu",
-          "eventId": "2026-womens-singles",
-          "group": "B"
-        },
-        {
-          "label": "女子-B组-第3轮",
-          "player1": "Yingxi Ma",
-          "player2": "Meizhu Li",
-          "eventId": "2026-womens-singles",
-          "group": "B"
-        },
-        null,
-        null,
-        null,
-        null,
-        null
-      ]
-    },
-    {
-      "time": null,
-      "matches": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         {
           "label": "女子-C组-第3轮",
           "player1": "Lei Ye",
@@ -833,11 +736,32 @@
         null,
         null,
         null,
-        null
+        null,
+        {
+          "label": "蓝宝石-H组-第3轮",
+          "player1": "Kevin Huang",
+          "player2": "Jan Luk",
+          "eventId": "2026-b-sapphire",
+          "group": "H"
+        },
+        {
+          "label": "蓝宝石-H组-第3轮",
+          "player1": "Jiaxin Shen",
+          "player2": "Chris Yu",
+          "eventId": "2026-b-sapphire",
+          "group": "H"
+        },
+        {
+          "label": "红宝石-E组-第3轮",
+          "player1": "Keli Hu",
+          "player2": "Josh Zhu",
+          "eventId": "2026-b-ruby",
+          "group": "E"
+        }
       ]
     },
     {
-      "time": null,
+      "time": "12:30PM",
       "matches": [
         null,
         null,
@@ -845,25 +769,18 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
         {
-          "label": "女子-D组-第3轮",
-          "player1": "Shan Li",
-          "player2": "Jiayu Gao",
-          "eventId": "2026-womens-singles",
-          "group": "D"
-        },
-        {
-          "label": "女子-D组-第3轮",
-          "player1": "Ye Li",
-          "player2": "Pamela Qi",
-          "eventId": "2026-womens-singles",
-          "group": "D"
-        },
-        null,
-        null,
-        null,
-        null,
-        null
+          "label": "红宝石-H组-第3轮",
+          "player1": "Alex Zhao",
+          "player2": "Ronnie Tse",
+          "eventId": "2026-b-ruby",
+          "group": "H"
+        }
       ]
     }
   ]

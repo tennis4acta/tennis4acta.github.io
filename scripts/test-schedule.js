@@ -6,7 +6,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const ExcelJS = require('exceljs');
-const { readSchedule, pageSchedule } = require('./import-schedule');
+const { readSchedule, readMatchList, pageSchedule } = require('./import-schedule');
 const { playerNames, suggestions, matchesForPlayer, matchesForCourt, scoreForMatch, updateScores } = require('../js/schedule');
 
 function scoreTools(fetch) {
@@ -33,6 +33,13 @@ function sheet() {
   return result;
 }
 
+function matchListSheet() {
+  const workbook = new ExcelJS.Workbook();
+  const result = workbook.addWorksheet('Match List');
+  result.addRow(['开始（估计）', '结束（估计）', '场地', '项目', '小组', '轮次', '球员 1', '球员 2']);
+  return result;
+}
+
 test('imports blank following times, not-before times and rich-text match cells without inventing times', () => {
   const source = sheet();
   source.addRow(['8:30AM', 'A-A-R1\nBenson Huang [1] vs Frank Zhang']);
@@ -45,6 +52,27 @@ test('imports blank following times, not-before times and rich-text match cells 
   assert.equal(schedule.rows[0].matches[1], null);
 });
 
+test('imports the adjusted workbook Match List and keeps women matches on their reassigned courts', () => {
+  const source = matchListSheet();
+  source.addRow(['8:00AM', '8:30AM', 3, '女子', 'A', 1, 'Alice', 'Bob']);
+  source.addRow(['8:00AM', '8:30AM', 4, '女子', 'A', 1, 'Carol', 'Dana']);
+  source.addRow(['8:30AM', '9:00AM', 14, '红宝石', 'B', 2, 'Eve', 'Frank']);
+
+  const schedule = pageSchedule(readMatchList(source));
+  assert.deepEqual(schedule.courts, [3, 4, 14]);
+  assert.deepEqual(schedule.rows.map(row => row.time), ['8:00AM', '8:30AM']);
+  assert.deepEqual(schedule.rows[0].matches, [
+    { label: '女子-A组-第1轮', player1: 'Alice', player2: 'Bob', eventId: '2026-womens-singles', group: 'A' },
+    { label: '女子-A组-第1轮', player1: 'Carol', player2: 'Dana', eventId: '2026-womens-singles', group: 'A' },
+    null
+  ]);
+  assert.deepEqual(schedule.rows[1].matches, [
+    null,
+    null,
+    { label: '红宝石-B组-第2轮', player1: 'Eve', player2: 'Frank', eventId: '2026-b-ruby', group: 'B' }
+  ]);
+});
+
 test('rejects invalid workbook headers or match cells rather than silently skipping them', () => {
   const source = sheet();
   source.addRow(['8:30AM', 'Invalid match']);
@@ -52,6 +80,16 @@ test('rejects invalid workbook headers or match cells rather than silently skipp
   source.getCell(1, 3).value = 'Court 1';
   assert.throws(() => readSchedule(source), /duplicate court/);
   assert.throws(() => readSchedule(null), /All Courts/);
+});
+
+test('rejects invalid or duplicate courts in a Match List', () => {
+  const source = matchListSheet();
+  source.addRow(['8:00AM', '8:30AM', 7, '女子', 'A', 1, 'Alice', 'Bob']);
+  assert.throws(() => readMatchList(source), /Invalid time or court/);
+
+  source.getRow(2).getCell(3).value = 3;
+  source.addRow(['8:00AM', '8:30AM', 3, '女子', 'A', 1, 'Carol', 'Dana']);
+  assert.throws(() => readMatchList(source), /Duplicate court/);
 });
 
 test('suggests only real, unique players after at least three characters, ignoring case', () => {
@@ -211,7 +249,7 @@ test('shared score loading reports CDN fallback, treats 404 as no scores and rej
   await assert.rejects(cached.loadScores({ ...client, scores: { matches: { existing: {} } } }), /缓存比分暂不可用/);
 });
 
-test('all published schedule identities match the exact event group players including seed markers', () => {
+test('schedule snapshot identities match current event group players including seed markers', () => {
   const yaml = require('js-yaml');
   const data = require('../_data/schedules/2026-singles.json');
   const events = new Map();
@@ -224,6 +262,10 @@ test('all published schedule identities match the exact event group players incl
     assert.ok(players.includes(match.player1), match.player1);
     assert.ok(players.includes(match.player2), match.player2);
   }
-  assert.equal(matches.length, 105);
+  const womensMatches = matches.filter(match => match.eventId === '2026-womens-singles');
+  assert.equal(matches.length, 99);
+  assert.equal(womensMatches.length, 18);
+  assert.equal(womensMatches.some(match => ['Heli Yang', 'Pamela Qi'].includes(match.player1)
+    || ['Heli Yang', 'Pamela Qi'].includes(match.player2)), false);
   assert.equal(events.size, 4);
 });

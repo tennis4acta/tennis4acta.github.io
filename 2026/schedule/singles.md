@@ -1,16 +1,15 @@
 ---
 layout: page
-title: "2026 年单打赛程（旧版备份）"
-description: "场地调整前的旧赛程备份，不作现行安排"
-permalink: /2026/schedule/singles_backup/
-published: false
+title: "2026 年单打赛程（场地调整后）"
+description: "2026年11月15日单打赛程"
+permalink: /2026/schedule/singles/
 wide: true
 ---
 {% assign schedule = site.data.schedules['2026-singles'] %}
 {% assign store = site.tournament_scores %}
 <link rel="stylesheet" href="{{ '/css/schedule.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <section class="schedule" data-schedule data-repo="{{ store.repo | escape }}" data-branch="{{ store.branch | default: 'master' | escape }}" data-path="{{ store.path | default: 'events/scores' | escape }}">
-  <p><a class="btn btn--primary btn-lg btn--block" href="{{ '/2026/1115/' | relative_url }}">返回赛程表</a></p>
+  <p><a class="btn btn--primary btn-lg btn--block" href="{{ '/2026/1115/' | relative_url }}">返回单打赛事页</a></p>
   <div class="schedule-search" data-schedule-search hidden>
     <div class="schedule-search__controls">
       <div class="schedule-search__field">
@@ -36,11 +35,11 @@ wide: true
     <p>晋级后对阵以赛会公布为准。</p>
   </section>
   <div data-schedule-full>
-    <p class="schedule__scroll-hint">左右滑动查看全部场地；时间列固定在左侧。A 级别、红宝石区、蓝宝石区和女子单打以比赛标识区分。</p>
+    <p class="schedule__scroll-hint">左右滑动查看全部场地；时间列固定在左侧。A 级别、红宝石区、蓝宝石区和女子单打以比赛标识区分。14 号场地上午 10:00 起可用；7、8 号场地停用。</p>
     <p class="schedule__scroll-hint">注意：赛会保留更改场地的权利。</p>
     <div class="schedule__scroll table-responsive" role="region" aria-label="完整单打赛程，可左右滚动" tabindex="0">
       <table class="schedule-table" data-schedule-table>
-        <caption class="sr-only">2026 年 11 月 15 日单打赛程，按 Excel 行序及场地排列</caption>
+        <caption class="sr-only">2026 年 11 月 15 日单打赛程，按开赛时间及场地排列</caption>
         <thead><tr><th scope="col">开赛时间</th>{% for court in schedule.courts %}<th scope="col">{{ court }} 号场地</th>{% endfor %}</tr></thead>
         <tbody>
           {% for row in schedule.rows %}
@@ -52,7 +51,7 @@ wide: true
             <td{% if match %} data-match data-court="{{ court }}" data-event="{{ match.eventId | escape }}" data-group="{{ match.group | escape }}" data-label="{{ match.label | escape }}" data-player1="{{ match.player1 | escape }}" data-player2="{{ match.player2 | escape }}"{% endif %}>
               {% if match %}
               {% assign division = match.label | split: '-' | first %}
-              <div class="schedule-match{% if court == 7 or court == 8 %} schedule-match--women{% elsif division == '红宝石' %} schedule-match--ruby{% elsif division == '蓝宝石' %} schedule-match--sapphire{% else %} schedule-match--a{% endif %}">
+              <div class="schedule-match{% if division == '女子' %} schedule-match--women{% elsif division == '红宝石' %} schedule-match--ruby{% elsif division == '蓝宝石' %} schedule-match--sapphire{% else %} schedule-match--a{% endif %}">
                 <span class="schedule-match__label">{{ match.label | escape }}</span>
                 <span><strong>{{ match.player1 | escape }}</strong> <span class="schedule-match__vs">vs</span></span>
                 <span><strong>{{ match.player2 | escape }}</strong></span>

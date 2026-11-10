@@ -1,9 +1,9 @@
 name: "Womens Singles"
 groups:
   "A": ["Alicia Wang","Haiyan Huang","Linda Zhou","Jie Deng"]
-  "B": ["Heli Yang","Riley Liu","Yingxi Ma","Meizhu Li"]
+  "B": ["Riley Liu","Yingxi Ma","Meizhu Li"]
   "C": ["Lei Ye","Lauren Shen","Tracy Zhang","June Jiang"]
-  "D": ["Shan Li","Jiayu Gao","Ye Li","Pamela Qi"]
+  "D": ["Shan Li","Jiayu Gao","Ye Li"]
 seeds: {}
 rules:
   advance: 2

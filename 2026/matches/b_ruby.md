@@ -7,6 +7,7 @@ wide: true
 
 <p>
   <a class="btn btn--outline" href="{{ '/2026/1115/' | relative_url }}">返回单打赛事页</a>
+  <a class="btn btn--outline" href="{{ '/2026/schedule/singles/' | relative_url }}">查看单打赛程</a>
 </p>
 
 ### 赛制

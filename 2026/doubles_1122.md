@@ -12,7 +12,7 @@ permalink: /2026/1122/
 
 地址：{{ t.venue.address }}。报名费：{{ day.fee_text }}。
 
-[赛事报名]({{ t.registration.url | relative_url }}) · [参赛规程]({{ '/#rules' | relative_url }}) · [单打赛程]({{ t.days[0].url | relative_url }})
+[赛事报名]({{ t.registration.url | relative_url }}) · [参赛规程]({{ '/#rules' | relative_url }}) · [单打赛程]({{ '/2026/schedule/singles/' | relative_url }})
 
 ## 赛程表
 

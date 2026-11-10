@@ -8,6 +8,13 @@ const ExcelJS = require('exceljs');
 const root = path.join(__dirname, '..');
 const sourcePath = path.join(root, 'make_draw', '2026', '111115', 'singles_combined_schedule.xlsx');
 const outputPath = path.join(root, '_data', 'schedules', '2026-singles.json');
+const MATCH_LIST_HEADERS = ['开始（估计）', '结束（估计）', '场地', '项目', '小组', '轮次', '球员 1', '球员 2'];
+const MATCH_LIST_EVENTS = {
+  红宝石: '2026-b-ruby',
+  蓝宝石: '2026-b-sapphire',
+  A级别: '2026-a-grade',
+  女子: '2026-womens-singles'
+};
 
 function cellText(cell) {
   const value = cell.value;
@@ -53,16 +60,66 @@ function readSchedule(sheet) {
   return { courts, rows };
 }
 
+function readMatchList(sheet) {
+  if (!sheet) throw new Error('Workbook must contain the Match List sheet.');
+  const headers = MATCH_LIST_HEADERS.map((_, index) => cellText(sheet.getCell(1, index + 1)));
+  if (headers.some((header, index) => header !== MATCH_LIST_HEADERS[index])) {
+    throw new Error('Match List headers do not match the expected format.');
+  }
+
+  const courts = new Set();
+  const rowsByTime = new Map();
+  for (let rowNumber = 2; rowNumber <= sheet.rowCount; rowNumber += 1) {
+    const row = sheet.getRow(rowNumber);
+    if (row.values.slice(1, MATCH_LIST_HEADERS.length + 1).every(value => value === null || value === undefined || value === '')) continue;
+
+    const time = cellText(row.getCell(1));
+    const court = row.getCell(3).value;
+    const division = cellText(row.getCell(4));
+    const group = cellText(row.getCell(5));
+    const round = row.getCell(6).value;
+    const player1 = cellText(row.getCell(7));
+    const player2 = cellText(row.getCell(8));
+    if (!time || !Number.isInteger(court) || court < 1 || court > 14 || court === 7 || court === 8) {
+      throw new Error(`Invalid time or court at Match List row ${rowNumber}.`);
+    }
+    if (!MATCH_LIST_EVENTS[division] || !/^[A-Z]+$/.test(group || '') || !Number.isInteger(round) || round < 1) {
+      throw new Error(`Invalid event, group or round at Match List row ${rowNumber}.`);
+    }
+    if (!player1 || !player2) throw new Error(`Missing player at Match List row ${rowNumber}.`);
+
+    const rowMatches = rowsByTime.get(time) || new Map();
+    if (rowMatches.has(court)) throw new Error(`Duplicate court ${court} at ${time}.`);
+    rowMatches.set(court, {
+      label: `${division}-${group}组-第${round}轮`,
+      player1,
+      player2
+    });
+    rowsByTime.set(time, rowMatches);
+    courts.add(court);
+  }
+  if (!rowsByTime.size) throw new Error('Match List has no matches.');
+
+  const courtList = [...courts].sort((a, b) => a - b);
+  return {
+    courts: courtList,
+    rows: [...rowsByTime].map(([time, rowMatches]) => ({
+      time,
+      matches: courtList.map(court => rowMatches.get(court) || null)
+    }))
+  };
+}
+
 function pageSchedule(schedule) {
   const divisions = { Ruby: '红宝石', Sapphire: '蓝宝石', A: 'A级别' };
-  const events = { 红宝石: '2026-b-ruby', 蓝宝石: '2026-b-sapphire', A级别: '2026-a-grade', 女子: '2026-womens-singles' };
+  const events = MATCH_LIST_EVENTS;
   const rows = schedule.rows.map(row => ({
     time: row.time,
     matches: row.matches.map((match, index) => {
       if (!match) return null;
       const court = schedule.courts[index];
       let label = match.label;
-      if (court === 7 || court === 8) {
+      if (label.startsWith('女子-') || court === 7 || court === 8) {
         const groupLabel = label.replace(/^女子-/, '');
         if (!/^(?:[A-Z]+-R\d+|[A-Z]+组-第\d+轮)$/.test(groupLabel)) return null;
         label = '女子-' + groupLabel;
@@ -81,13 +138,16 @@ function pageSchedule(schedule) {
   return { courts: schedule.courts, rows };
 }
 
-async function main() {
-  const bytes = await fs.readFile(sourcePath);
+async function main(inputPath = process.argv[2] ? path.resolve(root, process.argv[2]) : sourcePath) {
+  const bytes = await fs.readFile(inputPath);
   const workbook = new ExcelJS.Workbook();
   await workbook.xlsx.load(bytes);
-  const schedule = pageSchedule(readSchedule(workbook.getWorksheet('All Courts')));
+  const matchList = workbook.getWorksheet('Match List');
+  const schedule = pageSchedule(matchList
+    ? readMatchList(matchList)
+    : readSchedule(workbook.getWorksheet('All Courts')));
   const data = {
-    source: { file: path.basename(sourcePath), sheet: 'All Courts', sha256: crypto.createHash('sha256').update(bytes).digest('hex') },
+    source: { file: path.basename(inputPath), sheet: matchList ? 'Match List' : 'All Courts', sha256: crypto.createHash('sha256').update(bytes).digest('hex') },
     ...schedule
   };
   await fs.mkdir(path.dirname(outputPath), { recursive: true });
@@ -95,7 +155,7 @@ async function main() {
   console.log(`Imported ${schedule.rows.length} rows and ${schedule.courts.length} courts into ${outputPath}`);
 }
 
-module.exports = { readSchedule, pageSchedule };
+module.exports = { readSchedule, readMatchList, pageSchedule };
 if (require.main === module) {
   main().catch(error => { console.error(error.message); process.exitCode = 1; });
 }

@@ -25,8 +25,8 @@
 | [_config.yml](../_config.yml) | 比分仓库、分支、路径及构建排除项 |
 | `events/scores/<id>.json` | 原始比赛结果，由首次保存自动创建 |
 | [scripts/test-tournament.js](../scripts/test-tournament.js) | 无第三方依赖的算法回归测试 |
-| [2026/schedule/singles_backup.md](../2026/schedule/singles_backup.md)、[js/schedule.js](../js/schedule.js)、[css/schedule.css](../css/schedule.css) | 旧单打赛程备份（暂不发布）、球员/场地筛选和只读比分同步 |
-| [scripts/import-schedule.js](../scripts/import-schedule.js)、[_data/schedules/2026-singles.json](../_data/schedules/2026-singles.json) | 从源 Excel 导入赛程，保留赛事 ID 和组别用于比分匹配 |
+| [2026/schedule/singles.md](../2026/schedule/singles.md)、[js/schedule.js](../js/schedule.js)、[css/schedule.css](../css/schedule.css) | 已发布的 2026 单打赛程页、球员/场地筛选和只读比分同步 |
+| [scripts/import-schedule.js](../scripts/import-schedule.js)、[_data/schedules/2026-singles.json](../_data/schedules/2026-singles.json) | 从 Excel 的 `All Courts` 或 `Match List` 导入赛程，保留赛事 ID 和组别用于比分匹配 |
 | [scripts/test-schedule.js](../scripts/test-schedule.js) | 赛程导入、筛选、身份核对和模拟比分读写测试 |
 | [skills/generate_draw/generate_draw.js](../skills/generate_draw/generate_draw.js) | 赛前名单解析、种子分组、直接淘汰赛及 YAML 生成 |
 | [skills/generate_draw/README.md](../skills/generate_draw/README.md) | 抽签工具输入、命令、默认值与限制 |
@@ -258,9 +258,10 @@ tournament_scores:
 
 ### 8.3 单打赛程只读同步
 
-- 2026-11-10 因两个比赛日均无法使用 7/8 号场地，原赛程暂时撤下，保存为 [singles_backup.md](../2026/schedule/singles_backup.md)，设置 `published: false`；不保留旧赛程网址，也不从主页、赛事总览或分组页链接到备份。调整后的赛程另行公布，现有数据快照和 Excel 不改动。
-- 备份保留原赛程功能：读取与分组记分板相同的四个赛事比分文件，沿用 `tournament_scores` 仓库、分支和路径，不新增比分副本或写入入口。当前代码开发分支不改变比分存储分支。
-- 导入时给循环赛记录添加稳定的 `eventId`、`group`；运行时按赛事、组别和双方完整姓名匹配，不解析中文显示编号，姓名中的种子标记也必须一致。当前 105 场均为已实名的小组赛；未来淘汰赛赛程同步不在本次范围。
+- 2026-11-10 按停用 7/8 号场地的新工作簿恢复并发布 [singles.md](../2026/schedule/singles.md)，正式路径为 `/2026/schedule/singles/`。首页场地通知、单打总览、四个分组页及双打页均提供赛程入口；7/8 号场地仍停用，14 号场地从 10:00AM 起可用。
+- 赛程数据从 `make_draw/2026/111115/singles_backup_no_court_7_8.xlsx` 的 `Match List` 导入：99 场小组赛（A级别 24、红宝石 24、蓝宝石 33、女子 18），使用 1–6、9–14 号场地。女子赛程连续使用 3、4 号场地，8:00AM 至 12:30PM。
+- `node scripts/import-schedule.js <workbook>` 可导入指定工作簿；存在 `Match List` 时优先读取该表，否则沿用 `All Courts` 导入。导入为每场循环赛生成稳定的 `eventId`、`group`；运行时按赛事、组别和双方完整姓名匹配，不解析中文显示编号，姓名中的种子标记也必须一致。未来淘汰赛赛程同步不在本次范围。
+- 赛程页读取与分组记分板相同的四个赛事比分文件，沿用 `tournament_scores` 仓库、分支和路径，不新增比分副本或写入入口。当前代码开发分支不改变比分存储分支。
 - `window.ACTCTournamentScores` 仅公开 `pairKey`、`result`、`loadScores`、`cellText`，赛程复用现有读取、校验与比分方向规则，不公开写入方法。
 - 首次打开、每 60 秒、回到可见标签页及“刷新比分”时读取；后台暂停常规轮询，重叠请求被阻止。比分保存后的同步不依赖网站重建，但不是即时推送。
 - 完整表格和场地卡片按第一位选手视角显示比分，球员卡片按所选球员视角显示。匹配到有效结果后，三种视图都显示“已结束”及浅灰背景；W/O、RET 同时显示胜者。成功读取已清除的成绩后移除比分和结束标记，恢复原背景。
@@ -292,7 +293,7 @@ tournament_scores:
 
 无需登录，直接查看 Table 积分和 Match 轮次。页面定时刷新，也可手动刷新；共用现场 Wi-Fi 时可能因匿名限流产生数分钟延迟。
 
-2026 年 A 级别、红宝石区、蓝宝石区和女子单打项目页在标题说明下方保留“返回单打赛事页”按钮，链接到 `/2026/1115/`，使用 `relative_url` 保留站点路径配置。赛程调整期间隐藏“查看单打赛程”入口；分组、规则和记分板仍正常开放。
+2026 年 A 级别、红宝石区、蓝宝石区和女子单打项目页在标题说明下方提供“返回单打赛事页”和“查看单打赛程”按钮，分别链接到 `/2026/1115/` 和 `/2026/schedule/singles/`，使用 `relative_url` 保留站点路径配置；分组、规则和记分板仍正常开放。
 
 ## 10. 安全与排错
 
@@ -353,6 +354,7 @@ git diff --check
 | 2026-11-08：赛程页提示位置 | 刷新按钮和同步文字移到表格/筛选卡片下方；球员及场地视图删除 Excel 姓名提示，保留晋级对阵说明；比分同步逻辑不变 |
 | 2026-11-08：项目页导航 | 四个单打项目页新增返回赛事总览及查看单打赛程的按钮，保留原赛制和记分板 include |
 | 2026-11-10：场地调整与赛程撤下 | 两个比赛日停用 7/8 号场地；首页首条为不带链接的醒目通知，隐藏赛程入口，旧页改为未发布的 `singles_backup.md`；分组及比分保持不变 |
+| 2026-11-10：按新工作簿恢复赛程 | 从停用 7/8 号场地工作簿导入 99 场、12 片可用场地；恢复并发布 `singles.md`，更新首页、单打总览、分组和双打页入口；导入器支持 `Match List` 格式 |
 
 后续每次修改时：
 

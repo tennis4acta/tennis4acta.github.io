@@ -15,7 +15,9 @@ permalink: /2026/1115/
 
 ## 赛程表
 
-赛程因场地调整暂时撤下，具体安排会稍后公布，请留意本网站及球会群的通知。
+场地调整后的单打赛程已公布。
+
+<a class="btn btn--primary" href="{{ '/2026/schedule/singles/' | relative_url }}">查看调整后的单打赛程</a>
 
 ## 分组及比分
 
@@ -54,9 +56,9 @@ permalink: /2026/1115/
     <span class="mcard__badge">女子单打</span>
     <h3>女子单打</h3>
     <ul class="mcard__stats">
-      <li><b>16</b><span>球员</span></li>
+      <li><b>14</b><span>球员</span></li>
       <li><b>4</b><span>小组</span></li>
-      <li><b>4</b><span>人/组</span></li>
+      <li><b>3–4</b><span>人/组</span></li>
     </ul>
     <span class="mcard__go">查看分组及比分 →</span>
   </a>
