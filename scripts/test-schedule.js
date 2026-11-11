@@ -29,7 +29,7 @@ function jsonResponse(data, status = 200) {
 function sheet() {
   const workbook = new ExcelJS.Workbook();
   const result = workbook.addWorksheet('All Courts');
-  result.addRow(['Timestamp', ...Array.from({ length: 13 }, (_, index) => `Court ${index + 1}`)]);
+  result.addRow(['Timestamp', ...[1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15].map(court => `Court ${court}`)]);
   return result;
 }
 
@@ -50,6 +50,19 @@ test('imports blank following times, not-before times and rich-text match cells 
   assert.equal(schedule.rows[2].time, 'Not before\n9:30AM');
   assert.deepEqual(schedule.rows[1].matches[0], { label: 'A-A-R2', player1: 'Frank Zhang', player2: 'Simon Yu' });
   assert.equal(schedule.rows[0].matches[1], null);
+});
+
+test('reads Court 15 from the All Courts matrix', () => {
+  const source = sheet();
+  source.addRow(['10:00AM', ...Array(12).fill(null), 'Ruby-C-R2\nAlice vs Bob']);
+
+  const schedule = readSchedule(source);
+  assert.equal(schedule.courts[12], 15);
+  assert.deepEqual(schedule.rows[0].matches[12], {
+    label: 'Ruby-C-R2',
+    player1: 'Alice',
+    player2: 'Bob'
+  });
 });
 
 test('imports the adjusted workbook Match List and keeps women matches on their reassigned courts', () => {
@@ -90,6 +103,15 @@ test('rejects invalid or duplicate courts in a Match List', () => {
   source.getRow(2).getCell(3).value = 3;
   source.addRow(['8:00AM', '8:30AM', 3, '女子', 'A', 1, 'Carol', 'Dana']);
   assert.throws(() => readMatchList(source), /Duplicate court/);
+});
+
+test('imports Court 15 and rejects courts outside the venue allocation', () => {
+  const source = matchListSheet();
+  source.addRow(['10:00AM', '10:30AM', 15, '红宝石', 'C', 2, 'Alice', 'Bob']);
+  assert.deepEqual(readMatchList(source).courts, [15]);
+
+  source.getRow(2).getCell(3).value = 16;
+  assert.throws(() => readMatchList(source), /Invalid time or court/);
 });
 
 test('suggests only real, unique players after at least three characters, ignoring case', () => {
@@ -274,6 +296,50 @@ test('schedule snapshot identities match current event group players including s
       && match.player1 === player1 && match.player2 === player2
       ? { time: row.time, court: data.courts[index] }
       : null)).find(Boolean);
-  assert.deepEqual(rubyBMatch('Jifan Zhang', 'Chenxiao Xu'), { time: '10:00AM', court: 1 });
+  assert.deepEqual(rubyBMatch('Jifan Zhang', 'Chenxiao Xu'), { time: '10:30AM', court: 14 });
   assert.deepEqual(rubyBMatch('Chenxiao Xu', 'David Cheung'), { time: '8:30AM', court: 1 });
+  assert.deepEqual(rubyBMatch('Jifan Zhang', 'David Cheung'), { time: '11:30AM', court: 14 });
+
+  const rubyCourts = { A: 14, B: 14, C: 15, D: 15, E: 1, F: 1, G: 2, H: 2 };
+  const toMinutes = time => {
+    const [, hours, minutes, meridiem] = /^(\d+):(\d{2})(AM|PM)$/.exec(time);
+    return ((Number(hours) % 12) + (meridiem === 'PM' ? 12 : 0)) * 60 + Number(minutes);
+  };
+  const scheduled = data.rows.flatMap(row => row.matches.map((match, index) => match && ({
+    ...match,
+    start: row.time,
+    court: data.courts[index]
+  }))).filter(Boolean);
+  const ruby = scheduled.filter(match => match.eventId === '2026-b-ruby');
+  for (const match of ruby.filter(match => toMinutes(match.start) >= 600)) {
+    assert.equal(match.court, rubyCourts[match.group], `${match.group} at ${match.start}`);
+  }
+  assert.equal(ruby.find(match => match.group === 'H' && match.label.endsWith('第3轮')).start, '11:30AM');
+  for (const court of [1, 2, 14, 15]) {
+    const starts = ruby.filter(match => match.court === court && toMinutes(match.start) >= 600)
+      .map(match => toMinutes(match.start))
+      .sort((a, b) => a - b);
+    assert.deepEqual(starts, [600, 630, 660, 690], `Court ${court} should have no idle half-hour slots`);
+  }
+
+  const startsByPlayer = new Map();
+  for (const match of scheduled) {
+    for (const player of [match.player1, match.player2]) {
+      const starts = startsByPlayer.get(player) || [];
+      starts.push(toMinutes(match.start));
+      startsByPlayer.set(player, starts);
+    }
+    if ([14, 15].includes(match.court)) {
+      assert.ok(toMinutes(match.start) >= 600, `Court ${match.court} starts too early`);
+      assert.ok(toMinutes(match.start) + 30 <= 960, `Court ${match.court} runs past 4:00PM`);
+    }
+    assert.notEqual(match.court, 7);
+    assert.notEqual(match.court, 8);
+  }
+  for (const [player, starts] of startsByPlayer) {
+    starts.sort((a, b) => a - b);
+    for (let index = 1; index < starts.length; index += 1) {
+      assert.ok(starts[index] - starts[index - 1] >= 60, `${player} has less than 30 minutes' rest`);
+    }
+  }
 });

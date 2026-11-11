@@ -35,7 +35,9 @@ function readSchedule(sheet) {
     const match = /^Court (\d+)$/.exec(header || '');
     if (!match) throw new Error(`Invalid court header at column ${column}.`);
     const court = Number(match[1]);
-    if (courts.includes(court) || court < 1 || court > 13) throw new Error(`Invalid or duplicate court ${court}.`);
+    if (courts.includes(court) || court < 1 || court > 15 || court === 7 || court === 8) {
+      throw new Error(`Invalid or duplicate court ${court}.`);
+    }
     courts.push(court);
   }
   if (courts.length !== 13) throw new Error('Expected all 13 courts.');
@@ -80,7 +82,7 @@ function readMatchList(sheet) {
     const round = row.getCell(6).value;
     const player1 = cellText(row.getCell(7));
     const player2 = cellText(row.getCell(8));
-    if (!time || !Number.isInteger(court) || court < 1 || court > 14 || court === 7 || court === 8) {
+    if (!time || !Number.isInteger(court) || court < 1 || court > 15 || court === 7 || court === 8) {
       throw new Error(`Invalid time or court at Match List row ${rowNumber}.`);
     }
     if (!MATCH_LIST_EVENTS[division] || !/^[A-Z]+$/.test(group || '') || !Number.isInteger(round) || round < 1) {

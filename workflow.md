@@ -395,3 +395,29 @@
 - 按用户要求交换红宝石 B 组第 1、2 轮的赛程时段：第 2 轮改为 8:30AM、Court 1；第 1 轮改为 10:00AM、Court 1。第 3 轮仍为 11:30AM、Court 14；两场间相关球员均保留至少 60 分钟休息。
 - 同步更新工作簿 `All Courts`、`Match List`、`Group Assignments` 和说明备注，并从工作簿重新生成 [赛程快照](_data/schedules/2026-singles.json)；公开赛程页自动显示更新后的轮次时段。
 - 验证：赛程测试 15 项及记分板回归测试通过；核对工作簿与快照中 B 组对阵、轮次、时间、场地一致，其他比赛数量及总场数 99 不变。Jekyll 构建未运行（环境缺少 `bundle`）；未修改比分、未提交或推送 Git。
+
+## 2026-11-11：确认单打场地时段与红宝石组分配
+
+### 设计决定
+
+- 按俱乐部经理确认，11 月 15 日 Court 3–6、9–13 为 8:00AM–4:00PM；Court 1、2 为 8:00AM–6:00PM；Court 14、15 为 10:00AM–4:00PM；Court 7、8 停用。
+- 按用户指定，10:00AM 起红宝石 A、B 组使用 Court 14，C、D 组使用 Court 15，E、F 组使用 Court 1，G、H 组使用 Court 2。10:00AM 前的红宝石赛程保留原场地。
+- 将受新分配影响的 16 场红宝石比赛按原有比赛顺序尽早安排到指定场地；有场地冲突时顺延半小时，保持球员至少 30 分钟休息及场地开放时段。红宝石小组赛预计结束时间由 1:00PM 调整为 1:30PM。
+
+### 实际完成
+
+- 更新 [单打赛程工作簿](make_draw/2026/111115/singles_backup_no_court_7_8.xlsx) 的 `All Courts`、`Match List`、`Group Assignments` 和 `Notes`，加入 Court 15 并同步新时段、分组场地及预计结束时间。
+- 更新 [赛程导入器](scripts/import-schedule.js) 以支持 Court 15 和 13 片可用场地；从当前工作簿重新生成 [赛程快照](_data/schedules/2026-singles.json)，并在 [正式赛程页](2026/schedule/singles.md) 显示俱乐部确认的开放时段与红宝石组场地分配。
+
+### 验证与未验证事项
+
+- `node --test scripts/test-schedule.js` 17 项全部通过；`node scripts/test-tournament.js` 通过；`git diff --check` 通过。
+- ExcelJS 重读工作簿，核对 `All Courts` 与 `Match List` 的 99 场比赛一致；确认 Court 14、15 的开放时段、Court 15 仅安排红宝石、指定组别场地、无场地重叠及球员至少 30 分钟休息。
+- 未运行 Jekyll 构建或核验线上部署（此前环境未识别 `bundle`）；未修改真实比分，未提交或推送 Git。
+
+## 2026-11-11：同步最新赛程矩阵并修正轮次标签
+
+- 按用户在工作簿 `All Courts` 中的最新调整，将 14 场红宝石比赛的时间同步到 `Match List` 和 `Group Assignments`，保留其场地矩阵不变。Court 14、15、1、2 在 10:00AM–12:00PM 连续排满，赛程按组别轮次顺序安排；红宝石小组赛预计结束时间更新为 12:00PM。
+- 修正此前写入 `All Courts` 的 99 个比赛标签错字，将“第 N 辞”改为“第 N 轮”；比赛时间、场地、对阵和顺序不变。重新生成 [赛程快照](_data/schedules/2026-singles.json)以更新工作簿来源哈希。
+- 验证：赛程测试 17 项全部通过；`All Courts`、`Match List` 共 99 场逐项一致；四片红宝石场地在指定时段无空档，且无场地冲突、球员休息不足或错误轮次字形。记分板算法测试通过。
+- 未运行 Jekyll 构建或核验线上部署；未修改真实比分，未提交或推送 Git。

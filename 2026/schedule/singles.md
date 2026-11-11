@@ -35,7 +35,7 @@ wide: true
     <p>晋级后对阵以赛会公布为准。</p>
   </section>
   <div data-schedule-full>
-    <p class="schedule__scroll-hint">左右滑动查看全部场地；时间列固定在左侧。A 级别、红宝石区、蓝宝石区和女子单打以比赛标识区分。14 号场地上午 10:00 起可用；7、8 号场地停用。</p>
+    <p class="schedule__scroll-hint">左右滑动查看全部场地；时间列固定在左侧。A 级别、红宝石区、蓝宝石区和女子单打以比赛标识区分。1、2 号场地开放时间为 8:00AM–6:00PM；3–6、9–13 号场地为 8:00AM–4:00PM；14、15 号场地为 10:00AM–4:00PM；7、8 号场地停用。红宝石组 10:00AM 起按组别使用场地：A、B 组为 14 号，C、D 组为 15 号，E、F 组为 1 号，G、H 组为 2 号。</p>
     <p class="schedule__scroll-hint">注意：赛会保留更改场地的权利。</p>
     <div class="schedule__scroll table-responsive" role="region" aria-label="完整单打赛程，可左右滚动" tabindex="0">
       <table class="schedule-table" data-schedule-table>
