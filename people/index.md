@@ -33,6 +33,7 @@ wide: true
         <li>国际网联ITF一级教练员</li>
         <li>原上海网球队主教练</li>
         <li>上海围城网球俱乐部</li>
+        <li>上海围城俱乐部副总经理，兼职教练</li>
       </ul>
     </div>
   </article>
@@ -57,10 +58,11 @@ wide: true
     <img src="/img/flickr/28494934862_b0c4c8fcc2_c.jpg" alt="韩蓓">
     <div class="pcard__body">
       <h3>韩蓓</h3>
-      <p class="role">前中国国家网球队队员</p>
+      <p class="role">前中国国家网球队队员，澳洲华人网球会名誉顾问</p>
       <ul>
         <li>国际网联ITF二级教练员</li>
         <li>原四川网球队教练</li>
+        <li>退役后长期从事青少年网球教学，曾担任澳网温网女双冠军郑洁晏紫少年时期的教练</li>
       </ul>
     </div>
   </article>
