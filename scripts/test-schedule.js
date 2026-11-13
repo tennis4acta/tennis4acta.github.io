@@ -296,9 +296,9 @@ test('schedule snapshot identities match current event group players including s
       && match.player1 === player1 && match.player2 === player2
       ? { time: row.time, court: data.courts[index] }
       : null)).find(Boolean);
-  assert.deepEqual(rubyBMatch('Jifan Zhang', 'Chenxiao Xu'), { time: '10:30AM', court: 14 });
   assert.deepEqual(rubyBMatch('Chenxiao Xu', 'David Cheung'), { time: '8:30AM', court: 1 });
-  assert.deepEqual(rubyBMatch('Jifan Zhang', 'David Cheung'), { time: '11:30AM', court: 14 });
+  assert.deepEqual(rubyBMatch('Jifan Zhang', 'David Cheung'), { time: '10:30AM', court: 14 });
+  assert.deepEqual(rubyBMatch('Jifan Zhang', 'Chenxiao Xu'), { time: '11:30AM', court: 14 });
 
   const rubyCourts = { A: 14, B: 14, C: 15, D: 15, E: 1, F: 1, G: 2, H: 2 };
   const toMinutes = time => {
@@ -341,5 +341,41 @@ test('schedule snapshot identities match current event group players including s
     for (let index = 1; index < starts.length; index += 1) {
       assert.ok(starts[index] - starts[index - 1] >= 60, `${player} has less than 30 minutes' rest`);
     }
+  }
+});
+
+test('schedule group rounds follow the event page round-robin order', () => {
+  const yaml = require('js-yaml');
+  const source = fs.readFileSync(path.join(__dirname, '../js/tournament.js'), 'utf8');
+  const context = { window: {} };
+  vm.createContext(context);
+  vm.runInContext(source.slice(0, source.indexOf('  // ---------- GitHub storage')) + '\nwindow.roundRobin = roundRobin; })();', context);
+  const data = require('../_data/schedules/2026-singles.json');
+  const toMinutes = time => {
+    const [, hours, minutes, meridiem] = /^(\d+):(\d{2})(AM|PM)$/.exec(time);
+    return ((Number(hours) % 12) + (meridiem === 'PM' ? 12 : 0)) * 60 + Number(minutes);
+  };
+  const key = (a, b) => [a, b].sort().join('|');
+  const groups = new Map();
+  for (const row of data.rows) {
+    for (const match of row.matches.filter(Boolean)) {
+      const id = match.eventId + ' ' + match.group;
+      if (!groups.has(id)) groups.set(id, []);
+      groups.get(id).push({ ...match, start: toMinutes(row.time) });
+    }
+  }
+  assert.equal(groups.size, 28);
+  for (const [id, matches] of groups) {
+    const [eventId, group] = id.split(' ');
+    const config = yaml.load(fs.readFileSync(path.join(__dirname, '../_data/events', eventId + '.yml'), 'utf8'));
+    const rounds = context.window.roundRobin(config.groups[group]);
+    const slots = [...new Set(matches.map(match => match.start))].sort((a, b) => a - b);
+    assert.equal(slots.length, rounds.length, id);
+    slots.forEach((start, index) => {
+      const scheduled = matches.filter(match => match.start === start);
+      assert.deepEqual(scheduled.map(match => key(match.player1, match.player2)).sort(),
+        Array.from(rounds[index].pairs, ([a, b]) => key(a, b)).sort(), `${id} slot ${index + 1}`);
+      for (const match of scheduled) assert.ok(match.label.endsWith(`第${index + 1}轮`), `${id} ${match.label}`);
+    });
   }
 });
