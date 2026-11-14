@@ -1,5 +1,15 @@
 {
   "matches": {
+    "RR|A|Frank Zhang|Simon Yu": {
+      "p": [
+        "Frank Zhang",
+        "Simon Yu"
+      ],
+      "s": "6-5",
+      "w": "Frank Zhang",
+      "t": "2026-11-14T21:46:56.279Z",
+      "by": "sheenzhaox"
+    },
     "RR|B|Michael Zishan Deng|Timothy Chen": {
       "p": [
         "Michael Zishan Deng",
@@ -21,5 +31,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-14T21:38:47.963Z"
+  "updated": "2026-11-14T21:46:57.260Z"
 }
