@@ -60,6 +60,16 @@
       "t": "2026-11-15T02:29:36.952Z",
       "by": "sheenzhaox"
     },
+    "KO|1|8": {
+      "p": [
+        "James Yuan",
+        "Sizhe Tu"
+      ],
+      "s": "6-4",
+      "w": "James Yuan",
+      "t": "2026-11-15T03:35:53.937Z",
+      "by": "sheenzhaox"
+    },
     "RR|A|Benson Huang [1]|Frank Zhang": {
       "p": [
         "Benson Huang [1]",
@@ -301,5 +311,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-15T03:31:21.000Z"
+  "updated": "2026-11-15T03:35:54.710Z"
 }
