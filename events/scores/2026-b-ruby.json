@@ -1,5 +1,15 @@
 {
   "matches": {
+    "KO|1|5": {
+      "p": [
+        "David Cheung",
+        "Darren Zhong"
+      ],
+      "s": "5-0",
+      "w": "David Cheung",
+      "t": "2026-11-15T01:43:32.469Z",
+      "by": "sheenzhaox"
+    },
     "RR|A|Darren Zhong|Eric Wong": {
       "p": [
         "Eric Wong",
@@ -221,5 +231,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-15T01:37:11.315Z"
+  "updated": "2026-11-15T01:43:32.996Z"
 }
