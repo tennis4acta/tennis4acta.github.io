@@ -140,6 +140,16 @@
       "t": "2026-11-15T02:05:09.880Z",
       "by": "sheenzhaox"
     },
+    "RR|F|Chong Shi|James Yuan": {
+      "p": [
+        "James Yuan",
+        "Chong Shi"
+      ],
+      "s": "6-2",
+      "w": "James Yuan",
+      "t": "2026-11-15T02:23:27.084Z",
+      "by": "sheenzhaox"
+    },
     "RR|F|Chong Shi|Luming Qiu": {
       "p": [
         "Luming Qiu",
@@ -211,5 +221,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-15T02:23:11.169Z"
+  "updated": "2026-11-15T02:23:27.962Z"
 }
