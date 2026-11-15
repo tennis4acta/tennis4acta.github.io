@@ -50,6 +50,16 @@
       "t": "2026-11-15T04:31:05.068Z",
       "by": "sheenzhaox"
     },
+    "KO|2|2": {
+      "p": [
+        "Riley Liu",
+        "Ye Li"
+      ],
+      "s": "5-0",
+      "w": "Riley Liu",
+      "t": "2026-11-15T04:36:49.031Z",
+      "by": "sheenzhaox"
+    },
     "RR|A|Alicia Wang|Haiyan Huang": {
       "p": [
         "Alicia Wang",
@@ -231,5 +241,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-15T04:31:06.181Z"
+  "updated": "2026-11-15T04:36:49.651Z"
 }
