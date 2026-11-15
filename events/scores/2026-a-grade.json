@@ -120,6 +120,16 @@
       "t": "2026-11-14T22:25:14.107Z",
       "by": "sheenzhaox"
     },
+    "RR|E|Donny Jiang|Richard Gong": {
+      "p": [
+        "Richard Gong",
+        "Donny Jiang"
+      ],
+      "s": "2-6",
+      "w": "Donny Jiang",
+      "t": "2026-11-15T01:30:45.515Z",
+      "by": "sheenzhaox"
+    },
     "RR|F|Chong Shi|Luming Qiu": {
       "p": [
         "Luming Qiu",
@@ -181,5 +191,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-15T01:29:35.212Z"
+  "updated": "2026-11-15T01:30:46.042Z"
 }
