@@ -1,5 +1,15 @@
 {
   "matches": {
+    "RR|A|Alicia Wang|Haiyan Huang": {
+      "p": [
+        "Alicia Wang",
+        "Haiyan Huang"
+      ],
+      "s": "5-0",
+      "w": "Alicia Wang",
+      "t": "2026-11-15T00:20:20.559Z",
+      "by": "sheenzhaox"
+    },
     "RR|A|Alicia Wang|Jie Deng": {
       "p": [
         "Alicia Wang",
@@ -111,5 +121,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-15T00:03:18.523Z"
+  "updated": "2026-11-15T00:20:21.369Z"
 }
