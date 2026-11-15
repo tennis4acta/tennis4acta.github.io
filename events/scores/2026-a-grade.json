@@ -130,6 +130,16 @@
       "t": "2026-11-15T01:30:45.515Z",
       "by": "sheenzhaox"
     },
+    "RR|E|Marcus Gock|Richard Gong": {
+      "p": [
+        "Richard Gong",
+        "Marcus Gock"
+      ],
+      "s": "2-6",
+      "w": "Marcus Gock",
+      "t": "2026-11-15T02:05:09.880Z",
+      "by": "sheenzhaox"
+    },
     "RR|F|Chong Shi|Luming Qiu": {
       "p": [
         "Luming Qiu",
@@ -191,5 +201,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-15T01:30:46.042Z"
+  "updated": "2026-11-15T02:05:10.498Z"
 }
