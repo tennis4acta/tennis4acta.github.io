@@ -1,5 +1,15 @@
 {
   "matches": {
+    "RR|A|Benson Huang [1]|Frank Zhang": {
+      "p": [
+        "Benson Huang [1]",
+        "Frank Zhang"
+      ],
+      "s": "6-0",
+      "w": "Benson Huang [1]",
+      "t": "2026-11-15T00:22:59.024Z",
+      "by": "sheenzhaox"
+    },
     "RR|A|Benson Huang [1]|Simon Yu": {
       "p": [
         "Benson Huang [1]",
@@ -131,5 +141,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-14T23:58:50.054Z"
+  "updated": "2026-11-15T00:22:59.542Z"
 }
