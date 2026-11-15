@@ -60,6 +60,16 @@
       "t": "2026-11-14T23:23:53.128Z",
       "by": "sheenzhaox"
     },
+    "RR|C|Gui Zhihong|Jesse Chan": {
+      "p": [
+        "Jesse Chan",
+        "Gui Zhihong"
+      ],
+      "s": "0-6",
+      "w": "Gui Zhihong",
+      "t": "2026-11-15T01:16:23.716Z",
+      "by": "sheenzhaox"
+    },
     "RR|D|Howard Cai|Jianzhong Yin": {
       "p": [
         "Howard Cai",
@@ -281,5 +291,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-15T01:15:58.047Z"
+  "updated": "2026-11-15T01:16:24.350Z"
 }
