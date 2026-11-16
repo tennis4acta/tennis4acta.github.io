@@ -529,3 +529,11 @@
 - 按用户要求，移除首页顶部两条通知横幅（“重要通知：7&8号球场停用”“11月15日单打分组已公布”），改为一条：“11月15日单打比赛已顺利结束”，正文感谢球员、裁判及志愿者，并预告 11 月 22 日双打赛程于本周三（11 月 18 日）发布。保留“查看单打成绩”按钮，链接 `/2026/1115/`。
 - 只修改 [tournament.yml](_data/tournament.yml) 的 `announcements`。页面下方“场地调整公告”通知区（7/8 号场地两个比赛日均停用）仍适用于双打，予以保留。
 - 验证：`js-yaml` 解析通过，链接页面的 permalink 存在；`git diff --check` 通过。本机无 Jekyll，未构建或目视检查首页，未提交或推送 Git。
+
+## 2026-11-16：比分录入测试页
+
+- 按用户要求，新建测试页 [score_update.md](test/2026/score_update.md)，路径为 `/test/2026/score_update/`，设置 `noindex, nofollow`，不加入导航，页首标明非正式比赛。
+- 用加密随机数从 [女子单打配置](_data/events/2026-womens-singles.yml) 的 14 人中抽取 8 人并打乱分组。A 组：Shan Li、Ye Li、Tracy Zhang、Jie Deng；B 组：Meizhu Li、June Jiang、Linda Zhou、Alicia Wang。新增配置 [test-2026-score-update.yml](_data/events/test-2026-score-update.yml)：每组前 2 名进入半决赛（A1 vs B2、B1 vs A2），不打三四名赛；局制、排名规则及 `wo_score: "5-0"` 与女子单打相同。
+- 随机赛程 [test-2026-score-update.json](_data/schedules/test-2026-score-update.json)：从 13 片可用场地随机选出 4、10、11、13 号场。12 场小组赛按 `roundRobin()` 分为 3 轮（9:00、9:45、10:30，仅作数据占位），每轮 4 场随机分配到这 4 片场地；配置通过 `schedule` 引用，开赛时默认填入该场地。生成脚本保存在会话目录，未加入仓库。
+- [test-schedule.js](scripts/test-schedule.js) 的场地覆盖测试改为按赛程分别计数（`2026-singles` 99 场、测试赛程 12 场）。[技术记录](ai_tools/scoreboard.md) 第 11 节记录测试页及重置方法。
+- 验证：配置经 `js-yaml` 解析通过；`node scripts/test-tournament.js` 通过，`node --test scripts/test-schedule.js` 20 项通过；本地及 `origin/master` 均无同名比分文件。本机无 Jekyll，页面未构建或目视检查；首次在线录入会在远程生成 `events/scores/test-2026-score-update.json`，删除该文件即可重置。未提交或推送 Git。

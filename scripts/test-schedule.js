@@ -416,7 +416,7 @@ test('event configs with a schedule get a default court for every round-robin ma
     '\nwindow.t = { roundRobin, scheduleCourts, pairKey }; })();', context);
   const { roundRobin, scheduleCourts, pairKey } = context.window.t;
   const dir = path.join(__dirname, '../_data/events');
-  let checked = 0;
+  const checked = {};
   for (const file of fs.readdirSync(dir).filter(name => name.endsWith('.yml'))) {
     const config = yaml.load(fs.readFileSync(path.join(dir, file), 'utf8'));
     if (!config || !config.schedule) continue;
@@ -427,10 +427,11 @@ test('event configs with a schedule get a default court for every round-robin ma
       for (const round of roundRobin(players)) {
         for (const [a, b] of round.pairs) {
           assert.match(courts.get(pairKey('RR|' + group, a, b)) || '', /^\d+$/, `${id} ${group} ${a} vs ${b}`);
-          checked += 1;
+          checked[config.schedule] = (checked[config.schedule] || 0) + 1;
         }
       }
     }
   }
-  assert.equal(checked, 99);
+  assert.equal(checked['2026-singles'], 99);
+  assert.equal(checked['test-2026-score-update'], 12);
 });
