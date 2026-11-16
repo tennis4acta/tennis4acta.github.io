@@ -18,8 +18,8 @@ function scoreTools(fetch) {
   };
   vm.createContext(context);
   const source = fs.readFileSync(path.join(__dirname, '../js/tournament.js'), 'utf8');
-  vm.runInContext(source.replace('  window.ACTCTournamentScores =', '  window.testWriteMatch = writeMatch;\n  window.ACTCTournamentScores ='), context);
-  return { ...context.window.ACTCTournamentScores, writeMatch: context.window.testWriteMatch };
+  vm.runInContext(source.replace('  window.ACTCTournamentScores =', '  window.testWriteMatch = writeMatch;\n  window.testLiveUpdate = liveUpdate;\n  window.ACTCTournamentScores ='), context);
+  return { ...context.window.ACTCTournamentScores, writeMatch: context.window.testWriteMatch, liveUpdate: context.window.testLiveUpdate };
 }
 
 function jsonResponse(data, status = 200) {
@@ -214,6 +214,33 @@ test('a mocked scoreboard submission is read by the schedule with correct table 
   assert.equal(scoreForMatch(match, { matches: {} }, tools), null);
 });
 
+test('knockout in-progress marks are saved and cancelled without overwriting a concurrently saved score', async () => {
+  let stored = { matches: {} };
+  let writes = 0;
+  const tools = scoreTools(async (url, options = {}) => {
+    if (options.method === 'PUT') {
+      stored = JSON.parse(Buffer.from(JSON.parse(options.body).content, 'base64').toString('utf8'));
+      writes += 1;
+      return jsonResponse({ content: { sha: 'next-sha' } });
+    }
+    return jsonResponse({ sha: 'current-sha', content: Buffer.from(JSON.stringify(stored)).toString('base64') });
+  });
+  const client = { id: 'test-event', repo: 'example/test', branch: 'test', path: 'scores' };
+  const key = 'KO|1|1';
+  await tools.writeMatch(client, key, tools.liveUpdate(key, 'Alice', 'Bob', { p: ['Alice', 'Bob'], live: true, c: '5' }), 'start');
+  assert.deepEqual(stored.matches[key], { p: ['Alice', 'Bob'], live: true, c: '5' });
+  assert.equal(tools.result(stored.matches, key, 'Alice', 'Bob'), null);
+  await tools.writeMatch(client, key, tools.liveUpdate(key, 'Alice', 'Bob', null), 'cancel');
+  assert.equal(stored.matches[key], undefined);
+  stored.matches[key] = { p: ['Bob', 'Alice'], s: '4-6', w: 'Alice' };
+  await assert.rejects(
+    tools.writeMatch(client, key, tools.liveUpdate(key, 'Alice', 'Bob', { p: ['Alice', 'Bob'], live: true }), 'late start'),
+    error => error.userMessage === '该场比赛已录入比分，请刷新后查看。');
+  await assert.rejects(tools.writeMatch(client, key, tools.liveUpdate(key, 'Alice', 'Bob', null), 'late cancel'));
+  assert.equal(writes, 2);
+  assert.equal(stored.matches[key].w, 'Alice');
+});
+
 test('refresh preserves failed event scores and last-read time, updates other events, and handles a cleared score', async () => {
   const tools = scoreTools(async () => { throw new Error('Unexpected fetch'); });
   const old = { matches: { 'RR|A|Alice|Bob': { p: ['Alice', 'Bob'], s: '6-4', w: 'Alice' } } };
@@ -378,4 +405,32 @@ test('schedule group rounds follow the event page round-robin order', () => {
       for (const match of scheduled) assert.ok(match.label.endsWith(`第${index + 1}轮`), `${id} ${match.label}`);
     });
   }
+});
+
+test('event configs with a schedule get a default court for every round-robin match', () => {
+  const yaml = require('js-yaml');
+  const source = fs.readFileSync(path.join(__dirname, '../js/tournament.js'), 'utf8');
+  const context = { window: {} };
+  vm.createContext(context);
+  vm.runInContext(source.slice(0, source.indexOf('  // ---------- GitHub storage')) +
+    '\nwindow.t = { roundRobin, scheduleCourts, pairKey }; })();', context);
+  const { roundRobin, scheduleCourts, pairKey } = context.window.t;
+  const dir = path.join(__dirname, '../_data/events');
+  let checked = 0;
+  for (const file of fs.readdirSync(dir).filter(name => name.endsWith('.yml'))) {
+    const config = yaml.load(fs.readFileSync(path.join(dir, file), 'utf8'));
+    if (!config || !config.schedule) continue;
+    const id = file.replace(/\.yml$/, '');
+    const schedule = JSON.parse(fs.readFileSync(path.join(__dirname, '../_data/schedules', config.schedule + '.json'), 'utf8'));
+    const courts = scheduleCourts(schedule, id);
+    for (const [group, players] of Object.entries(config.groups)) {
+      for (const round of roundRobin(players)) {
+        for (const [a, b] of round.pairs) {
+          assert.match(courts.get(pairKey('RR|' + group, a, b)) || '', /^\d+$/, `${id} ${group} ${a} vs ${b}`);
+          checked += 1;
+        }
+      }
+    }
+  }
+  assert.equal(checked, 99);
 });

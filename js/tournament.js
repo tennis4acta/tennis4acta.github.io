@@ -57,6 +57,22 @@
   }
 
   const flipScore = (s) => String(s || '').replace(/(\d+)([-:])(\d+)/g, '$3$2$1');
+
+  // Per-set editor rows {a, b, mtb} -> stored score string from player a's view, e.g. "6-4 3-6 [10-8]".
+  function setsToScore(rows) {
+    const filled = (r) => String(r.a).trim() !== '' || String(r.b).trim() !== '';
+    let last = -1;
+    rows.forEach((r, i) => { if (filled(r)) last = i; });
+    const parts = [];
+    for (let i = 0; i <= last; i++) {
+      const x = String(rows[i].a).trim(), y = String(rows[i].b).trim();
+      if (!/^\d{1,2}$/.test(x) || !/^\d{1,2}$/.test(y)) return { error: '请填写第' + (i + 1) + '盘双方局数（0–99）。' };
+      if (+x === +y) return { error: '第' + (i + 1) + '盘双方局数不能相同。' };
+      const s = +x + '-' + +y;
+      parts.push(rows[i].mtb ? '[' + s + ']' : s);
+    }
+    return { score: parts.join(' ') };
+  }
   const pairKey = (prefix, a, b) => [prefix].concat([a, b].sort()).join('|');
 
   // Result oriented to player a; null if not played or the record belongs to other players.
@@ -70,9 +86,43 @@
     return { winner: r.w, loser: r.w === a ? b : a, score, note: r.n || '', sets: parseScore(score) };
   }
 
+  // Knockout match marked in progress (no winner yet); ignored once players no longer match.
+  function liveInfo(matches, key, a, b) {
+    const r = matches[key];
+    if (!r || r.w || !r.live || !Array.isArray(r.p)) return null;
+    if (!((r.p[0] === a && r.p[1] === b) || (r.p[0] === b && r.p[1] === a))) return null;
+    return { court: r.c ? String(r.c) : '' };
+  }
+
+  const courtText = (c) => (/^\d+$/.test(c) ? c + '号场' : c);
+
+  // Scheduled round-robin courts (_data/schedules/<name>.json) keyed like the score records.
+  function scheduleCourts(schedule, id) {
+    const courts = new Map();
+    if (!schedule || !Array.isArray(schedule.rows) || !Array.isArray(schedule.courts)) return courts;
+    for (const row of schedule.rows) {
+      (row.matches || []).forEach((m, i) => {
+        if (m && m.eventId === id && m.group && schedule.courts[i] != null) {
+          courts.set(pairKey('RR|' + m.group, m.player1, m.player2), String(schedule.courts[i]));
+        }
+      });
+    }
+    return courts;
+  }
+
   // ---------- Round robin ----------
+  // rules.wo_score: score credited to a W/O winner, e.g. "5-0", or a map by group size {"3": "6-0", "4": "5-0"}.
+  function woSets(cfg, size) {
+    const raw = cfg && typeof cfg === 'object' ? cfg[String(size)] : cfg;
+    const sets = raw ? parseScore(raw) : null;
+    if (!sets) return null;
+    const t = tally(sets);
+    return t.sa > t.sb ? t : null;
+  }
+
   function computeGroup(name, players, matches, rules) {
     const pts = Object.assign({ win: 1, loss: 0, wo_loss: 0 }, rules.points);
+    const wo = woSets(rules.wo_score, players.length);
     const st = {};
     players.forEach((p, i) => { st[p] = { idx: i, played: 0, wins: 0, losses: 0, points: 0, sw: 0, sl: 0, gw: 0, gl: 0 }; });
     const games = [];
@@ -82,14 +132,19 @@
         const a = players[i], b = players[j];
         const key = pairKey('RR|' + name, a, b);
         const r = result(matches, key, a, b);
-        games.push({ key, a, b, r });
+        games.push({ key, a, b, r, live: r ? null : liveInfo(matches, key, a, b) });
         if (!r) continue;
         done++;
         const w = st[r.winner], l = st[r.loser];
         w.wins++; w.points += pts.win;
         l.losses++; l.points += r.note === 'W/O' ? pts.wo_loss : pts.loss;
         st[a].played++; st[b].played++;
-        if (r.note !== 'W/O' && r.sets) {
+        if (r.note === 'W/O') {
+          if (wo) {
+            w.sw += wo.sa; w.sl += wo.sb; w.gw += wo.ga; w.gl += wo.gb;
+            l.sw += wo.sb; l.sl += wo.sa; l.gw += wo.gb; l.gl += wo.ga;
+          }
+        } else if (r.sets) {
           const t = tally(r.sets);
           st[a].sw += t.sa; st[a].sl += t.sb; st[a].gw += t.ga; st[a].gl += t.gb;
           st[b].sw += t.sb; st[b].sl += t.sa; st[b].gw += t.gb; st[b].gl += t.ga;
@@ -246,6 +301,7 @@
     if (a.bye) { m.win = b; m.lose = { bye: true, label: '轮空' }; return; }
     if (b.bye) { m.win = a; m.lose = { bye: true, label: '轮空' }; return; }
     m.r = m.playable ? result(matches, m.key, a.name, b.name) : null;
+    m.live = m.playable && !m.r ? liveInfo(matches, m.key, a.name, b.name) : null;
     if (m.r) { m.win = { name: m.r.winner }; m.lose = { name: m.r.loser }; return; }
     m.win = { name: null, label: '第' + m.no + '场胜者' };
     m.lose = { name: null, label: '第' + m.no + '场负者' };
@@ -400,11 +456,13 @@
     return out;
   }
 
+  // rec may be a function of the latest matches, so a change can be checked against a concurrent save.
   async function writeMatch(inst, key, rec, message) {
     const token = getToken();
     for (let attempt = 0; ; attempt++) {
       const cur = await readWithSha(inst, token);
-      if (rec) cur.data.matches[key] = rec; else delete cur.data.matches[key];
+      const next = typeof rec === 'function' ? rec(cur.data.matches) : rec;
+      if (next) cur.data.matches[key] = next; else delete cur.data.matches[key];
       cur.data.matches = sortedMatches(cur.data.matches);
       cur.data.updated = new Date().toISOString();
       const body = { message, content: b64encode(JSON.stringify(cur.data, null, 2) + '\n'), branch: inst.branch };
@@ -420,7 +478,20 @@
     }
   }
 
+  // Start (rec) or cancel (null) an in-progress mark without overwriting a result saved meanwhile.
+  function liveUpdate(key, a, b, rec) {
+    return (matches) => {
+      if (result(matches, key, a, b)) {
+        const e = new Error('该场比赛已录入比分，请刷新后查看。');
+        e.userMessage = e.message;
+        throw e;
+      }
+      return rec;
+    };
+  }
+
   function apiErrorText(e) {
+    if (e.userMessage) return e.userMessage;
     if (e.status === 401) return '令牌无效或已过期，请重新登录。';
     if (e.status === 403 || e.status === 404) return '该令牌没有本仓库的写入权限（需要 Contents: Read and write）。';
     if (e.status === 409 || e.status === 422) return '多人同时保存发生冲突，请重试。';
@@ -484,10 +555,11 @@
         if (i === j) return h('td', { class: 'tm-x tm-diag' });
         const g = lookup.get(p + '\u0000' + q);
         const r = g.r ? orient(g, p) : null;
-        const cls = 'tm-x' + (r ? (r.winner === p ? ' is-win' : ' is-loss') : '');
+        const cls = 'tm-x' + (r ? (r.winner === p ? ' is-win' : ' is-loss') : g.live ? ' is-live' : '');
+        const tip = g.live ? '进行中' + (g.live.court ? ' · ' + courtText(g.live.court) : '') : null;
         const label = r ? cellText(r) : '';
-        if (!admin) return h('td', { class: cls, text: label });
-        return h('td', { class: cls }, h('button', {
+        if (!admin) return h('td', { class: cls, text: label, title: tip });
+        return h('td', { class: cls, title: tip }, h('button', {
           type: 'button', class: 'tm-cell-btn', 'aria-label': p + ' vs ' + q,
           onclick: () => openEditor(inst, { key: g.key, a: p, b: q, title: G.name + '组' }),
         }, label || '+'));
@@ -533,17 +605,28 @@
       h('ul', null, rd.pairs.map(([a, b]) => {
         const g = lookup.get(a + '\u0000' + b);
         const r = g.r ? orient(g, a) : null;
+        const title = G.name + '组 第' + (ri + 1) + '轮';
         const line = [
           h('span', { class: r && r.winner === a ? 'is-w' : null }, who(a)),
           h('span', { class: 'tm-muted', text: ' vs ' }),
           h('span', { class: r && r.winner === b ? 'is-w' : null }, who(b)),
           h('span', { class: 'tm-order__score', text: r ? cellText(r) : '' }),
         ];
-        if (!admin) return h('li', { class: r ? 'is-done' : null }, line);
-        return h('li', { class: r ? 'is-done' : null }, h('button', {
+        const planned = inst.courts.get(g.key) || '';
+        const court = g.live ? g.live.court : planned;
+        const meta = r ? null : (g.live || court || admin) ? h('div', { class: 'tm-order__meta' },
+          g.live ? h('span', { class: 'tm-live', text: '进行中' + (court ? ' · ' + courtText(court) : '') })
+            : court ? h('span', { class: 'tm-muted', text: '赛程 ' + courtText(court) }) : null,
+          admin ? h('button', {
+            type: 'button', class: 'tm-link',
+            onclick: () => openLiveEditor(inst, { key: g.key, a, b, title, live: g.live, court: planned }),
+          }, g.live ? '改场地' : '开赛') : null) : null;
+        const cls = r ? 'is-done' : g.live ? 'is-live' : null;
+        if (!admin) return h('li', { class: cls }, line, meta);
+        return h('li', { class: cls }, h('button', {
           type: 'button', class: 'tm-order__btn',
-          onclick: () => openEditor(inst, { key: g.key, a, b, title: G.name + '组 第' + (ri + 1) + '轮' }),
-        }, line));
+          onclick: () => openEditor(inst, { key: g.key, a, b, title }),
+        }, line), meta);
       })),
       rd.bye ? h('div', { class: 'tm-muted tm-order__bye' }, '轮空：', who(rd.bye)) : null));
 
@@ -572,12 +655,19 @@
   }
 
   function renderMatch(inst, m, admin, roundLabel) {
-    return h('div', { class: 'tm-match' + (m.a.bye || m.b.bye ? ' is-bye' : '') },
-      h('div', { class: 'tm-match__no' }, h('span', { text: '第' + m.no + '场' }),
-        admin && m.playable ? h('button', {
-          type: 'button', class: 'tm-link',
-          onclick: () => openEditor(inst, { key: m.key, a: m.a.name, b: m.b.name, title: roundLabel + ' 第' + m.no + '场' }),
-        }, m.r ? '修改' : '录入') : null),
+    const title = roundLabel + ' 第' + m.no + '场';
+    const live = m.live ? h('span', { class: 'tm-live', text: '进行中' + (m.live.court ? ' · ' + courtText(m.live.court) : '') }) : null;
+    const links = admin && m.playable ? h('span', { class: 'tm-match__links' },
+      m.r ? null : h('button', {
+        type: 'button', class: 'tm-link',
+        onclick: () => openLiveEditor(inst, { key: m.key, a: m.a.name, b: m.b.name, title, live: m.live }),
+      }, m.live ? '改场地' : '开赛'),
+      h('button', {
+        type: 'button', class: 'tm-link',
+        onclick: () => openEditor(inst, { key: m.key, a: m.a.name, b: m.b.name, title }),
+      }, m.r ? '修改' : '录入')) : null;
+    return h('div', { class: 'tm-match' + (m.a.bye || m.b.bye ? ' is-bye' : '') + (m.live ? ' is-live' : '') },
+      h('div', { class: 'tm-match__no' }, h('span', { text: '第' + m.no + '场' }), live, links),
       renderSlot(m.a, m, 'a'),
       renderSlot(m.b, m, 'b'));
   }
@@ -623,8 +713,8 @@
   function openEditor(inst, ctx) {
     const a = ctx.a, b = ctx.b;
     const existing = result(inst.scores.matches, ctx.key, a, b);
-    const hint = inst.cfg.rules.score_hint || '如 6-4 或 6-4 3-6 [10-8]';
-    const scoreIn = h('input', { type: 'text', inputmode: 'text', autocomplete: 'off', placeholder: hint, value: existing && existing.note !== 'W/O' ? existing.score : '' });
+    const hint = inst.cfg.rules.score_hint || '';
+    const MAX_SETS = 5;
     const noteSel = h('select', null,
       h('option', { value: '', text: '正常完赛' }),
       h('option', { value: 'RET', text: '中途退赛（RET）' }),
@@ -635,19 +725,54 @@
     const err = h('p', { class: 'tm-error', role: 'alert' });
     const saveBtn = h('button', { type: 'submit', class: 'btn btn--dark btn--sm' }, '保存');
 
+    // One column per set: a row of games for each player, plus a match-tiebreak option from set 2 on.
+    const rows = [];
+    const table = h('table');
+    const addBtn = h('button', {
+      type: 'button', class: 'btn btn--outline btn--sm tm-sets__add', title: '增加一盘', 'aria-label': '增加一盘',
+      onclick: () => { if (rows.length >= MAX_SETS) return; addSet(null); sync(); rows[rows.length - 1].ia.focus(); },
+    }, '+');
+    function drawSets() {
+      const line = (side, name) => h('tr', null,
+        h('th', { scope: 'row', class: 'tm-sets__name', title: name }, nameNode(name)),
+        rows.map((r) => h('td', null, r[side])));
+      table.replaceChildren(
+        h('thead', null, h('tr', null, h('td'), rows.map((r, i) => h('th', { scope: 'col', text: '第' + (i + 1) + '盘' })))),
+        h('tbody', null, line('ia', a), line('ib', b),
+          rows.length > 1 ? h('tr', { class: 'tm-sets__mtb' }, h('td'),
+            rows.map((r, i) => h('td', null, i ? h('label', { title: '决胜盘抢十，如 [10-8]' }, r.mtb, '抢十') : null))) : null));
+      addBtn.hidden = rows.length >= MAX_SETS;
+    }
+    function addSet(s) {
+      const n = rows.length + 1;
+      const box = (v, who) => h('input', {
+        type: 'text', inputmode: 'numeric', maxlength: '2', autocomplete: 'off', class: 'tm-sets__in',
+        'aria-label': who + ' 第' + n + '盘局数', value: v == null ? '' : String(v),
+      });
+      const r = { ia: box(s && s.a, a), ib: box(s && s.b, b), mtb: h('input', { type: 'checkbox', checked: !!(s && s.mtb) }) };
+      r.ia.addEventListener('input', sync);
+      r.ib.addEventListener('input', sync);
+      r.mtb.addEventListener('change', sync);
+      rows.push(r);
+      drawSets();
+    }
+    const readSets = () => setsToScore(rows.map((r) => ({ a: r.ia.value, b: r.ib.value, mtb: r.mtb.checked })));
+    ((existing && existing.note !== 'W/O' && existing.sets) || [null]).slice(0, MAX_SETS).forEach((s) => addSet(s));
+
     function sync() {
       const manual = noteSel.value !== '';
+      const wo = noteSel.value === 'W/O';
       ra.disabled = rb.disabled = !manual;
-      scoreIn.disabled = noteSel.value === 'W/O';
+      rows.forEach((r) => { r.ia.disabled = r.ib.disabled = r.mtb.disabled = wo; });
+      addBtn.disabled = wo;
       if (!manual) {
-        const sets = parseScore(scoreIn.value);
-        const t = sets && tally(sets);
+        const out = readSets();
+        const t = out.score ? tally(parseScore(out.score)) : null;
         ra.checked = !!(t && t.sa > t.sb);
         rb.checked = !!(t && t.sb > t.sa);
       }
     }
     if (existing) { (existing.winner === a ? ra : rb).checked = true; }
-    scoreIn.addEventListener('input', sync);
     noteSel.addEventListener('change', sync);
 
     async function persist(rec, msg) {
@@ -669,9 +794,12 @@
       onsubmit: (e) => {
         e.preventDefault();
         const note = noteSel.value;
-        const raw = scoreIn.value.trim().replace(/\s+/g, ' ');
+        const out = note === 'W/O' ? { score: '' } : readSets();
+        if (out.error) { err.textContent = out.error; return; }
+        let raw = out.score;
         const sets = raw ? parseScore(raw) : null;
-        if (raw && !sets && note !== 'W/O') { err.textContent = '比分格式不正确。' + hint; return; }
+        // Unchanged games keep the original text, e.g. tiebreak points in 7-6(5).
+        if (sets && existing && existing.sets && JSON.stringify(sets) === JSON.stringify(existing.sets)) raw = existing.score;
         let winner;
         if (!note) {
           if (!sets) { err.textContent = '请输入比分。'; return; }
@@ -690,7 +818,9 @@
     },
       h('h3', { text: ctx.title }),
       h('p', { class: 'tm-vs' }, h('strong', { text: a }), ' vs ', h('strong', { text: b })),
-      h('label', { class: 'tm-field' }, h('span', { text: '比分（以 ' + a + ' 视角）' }), scoreIn),
+      h('div', { class: 'tm-field' }, h('span', { text: '比分（每盘局数）' }),
+        h('div', { class: 'tm-sets' }, h('div', { class: 'tm-sets__scroll' }, table), addBtn),
+        h('p', { class: 'tm-muted tm-sets__hint', text: (hint ? hint + '；' : '') + '多盘比赛点 + 增加一盘。' })),
       h('label', { class: 'tm-field' }, h('span', { text: '结果' }), noteSel),
       h('fieldset', { class: 'tm-field' }, h('legend', { text: '胜者' }),
         h('label', null, ra, ' ', a), h('label', null, rb, ' ', b)),
@@ -705,7 +835,56 @@
         saveBtn));
     const dlg = modal(form);
     sync();
-    scoreIn.focus();
+    rows[0].ia.focus();
+  }
+
+  function openLiveEditor(inst, ctx) {
+    const a = ctx.a, b = ctx.b;
+    const courtIn = h('input', { type: 'text', inputmode: 'numeric', autocomplete: 'off', maxlength: '12', placeholder: '如 5', value: ctx.live ? ctx.live.court : (ctx.court || '') });
+    const err = h('p', { class: 'tm-error', role: 'alert' });
+    const saveBtn = h('button', { type: 'submit', class: 'btn btn--dark btn--sm' }, ctx.live ? '保存' : '标记进行中');
+    const desc = ctx.title + ' ' + a + ' vs ' + b;
+
+    async function persist(rec, msg) {
+      saveBtn.disabled = true;
+      err.textContent = '';
+      try {
+        inst.scores = await writeMatch(inst, ctx.key, liveUpdate(ctx.key, a, b, rec), msg);
+        inst.error = '';
+        dlg.close();
+        render(inst);
+      } catch (e) {
+        err.textContent = apiErrorText(e);
+        saveBtn.disabled = false;
+      }
+    }
+
+    const form = h('form', {
+      method: 'dialog',
+      onsubmit: (e) => {
+        e.preventDefault();
+        const court = courtIn.value.trim().replace(/\s+/g, ' ');
+        const rec = { p: [a, b], live: true, t: new Date().toISOString() };
+        if (court) rec.c = court;
+        if (getUser()) rec.by = getUser();
+        persist(rec, 'score(' + inst.id + '): live ' + desc + (court ? ' @ court ' + court : ''));
+      },
+    },
+      h('h3', { text: ctx.title }),
+      h('p', { class: 'tm-vs' }, h('strong', { text: a }), ' vs ', h('strong', { text: b })),
+      h('p', { class: 'tm-muted tm-hint', text: '比赛开始或即将开始时标记为进行中；录入比分后自动结束。' + (ctx.court ? '场地默认为赛程安排的 ' + courtText(ctx.court) + '，可按现场情况修改，赛程表不变。' : '') }),
+      h('label', { class: 'tm-field' }, h('span', { text: '场地号（可选）' }), courtIn),
+      err,
+      h('div', { class: 'tm-actions' },
+        ctx.live ? h('button', {
+          type: 'button', class: 'btn btn--outline btn--sm tm-danger',
+          onclick: () => persist(null, 'score(' + inst.id + '): clear live ' + desc),
+        }, '取消进行中') : null,
+        h('span', { class: 'tm-bar__sp' }),
+        h('button', { type: 'button', class: 'btn btn--outline btn--sm', onclick: () => dlg.close() }, '取消'),
+        saveBtn));
+    const dlg = modal(form);
+    courtIn.focus();
   }
 
   function openLogin(inst) {
@@ -791,11 +970,15 @@
       return;
     }
     const cfgEl = root.querySelector('script[data-tm-config]');
+    const schedEl = root.querySelector('script[data-tm-schedule]');
+    let courts = new Map();
+    try { courts = scheduleCourts(schedEl ? JSON.parse(schedEl.textContent) : null, id); } catch (e) { /* no default courts */ }
     const inst = {
       root, id, repo,
       branch: root.dataset.branch || 'master',
       path: root.dataset.path || 'events/scores',
       cfg: normalizeConfig(JSON.parse(cfgEl ? cfgEl.textContent : '{}')),
+      courts,
       scores: emptyScores(),
       groupViews: {},
       busy: false, error: '',

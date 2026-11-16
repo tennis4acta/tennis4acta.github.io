@@ -9,9 +9,11 @@ groups:
   "G": ["RunTing Zheng","Kuan Hua Wu","Danny Zhang"]
   "H": ["Xinhao Li","Sizhe Tu","Andrew Zhao"]
 seeds: {"Benson Huang [1]":1,"Roger Yu [2]":2,"Austin Han [3]":3,"Haowen Deng [4]":4}
+schedule: "2026-singles"
 rules:
   advance: 2
   points: {"win":1,"loss":0,"wo_loss":0}
+  wo_score: "6-0"
   tiebreakers: ["wins","games_won","game_diff","h2h"]
   third_place: false
   show_set_column: false

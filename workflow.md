@@ -440,3 +440,86 @@
 - `node --test scripts/test-schedule.js` 18 项通过；新增测试用修改前快照运行确认会失败。`node scripts/test-tournament.js` 通过，`git diff --check` 通过。
 - 修改前后工作簿逐单元格比对：仅上述单元格内容变化，样式、富文本字体、行高、列宽、视图及打印设置不变；修正脚本再次运行无待修改项。快照中时间、场地、各格赛事/组别布局不变，仅 65 场的编号与球员变化，并且全部球员休息至少 30 分钟的既有测试仍通过。
 - 修改前工作簿备份保存在会话目录，不随仓库提交。未运行 Jekyll 构建或验证线上发布，未在 Excel GUI 中目视检查；未提交或推送 Git。
+
+## 2026-11-16：淘汰赛进行中标记与场地号
+
+### 设计决定
+
+- 按用户要求，仅在淘汰赛（含三四名赛）录入阶段增加“进行中”状态：比赛开始时或开始前，裁判可将双方已确定且尚无结果的比赛标记为进行中，并可选填场地号，便于掌握进度和场地分布。小组赛不提供此标记。
+- 状态与比分共用同一个 `KO|…` 键，记录为无胜者的 `{ p, live: true, c, t, by }`。`result()` 因缺少 `w` 而忽略该记录，单打赛程等只读消费者不受影响；只有双方仍与当前对阵一致时才显示，选手变化后自动失效。录入比分时整条记录被结果替换，标记自动结束，不保留场地号。
+- 标记和取消写入前，基于最新文件检查该场是否已有有效结果；若已有，则拒绝写入并提示刷新，避免覆盖其他裁判刚保存的比分。
+
+### 实际完成
+
+- [tournament.js](js/tournament.js)：新增 `liveInfo()`、`courtText()`、`liveUpdate()` 和“开赛 / 改场地”弹窗（含“取消进行中”）；`decide()` 计算 `m.live`；`writeMatch()` 支持按最新 `matches` 计算记录的函数式更新；`apiErrorText()` 显示业务错误提示。
+- [tournament.css](css/tournament.css)：进行中卡片使用浅橙色背景及边框，标题行显示红点和“进行中 · N号场”；标题行改为可换行。
+- 测试：[test-tournament.js](scripts/test-tournament.js) 覆盖进行中显示、选手变化失效、结果覆盖和未定对阵；[test-schedule.js](scripts/test-schedule.js) 在模拟 API 下覆盖标记、取消，以及已有比分时拒绝写入。
+- 同步更新 [技术记录](ai_tools/scoreboard.md) 和 [公开指南](score_board/howto.md)（裁判第 4 步及观众说明）。
+
+### 验证与未验证事项
+
+- `node --check js/tournament.js`、`node scripts/test-tournament.js` 通过；`node --test scripts/test-schedule.js` 19 项通过。新测试在修改前代码上运行会失败。
+- 使用 git 忽略的隔离预览（生产 JS/CSS、内存模拟 API，验证后已删除）在浏览器中确认：开赛、场地预填与修改、无场地标记、取消进行中、录入比分后标记消失且胜者晋级，以及观众视图无裁判按钮。375px 宽度下无横向溢出，浅色和深色主题均可读。
+- 未写入真实 GitHub 比分，未验证真实令牌、并发或 CDN 延迟；本机无 Jekyll，未运行构建，未提交或推送 Git。
+
+## 2026-11-16：录入比分改为逐盘填写双方局数
+
+### 设计决定
+
+- 按用户要求，录入弹窗不再要求以第一位选手视角输入 `5-2` 字符串，改为两位选手各一行、每盘一列，分别填写局数（如 A `5`、B `2`）。默认一盘，点 `+` 增加下一盘。
+- 存储格式不变：各盘仍转换为第一位选手在前的字符串（如 `5-2`、`6-4 3-6 [10-8]`），已有比分、排名、显示及单打赛程同步无需迁移。
+- 为保留演示配置支持的三盘抢十，第 2 盘起每盘可勾选“抢十”；最多 5 盘。抢七小分不再单独输入，未改动的已有比分保存时保留原字符串（含小分）。
+- 末尾全空的盘忽略；中间缺盘、只填一方、局数相同或非 0–99 整数均拒绝保存并指出盘次。
+
+### 实际完成
+
+- [tournament.js](js/tournament.js)：新增纯函数 `setsToScore()`；`openEditor()` 改为逐盘格子、`+` 按钮（上限保护）、抢十勾选，按已有结果预填，输入时自动判胜，W/O 时禁用格子和 `+`。
+- [tournament.css](css/tournament.css)：比分格子、`+` 按钮及提示样式；窄屏横向滚动时固定姓名列；输入数字使用正文颜色。
+- [test-tournament.js](scripts/test-tournament.js) 新增 `setsToScore()` 用例；同步更新 [技术记录](ai_tools/scoreboard.md) 和 [公开指南](score_board/howto.md) 的录入步骤与示例。
+
+### 验证与未验证事项
+
+- `node --check js/tournament.js`、`node scripts/test-tournament.js` 通过；`node --test scripts/test-schedule.js` 19 项通过。
+- 隔离浏览器预览（生产 JS/CSS、内存模拟 API，验证后已删除）确认：反向记录预填、自动判胜、`+` 增盘与聚焦、缺盘和同分提示、三盘抢十保存、对手行翻转显示、抢十勾选恢复、未改小分保留、W/O 与 RET、最多 5 盘。375px 下无溢出，多盘时姓名列固定；浅色和深色均可读。预览中发现并修复了两个问题：隐藏的 `+` 仍可被脚本点击，以及窄屏横向滚动时姓名被移出视野。
+- 未写入真实 GitHub 比分，未运行 Jekyll 构建；未修改赛事配置、`score_hint` 默认值或抽签工具，未提交或推送 Git。
+
+## 2026-11-16：小组赛 W/O 按满分计算
+
+### 设计决定
+
+- 用户确认 W/O 按满分计算。此前 W/O 不计盘局，2026 单打的排名顺序为“胜场 → 胜局数 → 净胜局 → 相互战绩”，获胜方会因 W/O 拿 0 局而排名吃亏（模拟中 W/O 获胜方由第 1 名降为第 3 名）。
+- 新增可选 `rules.wo_score`：获胜方在前的比分字符串（如 `"5-0"`），或按小组人数的映射（如 `{"3":"6-0","4":"5-0"}`）。W/O 按该比分把盘数和局数计入双方；未配置、无效、获胜方未胜或该人数未配置时，维持原来不计盘局的行为。
+- 仅影响小组统计。比分文件格式、表格中的 `W/O` 显示、积分（`wo_loss`）及相互战绩不变。淘汰赛不受影响。
+
+### 实际完成
+
+- [tournament.js](js/tournament.js)：新增 `woSets()`，`computeGroup()` 在 W/O 时按配置计入双方盘局。
+- 配置：[A 级别](_data/events/2026-a-grade.yml) `"6-0"`（11 局制）；[红宝石](_data/events/2026-b-ruby.yml)、[蓝宝石](_data/events/2026-b-sapphire.yml) 按人数映射，3 人组 `6-0`、4 人组 `5-0`（与各自 `score_hint` 局制一致）；[女子单打](_data/events/2026-womens-singles.yml) `"5-0"`（9 局制）。女子春季赛规则未确认，未配置。
+- 同步更新 [demo.yml](_data/events/demo.yml)、[赛事 skill](.github/skills/generate-tennis-scoreboard/SKILL.md)、[技术记录](ai_tools/scoreboard.md) 和 [公开指南](score_board/howto.md)；[test-tournament.js](scripts/test-tournament.js) 新增 W/O 用例。
+
+### 验证与未验证事项
+
+- `node --check js/tournament.js`、`node scripts/test-tournament.js` 通过；`node --test scripts/test-schedule.js` 19 项通过。
+- `git fetch` 后读取 `origin/master` 的五个真实比分文件（均无 W/O），对比修改前后代码与配置：小组排名、淘汰赛对阵与冠军完全一致。四个配置文件经 `js-yaml` 解析通过。
+- 未修改比分文件或已完赛项目页面中的赛制文字；未运行 Jekyll 构建，未提交或推送 Git。本地分支落后远程 161 个比分提交，未拉取。抽签工具生成的新配置不含 `wo_score`，新项目需按赛制补充。
+
+## 2026-11-16：小组赛开赛标记与默认赛程场地
+
+### 设计决定
+
+- 按用户要求，小组循环赛也可以标记进行中并填写场地号，复用淘汰赛的 `live` 记录（同一 `RR|…` 键、无胜者）。`result()` 忽略该记录，赛程页及排名不受影响。
+- 默认场地号取自当前赛程：事件配置新增可选顶层字段 `schedule`（`_data/schedules/` 中的名称）。`event.html` 嵌入该赛程 JSON，`scheduleCourts()` 按项目 ID、组名和双方完整姓名生成与比分记录相同的键。裁判修改的场地只写入进行中记录，不回写赛程表或 Excel，赛程页不显示。
+- 入口放在小组 Match 视图每场比赛下方（“开赛 / 改场地”）。未开赛时显示“赛程 N号场”，进行中显示“进行中 · N号场”并使用浅橙色背景；Table 视图双方两个格子同步浅橙色并悬停提示场地，格子仍用于录入比分。
+
+### 实际完成
+
+- [tournament.js](js/tournament.js)：`scheduleCourts()`；`computeGroup()` 为未完成比赛计算 `live`；`renderGroup()`、`renderOrder()` 显示进行中状态及赛程场地；`openLiveEditor()` 默认填入赛程场地并提示可修改；`init()` 读取嵌入赛程。
+- [event.html](_includes/event.html) 在配置了 `schedule` 且数据存在时嵌入赛程；[tournament.css](css/tournament.css) 新增小组进行中样式。
+- 四个 2026 单打配置加入 `schedule: "2026-singles"`；同步更新 [demo.yml](_data/events/demo.yml)、[赛事 skill](.github/skills/generate-tennis-scoreboard/SKILL.md)、[技术记录](ai_tools/scoreboard.md)、[公开指南](score_board/howto.md)。
+- 测试：[test-tournament.js](scripts/test-tournament.js) 覆盖小组进行中及 `scheduleCourts()`；[test-schedule.js](scripts/test-schedule.js) 用真实赛程和配置确认 99 场小组赛均能取得场地。
+
+### 验证与未验证事项
+
+- `node --check js/tournament.js`、`node scripts/test-tournament.js` 通过；`node --test scripts/test-schedule.js` 20 项通过。
+- 隔离浏览器预览（验证后已删除）确认：默认场地、改场地、再次打开预填、Table/Match 浅橙色、录入比分后标记消失、观众视图无裁判按钮，以及 375px 无溢出。
+- `event.html` 的 Liquid 改动未经 Jekyll 构建验证（本机无 Jekyll），发布后需在单打分组页确认嵌入的 `data-tm-schedule` 存在且开赛默认场地正确。未写入真实比分，未提交或推送 Git。双打尚无赛程数据，届时导入赛程后再设置 `schedule`。

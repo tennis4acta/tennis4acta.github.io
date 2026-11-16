@@ -5,9 +5,11 @@ groups:
   "C": ["Lei Ye","Lauren Shen","Tracy Zhang","June Jiang"]
   "D": ["Shan Li","Jiayu Gao","Ye Li"]
 seeds: {}
+schedule: "2026-singles"
 rules:
   advance: 2
   points: {"win":1,"loss":0,"wo_loss":0}
+  wo_score: "5-0"
   tiebreakers: ["wins","games_won","game_diff","h2h"]
   third_place: false
   show_set_column: false

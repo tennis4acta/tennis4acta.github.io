@@ -19,7 +19,7 @@ user-invocable: true
    - `name` 是页面标题；`groups` 将组名映射到选手名单。双打组合按系统约定写为一个名称，例如 `张三 & 李四`。
    - `rules.advance` 表示每组出线人数；有小组时 `0` 表示只进行小组循环赛。直接淘汰赛使用 `groups: {}`、`rules.advance: 0` 和非空实名 `rules.draw`。
    - 抽签工具输出的姓名保留 `[种子编号]`，小组、实名签表和顶层 `seeds` 映射必须使用同一完整姓名。`seeds` 属于核对元数据，记分板不依据该字段重排晋级名次；不要为已经录入比分的旧配置自动添加或删除标记。
-   - `rules.points`、`rules.tiebreakers`、可选的 `rules.draw`、`rules.third_place`、`rules.show_set_column` 和 `rules.score_hint` 必须与主办方给出的规则一致。每组固定提供 Table / Match 切换，旧 `rules.show_order` 已忽略，不再为新项目添加。只有在规则已确认或用户明确授权采用模板默认值时才填默认值。
+   - `rules.points`、`rules.tiebreakers`、`rules.wo_score`、可选的 `rules.draw`、`rules.third_place`、`rules.show_set_column` 和 `rules.score_hint` 必须与主办方给出的规则一致。`rules.wo_score` 为 W/O 按满分计入盘局的比分（如 9 局制 `"5-0"`、11 局制 `"6-0"`；各组局制不同时按组人数写映射）；主办方确认 W/O 不计盘局时才省略。若已有 `_data/schedules/<名称>.json` 赛程且其中比赛的 `eventId`、组名和姓名与本项目一致，设置顶层 `schedule: "<名称>"`，裁判开赛时默认使用赛程场地。每组固定提供 Table / Match 切换，旧 `rules.show_order` 已忽略，不再为新项目添加。只有在规则已确认或用户明确授权采用模板默认值时才填默认值。
    - `id` 使用唯一的小写英文字母、数字和连字符；先检查配置文件和比分文件，不能覆盖已存在或正在使用的赛事 ID。
    - 保持姓名稳定、准确。赛事开始后改动姓名会使相应旧比分无法匹配。
    - 抽签工具在每组前 2 名出线时会输出固定 `rules.draw`，不得丢弃或重抽：10 人出线时五个组第一加随机一个组第二轮空，12 人出线时前四种子组第一轮空；保留同组半区回避。保护组别及真实出线名次，不把原种子身份当作改写排名的依据。

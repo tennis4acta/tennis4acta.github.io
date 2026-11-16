@@ -9,9 +9,11 @@ groups:
   "G": ["Yun Chen","Simon Kwok","Eric Qu","Qiang Li"]
   "H": ["Kevin Huang","Jan Luk","Jiaxin Shen","Chris Yu"]
 seeds: {}
+schedule: "2026-singles"
 rules:
   advance: 2
   points: {"win":1,"loss":0,"wo_loss":0}
+  wo_score: {"3":"6-0","4":"5-0"}
   tiebreakers: ["wins","games_won","game_diff","h2h"]
   third_place: false
   show_set_column: false

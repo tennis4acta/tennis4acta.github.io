@@ -7,6 +7,9 @@
 <h2 class="tm-title" id="event-{{ include.id | escape }}">{{ ev.name | escape }}</h2>
 {%- endif %}
 <script type="application/json" data-tm-config>{{ ev | jsonify | replace: '<', '\u003c' }}</script>
+{%- if ev.schedule and site.data.schedules[ev.schedule] %}
+<script type="application/json" data-tm-schedule>{{ site.data.schedules[ev.schedule] | jsonify | replace: '<', '\u003c' }}</script>
+{%- endif %}
 <noscript><p>请启用 JavaScript 以查看分组及比分。</p></noscript>
 </div>
 <script src="{{ '/js/tournament.js' | prepend: site.baseurl }}?v={{ site.time | date: '%s' }}" defer></script>
