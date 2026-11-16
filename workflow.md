@@ -537,3 +537,10 @@
 - 随机赛程 [test-2026-score-update.json](_data/schedules/test-2026-score-update.json)：从 13 片可用场地随机选出 4、10、11、13 号场。12 场小组赛按 `roundRobin()` 分为 3 轮（9:00、9:45、10:30，仅作数据占位），每轮 4 场随机分配到这 4 片场地；配置通过 `schedule` 引用，开赛时默认填入该场地。生成脚本保存在会话目录，未加入仓库。
 - [test-schedule.js](scripts/test-schedule.js) 的场地覆盖测试改为按赛程分别计数（`2026-singles` 99 场、测试赛程 12 场）。[技术记录](ai_tools/scoreboard.md) 第 11 节记录测试页及重置方法。
 - 验证：配置经 `js-yaml` 解析通过；`node scripts/test-tournament.js` 通过，`node --test scripts/test-schedule.js` 20 项通过；本地及 `origin/master` 均无同名比分文件。本机无 Jekyll，页面未构建或目视检查；首次在线录入会在远程生成 `events/scores/test-2026-score-update.json`，删除该文件即可重置。未提交或推送 Git。
+
+## 2026-11-16：修复测试页中文乱码（???）
+
+- 问题：用户发现测试页标题及比分弹窗提示显示为 `????`。原因是生成脚本经 PowerShell 管道传给 Node（`Get-Content | node -`），Windows PowerShell 按 ASCII 编码管道输出，脚本中的中文字面量被替换为 `?`。受影响的是 [测试配置](_data/events/test-2026-score-update.yml) 的注释、`name`、`score_hint`，以及 [测试赛程](_data/schedules/test-2026-score-update.json) 的 12 个 `label`。姓名、分组、场地和对阵均为 ASCII，未受影响。
+- 修复：用编辑工具按 UTF-8 恢复配置中的中文；按组名和轮次重建赛程 `label`（`测试-<组>组-第<n>轮`），修复脚本以文件方式运行，不再经管道。
+- 验证：三个测试文件中已无 `?`，标题码位核对为“比分录入测试”；`js-yaml` 解析通过，`node --test scripts/test-schedule.js` 20 项通过。同期以 PowerShell `Add-Content` 写入的 `workflow.md`、`test-schedule.js` 及首页公告均未发现 `???`。
+- 经验：在 Windows PowerShell 中，不要把含中文的脚本经管道传给外部程序；改用编辑工具，或保存为文件后用 `node <文件>` 运行。修复尚未提交或推送。

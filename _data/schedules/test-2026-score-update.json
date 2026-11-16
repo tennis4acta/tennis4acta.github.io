@@ -15,28 +15,28 @@
       "time": "9:00AM",
       "matches": [
         {
-          "label": "??-B?-?1?",
+          "label": "测试-B组-第1轮",
           "player1": "Meizhu Li",
           "player2": "Alicia Wang",
           "eventId": "test-2026-score-update",
           "group": "B"
         },
         {
-          "label": "??-B?-?1?",
+          "label": "测试-B组-第1轮",
           "player1": "June Jiang",
           "player2": "Linda Zhou",
           "eventId": "test-2026-score-update",
           "group": "B"
         },
         {
-          "label": "??-A?-?1?",
+          "label": "测试-A组-第1轮",
           "player1": "Ye Li",
           "player2": "Tracy Zhang",
           "eventId": "test-2026-score-update",
           "group": "A"
         },
         {
-          "label": "??-A?-?1?",
+          "label": "测试-A组-第1轮",
           "player1": "Shan Li",
           "player2": "Jie Deng",
           "eventId": "test-2026-score-update",
@@ -48,28 +48,28 @@
       "time": "9:45AM",
       "matches": [
         {
-          "label": "??-B?-?2?",
+          "label": "测试-B组-第2轮",
           "player1": "June Jiang",
           "player2": "Alicia Wang",
           "eventId": "test-2026-score-update",
           "group": "B"
         },
         {
-          "label": "??-A?-?2?",
+          "label": "测试-A组-第2轮",
           "player1": "Shan Li",
           "player2": "Tracy Zhang",
           "eventId": "test-2026-score-update",
           "group": "A"
         },
         {
-          "label": "??-B?-?2?",
+          "label": "测试-B组-第2轮",
           "player1": "Meizhu Li",
           "player2": "Linda Zhou",
           "eventId": "test-2026-score-update",
           "group": "B"
         },
         {
-          "label": "??-A?-?2?",
+          "label": "测试-A组-第2轮",
           "player1": "Ye Li",
           "player2": "Jie Deng",
           "eventId": "test-2026-score-update",
@@ -81,28 +81,28 @@
       "time": "10:30AM",
       "matches": [
         {
-          "label": "??-A?-?3?",
+          "label": "测试-A组-第3轮",
           "player1": "Tracy Zhang",
           "player2": "Jie Deng",
           "eventId": "test-2026-score-update",
           "group": "A"
         },
         {
-          "label": "??-B?-?3?",
+          "label": "测试-B组-第3轮",
           "player1": "Linda Zhou",
           "player2": "Alicia Wang",
           "eventId": "test-2026-score-update",
           "group": "B"
         },
         {
-          "label": "??-A?-?3?",
+          "label": "测试-A组-第3轮",
           "player1": "Shan Li",
           "player2": "Ye Li",
           "eventId": "test-2026-score-update",
           "group": "A"
         },
         {
-          "label": "??-B?-?3?",
+          "label": "测试-B组-第3轮",
           "player1": "Meizhu Li",
           "player2": "June Jiang",
           "eventId": "test-2026-score-update",
