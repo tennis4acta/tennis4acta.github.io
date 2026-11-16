@@ -523,3 +523,9 @@
 - `node --check js/tournament.js`、`node scripts/test-tournament.js` 通过；`node --test scripts/test-schedule.js` 20 项通过。
 - 隔离浏览器预览（验证后已删除）确认：默认场地、改场地、再次打开预填、Table/Match 浅橙色、录入比分后标记消失、观众视图无裁判按钮，以及 375px 无溢出。
 - `event.html` 的 Liquid 改动未经 Jekyll 构建验证（本机无 Jekyll），发布后需在单打分组页确认嵌入的 `data-tm-schedule` 存在且开赛默认场地正确。未写入真实比分，未提交或推送 Git。双打尚无赛程数据，届时导入赛程后再设置 `schedule`。
+
+## 2026-11-16：首页公告更新为单打结束及双打赛程预告
+
+- 按用户要求，移除首页顶部两条通知横幅（“重要通知：7&8号球场停用”“11月15日单打分组已公布”），改为一条：“11月15日单打比赛已顺利结束”，正文感谢球员、裁判及志愿者，并预告 11 月 22 日双打赛程于本周三（11 月 18 日）发布。保留“查看单打成绩”按钮，链接 `/2026/1115/`。
+- 只修改 [tournament.yml](_data/tournament.yml) 的 `announcements`。页面下方“场地调整公告”通知区（7/8 号场地两个比赛日均停用）仍适用于双打，予以保留。
+- 验证：`js-yaml` 解析通过，链接页面的 permalink 存在；`git diff --check` 通过。本机无 Jekyll，未构建或目视检查首页，未提交或推送 Git。
