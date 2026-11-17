@@ -56,10 +56,13 @@ days:
 # Prominent banners at the top of the home page, displayed in order. Omit url for a text-only notice.
 # Remove an entry or leave its title empty to hide it.
 announcements:
-  - title: "11月15日单打比赛已顺利结束"
-    text: "感谢全体球员、裁判及志愿者的支持！11月22日双打比赛的赛程将于本周三（11月18日）发布，敬请关注。"
-    button: "查看单打成绩"
-    url: "/2026/1115/"
+  - title: "11月22日双打签表已公布"
+    text: "男子双打 A/B 级别、女子双打及中年组双打分组与淘汰赛签表已公布，请点击查看分组及对阵。双打赛程将于本周三（11月18日）发布，敬请关注。"
+    button: "点击查看"
+    url: "/2026/1122/"
+
+# Default event day tab selected on the home page ("singles" or "doubles").
+default_day: "doubles"
 
 # Competition categories shown on the home page. Set full: true when an event is full to swap its
 # registration link for a waiting-list link.
@@ -102,6 +105,7 @@ events:
     name: "男子双打 A级别"
     capacity_text: "12对"
     requirements: doubles_a
+    match_url: "/2026/matches/doubles_a/"
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=95FA8568-52FC-4984-BFDF-A46B047AC185"
     full: true
   - id: doubles_b
@@ -109,6 +113,7 @@ events:
     name: "男子双打 B级别"
     capacity_text: "32对"
     requirements: doubles_b
+    match_url: "/2026/matches/doubles_b/"
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=9C947EFC-08F2-4FD7-8E6E-1E92BEB45151"
     full: true
   - id: doubles_w
@@ -116,6 +121,7 @@ events:
     name: "女子双打"
     capacity_text: "20对"
     requirements: doubles_w
+    match_url: "/2026/matches/womens_doubles/"
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=DB5E2D51-282E-43F8-AB50-3FC451C0339B"
     full: false
   - id: doubles_s
@@ -124,6 +130,7 @@ events:
     tag: "50-70岁"
     capacity_text: "10对"
     requirements: doubles_s
+    match_url: "/2026/matches/senior_doubles/"
     reg_url: "https://www.classhub.com.au/secure/registration?providerAlias=actc&classId=9EE80B94-8F41-40C0-B1C5-DAE0CD896414"
     full: false
 

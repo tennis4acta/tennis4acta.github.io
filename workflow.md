@@ -554,8 +554,9 @@
   - [2026-doubles-b.yml](_data/events/2026-doubles-b.yml)：8 组 × 4 对，每组前 2 名进 16 强（无种子）。
   - [2026-doubles-womens.yml](_data/events/2026-doubles-womens.yml)：4 组 × 4 对，每组前 2 名进 QF（1、2 号种子分处 A、B 组）。
   - [2026-doubles-senior.yml](_data/events/2026-doubles-senior.yml)：2 组 × 4 对，每组前 2 名进 SF（1、2 号种子分处 A、B 组）。
-- 按用户确认将 4 份双打配置的 `tiebreakers` 统一为 `["wins","games_won","game_diff","h2h"]`，并按 [1122 双打页面](2026/doubles_1122.md) 同步短局制规则：`男A双`（3 对/组）设为 `wo_score: "6-0"`、`score_hint: "11 局制，先胜 6 局，如 6-4"`；`男B双`、`女双`、`中年双`（4 对/组）设为 `wo_score: "5-0"`、`score_hint: "9 局制，先胜 5 局，如 5-3、5-4"`；四项均设 `show_set_column: false`，`third_place: true` 暂保留默认值。按用户最新确认，同步将 4 个双打比赛页及 [1122 双打页面](2026/doubles_1122.md) 第 5 条的决赛抢七规则更新为“常规 6 局制（5 平时抢七）”。
-- 新增 4 个双打比赛页（参考单打格式，含“返回双打赛事页”按钮、`赛制`说明及 `event.html` 挂载），暂未接入 [1122 双打页面](2026/doubles_1122.md) 或 [tournament.yml](_data/tournament.yml) 站内链接：
+- 按用户确认将 4 份双打配置的 `tiebreakers` 统一为 `["wins","games_won","game_diff","h2h"]`，并按 [1122 双打页面](2026/doubles_1122.md) 同步短局制规则：`男A双`（3 对/组）设为 `wo_score: "6-0"`、`score_hint: "11 局制，先胜 6 局，如 6-4"`；`男B双`、`女双`、`中年双`（4 对/组）设为 `wo_score: "5-0"`、`score_hint: "9 局制，先胜 5 局，如 5-3、5-4"`；四项均设 `show_set_column: false`。按用户最新确认，全部双打项目取消三四名决赛（`third_place: false`），并在 4 个比赛页与 [1122 双打页面](2026/doubles_1122.md) 写明“不设三四名赛”；决赛抢七规则统一为“常规 6 局制（5 平时抢七）”。
+- 更新主页 [tournament.yml](_data/tournament.yml) 与 [home.html](_layouts/home.html)：顶部通知改为“11月22日双打签表已公布”（按钮“点击查看”链接 `/2026/1122/`）；`default_day: "doubles"` 使比赛项目栏默认选中双打选项卡；4 个双打项目加入 `match_url` 使赛事卡直接链接到对应比赛页。
+- 新增 4 个双打比赛页（参考单打格式，含“返回双打赛事页”按钮、`赛制`说明及 `event.html` 挂载），并参考 [singles_1115.md](2026/singles_1115.md) 更新 [1122 双打页面](2026/doubles_1122.md)（移除报名费和报名链接，改用 `.mcards` 卡片接入 4 个双打比赛页，补充各项目淘汰赛说明及 3/4 对小组赛制）：
   - [doubles_a.md](2026/matches/doubles_a.md)（`2026-doubles-a`）
   - [doubles_b.md](2026/matches/doubles_b.md)（`2026-doubles-b`）
   - [womens_doubles.md](2026/matches/womens_doubles.md)（`2026-doubles-womens`）

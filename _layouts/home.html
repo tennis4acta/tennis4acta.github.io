@@ -95,14 +95,15 @@ layout: default
       <p>{{ t.draw_count }}个项目，分两个周末进行，每位球员每个比赛日只能参加一个项目。点击「参赛要求」查看各项目资格。</p>
     </div>
 
+    {%- assign active_day = t.default_day | default: t.days.first.id -%}
     <div data-tabs data-reveal>
       <div class="tabs__list" role="tablist" aria-label="比赛日">
         {%- for d in t.days %}
-        <button role="tab" id="tab-{{ d.id }}" aria-controls="panel-{{ d.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">{{ d.name }} · {{ d.date_text | split: '（' | first }}</button>
+        <button role="tab" id="tab-{{ d.id }}" aria-controls="panel-{{ d.id }}" aria-selected="{% if d.id == active_day %}true{% else %}false{% endif %}">{{ d.name }} · {{ d.date_text | split: '（' | first }}</button>
         {%- endfor %}
       </div>
       {%- for d in t.days %}
-      <div class="tabs__panel" role="tabpanel" id="panel-{{ d.id }}" aria-labelledby="tab-{{ d.id }}"{% unless forloop.first %} hidden{% endunless %}>
+      <div class="tabs__panel" role="tabpanel" id="panel-{{ d.id }}" aria-labelledby="tab-{{ d.id }}"{% unless d.id == active_day %} hidden{% endunless %}>
         <p><strong>{{ d.date_text }}</strong> · {{ d.time_text }}{% if d.url %} · <a href="{{ d.url | relative_url }}">赛程与比赛规则</a>{% endif %}</p>
         <div class="ecards">
           {%- for e in t.events %}{% if e.day == d.id %}
