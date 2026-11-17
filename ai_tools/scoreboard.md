@@ -1,6 +1,6 @@
 # 实时记分板：设计、使用与维护记录
 
-最后更新：2026-11-16。
+最后更新：2026-11-18。
 
 本文是 ACTC 实时记分板的统一技术与使用记录。修改记分板实现、赛事配置约定、操作流程或测试方式时，必须在同一次变更中同步更新本文。公开使用指南为 [howto.md](../score_board/howto.md)；旧设计与早期开发记录见 [score_system.md](../score_board/score_system.md)。本文所在的 `ai_tools` 目录不发布到 Jekyll 网站。
 
@@ -26,7 +26,7 @@
 | `events/scores/<id>.json` | 原始比赛结果，由首次保存自动创建 |
 | [scripts/test-tournament.js](../scripts/test-tournament.js) | 无第三方依赖的算法回归测试 |
 | [2026/schedule/singles.md](../2026/schedule/singles.md)、[js/schedule.js](../js/schedule.js)、[css/schedule.css](../css/schedule.css) | 已发布的 2026 单打赛程页、球员/场地筛选和只读比分同步 |
-| [scripts/import-schedule.js](../scripts/import-schedule.js)、[_data/schedules/2026-singles.json](../_data/schedules/2026-singles.json) | 从 Excel 的 `All Courts` 或 `Match List` 导入赛程，保留赛事 ID 和组别用于比分匹配 |
+| [scripts/import-schedule.js](../scripts/import-schedule.js)、[_data/schedules/2026-singles.json](../_data/schedules/2026-singles.json)、[_data/schedules/2026-doubles.json](../_data/schedules/2026-doubles.json) | 从 Excel 的 `All Courts` 或标准 `Match List` 导入单打/双打赛程，保留赛事 ID 和组别用于比分匹配 |
 | [scripts/test-schedule.js](../scripts/test-schedule.js) | 赛程导入、筛选、身份核对和模拟比分读写测试 |
 | [skills/generate_draw/generate_draw.js](../skills/generate_draw/generate_draw.js) | 赛前名单解析、种子分组、直接淘汰赛及 YAML 生成 |
 | [skills/generate_draw/README.md](../skills/generate_draw/README.md) | 抽签工具输入、命令、默认值与限制 |
@@ -271,11 +271,12 @@ tournament_scores:
 
 写入按键排序，中文通过 UTF-8 / Base64 编码。每次保存生成 GitHub commit，可在仓库提交历史中追踪。比分提交可能触发 Pages 构建，但比分读取不等待构建。若改用独立比分分支，先创建该分支并设置 `tournament_scores.branch`。
 
-### 8.3 单打赛程只读同步
+### 8.3 2026 赛程只读同步
 
 - 2026-11-10 按停用 7/8 号场地的新工作簿恢复并发布 [singles.md](../2026/schedule/singles.md)，正式路径为 `/2026/schedule/singles/`。首页场地通知、单打总览、四个分组页及双打页均提供赛程入口；7/8 号场地仍停用，14 号场地从 10:00AM 起可用。
 - 赛程数据从 `make_draw/2026/111115/singles_backup_no_court_7_8.xlsx` 的 `Match List` 导入：99 场小组赛（A级别 24、红宝石 24、蓝宝石 33、女子 18），使用 1–6、9–14 号场地。女子赛程连续使用 3、4 号场地，8:00AM 至 12:30PM。
-- `node scripts/import-schedule.js <workbook>` 可导入指定工作簿；存在 `Match List` 时优先读取该表，否则沿用 `All Courts` 导入。导入为每场循环赛生成稳定的 `eventId`、`group`；运行时按赛事、组别和双方完整姓名匹配，不解析中文显示编号，姓名中的种子标记也必须一致。未来淘汰赛赛程同步不在本次范围。
+- 双打赛程从 `make_draw/2026/111122/doubles_schedule_draft.xlsx` 的 `All Courts` 导入，公开快照为 `2026-doubles.json`：96 场小组赛、13 片场地，不含淘汰赛。当前女子双打 A/C 组使用 Court 5–6，B/D 组使用 Court 3–4；开赛默认场地随快照同步。
+- `node scripts/import-schedule.js <workbook>` 可导入指定工作簿。仅当 `Match List` 具有当前标准表头时优先读取，否则回退到 `All Courts`；双打工作簿名导出 `2026-doubles.json`，其他工作簿导出 `2026-singles.json`。矩阵中的“起可用”和“场地已关闭”提示不作为比赛。导入为每场循环赛生成稳定的 `eventId`、`group`；运行时按赛事、组别和双方完整姓名匹配，不解析中文显示编号，姓名中的种子标记也必须一致。未来淘汰赛赛程同步不在本次范围。
 - 赛程轮次必须与分组页一致：每组按开始时间排序的第 k 个时段，对阵须等于该组 `roundRobin()` 的第 k 轮，编号同为“第k轮”。修改工作簿或分组名单顺序后，`scripts/test-schedule.js` 会逐组检查；不得只改轮次文字而不调换对阵。
 - 赛程页读取与分组记分板相同的四个赛事比分文件，沿用 `tournament_scores` 仓库、分支和路径，不新增比分副本或写入入口。当前代码开发分支不改变比分存储分支。
 - `window.ACTCTournamentScores` 仅公开 `pairKey`、`result`、`loadScores`、`cellText`，赛程复用现有读取、校验与比分方向规则，不公开写入方法。
@@ -386,6 +387,7 @@ git diff --check
 | 2026-11-16：逐盘录入比分 | 录入弹窗改为两位选手各一行、每盘一列的局数格子，`+` 增加一盘（最多 5 盘），第 2 盘起可勾选抢十；`setsToScore()` 转为原存储字符串，存储格式不变；未改动的已有比分保留抢七小分 |
 | 2026-11-16：W/O 按满分计算 | 新增可选 `rules.wo_score`（字符串或按组人数映射），W/O 按满分计入双方盘局；2026 四个单打项目已配置，真实比分下排名、签表与冠军不变 |
 | 2026-11-16：小组赛进行中及默认场地 | 小组 Match 视图可开赛、改场地、取消，Table 格子同步浅橙色；新增顶层 `schedule` 配置及 `scheduleCourts()`，`event.html` 嵌入赛程数据，以赛程场地作为默认场地，改场地不回写赛程；2026 四个单打项目已关联 `2026-singles` |
+| 2026-11-18：双打赛程同步修复 | 保留女双 A/C 与 B/D 的人工场地对调，同步工作簿矩阵、`Match List`、组分配与公开双打快照；导入器支持双打项目 ID、旧表头回退、场地提示忽略和按输入选择输出快照；23 项赛程测试及记分板回归通过 |
 
 后续每次修改时：
 

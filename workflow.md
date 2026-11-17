@@ -580,3 +580,17 @@
 - 为 4 份双打赛事配置（`2026-doubles-a`、`2026-doubles-b`、`2026-doubles-womens`、`2026-doubles-senior`）加入 `schedule: "2026-doubles"`，使小组赛开赛标记默认预填对应赛程场地。
 - 在 [1122 双打页面](2026/doubles_1122.md) 与 4 个双打比赛页加入“查看双打赛程”入口按钮；并在首页 [tournament.yml](_data/tournament.yml) `announcements` 中新增“11月22日双打赛程已公布”通知（链接 `/2026/schedule/doubles/`），同时移除上一条通知中已过时的“周三发布”预告。
 - 验证：`node --test scripts/test-schedule.js` 20 项通过（含全部配置 `schedule` 默认场地覆盖校验）、`node scripts/test-tournament.js` 通过、`git diff --check` 通过；未运行 Jekyll 构建或提交推送 Git。
+
+## 2026-11-18：恢复双打场地调整同步
+
+### 需求与设计决定
+
+- 从用户已调整的 [双打赛程草案](make_draw/2026/111122/doubles_schedule_draft.xlsx) 恢复工作：保留 `All Courts` 中女双 A/C 组对调到 Court 5–6、B/D 组对调到 Court 3–4，不重新抽签或重排。
+- 工作簿 `All Courts` 作为该次用户调整的事实来源；同步更新派生 `Match List`、`Group Assignments`、仅小组赛说明及公开 `_data/schedules/2026-doubles.json`。
+- 修复导入器：只有 `Match List` 符合标准中文表头时才优先读取，否则回退 `All Courts`；支持四个双打事件 ID，忽略“起可用”“场地已关闭”提示，并依据输入工作簿名输出单打或双打快照，避免误覆盖单打数据。
+
+### 验证与限制
+
+- 工作簿语义审计确认仅 56 个目标单元格变化：`All Courts` 24、`Match List` 24、`Group Assignments` 4、`Notes` 4；96 场小组赛、13 片场地及源哈希与公开快照一致。
+- `node --test scripts/test-schedule.js` 23 项通过；`node scripts/test-tournament.js` 通过；新增测试覆盖双打标签、旧表头回退、场地提示、输出文件选择及五份配置的 207 场默认场地。`git diff --check` 通过。
+- 未重新生成名单、比分或淘汰赛，未写入真实 GitHub 数据；未运行 Jekyll 构建、Excel GUI 目视检查或线上部署，未提交或推送 Git。

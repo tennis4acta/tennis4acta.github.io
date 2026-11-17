@@ -6,7 +6,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const ExcelJS = require('exceljs');
-const { readSchedule, readMatchList, pageSchedule } = require('./import-schedule');
+const { readSchedule, readMatchList, pageSchedule, outputPathFor } = require('./import-schedule');
 const { playerNames, suggestions, matchesForPlayer, matchesForCourt, scoreForMatch, updateScores } = require('../js/schedule');
 
 function scoreTools(fetch) {
@@ -86,6 +86,36 @@ test('imports the adjusted workbook Match List and keeps women matches on their 
   ]);
 });
 
+test('imports doubles labels from the All Courts matrix and falls back from legacy Match List headers', () => {
+  const source = sheet();
+  source.addRow(['8:00AM', '男A双-A组-第1轮\nAlice & Bob vs Carol & Dana', '女双-B组-第1轮\nEve & Fran vs Gia & Hana']);
+  const legacy = source.workbook.addWorksheet('Match List');
+  legacy.addRow(['Time', 'Court', 'Event', 'Stage', 'Match Label', 'Pair 1', 'Pair 2']);
+
+  assert.equal(require('./import-schedule').hasExpectedMatchListHeaders(legacy), false);
+  assert.deepEqual(pageSchedule(readSchedule(source)).rows[0].matches.slice(0, 2), [
+    {
+      label: '男A双-A组-第1轮',
+      player1: 'Alice & Bob',
+      player2: 'Carol & Dana',
+      eventId: '2026-doubles-a',
+      group: 'A'
+    },
+    {
+      label: '女双-B组-第1轮',
+      player1: 'Eve & Fran',
+      player2: 'Gia & Hana',
+      eventId: '2026-doubles-womens',
+      group: 'B'
+    }
+  ]);
+});
+
+test('selects the schedule snapshot matching the workbook', () => {
+  assert.equal(path.basename(outputPathFor(path.join(__dirname, '../make_draw/example.xlsx'))), '2026-singles.json');
+  assert.equal(path.basename(outputPathFor(path.join(__dirname, '../make_draw/doubles_schedule_draft.xlsx'))), '2026-doubles.json');
+});
+
 test('rejects invalid workbook headers or match cells rather than silently skipping them', () => {
   const source = sheet();
   source.addRow(['8:30AM', 'Invalid match']);
@@ -112,6 +142,16 @@ test('imports Court 15 and rejects courts outside the venue allocation', () => {
 
   source.getRow(2).getCell(3).value = 16;
   assert.throws(() => readMatchList(source), /Invalid time or court/);
+});
+
+test('ignores court availability notes in the doubles matrix', () => {
+  const source = sheet();
+  source.addRow(['8:00AM', '男B双-A组-第1轮\nAlice & Bob vs\nCarol & Dana', '场地已关闭',
+    ...Array(10).fill(null), '\u0031\u0030:00AM 起可用']);
+  const schedule = pageSchedule(readSchedule(source));
+  assert.equal(schedule.rows[0].matches[0].eventId, '2026-doubles-b');
+  assert.equal(schedule.rows[0].matches[1], null);
+  assert.equal(schedule.rows[0].matches[12], null);
 });
 
 test('suggests only real, unique players after at least three characters, ignoring case', () => {
@@ -433,5 +473,6 @@ test('event configs with a schedule get a default court for every round-robin ma
     }
   }
   assert.equal(checked['2026-singles'], 99);
+  assert.equal(checked['2026-doubles'], 96);
   assert.equal(checked['test-2026-score-update'], 12);
 });

@@ -7,13 +7,16 @@ const ExcelJS = require('exceljs');
 
 const root = path.join(__dirname, '..');
 const sourcePath = path.join(root, 'make_draw', '2026', '111115', 'singles_combined_schedule.xlsx');
-const outputPath = path.join(root, '_data', 'schedules', '2026-singles.json');
 const MATCH_LIST_HEADERS = ['开始（估计）', '结束（估计）', '场地', '项目', '小组', '轮次', '球员 1', '球员 2'];
 const MATCH_LIST_EVENTS = {
   红宝石: '2026-b-ruby',
   蓝宝石: '2026-b-sapphire',
   A级别: '2026-a-grade',
-  女子: '2026-womens-singles'
+  女子: '2026-womens-singles',
+  男A双: '2026-doubles-a',
+  男B双: '2026-doubles-b',
+  女双: '2026-doubles-womens',
+  中年双: '2026-doubles-senior'
 };
 
 function cellText(cell) {
@@ -49,6 +52,7 @@ function readSchedule(sheet) {
       const cell = row.getCell(index + 2);
       const text = cellText(cell);
       if (!text) return null;
+      if (/^(?:(?:\d{1,2}:\d{2}(?:AM|PM)\s+)?起可用|场地已关闭)$/.test(text)) return null;
       const lines = text.split('\n');
       const players = lines.slice(1).join(' ').split(' vs ');
       if (lines.length < 2 || players.length !== 2 || players.some(player => !player.trim())) {
@@ -140,24 +144,36 @@ function pageSchedule(schedule) {
   return { courts: schedule.courts, rows };
 }
 
+function hasExpectedMatchListHeaders(sheet) {
+  return sheet && MATCH_LIST_HEADERS.every((header, index) => cellText(sheet.getCell(1, index + 1)) === header);
+}
+
+function outputPathFor(inputPath) {
+  const name = path.basename(inputPath).toLowerCase();
+  const outputName = name.includes('doubles') ? '2026-doubles.json' : '2026-singles.json';
+  return path.join(root, '_data', 'schedules', outputName);
+}
+
 async function main(inputPath = process.argv[2] ? path.resolve(root, process.argv[2]) : sourcePath) {
   const bytes = await fs.readFile(inputPath);
   const workbook = new ExcelJS.Workbook();
   await workbook.xlsx.load(bytes);
   const matchList = workbook.getWorksheet('Match List');
-  const schedule = pageSchedule(matchList
+  const useMatchList = hasExpectedMatchListHeaders(matchList);
+  const schedule = pageSchedule(useMatchList
     ? readMatchList(matchList)
     : readSchedule(workbook.getWorksheet('All Courts')));
   const data = {
-    source: { file: path.basename(inputPath), sheet: matchList ? 'Match List' : 'All Courts', sha256: crypto.createHash('sha256').update(bytes).digest('hex') },
+    source: { file: path.basename(inputPath), sheet: useMatchList ? 'Match List' : 'All Courts', sha256: crypto.createHash('sha256').update(bytes).digest('hex') },
     ...schedule
   };
+  const outputPath = outputPathFor(inputPath);
   await fs.mkdir(path.dirname(outputPath), { recursive: true });
   await fs.writeFile(outputPath, JSON.stringify(data, null, 2) + '\n');
   console.log(`Imported ${schedule.rows.length} rows and ${schedule.courts.length} courts into ${outputPath}`);
 }
 
-module.exports = { readSchedule, readMatchList, pageSchedule };
+module.exports = { readSchedule, readMatchList, pageSchedule, hasExpectedMatchListHeaders, outputPathFor };
 if (require.main === module) {
   main().catch(error => { console.error(error.message); process.exitCode = 1; });
 }
