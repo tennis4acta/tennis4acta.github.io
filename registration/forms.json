@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /registration/forms.json
+---
+{{ site.data.registration | jsonify }}

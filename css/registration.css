@@ -1,0 +1,55 @@
+/* Registration form (_includes/registration_form.html, js/registration.js). Builds on .form and the tokens in actc.css. */
+
+.reg-intro p { margin: .6em 0; }
+
+.reg-table { width: 100%; border-collapse: collapse; font-size: .95rem; background: var(--surface); }
+.reg-table th, .reg-table td { padding: 8px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.reg-table thead th { font-size: .82rem; color: var(--muted); }
+.reg-table__day th { background: var(--surface-2); font-weight: 800; }
+.reg-table td small { display: block; color: var(--muted); font-size: .82rem; }
+.reg-table td + td { white-space: nowrap; }
+.reg-table .is-full { color: #b45309; font-weight: 700; }
+:root[data-theme="dark"] .reg-table .is-full { color: #f5a623; }
+
+.reg-form { max-width: 760px; }
+.reg-lock, .reg-fs, .reg-form label { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+.reg-form select { width: 100%; min-width: 0; text-overflow: ellipsis; }
+.reg-lock { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 20px; counter-reset: regstep; }
+.reg-fs { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow-1); margin: 0; padding: 16px 20px 20px; min-width: 0; display: grid; gap: 16px; }
+.reg-fs > legend { display: flex; align-items: center; gap: 10px; padding: 0 8px; margin-left: -8px; font-size: 1.1rem; font-weight: 800; color: var(--court); counter-increment: regstep; }
+.reg-fs > legend::before { content: counter(regstep); display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; border-radius: 50%; background: var(--ball); color: var(--ball-ink); font: 800 .85rem/1 var(--display); }
+:root[data-theme="dark"] .reg-fs > legend { color: var(--ball); }
+.reg-row { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); align-items: start; }
+.req { color: #d0342c; }
+:root[data-theme="dark"] .req { color: #ff8a7a; }
+.reg .reg-hint { margin: 0; font-size: .85rem; font-weight: 400; color: var(--muted); }
+.reg-form textarea { font: inherit; font-weight: 400; padding: 10px 12px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; resize: vertical; }
+.reg-form textarea:focus { outline: 2px solid var(--court); outline-offset: 1px; }
+.reg-form input:disabled, .reg-form select:disabled, .reg-form textarea:disabled { opacity: .6; }
+.reg-form input[type="checkbox"], .reg-form input[type="radio"] { flex: none; width: 20px; height: 20px; margin: 3px 0 0; padding: 0; accent-color: var(--court); }
+
+.reg-choice { border: 0; margin: 0; padding: 0; min-width: 0; }
+.reg-choice > legend { padding: 0; margin-bottom: 6px; }
+.reg-opts { display: flex; flex-wrap: wrap; gap: 6px 28px; }
+.form .reg-opts label, .form .reg-check { display: flex; align-items: flex-start; gap: 10px; font-weight: 400; cursor: pointer; }
+.form .reg-check { padding: 10px 12px; border-radius: 10px; background: var(--surface-2); }
+
+.reg .reg-status { margin: 0; font-size: .92rem; color: var(--ink-soft); }
+.reg .reg-status.is-full { color: #b45309; font-weight: 700; }
+:root[data-theme="dark"] .reg .reg-status.is-full { color: #f5a623; }
+.reg-req { padding: 12px 16px; border-radius: 12px; background: var(--surface-2); font-size: .92rem; }
+.reg-req ol { margin: 6px 0 0; padding-left: 1.3em; }
+
+.reg-done { max-width: 760px; margin: 24px 0; padding: 20px 22px; border: 1px solid var(--line); border-left: 4px solid var(--ok); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow-1); }
+.reg-done[data-kind="preview"] { border-left-color: #f5a623; }
+.reg-done[data-kind="waitlist"] { border-left-color: var(--court); }
+.prose .reg-done h3 { margin-top: 0; }
+.reg-summary { display: grid; grid-template-columns: minmax(140px, max-content) 1fr; gap: 6px 18px; margin: 16px 0 20px; font-size: .92rem; }
+.prose .reg-summary dt { margin: 0; font-weight: 400; color: var(--muted); }
+.prose .reg-summary dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+
+@media (max-width: 560px) {
+  .reg-fs { padding: 14px 14px 18px; }
+  .reg-summary { grid-template-columns: 1fr; gap: 0; }
+  .prose .reg-summary dd { margin-bottom: 8px; }
+}

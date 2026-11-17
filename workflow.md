@@ -544,3 +544,77 @@
 - 修复：用编辑工具按 UTF-8 恢复配置中的中文；按组名和轮次重建赛程 `label`（`测试-<组>组-第<n>轮`），修复脚本以文件方式运行，不再经管道。
 - 验证：三个测试文件中已无 `?`，标题码位核对为“比分录入测试”；`js-yaml` 解析通过，`node --test scripts/test-schedule.js` 20 项通过。同期以 PowerShell `Add-Content` 写入的 `workflow.md`、`test-schedule.js` 及首页公告均未发现 `???`。
 - 经验：在 Windows PowerShell 中，不要把含中文的脚本经管道传给外部程序；改用编辑工具，或保存为文件后用 `node <文件>` 运行。修复尚未提交或推送。
+
+## 2026-11-16：赛事报名表生成工具及 2028 隐藏预览页
+
+### 需求
+
+- 新增报名功能：输入比赛项目和名额（如 `Mens Singles Grade A=16`），即可生成网站报名表，并提供报名页预览及需收集的信息。
+- 报名费只提供方案，暂不实现。以往报名使用 Eventbrite、SportsLogic、ClassHub 等第三方平台。
+
+### 设计决定
+
+- 用户确认的选项：
+  - 报名数据写入 Google 表格，沿用等候名单的 Apps Script 做法；
+  - 满额后自动进入等候名单；
+  - 双打名额按对计算；
+  - 预览放在隐藏测试页 `/test/2028/register/`；
+  - 预览项目沿用 2026 年的 7 个项目（男单 A 级别为 16 人）。
+- 采用与抽签工具相同的模式：CLI 加 skill。生成器根据项目名识别单打/双打、性别、级别和年龄组，生成与 2026 一致的中英文名称，项目 ID 与 `_data/tournament.yml` 的 `requirements` 键一致，因此报名页可直接显示现有参赛要求。
+- 每届一份配置 `_data/registration/<id>.yml`，页面只含 include。为避免影响仍在进行的 2026 赛事，不改动 `_data/tournament.yml`。
+- 后端读取 Jekyll 发布的 `/registration/forms.json`，以 YAML 为唯一配置来源。同步方式：
+  - 每个配置对应表格中的一个标签页，按表头读取；
+  - 在加锁状态下判断名额，避免并发超报；
+  - 只要仍有人等候，新报名一律进入等候名单，保证先后顺序；
+  - 每位球员每个比赛日只能有一个有效报名，按姓名加出生年份判断，包括作为搭档；
+  - 报名编号格式为 `<id>-0001`；
+  - 发送确认邮件，失败或额度用尽不影响报名。
+- 收集的信息依据 2026 参赛规程：
+  - 姓名按证件填写；
+  - 来源地限大陆、香港、澳门、台湾；
+  - 年龄按出生年份判断，只收年份，不收完整生日；
+  - NTRP 自评、UTR、专业经历及退役年份；
+  - 联系方式；
+  - 健康、保险、免责、退赛、个人信息等声明。
+
+  性别只在混双时收集。双打每对一人填写，并须勾选“已获搭档同意”。
+
+### 实际完成
+
+- 生成器、测试及说明：
+  - [生成器](skills/generate_registration/generate_registration.js)、[测试](skills/generate_registration/generate_registration.test.js)；
+  - [README](skills/generate_registration/README.md)：用法、配置、部署、日常管理及报名费方案；
+  - [generate-registration skill](.github/skills/generate-registration/SKILL.md)。
+- 网站：
+  - [表单模板](_includes/registration_form.html)；
+  - [前端脚本](js/registration.js)、[样式](css/registration.css)；
+  - [配置发布页](registration/forms.json)。
+- 后端：[Apps Script 后端](scripts/registration.gs) 及 [模拟测试](scripts/test-registration.js)。
+- 用生成器创建了 [test-2028.yml](_data/registration/test-2028.yml) 和 [隐藏测试页](test/2028/register.md)：`endpoint` 为空，处于预览模式，不发送数据。
+- 更新 [AGENTS.md](AGENTS.md) 的入口、skill 表及验证命令。
+
+### 验证与未验证事项
+
+- 自动测试：
+  - 生成器测试 6 项通过；
+  - 后端模拟测试 7 项通过（vm 加内存表格、锁、缓存、请求和邮件），并核对表单字段与后端字段一致，以及前后端的身份判断、年龄范围和开放状态逻辑一致；
+  - 原有 `node scripts/test-tournament.js`、`node --test scripts/test-schedule.js`（20 项）、抽签测试（15 项）、`node --check js/registration.js`、`git diff --check` 均通过。
+- 浏览器预览：本机无 Jekyll，在 git 忽略的 `tmp/` 中用 LiquidJS（Jekyll include 模式）加 marked 渲染真实布局、include 和数据，并在会话浏览器中检查：
+  - 预览模式的汇总；
+  - 单打、双打及搭档声明；
+  - 中年组年份范围 1958–1978、专业经历展开；
+  - 混双同性别拦截；
+  - 深色模式，以及 390px 宽度下无溢出。
+- 端到端模拟：同一预览接入运行真实 `registration.gs` 的模拟后端，验证了剩余名额显示、满额进入等候第 1 位、重复报名提示，以及保存的整行数据。
+- 预览中发现并修复：`.prose` 默认段落和列表边距导致的间距与错位；原生下拉框过宽，在窄屏横向溢出。
+- 未验证：
+  - 未运行 Jekyll/kramdown 构建，include 结构参照 `event.html`（外层 div、无空行）；
+  - 未部署真实 Apps Script，未写入真实 Google 表格，未发送真实邮件；
+  - 未提交或推送 Git。
+- 测试页显示的参赛要求仍来自 2026 年的 `_data/tournament.yml`，例如中年组写 1956–1976 年出生，而 2028 配置的计算结果为 1958–1978。2028 规程更新后会自动一致。
+
+### 报名费（方案，未实现）
+
+- 依据 2026-11-16 的公开资料：自 2026 年 10 月 1 日起，卡附加费已被禁止，不应再标示“+ 手续费”，应标示含手续费的总价。
+- 推荐方案：先报名占位，再用 Stripe Payment Links 付款，并以报名编号作为 `client_reference_id`；Apps Script 定时用受限密钥对账，PayID 作为备选。
+- 详见 [README](skills/generate_registration/README.md) 末节。实施前须确认价格、付款期限和收款账户。

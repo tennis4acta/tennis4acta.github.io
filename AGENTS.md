@@ -10,6 +10,7 @@
 
 - 实时记分板：先读 [ai_tools/scoreboard.md](ai_tools/scoreboard.md)，行为或接口变化时同步更新。
 - 抽签工具：实现和测试在 [skills/generate_draw](skills/generate_draw)，操作见 [README.md](skills/generate_draw/README.md)。
+- 报名表：生成器、配置字段、Apps Script 部署及报名费方案见 [skills/generate_registration/README.md](skills/generate_registration/README.md)。
 - 后续设计、开发、验证及更改统一追加到 [workflow.md](workflow.md)，区分设计决定、实际完成和未验证事项。
 - 遵守适用的 `.github/instructions/` 指令及 skill，保留用户已有改动。
 
@@ -19,6 +20,7 @@
 |---|---|---|
 | `generate-draw` | [.github/skills/generate-draw/SKILL.md](.github/skills/generate-draw/SKILL.md) | 解析名单与种子，分组或直接淘汰赛抽签，生成记分板 YAML |
 | `generate-tennis-scoreboard` | [.github/skills/generate-tennis-scoreboard/SKILL.md](.github/skills/generate-tennis-scoreboard/SKILL.md) | 将赛事配置接入 Jekyll 页面，核对赛制与比分存储 |
+| `generate-registration` | [.github/skills/generate-registration/SKILL.md](.github/skills/generate-registration/SKILL.md) | 按项目和名额生成报名页，报名写入 Google 表格，含等候名单 |
 
 新建或更改仓库 agent/skill 时，更新此表或对应角色说明；不要写入个人令牌、凭据或无法验证的能力声明。
 
@@ -28,5 +30,6 @@
 2. 修改后先运行受影响的聚焦测试，不触碰真实比分、开赛名单或令牌。
 3. 抽签工具检查：`node --test skills/generate_draw/generate_draw.test.js`。
 4. 记分板算法检查：`node scripts/test-tournament.js`；补丁检查：`git diff --check`。
-5. 用户可见流程变化同步公开指南；内部工具、agent 说明和工作记录不发布到 Jekyll 网站。
-6. 完成前更新 `workflow.md`，写明验证范围及外部依赖造成的未验证项；不把模拟 API 测试描述为真实写入通过。
+5. 报名表检查：`node --test skills/generate_registration/generate_registration.test.js scripts/test-registration.js`（后端为模拟验证）。
+6. 用户可见流程变化同步公开指南；内部工具、agent 说明和工作记录不发布到 Jekyll 网站。
+7. 完成前更新 `workflow.md`，写明验证范围及外部依赖造成的未验证项；不把模拟 API 测试描述为真实写入通过。
