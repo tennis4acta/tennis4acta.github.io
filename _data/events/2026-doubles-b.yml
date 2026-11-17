@@ -9,6 +9,7 @@ groups:
   "G": ["Simon Kwok & David Cheung","Sam Tang & Fei Wang","Chris Niu & Josh Zhu","Ruyi Liu & Jay Wu"]
   "H": ["Tingwei Chen & Pong Lung Lau","Si Wang & Xiugui Tang","Shawn Han & Maurice Li","Amos Chen & Fred Zheng"]
 seeds: {}
+schedule: "2026-doubles"
 rules:
   advance: 2
   points: {"win":1,"loss":0,"wo_loss":0}

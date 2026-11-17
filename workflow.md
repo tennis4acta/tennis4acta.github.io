@@ -562,3 +562,21 @@
   - [womens_doubles.md](2026/matches/womens_doubles.md)（`2026-doubles-womens`）
   - [senior_doubles.md](2026/matches/senior_doubles.md)（`2026-doubles-senior`）
 - 验证：`js-yaml` 解析 4 份配置通过，`node --test skills/generate_draw/generate_draw.test.js` 15 项通过，`node scripts/test-tournament.js` 通过，`git diff --check` 通过；未运行 Jekyll 构建或调用 GitHub API，未提交或推送 Git。
+
+## 2026-11-17：2026 双打赛程 Excel 草案
+
+- 按用户指定场地与开放时段生成 [双打赛程草案](make_draw/2026/111122/doubles_schedule_draft.xlsx)（含 `All Courts`、`Match List`、`Group Assignments`、`Notes` 4 个工作表），**未发布或导入网站**：
+  - **男A双**（Court 1–2，8:00AM–6:00PM）：12 场小组赛至 11:00AM 结束；QF（11:00/11:30AM）、SF（12:30PM）、F（1:30PM），共 19 场，2:00PM 结束。
+  - **女双**（Court 3–6，8:00AM–4:00PM）：24 场小组赛至 11:00AM 结束；QF（11:30AM）、SF（12:30PM）、F（1:30PM），共 31 场，2:00PM 结束。
+  - **中年双**（Court 14–15，10:00AM–4:00PM）：12 场小组赛至 1:00PM 结束；SF（1:30PM）、F（2:30PM），共 15 场，3:00PM 结束。
+  - **男B双**（Court 9–13，8:00AM–4:00PM）：48 场小组赛至 1:00PM 结束；R16（12:30/1:00/1:30PM）、QF（2:30PM）、SF（3:30PM，4:00PM 结束），共 63 场；因 Court 9–13 于 4:00PM 关闭且需保障半决赛后 30 分钟休息，男B双决赛安排在 4:30PM 使用已于 2:00PM 完赛且开放至 6:00PM 的 Court 1。
+- 验证：128 场（96 场小组赛、32 场淘汰赛）全部严格按 `js/tournament.js` `roundRobin()` 及固定 `rules.draw` 编排；零场地冲突、零球员冲突、所有轮次间隔至少 1 个 30 分钟时段、所有场地均在开放时段内；ExcelJS 重读核对 4 个工作表与场次总数一致，`git diff --check` 通过。生成脚本保存在会话目录。未在 Excel GUI 中目视检查。
+- 后续（同日用户调整）：用户将草案改为仅保留 96 场小组赛，并将 `男B双` 第 3 轮 A/B/E/F 组安排到女双完赛后的 Court 3–6。核查发现 `男B双-H组` 第 2、3 轮相邻无休息，按用户指示已将 `男B双-H组-第3轮`（2 场）从第 9 行移至第 10 行（Court 12、13），清理第 12–19 行空白/关闭提示行，并同步重建 `Match List`（97 行含表头）与 `Group Assignments`（19 行含表头）。验证 96 场小组赛完整、零冲突、全部球员至少间隔 1 轮休息；尚未导入网站赛程数据。
+
+## 2026-11-17：2026 双打赛程页生成与入口接入
+
+- 从确认后的 [doubles_schedule_draft.xlsx](make_draw/2026/111122/doubles_schedule_draft.xlsx)（`All Courts`）生成 [2026-doubles.json](_data/schedules/2026-doubles.json)（10 行、13 片场地、96 场小组赛），并参考 [singles.md](2026/schedule/singles.md) 新建 [doubles.md](2026/schedule/doubles.md)（`/2026/schedule/doubles/`）。
+- 赛程页支持完整表格横向滚动与固定时间列/表头、至少 3 个字母自动提示的球员搜索、1–15 号场地筛选及实时比分同步；复用 `css/schedule.css` 颜色分类（男A双 `a`、男B双 `sapphire`、女双 `women`、中年双 `ruby`）。
+- 为 4 份双打赛事配置（`2026-doubles-a`、`2026-doubles-b`、`2026-doubles-womens`、`2026-doubles-senior`）加入 `schedule: "2026-doubles"`，使小组赛开赛标记默认预填对应赛程场地。
+- 在 [1122 双打页面](2026/doubles_1122.md) 与 4 个双打比赛页加入“查看双打赛程”入口按钮；并在首页 [tournament.yml](_data/tournament.yml) `announcements` 中新增“11月22日双打赛程已公布”通知（链接 `/2026/schedule/doubles/`），同时移除上一条通知中已过时的“周三发布”预告。
+- 验证：`node --test scripts/test-schedule.js` 20 项通过（含全部配置 `schedule` 默认场地覆盖校验）、`node scripts/test-tournament.js` 通过、`git diff --check` 通过；未运行 Jekyll 构建或提交推送 Git。

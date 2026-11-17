@@ -7,6 +7,7 @@ wide: true
 
 <p>
   <a class="btn btn--outline" href="{{ '/2026/1122/' | relative_url }}">返回双打赛事页</a>
+  <a class="btn btn--outline" href="{{ '/2026/schedule/doubles/' | relative_url }}">查看双打赛程</a>
 </p>
 
 ### 赛制

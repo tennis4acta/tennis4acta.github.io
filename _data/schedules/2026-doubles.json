@@ -1,0 +1,780 @@
+{
+  "source": {
+    "file": "doubles_schedule_draft.xlsx",
+    "sheet": "All Courts",
+    "sha256": "d67eb822e4dd30b5f9d237ec0700fd4e1d690761cea2b41b83ce860e6811127b"
+  },
+  "courts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "rows": [
+    {
+      "time": "8:00AM",
+      "matches": [
+        {
+          "label": "男A双-A组-第1轮",
+          "player1": "Jeff Ng & Eric Hsu",
+          "player2": "Donny Jiang & James Yuan",
+          "eventId": "2026-doubles-a",
+          "group": "A"
+        },
+        {
+          "label": "男A双-B组-第1轮",
+          "player1": "Simon Yu & Marcus Gock",
+          "player2": "Chong Shi & Raymond Jiang",
+          "eventId": "2026-doubles-a",
+          "group": "B"
+        },
+        {
+          "label": "女双-A组-第1轮",
+          "player1": "Zijun Xia & Zilan Wu [1]",
+          "player2": "Linda Zhou & Jiayu Gao",
+          "eventId": "2026-doubles-womens",
+          "group": "A"
+        },
+        {
+          "label": "女双-A组-第1轮",
+          "player1": "Qunying Huang & Pei Zou",
+          "player2": "Vivienne Qi & Vivian Sue",
+          "eventId": "2026-doubles-womens",
+          "group": "A"
+        },
+        {
+          "label": "女双-B组-第1轮",
+          "player1": "Amy Chen & Alicia Wang [2]",
+          "player2": "June Jiang & Jackie Xu",
+          "eventId": "2026-doubles-womens",
+          "group": "B"
+        },
+        {
+          "label": "女双-B组-第1轮",
+          "player1": "Qingqing Li-Du & Louisa Zhi",
+          "player2": "Yingxi Ma & Pamela Qi",
+          "eventId": "2026-doubles-womens",
+          "group": "B"
+        },
+        {
+          "label": "男B双-A组-第1轮",
+          "player1": "Yong Huang & Biyou Ma",
+          "player2": "Romeo Chen & Xiaohan Wang",
+          "eventId": "2026-doubles-b",
+          "group": "A"
+        },
+        {
+          "label": "男B双-A组-第1轮",
+          "player1": "Tony Su & Da Di",
+          "player2": "Jason Zhao & Kevin Liang",
+          "eventId": "2026-doubles-b",
+          "group": "A"
+        },
+        {
+          "label": "男B双-B组-第1轮",
+          "player1": "Yong Fan & Jesse Chan",
+          "player2": "Alex Zhao & Cham Chen",
+          "eventId": "2026-doubles-b",
+          "group": "B"
+        },
+        {
+          "label": "男B双-B组-第1轮",
+          "player1": "Hua En Chang & Yongji Liu",
+          "player2": "Ronnie Tse & Ka Siu Luk",
+          "eventId": "2026-doubles-b",
+          "group": "B"
+        },
+        {
+          "label": "男B双-C组-第1轮",
+          "player1": "Gordon Ge & Jackman Yin",
+          "player2": "Tony Liu & Sherman Kwong",
+          "eventId": "2026-doubles-b",
+          "group": "C"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "time": null,
+      "matches": [
+        {
+          "label": "男A双-C组-第1轮",
+          "player1": "Joseph Shao & Roger Cheung",
+          "player2": "Richard Gong & Brandon Liu",
+          "eventId": "2026-doubles-a",
+          "group": "C"
+        },
+        {
+          "label": "男A双-D组-第1轮",
+          "player1": "Michael Deng & Dominic Tu",
+          "player2": "Dingkun Wu & Junchao Li",
+          "eventId": "2026-doubles-a",
+          "group": "D"
+        },
+        {
+          "label": "女双-C组-第1轮",
+          "player1": "Lauren Shen & Alison Liu",
+          "player2": "Riley Liu & Polly Yang",
+          "eventId": "2026-doubles-womens",
+          "group": "C"
+        },
+        {
+          "label": "女双-C组-第1轮",
+          "player1": "Jing Hong & Jamie Lee",
+          "player2": "Lei Huang & Evelyn Qin",
+          "eventId": "2026-doubles-womens",
+          "group": "C"
+        },
+        {
+          "label": "女双-D组-第1轮",
+          "player1": "Bing Liang & Jo Zhang",
+          "player2": "Chelsea He & Xin Liu",
+          "eventId": "2026-doubles-womens",
+          "group": "D"
+        },
+        {
+          "label": "女双-D组-第1轮",
+          "player1": "Huixuan Zhao & Wenbo Zhao",
+          "player2": "Sammy Gan & Claudia Wang",
+          "eventId": "2026-doubles-womens",
+          "group": "D"
+        },
+        {
+          "label": "男B双-D组-第1轮",
+          "player1": "Will Hong & Jiaxin Shen",
+          "player2": "Patrick Zhang & Andrew Tan",
+          "eventId": "2026-doubles-b",
+          "group": "D"
+        },
+        {
+          "label": "男B双-D组-第1轮",
+          "player1": "Oscar Wong & Toma Ishinozeki",
+          "player2": "Junde Liu & Yatao Cui",
+          "eventId": "2026-doubles-b",
+          "group": "D"
+        },
+        {
+          "label": "男B双-E组-第1轮",
+          "player1": "Hao Yu & Chance Qin",
+          "player2": "Cheuk Nam Ip & Xiang Zhang",
+          "eventId": "2026-doubles-b",
+          "group": "E"
+        },
+        {
+          "label": "男B双-E组-第1轮",
+          "player1": "Kevin Huang & Joachim Li",
+          "player2": "Chris Yu & John Yue",
+          "eventId": "2026-doubles-b",
+          "group": "E"
+        },
+        {
+          "label": "男B双-C组-第1轮",
+          "player1": "Connor Zhou & Steven Xie",
+          "player2": "Darren Zhong & Wei Peng",
+          "eventId": "2026-doubles-b",
+          "group": "C"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "time": null,
+      "matches": [
+        {
+          "label": "男A双-A组-第2轮",
+          "player1": "Haowen Deng & Kane Duong [1]",
+          "player2": "Donny Jiang & James Yuan",
+          "eventId": "2026-doubles-a",
+          "group": "A"
+        },
+        {
+          "label": "男A双-B组-第2轮",
+          "player1": "Roger Yu & Austin Han [2]",
+          "player2": "Chong Shi & Raymond Jiang",
+          "eventId": "2026-doubles-a",
+          "group": "B"
+        },
+        {
+          "label": "女双-A组-第2轮",
+          "player1": "Zijun Xia & Zilan Wu [1]",
+          "player2": "Vivienne Qi & Vivian Sue",
+          "eventId": "2026-doubles-womens",
+          "group": "A"
+        },
+        {
+          "label": "女双-A组-第2轮",
+          "player1": "Qunying Huang & Pei Zou",
+          "player2": "Linda Zhou & Jiayu Gao",
+          "eventId": "2026-doubles-womens",
+          "group": "A"
+        },
+        {
+          "label": "女双-B组-第2轮",
+          "player1": "Amy Chen & Alicia Wang [2]",
+          "player2": "Yingxi Ma & Pamela Qi",
+          "eventId": "2026-doubles-womens",
+          "group": "B"
+        },
+        {
+          "label": "女双-B组-第2轮",
+          "player1": "Qingqing Li-Du & Louisa Zhi",
+          "player2": "June Jiang & Jackie Xu",
+          "eventId": "2026-doubles-womens",
+          "group": "B"
+        },
+        {
+          "label": "男B双-F组-第1轮",
+          "player1": "Edward Liang & Yue Liao",
+          "player2": "Benedict Siu & Daniel Lee",
+          "eventId": "2026-doubles-b",
+          "group": "F"
+        },
+        {
+          "label": "男B双-F组-第1轮",
+          "player1": "Zhihong Gui & David Zhou",
+          "player2": "Zhe Yang & Yicheng Zhang",
+          "eventId": "2026-doubles-b",
+          "group": "F"
+        },
+        {
+          "label": "男B双-G组-第1轮",
+          "player1": "Simon Kwok & David Cheung",
+          "player2": "Ruyi Liu & Jay Wu",
+          "eventId": "2026-doubles-b",
+          "group": "G"
+        },
+        {
+          "label": "男B双-G组-第1轮",
+          "player1": "Sam Tang & Fei Wang",
+          "player2": "Chris Niu & Josh Zhu",
+          "eventId": "2026-doubles-b",
+          "group": "G"
+        },
+        {
+          "label": "男B双-H组-第1轮",
+          "player1": "Tingwei Chen & Pong Lung Lau",
+          "player2": "Amos Chen & Fred Zheng",
+          "eventId": "2026-doubles-b",
+          "group": "H"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "time": null,
+      "matches": [
+        {
+          "label": "男A双-C组-第2轮",
+          "player1": "Luming Qiu & Michael Li",
+          "player2": "Richard Gong & Brandon Liu",
+          "eventId": "2026-doubles-a",
+          "group": "C"
+        },
+        {
+          "label": "男A双-D组-第2轮",
+          "player1": "Justin Chan & Jeffery Wong",
+          "player2": "Dingkun Wu & Junchao Li",
+          "eventId": "2026-doubles-a",
+          "group": "D"
+        },
+        {
+          "label": "女双-C组-第2轮",
+          "player1": "Lauren Shen & Alison Liu",
+          "player2": "Lei Huang & Evelyn Qin",
+          "eventId": "2026-doubles-womens",
+          "group": "C"
+        },
+        {
+          "label": "女双-C组-第2轮",
+          "player1": "Jing Hong & Jamie Lee",
+          "player2": "Riley Liu & Polly Yang",
+          "eventId": "2026-doubles-womens",
+          "group": "C"
+        },
+        {
+          "label": "女双-D组-第2轮",
+          "player1": "Bing Liang & Jo Zhang",
+          "player2": "Sammy Gan & Claudia Wang",
+          "eventId": "2026-doubles-womens",
+          "group": "D"
+        },
+        {
+          "label": "女双-D组-第2轮",
+          "player1": "Huixuan Zhao & Wenbo Zhao",
+          "player2": "Chelsea He & Xin Liu",
+          "eventId": "2026-doubles-womens",
+          "group": "D"
+        },
+        {
+          "label": "男B双-A组-第2轮",
+          "player1": "Yong Huang & Biyou Ma",
+          "player2": "Jason Zhao & Kevin Liang",
+          "eventId": "2026-doubles-b",
+          "group": "A"
+        },
+        {
+          "label": "男B双-A组-第2轮",
+          "player1": "Tony Su & Da Di",
+          "player2": "Romeo Chen & Xiaohan Wang",
+          "eventId": "2026-doubles-b",
+          "group": "A"
+        },
+        {
+          "label": "男B双-B组-第2轮",
+          "player1": "Yong Fan & Jesse Chan",
+          "player2": "Ronnie Tse & Ka Siu Luk",
+          "eventId": "2026-doubles-b",
+          "group": "B"
+        },
+        {
+          "label": "男B双-B组-第2轮",
+          "player1": "Hua En Chang & Yongji Liu",
+          "player2": "Alex Zhao & Cham Chen",
+          "eventId": "2026-doubles-b",
+          "group": "B"
+        },
+        {
+          "label": "男B双-H组-第1轮",
+          "player1": "Si Wang & Xiugui Tang",
+          "player2": "Shawn Han & Maurice Li",
+          "eventId": "2026-doubles-b",
+          "group": "H"
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "time": "Not Before 10:00AM",
+      "matches": [
+        {
+          "label": "男A双-A组-第3轮",
+          "player1": "Haowen Deng & Kane Duong [1]",
+          "player2": "Jeff Ng & Eric Hsu",
+          "eventId": "2026-doubles-a",
+          "group": "A"
+        },
+        {
+          "label": "男A双-B组-第3轮",
+          "player1": "Roger Yu & Austin Han [2]",
+          "player2": "Simon Yu & Marcus Gock",
+          "eventId": "2026-doubles-a",
+          "group": "B"
+        },
+        {
+          "label": "女双-A组-第3轮",
+          "player1": "Zijun Xia & Zilan Wu [1]",
+          "player2": "Qunying Huang & Pei Zou",
+          "eventId": "2026-doubles-womens",
+          "group": "A"
+        },
+        {
+          "label": "女双-A组-第3轮",
+          "player1": "Vivienne Qi & Vivian Sue",
+          "player2": "Linda Zhou & Jiayu Gao",
+          "eventId": "2026-doubles-womens",
+          "group": "A"
+        },
+        {
+          "label": "女双-B组-第3轮",
+          "player1": "Amy Chen & Alicia Wang [2]",
+          "player2": "Qingqing Li-Du & Louisa Zhi",
+          "eventId": "2026-doubles-womens",
+          "group": "B"
+        },
+        {
+          "label": "女双-B组-第3轮",
+          "player1": "Yingxi Ma & Pamela Qi",
+          "player2": "June Jiang & Jackie Xu",
+          "eventId": "2026-doubles-womens",
+          "group": "B"
+        },
+        {
+          "label": "男B双-C组-第2轮",
+          "player1": "Gordon Ge & Jackman Yin",
+          "player2": "Darren Zhong & Wei Peng",
+          "eventId": "2026-doubles-b",
+          "group": "C"
+        },
+        {
+          "label": "男B双-C组-第2轮",
+          "player1": "Connor Zhou & Steven Xie",
+          "player2": "Tony Liu & Sherman Kwong",
+          "eventId": "2026-doubles-b",
+          "group": "C"
+        },
+        {
+          "label": "男B双-D组-第2轮",
+          "player1": "Will Hong & Jiaxin Shen",
+          "player2": "Junde Liu & Yatao Cui",
+          "eventId": "2026-doubles-b",
+          "group": "D"
+        },
+        {
+          "label": "男B双-D组-第2轮",
+          "player1": "Oscar Wong & Toma Ishinozeki",
+          "player2": "Patrick Zhang & Andrew Tan",
+          "eventId": "2026-doubles-b",
+          "group": "D"
+        },
+        {
+          "label": "男B双-E组-第2轮",
+          "player1": "Hao Yu & Chance Qin",
+          "player2": "Chris Yu & John Yue",
+          "eventId": "2026-doubles-b",
+          "group": "E"
+        },
+        {
+          "label": "中年双-A组-第1轮",
+          "player1": "Titus Chiu & Bill Peng [1]",
+          "player2": "Yiou Tan & Edward Xu",
+          "eventId": "2026-doubles-senior",
+          "group": "A"
+        },
+        {
+          "label": "中年双-A组-第1轮",
+          "player1": "Yunbin Wu & Jimmy W",
+          "player2": "Richard Yang & Guangyao Jiang",
+          "eventId": "2026-doubles-senior",
+          "group": "A"
+        }
+      ]
+    },
+    {
+      "time": null,
+      "matches": [
+        {
+          "label": "男A双-C组-第3轮",
+          "player1": "Luming Qiu & Michael Li",
+          "player2": "Joseph Shao & Roger Cheung",
+          "eventId": "2026-doubles-a",
+          "group": "C"
+        },
+        {
+          "label": "男A双-D组-第3轮",
+          "player1": "Justin Chan & Jeffery Wong",
+          "player2": "Michael Deng & Dominic Tu",
+          "eventId": "2026-doubles-a",
+          "group": "D"
+        },
+        {
+          "label": "女双-C组-第3轮",
+          "player1": "Lauren Shen & Alison Liu",
+          "player2": "Jing Hong & Jamie Lee",
+          "eventId": "2026-doubles-womens",
+          "group": "C"
+        },
+        {
+          "label": "女双-C组-第3轮",
+          "player1": "Lei Huang & Evelyn Qin",
+          "player2": "Riley Liu & Polly Yang",
+          "eventId": "2026-doubles-womens",
+          "group": "C"
+        },
+        {
+          "label": "女双-D组-第3轮",
+          "player1": "Bing Liang & Jo Zhang",
+          "player2": "Huixuan Zhao & Wenbo Zhao",
+          "eventId": "2026-doubles-womens",
+          "group": "D"
+        },
+        {
+          "label": "女双-D组-第3轮",
+          "player1": "Sammy Gan & Claudia Wang",
+          "player2": "Chelsea He & Xin Liu",
+          "eventId": "2026-doubles-womens",
+          "group": "D"
+        },
+        {
+          "label": "男B双-F组-第2轮",
+          "player1": "Edward Liang & Yue Liao",
+          "player2": "Zhe Yang & Yicheng Zhang",
+          "eventId": "2026-doubles-b",
+          "group": "F"
+        },
+        {
+          "label": "男B双-F组-第2轮",
+          "player1": "Zhihong Gui & David Zhou",
+          "player2": "Benedict Siu & Daniel Lee",
+          "eventId": "2026-doubles-b",
+          "group": "F"
+        },
+        {
+          "label": "男B双-G组-第2轮",
+          "player1": "Simon Kwok & David Cheung",
+          "player2": "Chris Niu & Josh Zhu",
+          "eventId": "2026-doubles-b",
+          "group": "G"
+        },
+        {
+          "label": "男B双-G组-第2轮",
+          "player1": "Sam Tang & Fei Wang",
+          "player2": "Ruyi Liu & Jay Wu",
+          "eventId": "2026-doubles-b",
+          "group": "G"
+        },
+        {
+          "label": "男B双-E组-第2轮",
+          "player1": "Kevin Huang & Joachim Li",
+          "player2": "Cheuk Nam Ip & Xiang Zhang",
+          "eventId": "2026-doubles-b",
+          "group": "E"
+        },
+        {
+          "label": "中年双-B组-第1轮",
+          "player1": "Andrew Au & Bill Hsu [2]",
+          "player2": "Johnny Tang & Ted Li",
+          "eventId": "2026-doubles-senior",
+          "group": "B"
+        },
+        {
+          "label": "中年双-B组-第1轮",
+          "player1": "Roy Qiao & Henry Lu",
+          "player2": "Peter Sui & Harry Song",
+          "eventId": "2026-doubles-senior",
+          "group": "B"
+        }
+      ]
+    },
+    {
+      "time": null,
+      "matches": [
+        null,
+        null,
+        {
+          "label": "男B双-A组-第3轮",
+          "player1": "Yong Huang & Biyou Ma",
+          "player2": "Tony Su & Da Di",
+          "eventId": "2026-doubles-b",
+          "group": "A"
+        },
+        {
+          "label": "男B双-A组-第3轮",
+          "player1": "Jason Zhao & Kevin Liang",
+          "player2": "Romeo Chen & Xiaohan Wang",
+          "eventId": "2026-doubles-b",
+          "group": "A"
+        },
+        {
+          "label": "男B双-B组-第3轮",
+          "player1": "Yong Fan & Jesse Chan",
+          "player2": "Hua En Chang & Yongji Liu",
+          "eventId": "2026-doubles-b",
+          "group": "B"
+        },
+        {
+          "label": "男B双-B组-第3轮",
+          "player1": "Ronnie Tse & Ka Siu Luk",
+          "player2": "Alex Zhao & Cham Chen",
+          "eventId": "2026-doubles-b",
+          "group": "B"
+        },
+        {
+          "label": "男B双-C组-第3轮",
+          "player1": "Gordon Ge & Jackman Yin",
+          "player2": "Connor Zhou & Steven Xie",
+          "eventId": "2026-doubles-b",
+          "group": "C"
+        },
+        {
+          "label": "男B双-C组-第3轮",
+          "player1": "Darren Zhong & Wei Peng",
+          "player2": "Tony Liu & Sherman Kwong",
+          "eventId": "2026-doubles-b",
+          "group": "C"
+        },
+        {
+          "label": "男B双-D组-第3轮",
+          "player1": "Will Hong & Jiaxin Shen",
+          "player2": "Oscar Wong & Toma Ishinozeki",
+          "eventId": "2026-doubles-b",
+          "group": "D"
+        },
+        {
+          "label": "男B双-H组-第2轮",
+          "player1": "Si Wang & Xiugui Tang",
+          "player2": "Amos Chen & Fred Zheng",
+          "eventId": "2026-doubles-b",
+          "group": "H"
+        },
+        {
+          "label": "男B双-H组-第2轮",
+          "player1": "Tingwei Chen & Pong Lung Lau",
+          "player2": "Shawn Han & Maurice Li",
+          "eventId": "2026-doubles-b",
+          "group": "H"
+        },
+        {
+          "label": "中年双-A组-第2轮",
+          "player1": "Titus Chiu & Bill Peng [1]",
+          "player2": "Richard Yang & Guangyao Jiang",
+          "eventId": "2026-doubles-senior",
+          "group": "A"
+        },
+        {
+          "label": "中年双-A组-第2轮",
+          "player1": "Yunbin Wu & Jimmy W",
+          "player2": "Yiou Tan & Edward Xu",
+          "eventId": "2026-doubles-senior",
+          "group": "A"
+        }
+      ]
+    },
+    {
+      "time": null,
+      "matches": [
+        null,
+        null,
+        {
+          "label": "男B双-E组-第3轮",
+          "player1": "Hao Yu & Chance Qin",
+          "player2": "Kevin Huang & Joachim Li",
+          "eventId": "2026-doubles-b",
+          "group": "E"
+        },
+        {
+          "label": "男B双-E组-第3轮",
+          "player1": "Chris Yu & John Yue",
+          "player2": "Cheuk Nam Ip & Xiang Zhang",
+          "eventId": "2026-doubles-b",
+          "group": "E"
+        },
+        {
+          "label": "男B双-F组-第3轮",
+          "player1": "Edward Liang & Yue Liao",
+          "player2": "Zhihong Gui & David Zhou",
+          "eventId": "2026-doubles-b",
+          "group": "F"
+        },
+        {
+          "label": "男B双-F组-第3轮",
+          "player1": "Zhe Yang & Yicheng Zhang",
+          "player2": "Benedict Siu & Daniel Lee",
+          "eventId": "2026-doubles-b",
+          "group": "F"
+        },
+        {
+          "label": "男B双-D组-第3轮",
+          "player1": "Junde Liu & Yatao Cui",
+          "player2": "Patrick Zhang & Andrew Tan",
+          "eventId": "2026-doubles-b",
+          "group": "D"
+        },
+        {
+          "label": "男B双-G组-第3轮",
+          "player1": "Simon Kwok & David Cheung",
+          "player2": "Sam Tang & Fei Wang",
+          "eventId": "2026-doubles-b",
+          "group": "G"
+        },
+        {
+          "label": "男B双-G组-第3轮",
+          "player1": "Chris Niu & Josh Zhu",
+          "player2": "Ruyi Liu & Jay Wu",
+          "eventId": "2026-doubles-b",
+          "group": "G"
+        },
+        null,
+        null,
+        {
+          "label": "中年双-B组-第2轮",
+          "player1": "Andrew Au & Bill Hsu [2]",
+          "player2": "Peter Sui & Harry Song",
+          "eventId": "2026-doubles-senior",
+          "group": "B"
+        },
+        {
+          "label": "中年双-B组-第2轮",
+          "player1": "Roy Qiao & Henry Lu",
+          "player2": "Johnny Tang & Ted Li",
+          "eventId": "2026-doubles-senior",
+          "group": "B"
+        }
+      ]
+    },
+    {
+      "time": null,
+      "matches": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "label": "男B双-H组-第3轮",
+          "player1": "Tingwei Chen & Pong Lung Lau",
+          "player2": "Si Wang & Xiugui Tang",
+          "eventId": "2026-doubles-b",
+          "group": "H"
+        },
+        {
+          "label": "男B双-H组-第3轮",
+          "player1": "Shawn Han & Maurice Li",
+          "player2": "Amos Chen & Fred Zheng",
+          "eventId": "2026-doubles-b",
+          "group": "H"
+        },
+        {
+          "label": "中年双-A组-第3轮",
+          "player1": "Titus Chiu & Bill Peng [1]",
+          "player2": "Yunbin Wu & Jimmy W",
+          "eventId": "2026-doubles-senior",
+          "group": "A"
+        },
+        {
+          "label": "中年双-A组-第3轮",
+          "player1": "Richard Yang & Guangyao Jiang",
+          "player2": "Yiou Tan & Edward Xu",
+          "eventId": "2026-doubles-senior",
+          "group": "A"
+        }
+      ]
+    },
+    {
+      "time": null,
+      "matches": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "label": "中年双-B组-第3轮",
+          "player1": "Andrew Au & Bill Hsu [2]",
+          "player2": "Roy Qiao & Henry Lu",
+          "eventId": "2026-doubles-senior",
+          "group": "B"
+        },
+        {
+          "label": "中年双-B组-第3轮",
+          "player1": "Peter Sui & Harry Song",
+          "player2": "Johnny Tang & Ted Li",
+          "eventId": "2026-doubles-senior",
+          "group": "B"
+        }
+      ]
+    }
+  ]
+}

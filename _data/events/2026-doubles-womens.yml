@@ -5,6 +5,7 @@ groups:
   "C": ["Lauren Shen & Alison Liu","Jing Hong & Jamie Lee","Lei Huang & Evelyn Qin","Riley Liu & Polly Yang"]
   "D": ["Bing Liang & Jo Zhang","Huixuan Zhao & Wenbo Zhao","Sammy Gan & Claudia Wang","Chelsea He & Xin Liu"]
 seeds: {"Zijun Xia & Zilan Wu [1]":1,"Amy Chen & Alicia Wang [2]":2}
+schedule: "2026-doubles"
 rules:
   advance: 2
   points: {"win":1,"loss":0,"wo_loss":0}

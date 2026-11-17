@@ -5,6 +5,7 @@ groups:
   "C": ["Luming Qiu & Michael Li","Joseph Shao & Roger Cheung","Richard Gong & Brandon Liu"]
   "D": ["Justin Chan & Jeffery Wong","Michael Deng & Dominic Tu","Dingkun Wu & Junchao Li"]
 seeds: {"Haowen Deng & Kane Duong [1]":1,"Roger Yu & Austin Han [2]":2}
+schedule: "2026-doubles"
 rules:
   advance: 2
   points: {"win":1,"loss":0,"wo_loss":0}

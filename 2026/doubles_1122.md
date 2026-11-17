@@ -15,7 +15,9 @@ permalink: /2026/1122/
 
 ## 赛程表
 
-详细赛程待公布，请留意本网站及球会群的通知。
+双打赛程已公布。
+
+<a class="btn btn--primary" href="{{ '/2026/schedule/doubles/' | relative_url }}">查看双打赛程</a>
 
 ## 分组及比分
 

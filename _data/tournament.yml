@@ -57,9 +57,13 @@ days:
 # Remove an entry or leave its title empty to hide it.
 announcements:
   - title: "11月22日双打签表已公布"
-    text: "男子双打 A/B 级别、女子双打及中年组双打分组与淘汰赛签表已公布，请点击查看分组及对阵。双打赛程将于本周三（11月18日）发布，敬请关注。"
+    text: "男子双打 A/B 级别、女子双打及中年组双打分组与淘汰赛签表已公布，请点击查看分组及对阵。"
     button: "点击查看"
     url: "/2026/1122/"
+  - title: "11月22日双打赛程已公布"
+    text: "按球员姓名或场地号即可查看比赛时间、场地及对阵安排。"
+    button: "查看双打赛程"
+    url: "/2026/schedule/doubles/"
   - title: "A级别双打场地调整通知"
     text: "因施工未完成，原定于7&8号硬地球场的A级别双打将更改至Syn Grass球场。具体场地分配将后续安排。"
 
