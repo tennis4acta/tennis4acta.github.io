@@ -102,7 +102,7 @@ permalink: /2026/1122/
 2. **No AD scoring (Short Deuce):** At deuce, the next point wins. The receiving pair decides who returns the point.<br>如果双方出现第一次DEUCE平分，赢得下一分的一方赢得本局。由接发球方选择接球区。
 3. **Tiebreak (finals excepted):** First to 5 points wins, with a two-point lead required. At 4:4, play continues until one pair leads by two points.<br>除决赛外的所有比赛采用short tie-break，先赢5分并领先两分者获胜。
 4. **Playoffs (finals excepted):** First to 5 games wins (tiebreak at 4 all).<br>淘汰赛除决赛外先赢五局者获胜，4平时抢五。
-5. **Finals:** A normal no-ad set applies, with a normal tiebreak at 6 all.<br>决赛使用常规short deuce set，6平时使用常规抢七规则。
+5. **Finals:** A normal no-ad set applies, with a normal tiebreak at 5 all.<br>决赛使用常规short deuce set，5平时使用常规抢七规则。
 
 ---
 

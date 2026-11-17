@@ -1,0 +1,20 @@
+name: "Womens Doubles"
+groups:
+  "A": ["Zijun Xia & Zilan Wu [1]","Qunying Huang & Pei Zou","Vivienne Qi & Vivian Sue","Linda Zhou & Jiayu Gao"]
+  "B": ["Amy Chen & Alicia Wang [2]","Qingqing Li-Du & Louisa Zhi","Yingxi Ma & Pamela Qi","June Jiang & Jackie Xu"]
+  "C": ["Lauren Shen & Alison Liu","Jing Hong & Jamie Lee","Lei Huang & Evelyn Qin","Riley Liu & Polly Yang"]
+  "D": ["Bing Liang & Jo Zhang","Huixuan Zhao & Wenbo Zhao","Sammy Gan & Claudia Wang","Chelsea He & Xin Liu"]
+seeds: {"Zijun Xia & Zilan Wu [1]":1,"Amy Chen & Alicia Wang [2]":2}
+rules:
+  advance: 2
+  points: {"win":1,"loss":0,"wo_loss":0}
+  wo_score: "5-0"
+  tiebreakers: ["wins","games_won","game_diff","h2h"]
+  third_place: true
+  show_set_column: false
+  score_hint: "9 局制，先胜 5 局，如 5-3、5-4"
+  draw:
+    - ["A1","B2"]
+    - ["D1","C2"]
+    - ["B1","A2"]
+    - ["C1","D2"]

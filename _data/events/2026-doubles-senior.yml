@@ -1,0 +1,16 @@
+name: "Senior Doubles"
+groups:
+  "A": ["Titus Chiu & Bill Peng [1]","Yunbin Wu & Jimmy W","Richard Yang & Guangyao Jiang","Yiou Tan & Edward Xu"]
+  "B": ["Andrew Au & Bill Hsu [2]","Roy Qiao & Henry Lu","Peter Sui & Harry Song","Johnny Tang & Ted Li"]
+seeds: {"Titus Chiu & Bill Peng [1]":1,"Andrew Au & Bill Hsu [2]":2}
+rules:
+  advance: 2
+  points: {"win":1,"loss":0,"wo_loss":0}
+  wo_score: "5-0"
+  tiebreakers: ["wins","games_won","game_diff","h2h"]
+  third_place: true
+  show_set_column: false
+  score_hint: "9 局制，先胜 5 局，如 5-3、5-4"
+  draw:
+    - ["A1","B2"]
+    - ["B1","A2"]

@@ -544,3 +544,20 @@
 - 修复：用编辑工具按 UTF-8 恢复配置中的中文；按组名和轮次重建赛程 `label`（`测试-<组>组-第<n>轮`），修复脚本以文件方式运行，不再经管道。
 - 验证：三个测试文件中已无 `?`，标题码位核对为“比分录入测试”；`js-yaml` 解析通过，`node --test scripts/test-schedule.js` 20 项通过。同期以 PowerShell `Add-Content` 写入的 `workflow.md`、`test-schedule.js` 及首页公告均未发现 `???`。
 - 经验：在 Windows PowerShell 中，不要把含中文的脚本经管道传给外部程序；改用编辑工具，或保存为文件后用 `node <文件>` 运行。修复尚未提交或推送。
+
+## 2026-11-17：2026 双打名单核查与分组抽签
+
+- 核查 [2026 双打名单](docs/2026/2026_dubs.xlsx)：共 4 个项目、68 对（136 人），无完全重名；提请留意 `男B双` `Jack Yin` 与 `Jackman Yin`、`中年双` `Jimmy W`、`男B双` `Da Di`，以及大小写和 27 处多余尾随空格。
+- 按用户确认规范化全部姓名（去除多余空格、所有单词首字母大写，组合格式为 `P1 & P2`），导出输入至 `tmp/2026_doubles_*.txt`；其中 `男A双` 1 号种子 `Kane Duong/Delon Deng` 对应表格 `Haowen Deng & Kane Duong`，`女双` 1 号种子 `Zilan Wu/Zijun Xia` 对应表格 `Zijun Xia & Zilan Wu`。
+- 使用 `skills/generate_draw/generate_draw.js` 生成 4 份赛事配置：
+  - [2026-doubles-a.yml](_data/events/2026-doubles-a.yml)：4 组 × 3 对，每组前 2 名进 QF（1、2 号种子分处 A、B 组）。
+  - [2026-doubles-b.yml](_data/events/2026-doubles-b.yml)：8 组 × 4 对，每组前 2 名进 16 强（无种子）。
+  - [2026-doubles-womens.yml](_data/events/2026-doubles-womens.yml)：4 组 × 4 对，每组前 2 名进 QF（1、2 号种子分处 A、B 组）。
+  - [2026-doubles-senior.yml](_data/events/2026-doubles-senior.yml)：2 组 × 4 对，每组前 2 名进 SF（1、2 号种子分处 A、B 组）。
+- 按用户确认将 4 份双打配置的 `tiebreakers` 统一为 `["wins","games_won","game_diff","h2h"]`，并按 [1122 双打页面](2026/doubles_1122.md) 同步短局制规则：`男A双`（3 对/组）设为 `wo_score: "6-0"`、`score_hint: "11 局制，先胜 6 局，如 6-4"`；`男B双`、`女双`、`中年双`（4 对/组）设为 `wo_score: "5-0"`、`score_hint: "9 局制，先胜 5 局，如 5-3、5-4"`；四项均设 `show_set_column: false`，`third_place: true` 暂保留默认值。按用户最新确认，同步将 4 个双打比赛页及 [1122 双打页面](2026/doubles_1122.md) 第 5 条的决赛抢七规则更新为“常规 6 局制（5 平时抢七）”。
+- 新增 4 个双打比赛页（参考单打格式，含“返回双打赛事页”按钮、`赛制`说明及 `event.html` 挂载），暂未接入 [1122 双打页面](2026/doubles_1122.md) 或 [tournament.yml](_data/tournament.yml) 站内链接：
+  - [doubles_a.md](2026/matches/doubles_a.md)（`2026-doubles-a`）
+  - [doubles_b.md](2026/matches/doubles_b.md)（`2026-doubles-b`）
+  - [womens_doubles.md](2026/matches/womens_doubles.md)（`2026-doubles-womens`）
+  - [senior_doubles.md](2026/matches/senior_doubles.md)（`2026-doubles-senior`）
+- 验证：`js-yaml` 解析 4 份配置通过，`node --test skills/generate_draw/generate_draw.test.js` 15 项通过，`node scripts/test-tournament.js` 通过，`git diff --check` 通过；未运行 Jekyll 构建或调用 GitHub API，未提交或推送 Git。
