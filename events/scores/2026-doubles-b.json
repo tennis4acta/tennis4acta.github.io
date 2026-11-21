@@ -140,6 +140,16 @@
       "t": "2026-11-21T22:00:42.695Z",
       "by": "sheenzhaox"
     },
+    "RR|E|Cheuk Nam Ip & Xiang Zhang|Kevin Huang & Joachim Li": {
+      "p": [
+        "Kevin Huang & Joachim Li",
+        "Cheuk Nam Ip & Xiang Zhang"
+      ],
+      "live": true,
+      "c": "11",
+      "t": "2026-11-21T22:49:48.070Z",
+      "by": "sheenzhaox"
+    },
     "RR|E|Chris Yu & John Yue|Kevin Huang & Joachim Li": {
       "p": [
         "Kevin Huang & Joachim Li",
@@ -192,5 +202,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-21T22:49:34.301Z"
+  "updated": "2026-11-21T22:49:48.672Z"
 }
