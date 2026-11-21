@@ -101,6 +101,16 @@
       "n": "W/O",
       "by": "sheenzhaox"
     },
+    "RR|F|Benedict Siu & Daniel Lee|Edward Liang & Yue Liao": {
+      "p": [
+        "Edward Liang & Yue Liao",
+        "Benedict Siu & Daniel Lee"
+      ],
+      "live": true,
+      "c": "12",
+      "t": "2026-11-21T21:47:26.640Z",
+      "by": "sheenzhaox"
+    },
     "RR|G|Chris Niu & Josh Zhu|Sam Tang & Fei Wang": {
       "p": [
         "Sam Tang & Fei Wang",
@@ -112,5 +122,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-21T21:47:26.329Z"
+  "updated": "2026-11-21T21:47:29.005Z"
 }
