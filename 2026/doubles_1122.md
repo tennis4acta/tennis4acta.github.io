@@ -153,3 +153,5 @@ permalink: /2026/1122/
 - {{ t.rules.constraints[1] }}
 
 Note: 2026-11-21 男子B级别双打 D组 Will Hong/Jiaxin Shen 退赛，由 Wujian Gao/Fanning Meng 递补，沿用原小组位置及赛程安排。
+
+Note: 2026-11-21 男子A级别双打 C组 Luming Qiu/Michael Li 退赛，由 Lu Wang/Andrew Zhao 递补，沿用原小组位置及赛程安排。

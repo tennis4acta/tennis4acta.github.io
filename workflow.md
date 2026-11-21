@@ -665,3 +665,18 @@
 - 重新运行 `node scripts/import-schedule.js make_draw/2026/111122/doubles_schedule_draft.xlsx`：[2026-doubles.json](_data/schedules/2026-doubles.json) 相对上一版仅 3 处球员名及 `sha256` 变化，仍为 93 场、13 片场地；`Match List` 与快照逐场一致。
 - `node --test scripts/test-schedule.js` 23 项通过；`node scripts/test-tournament.js` 通过；`git diff --check` 无空白错误。
 - 未运行 Jekyll 构建或浏览器目视检查 Note 渲染，未写入真实 GitHub 比分，未提交或推送 Git。
+
+## 2026-11-21：男双 A 级别 C 组 Luming Qiu & Michael Li 退赛及递补
+
+### 需求与设计决定
+
+- 用户通知男双 A 级别 C 组 `Luming Qiu & Michael Li` 退赛，由 `Lu Wang & Andrew Zhao` 递补，其他一律不变。沿用 `P1 & P2` 写法；C 组位置（首位）、种子（A、B 组）、`rules.draw` 及赛程场地、时段均不变。
+- Note 格式沿用男B双递补 Note，仅陈述事实：在 [男A双比赛页](2026/matches/doubles_a.md) 底部新增，并在 [1122 双打页面](2026/doubles_1122.md) 底部男B双 Note 之后追加带“男子A级别双打”前缀的一条（该页已承载男双 Note，保持一致）。
+
+### 实施与验证
+
+- [2026-doubles-a.yml](_data/events/2026-doubles-a.yml) C 组首位改名，`js-yaml` 解析通过。
+- [doubles_schedule_draft.xlsx](make_draw/2026/111122/doubles_schedule_draft.xlsx)：`All Courts`（R5C2、R7C2）与 `Match List`（R35C6、R59C6）共 4 个单元格改名；改写前后 ExcelJS 内存快照比对（值、类型、规范化样式、合并区域、行列数）仅这 4 格不同。
+- 重新运行 `node scripts/import-schedule.js make_draw/2026/111122/doubles_schedule_draft.xlsx`：[2026-doubles.json](_data/schedules/2026-doubles.json) 相对上一版仅 2 处球员名及 `sha256` 变化，仍 93 场、13 片场地；`Match List` 与快照逐场一致（双向差集 0），快照与配置中已无旧名。
+- `node --test scripts/test-schedule.js` 23 项通过；`node scripts/test-tournament.js` 通过；`git diff --check` 无空白错误。
+- 未运行 Jekyll 构建或浏览器目视检查 Note 渲染，未写入真实 GitHub 比分，未提交或推送 Git。

@@ -2,7 +2,7 @@ name: "A Grade Mens Doubles"
 groups:
   "A": ["Haowen Deng & Kane Duong [1]","Jeff Ng & Eric Hsu","Donny Jiang & James Yuan"]
   "B": ["Roger Yu & Austin Han [2]","Simon Yu & Marcus Gock","Chong Shi & Raymond Jiang"]
-  "C": ["Luming Qiu & Michael Li","Joseph Shao & Roger Cheung","Richard Gong & Brandon Liu"]
+  "C": ["Lu Wang & Andrew Zhao","Joseph Shao & Roger Cheung","Richard Gong & Brandon Liu"]
   "D": ["Justin Chan & Jeffery Wong","Michael Deng & Dominic Tu","Dingkun Wu & Junchao Li"]
 seeds: {"Haowen Deng & Kane Duong [1]":1,"Roger Yu & Austin Han [2]":2}
 schedule: "2026-doubles"

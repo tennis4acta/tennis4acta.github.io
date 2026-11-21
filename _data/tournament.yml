@@ -64,8 +64,6 @@ announcements:
     text: "按球员姓名或场地号即可查看比赛时间、场地及对阵安排。"
     button: "查看双打赛程"
     url: "/2026/schedule/doubles/"
-  - title: "A级别双打场地调整通知"
-    text: "因施工未完成，原定于7&8号硬地球场的A级别双打将更改至Syn Grass球场。具体场地分配将后续安排。"
 
 # Default event day tab selected on the home page ("singles" or "doubles").
 default_day: "doubles"

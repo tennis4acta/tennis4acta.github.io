@@ -19,3 +19,5 @@ wide: true
 - 每组前 2 名进入淘汰赛（QF，共 8 对），不设三四名赛。
 
 {% include event.html id="2026-doubles-a" %}
+
+Note: 2026-11-21 C组 Luming Qiu/Michael Li 退赛，由 Lu Wang/Andrew Zhao 递补，沿用原小组位置及赛程安排。

@@ -2,7 +2,7 @@
   "source": {
     "file": "doubles_schedule_draft.xlsx",
     "sheet": "All Courts",
-    "sha256": "c67ee87305a080638a9204e3447f1f74319a326ab49e8464b787b2fe3629b7bd"
+    "sha256": "2a70a338dffba5a3057f4fb8326410f6d3f3fa1b8c8be8e5c5d685ab439e838d"
   },
   "courts": [
     1,
@@ -277,7 +277,7 @@
       "matches": [
         {
           "label": "男A双-C组-第2轮",
-          "player1": "Luming Qiu & Michael Li",
+          "player1": "Lu Wang & Andrew Zhao",
           "player2": "Richard Gong & Brandon Liu",
           "eventId": "2026-doubles-a",
           "group": "C"
@@ -457,7 +457,7 @@
       "matches": [
         {
           "label": "男A双-C组-第3轮",
-          "player1": "Luming Qiu & Michael Li",
+          "player1": "Lu Wang & Andrew Zhao",
           "player2": "Joseph Shao & Roger Cheung",
           "eventId": "2026-doubles-a",
           "group": "C"
