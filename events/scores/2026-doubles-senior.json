@@ -1,5 +1,15 @@
 {
   "matches": {
+    "RR|A|Richard Yang & Guangyao Jiang|Yunbin Wu & Jimmy W": {
+      "p": [
+        "Yunbin Wu & Jimmy W",
+        "Richard Yang & Guangyao Jiang"
+      ],
+      "live": true,
+      "c": "15",
+      "t": "2026-11-21T23:24:22.067Z",
+      "by": "sheenzhaox"
+    },
     "RR|A|Titus Chiu & Bill Peng [1]|Yiou Tan & Edward Xu": {
       "p": [
         "Titus Chiu & Bill Peng [1]",
@@ -11,5 +21,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-21T23:24:16.537Z"
+  "updated": "2026-11-21T23:24:22.661Z"
 }
