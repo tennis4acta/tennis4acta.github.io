@@ -150,6 +150,16 @@
       "t": "2026-11-21T22:49:48.070Z",
       "by": "sheenzhaox"
     },
+    "RR|E|Chris Yu & John Yue|Hao Yu & Chance Qin": {
+      "p": [
+        "Hao Yu & Chance Qin",
+        "Chris Yu & John Yue"
+      ],
+      "live": true,
+      "c": "10",
+      "t": "2026-11-21T23:03:15.059Z",
+      "by": "sheenzhaox"
+    },
     "RR|E|Chris Yu & John Yue|Kevin Huang & Joachim Li": {
       "p": [
         "Kevin Huang & Joachim Li",
@@ -212,5 +222,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-21T23:03:01.025Z"
+  "updated": "2026-11-21T23:03:17.937Z"
 }
