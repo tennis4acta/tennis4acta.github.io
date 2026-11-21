@@ -52,12 +52,12 @@
     },
     "RR|C|Gordon Ge & Jackman Yin|Tony Liu & Sherman Kwong": {
       "p": [
-        "Gordon Ge & Jackman Yin",
-        "Tony Liu & Sherman Kwong"
+        "Tony Liu & Sherman Kwong",
+        "Gordon Ge & Jackman Yin"
       ],
       "s": "5-0",
-      "w": "Gordon Ge & Jackman Yin",
-      "t": "2026-11-21T21:36:49.890Z",
+      "w": "Tony Liu & Sherman Kwong",
+      "t": "2026-11-21T21:49:56.031Z",
       "by": "sheenzhaox"
     },
     "RR|D|Junde Liu & Yatao Cui|Oscar Wong & Toma Ishinozeki": {
@@ -122,5 +122,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-21T21:47:29.005Z"
+  "updated": "2026-11-21T21:49:57.393Z"
 }
