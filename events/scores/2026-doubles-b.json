@@ -30,6 +30,16 @@
       "t": "2026-11-21T21:13:35.679Z",
       "by": "sheenzhaox"
     },
+    "RR|B|Hua En Chang & Yongji Liu|Ronnie Tse & Ka Siu Luk": {
+      "p": [
+        "Hua En Chang & Yongji Liu",
+        "Ronnie Tse & Ka Siu Luk"
+      ],
+      "live": true,
+      "c": "11",
+      "t": "2026-11-21T21:13:37.926Z",
+      "by": "sheenzhaox"
+    },
     "RR|C|Connor Zhou & Steven Xie|Darren Zhong & Wei Peng": {
       "p": [
         "Connor Zhou & Steven Xie",
@@ -51,5 +61,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-21T21:13:36.369Z"
+  "updated": "2026-11-21T21:13:38.641Z"
 }
