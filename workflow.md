@@ -594,3 +594,38 @@
 - 工作簿语义审计确认仅 56 个目标单元格变化：`All Courts` 24、`Match List` 24、`Group Assignments` 4、`Notes` 4；96 场小组赛、13 片场地及源哈希与公开快照一致。
 - `node --test scripts/test-schedule.js` 23 项通过；`node scripts/test-tournament.js` 通过；新增测试覆盖双打标签、旧表头回退、场地提示、输出文件选择及五份配置的 207 场默认场地。`git diff --check` 通过。
 - 未重新生成名单、比分或淘汰赛，未写入真实 GitHub 数据；未运行 Jekyll 构建、Excel GUI 目视检查或线上部署，未提交或推送 Git。
+
+## 2026-11-20：女子双打 D 组退赛及双打赛程草案重排
+
+### 需求与设计决定
+
+- 女子双打 D 组 `Huixuan Zhao & Wenbo Zhao` 退赛：从 [2026-doubles-womens.yml](_data/events/2026-doubles-womens.yml) D 组移除，D 组变为 3 对（A、B、C 组仍为 4 对，全项目 15 对）。
+- 按用户确认，D 组遵循双打规程 3 对小组局制：`wo_score` 改为 `{"3":"6-0","4":"5-0"}`，`score_hint` 改为 3 对 11 局制（先胜 6 局）/ 4 对 9 局制（先胜 5 局）；淘汰赛固定签表与出线规则不变。
+- 更新 [womens_doubles.md](2026/matches/womens_doubles.md) 赛制说明，并在页面底部添加退赛 Note（`Note: 2026-11-20 D组 Huixuan Zhao/Wenbo Zhao 退赛`）；同步更新 [doubles_1122.md](2026/doubles_1122.md) 女双卡片组合数（16 → 15）。
+- 按用户要求重排 [doubles_schedule_draft.xlsx](make_draw/2026/111122/doubles_schedule_draft.xlsx)：Court 3–5 分配给女双（21 场，R2–R8 连续 7 个时段无空场），Court 6、9–13 分配给男B双（48 场，R2–R9 连续 8 个时段无空场、所有小组轮次不拆分，且 A–F 组全程固定双场地）；男A双（Court 1–2）与中年双（Court 14–15）保持不变。同步重建工作簿 `Match List`（93 场）、`Group Assignments` 与 `Notes`。
+- 按用户指示，**暂不更新网站公开赛程**（`_data/schedules/2026-doubles.json` 与 `2026/schedule/doubles.md` 未改动），待确认 Excel 后再同步；[test-schedule.js](scripts/test-schedule.js) 的双打配置覆盖计数更新为 93。
+
+### 验证与未验证事项
+
+- ExcelJS 写入后重读及内存调用 `import-schedule.js` 核对：共 93 场（男A双 12、女双 21、男B双 48、中年双 12），Court 1–2 与 Court 14–15 与改前逐格一致，女双与男B双严格落在各自指定场地，退赛组合已从 `All Courts`、`Match List`、`Group Assignments` 彻底移除；全部 18 个小组严格符合 `js/tournament.js` `roundRobin()` 轮次顺序，零冲突且全部球员相邻场次至少间隔 1 个时段。
+- `js-yaml` 解析 `_data/events/2026-doubles-womens.yml` 通过；`node scripts/test-tournament.js` 通过；`node --test scripts/test-schedule.js` 23 项通过；`git diff --check` 通过。
+- 未更新 `_data/schedules/2026-doubles.json` 或网站赛程页；未运行 Jekyll 构建、Excel GUI 目视检查或写入真实 GitHub 比分，未提交或推送 Git。
+
+## 2026-11-21：男B双 D 组 Will Hong & Jiaxin Shen 更换搭档
+
+### 需求与设计决定
+
+- 用户通知男B双 D 组 `Will Hong & Jiaxin Shen` 更换为 `Wujian Gao/Fanning Meng`，并已手动更新 [doubles_schedule_draft.xlsx](make_draw/2026/111122/doubles_schedule_draft.xlsx)。
+- 组合名称沿用既有 `P1 & P2` 规范，统一写为 `Wujian Gao & Fanning Meng`（用户给出的 `/` 写法不进入配置，否则会与比分键及赛程匹配不一致）。D 组名单位置、小组内其他 3 对、淘汰赛 `rules.draw` 均不变。
+- 核查工作簿发现用户仅改了 `All Courts` 第 1 轮单元格（R3C7），且用的是 `/` 写法；`All Courts` 第 2、3 轮（R5C7、R8C7）及派生 `Match List`（3 行）仍是旧名。已补齐这 6 个单元格并统一为 `&` 写法（`Group Assignments` 与 `Notes` 不含球员姓名，无需改）。
+
+### 实施与验证
+
+- [2026-doubles-b.yml](_data/events/2026-doubles-b.yml) D 组首位改为 `Wujian Gao & Fanning Meng`；`js-yaml` 解析通过（8 组，D 组 4 对）。
+- 工作簿改写前后用 ExcelJS 内存快照逐单元格比对（值、类型、规范化样式、合并区域、行列数）：仅上述 6 个目标单元格不同，其余完全一致；单打 `Jiaxin Shen`（蓝宝石 H 组）是另一人，不受影响。
+- `node scripts/test-tournament.js` 通过；`node --test scripts/test-schedule.js` 23 项中 22 项通过，1 项（“event configs with a schedule get a default court…”）失败，原因见下。
+
+### 未完成与限制（阻塞）
+
+- 公开赛程快照 [2026-doubles.json](_data/schedules/2026-doubles.json) 尚未完整同步：整表重新导入（`node scripts/import-schedule.js make_draw/2026/111122/doubles_schedule_draft.xlsx`）及其中 `男B双-D组-第1轮` 的改名均被自动权限拒绝。目前该文件仅 `男B双-D组-第2轮`、`第3轮` 两处已改为新名，**第 1 轮（约第 154 行 `player1`）仍为 `Will Hong & Jiaxin Shen`**，导致上述 `test-schedule.js` 失败，且该组第 1 轮赛程页无默认场地/比分匹配。补完该行需用户确认或手动修改；整表同步另需用户确认后执行（该 JSON 仍是 11-18 的旧快照，含已退赛的 `Huixuan Zhao & Wenbo Zhao` 及旧场地分配，导入后会变为 93 场）。
+- 未运行 Jekyll 构建、Excel GUI 目视检查或写入真实 GitHub 比分/配置；未提交或推送 Git。该次改写前未能把工作簿备份到会话目录（备份被拒），仅依赖上述内存比对验证。

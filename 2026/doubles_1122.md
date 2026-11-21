@@ -46,7 +46,7 @@ permalink: /2026/1122/
     <span class="mcard__badge">女子双打</span>
     <h3>女子双打</h3>
     <ul class="mcard__stats">
-      <li><b>16</b><span>组合</span></li>
+      <li><b>15</b><span>组合</span></li>
       <li><b>4</b><span>小组</span></li>
       <li><b>2</b><span>种子</span></li>
     </ul>
@@ -151,3 +151,5 @@ permalink: /2026/1122/
 - 比赛采用信任制，双方球员对自己半场判球。请参赛球员尊重对手，公平竞争，公正裁判，在比赛中展现良好的球品。
 - 如遇屡有争议判球，球员可以向协调员申请裁判到场。裁判到场前的比分不做更改；裁判进场后，仍采用信任制由球员判球，但裁判可现场更正并拥有最终决定权。如有球员屡有乱判，组委会将做出进一步处罚。
 - {{ t.rules.constraints[1] }}
+
+Note: 2026-11-21 男子B级别双打 D组 Will Hong/Jiaxin Shen 退赛，由 Wujian Gao/Fanning Meng 递补，沿用原小组位置及赛程安排。

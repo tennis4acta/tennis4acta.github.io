@@ -473,6 +473,6 @@ test('event configs with a schedule get a default court for every round-robin ma
     }
   }
   assert.equal(checked['2026-singles'], 99);
-  assert.equal(checked['2026-doubles'], 96);
+  assert.equal(checked['2026-doubles'], 93);
   assert.equal(checked['test-2026-score-update'], 12);
 });

@@ -18,3 +18,5 @@ wide: true
 - 每组前 2 名进入淘汰赛（16 强），不设三四名赛。
 
 {% include event.html id="2026-doubles-b" %}
+
+Note: 2026-11-21 D组 Will Hong/Jiaxin Shen 退赛，由 Wujian Gao/Fanning Meng 递补，沿用原小组位置及赛程安排。
