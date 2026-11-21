@@ -70,6 +70,16 @@
       "t": "2026-11-21T21:25:32.156Z",
       "by": "sheenzhaox"
     },
+    "RR|B|Ronnie Tse & Ka Siu Luk|Yong Fan & Jesse Chan": {
+      "p": [
+        "Yong Fan & Jesse Chan",
+        "Ronnie Tse & Ka Siu Luk"
+      ],
+      "live": true,
+      "c": "10",
+      "t": "2026-11-21T22:30:25.730Z",
+      "by": "sheenzhaox"
+    },
     "RR|C|Connor Zhou & Steven Xie|Darren Zhong & Wei Peng": {
       "p": [
         "Connor Zhou & Steven Xie",
@@ -172,5 +182,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-21T22:26:32.409Z"
+  "updated": "2026-11-21T22:30:26.367Z"
 }
