@@ -111,6 +111,16 @@
       "t": "2026-11-21T21:47:26.640Z",
       "by": "sheenzhaox"
     },
+    "RR|F|Zhe Yang & Yicheng Zhang|Zhihong Gui & David Zhou": {
+      "p": [
+        "Zhihong Gui & David Zhou",
+        "Zhe Yang & Yicheng Zhang"
+      ],
+      "live": true,
+      "c": "13",
+      "t": "2026-11-21T22:01:06.107Z",
+      "by": "sheenzhaox"
+    },
     "RR|G|Chris Niu & Josh Zhu|Sam Tang & Fei Wang": {
       "p": [
         "Sam Tang & Fei Wang",
@@ -132,5 +142,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-21T22:00:57.641Z"
+  "updated": "2026-11-21T22:01:06.724Z"
 }
