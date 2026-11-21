@@ -2,7 +2,7 @@
   "source": {
     "file": "doubles_schedule_draft.xlsx",
     "sheet": "All Courts",
-    "sha256": "d40c7d14f8376f9d6ed528b1ad06c2cc59c0d09711e6a81749b73e651e5e1cf3"
+    "sha256": "c67ee87305a080638a9204e3447f1f74319a326ab49e8464b787b2fe3629b7bd"
   },
   "courts": [
     1,
@@ -40,7 +40,7 @@
         {
           "label": "女双-A组-第1轮",
           "player1": "Zijun Xia & Zilan Wu [1]",
-          "player2": "Linda Zhou & Jiayu Gao",
+          "player2": "Jenny Wan & Jiayu Gao",
           "eventId": "2026-doubles-womens",
           "group": "A"
         },
@@ -215,7 +215,7 @@
         {
           "label": "女双-A组-第2轮",
           "player1": "Qunying Huang & Pei Zou",
-          "player2": "Linda Zhou & Jiayu Gao",
+          "player2": "Jenny Wan & Jiayu Gao",
           "eventId": "2026-doubles-womens",
           "group": "A"
         },
@@ -486,7 +486,7 @@
         {
           "label": "女双-A组-第3轮",
           "player1": "Vivienne Qi & Vivian Sue",
-          "player2": "Linda Zhou & Jiayu Gao",
+          "player2": "Jenny Wan & Jiayu Gao",
           "eventId": "2026-doubles-womens",
           "group": "A"
         },

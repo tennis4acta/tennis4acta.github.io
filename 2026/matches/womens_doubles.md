@@ -21,3 +21,5 @@ wide: true
 {% include event.html id="2026-doubles-womens" %}
 
 Note: 2026-11-20 D组 Huixuan Zhao/Wenbo Zhao 退赛
+
+Note: 2026-11-21 A组 Linda Zhou/Jiayu Gao 更换为 Jenny Wan/Jiayu Gao，沿用原小组位置及赛程安排。
