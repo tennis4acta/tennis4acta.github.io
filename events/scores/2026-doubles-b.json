@@ -22,12 +22,12 @@
     },
     "RR|B|Alex Zhao & Cham Chen|Yong Fan & Jesse Chan": {
       "p": [
-        "Yong Fan & Jesse Chan",
-        "Alex Zhao & Cham Chen"
+        "Alex Zhao & Cham Chen",
+        "Yong Fan & Jesse Chan"
       ],
-      "live": true,
-      "c": "10",
-      "t": "2026-11-21T21:13:35.679Z",
+      "s": "5-0",
+      "w": "Alex Zhao & Cham Chen",
+      "t": "2026-11-21T21:27:28.422Z",
       "by": "sheenzhaox"
     },
     "RR|B|Hua En Chang & Yongji Liu|Ronnie Tse & Ka Siu Luk": {
@@ -61,5 +61,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-21T21:27:07.701Z"
+  "updated": "2026-11-21T21:27:29.441Z"
 }
