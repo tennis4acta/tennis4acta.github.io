@@ -120,6 +120,16 @@
       "t": "2026-11-21T22:06:57.582Z",
       "by": "sheenzhaox"
     },
+    "RR|D|Junde Liu & Yatao Cui|Wujian Gao & Fanning Meng": {
+      "p": [
+        "Wujian Gao & Fanning Meng",
+        "Junde Liu & Yatao Cui"
+      ],
+      "live": true,
+      "c": "6",
+      "t": "2026-11-21T23:18:48.388Z",
+      "by": "sheenzhaox"
+    },
     "RR|D|Oscar Wong & Toma Ishinozeki|Patrick Zhang & Andrew Tan": {
       "p": [
         "Oscar Wong & Toma Ishinozeki",
@@ -242,5 +252,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-21T23:18:35.635Z"
+  "updated": "2026-11-21T23:18:48.973Z"
 }
