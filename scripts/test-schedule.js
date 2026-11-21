@@ -19,7 +19,7 @@ function scoreTools(fetch) {
   vm.createContext(context);
   const source = fs.readFileSync(path.join(__dirname, '../js/tournament.js'), 'utf8');
   vm.runInContext(source.replace('  window.ACTCTournamentScores =', '  window.testWriteMatch = writeMatch;\n  window.testLiveUpdate = liveUpdate;\n  window.ACTCTournamentScores ='), context);
-  return { ...context.window.ACTCTournamentScores, writeMatch: context.window.testWriteMatch, liveUpdate: context.window.testLiveUpdate };
+  return { ...context.window.ACTCTournamentScores, courtMgt: context.window.ACTCCourtMgt, writeMatch: context.window.testWriteMatch, liveUpdate: context.window.testLiveUpdate };
 }
 
 function jsonResponse(data, status = 200) {
@@ -475,4 +475,131 @@ test('event configs with a schedule get a default court for every round-robin ma
   assert.equal(checked['2026-singles'], 99);
   assert.equal(checked['2026-doubles'], 93);
   assert.equal(checked['test-2026-score-update'], 12);
+});
+
+test('2026-1122 court management config aligns with doubles events, schedule courts, and page include', () => {
+  const yaml = require('js-yaml');
+  const { elapsedText, sortPlayableForCourt, filterPlayableMatches } = require('../js/court-mgt');
+  const rawCm = yaml.load(fs.readFileSync(path.join(__dirname, '../_data/courts/2026-1122.yml'), 'utf8'));
+  const schedule = JSON.parse(fs.readFileSync(path.join(__dirname, '../_data/schedules', rawCm.schedule + '.json'), 'utf8'));
+  assert.deepEqual(rawCm.courts.map(c => Number(c.id)), [1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14, 15]);
+  assert.deepEqual(rawCm.courts.map(c => Number(c.id)), schedule.courts);
+  assert.equal(rawCm.events.length, 4);
+  for (const ev of rawCm.events) {
+    const cfg = yaml.load(fs.readFileSync(path.join(__dirname, '../_data/events', ev.id + '.yml'), 'utf8'));
+    assert.equal(cfg.court_mgt, '2026-1122', ev.id);
+    assert.equal(cfg.schedule, '2026-doubles', ev.id);
+  }
+  const pageMd = fs.readFileSync(path.join(__dirname, '../2026/mgt/court_1122.md'), 'utf8');
+  assert.match(pageMd, /\{%\s*include court_mgt\.html id="2026-1122"\s*%\}/);
+
+  const now = Date.parse('2026-11-22T01:35:00Z');
+  assert.equal(elapsedText('2026-11-22T01:34:40Z', now), '刚刚开赛');
+  assert.equal(elapsedText('2026-11-22T01:10:00Z', now), '已进行 25 分钟');
+  assert.equal(elapsedText('2026-11-22T00:20:00Z', now), '已进行 1 小时 15 分钟');
+
+  const sorted = sortPlayableForCourt([
+    { eventId: 'b', stage: 'rr', plannedCourt: '5', scheduleSeq: 1, roundNo: 1, busyConflict: null },
+    { eventId: 'a', stage: 'ko', plannedCourt: '', scheduleSeq: 100, roundNo: 1, busyConflict: null },
+    { eventId: 'c', stage: 'rr', plannedCourt: '3', scheduleSeq: 50, roundNo: 2, busyConflict: null },
+    { eventId: 'd', stage: 'rr', plannedCourt: '3', scheduleSeq: 0, roundNo: 1, busyConflict: { court: '1' } },
+  ], '3');
+  assert.deepEqual(sorted.map(m => m.eventId), ['c', 'a', 'b', 'd']);
+  assert.equal(filterPlayableMatches([
+    { eventId: '2026-doubles-b', eventLabel: '男子双打 B级别', eventShort: '男B双', roundText: 'D组 · 第1轮', a: 'Wujian Gao & Fanning Meng', b: 'Patrick Zhang & Andrew Tan', plannedCourt: '6' },
+  ], '2026-doubles-b', 'wujian').length, 1);
+});
+
+test('court management sync shows RR and playoff matches, blocks occupied courts across events, and releases on score save', async () => {
+  const yaml = require('js-yaml');
+  const rawCm = yaml.load(fs.readFileSync(path.join(__dirname, '../_data/courts/2026-1122.yml'), 'utf8'));
+  const schedule = JSON.parse(fs.readFileSync(path.join(__dirname, '../_data/schedules/2026-doubles.json'), 'utf8'));
+  const store = {};
+  let writes = 0;
+  const tools = scoreTools(async (url, options = {}) => {
+    const m = /\/contents\/scores\/([^?]+)\.json/.exec(url);
+    assert.ok(m, url);
+    const id = decodeURIComponent(m[1]);
+    if (options.method === 'PUT') {
+      store[id] = JSON.parse(Buffer.from(JSON.parse(options.body).content, 'base64').toString('utf8'));
+      writes += 1;
+      return jsonResponse({ content: { sha: 'sha-' + writes } });
+    }
+    if (!store[id]) return jsonResponse({ message: 'Not Found' }, 404);
+    if (options.headers && options.headers.Accept === 'application/vnd.github.raw+json') return jsonResponse(store[id]);
+    return jsonResponse({ sha: 'sha-' + id, content: Buffer.from(JSON.stringify(store[id])).toString('base64') });
+  });
+  const cm = tools.courtMgt.normalizeCourtMgt({
+    id: '2026-1122',
+    courts: rawCm.courts,
+    schedule,
+    events: rawCm.events.map(ev => ({
+      ...ev,
+      cfg: yaml.load(fs.readFileSync(path.join(__dirname, '../_data/events', ev.id + '.yml'), 'utf8')),
+    })),
+  });
+  const makeClient = id => ({ id, repo: 'example/test', branch: 'master', path: 'scores', scores: { matches: {} } });
+  const clientB = makeClient('2026-doubles-b');
+  const clientW = makeClient('2026-doubles-womens');
+  const clientA = makeClient('2026-doubles-a');
+
+  // 1. Start Men's B Group D Round 1 on Court 6.
+  const bP1 = 'Wujian Gao & Fanning Meng', bP2 = 'Patrick Zhang & Andrew Tan';
+  const bKey = tools.pairKey('RR|D', bP1, bP2);
+  clientB.scores = await tools.writeMatch(clientB, bKey, { p: [bP1, bP2], live: true, c: '6', t: '2026-11-22T00:00:00Z' }, 'live b');
+
+  // 2. Attempting to assign Women's Doubles Group A Round 1 to occupied Court 6 fails validation & blocks write.
+  const wP1 = 'Zijun Xia & Zilan Wu [1]', wP2 = 'Jenny Wan & Jiayu Gao';
+  const wKey = tools.pairKey('RR|A', wP1, wP2);
+  await assert.rejects(
+    () => tools.writeMatch(clientW, wKey, tools.liveUpdate(wKey, wP1, wP2, { p: [wP1, wP2], live: true, c: '6' }, latest => {
+      const check = tools.courtMgt.checkCourtAssignment('6', { eventId: clientW.id, key: wKey, a: wP1, b: wP2 }, cm, {
+        '2026-doubles-b': clientB.scores,
+        '2026-doubles-womens': { matches: latest },
+      });
+      if (!check.ok) throw Object.assign(new Error(check.message), { userMessage: check.message });
+    }), 'live w conflict'),
+    /6号场 已被占用.*男B双.*D组 · 第1轮/
+  );
+  assert.equal(writes, 1);
+
+  // 3. Complete Men's A Group A & B so QF1 (A1 vs B2) is determined, then start Playoff QF1 on Court 1.
+  const aCfg = cm.events.find(e => e.id === '2026-doubles-a').cfg;
+  for (const gName of ['A', 'B']) {
+    const ps = aCfg.groups[gName];
+    for (let i = 0; i < ps.length; i++) {
+      for (let j = i + 1; j < ps.length; j++) {
+        const k = tools.pairKey('RR|' + gName, ps[i], ps[j]);
+        clientA.scores = await tools.writeMatch(clientA, k, { p: [ps[i], ps[j]], s: '6-3', w: ps[i] }, 'rr done');
+      }
+    }
+  }
+  const koView = tools.courtMgt.compute({ cfg: aCfg, scores: clientA.scores }).ko;
+  const qf1 = koView.rounds[0].matches[0];
+  assert.equal(qf1.playable, true);
+  clientA.scores = await tools.writeMatch(clientA, qf1.key, { p: [qf1.a.name, qf1.b.name], live: true, c: '1', t: '2026-11-22T02:30:00Z' }, 'ko live');
+
+  let board = tools.courtMgt.buildCourtBoard(cm, {
+    '2026-doubles-a': clientA.scores,
+    '2026-doubles-b': clientB.scores,
+    '2026-doubles-womens': clientW.scores,
+  });
+  assert.equal(board.busy, 2);
+  assert.equal(board.free, 11);
+  assert.equal(board.courts.find(c => c.id === '6').matches[0].roundText, 'D组 · 第1轮');
+  assert.equal(board.courts.find(c => c.id === '1').matches[0].roundText, '四分之一决赛 · 第1场');
+
+  // 4. Enter scores for both matches -> Court 6 and Court 1 automatically release, allowing Women's match to use Court 6.
+  clientB.scores = await tools.writeMatch(clientB, bKey, { p: [bP1, bP2], s: '5-3', w: bP1 }, 'score b');
+  clientA.scores = await tools.writeMatch(clientA, qf1.key, { p: [qf1.a.name, qf1.b.name], s: '5-2', w: qf1.a.name }, 'score qf1');
+  board = tools.courtMgt.buildCourtBoard(cm, {
+    '2026-doubles-a': clientA.scores,
+    '2026-doubles-b': clientB.scores,
+    '2026-doubles-womens': clientW.scores,
+  });
+  assert.equal(board.busy, 0);
+  assert.equal(board.free, 13);
+  assert.equal(tools.courtMgt.checkCourtAssignment('6', { eventId: clientW.id, key: wKey, a: wP1, b: wP2 }, cm, {
+    '2026-doubles-b': clientB.scores,
+  }).ok, true);
 });

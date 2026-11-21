@@ -1,6 +1,6 @@
 # 实时记分板：设计、使用与维护记录
 
-最后更新：2026-11-18。
+最后更新：2026-11-21。
 
 本文是 ACTC 实时记分板的统一技术与使用记录。修改记分板实现、赛事配置约定、操作流程或测试方式时，必须在同一次变更中同步更新本文。公开使用指南为 [howto.md](../score_board/howto.md)；旧设计与早期开发记录见 [score_system.md](../score_board/score_system.md)。本文所在的 `ai_tools` 目录不发布到 Jekyll 网站。
 
@@ -19,9 +19,10 @@
 |---|---|
 | `_data/events/<id>.yml` | 赛事名称、预先分好的名单和规则 |
 | [_data/events/demo.yml](../_data/events/demo.yml) | 现行配置示例 |
-| [_includes/event.html](../_includes/event.html) | 输出赛事标题、嵌入 JSON 配置（配置了 `schedule` 时同时嵌入该赛程数据）、加载共享 CSS/JS |
-| [js/tournament.js](../js/tournament.js) | 比分解析、排名、赛程、签表、GitHub 同步和交互 |
-| [css/tournament.css](../css/tournament.css) | 记分板样式，复用网站主题变量 |
+| [_includes/event.html](../_includes/event.html) | 输出赛事标题、嵌入 JSON 配置（配置了 `schedule` 或 `court_mgt` 时同时嵌入赛程或球场管理数据）、加载共享 CSS/JS |
+| [js/tournament.js](../js/tournament.js) | 比分解析、排名、赛程、签表、球场占用校验、GitHub 同步和交互 |
+| [css/tournament.css](../css/tournament.css) | 记分板及球场选择/冲突弹窗样式，复用网站主题变量 |
+| `_data/courts/<id>.yml`、[_includes/court_mgt.html](../_includes/court_mgt.html)、[2026/mgt/court_1122.md](../2026/mgt/court_1122.md)、[js/court-mgt.js](../js/court-mgt.js)、[css/court-mgt.css](../css/court-mgt.css) | 比赛日球场实时管理与跨项目调度页（展示空闲/占用、开赛用时、赛程待打及裁判派场/录分释放） |
 | [_config.yml](../_config.yml) | 比分仓库、分支、路径及构建排除项 |
 | `events/scores/<id>.json` | 原始比赛结果，由首次保存自动创建 |
 | [scripts/test-tournament.js](../scripts/test-tournament.js) | 无第三方依赖的算法回归测试 |
@@ -84,6 +85,7 @@ rules:
 | `rules.score_hint` | 裁判录入弹窗中比分格子下方的提示文字 |
 | `rules.show_order` | 历史字段，已忽略；Table / Match 始终提供 |
 | `schedule` | 可选，顶层字段，`_data/schedules/` 中的赛程名（如 `2026-singles`）。用于小组赛“开赛”时的默认场地号，按项目 ID、组名和双方完整姓名匹配；裁判改场地不回写赛程 |
+| `court_mgt` | 可选，顶层字段，`_data/courts/` 中的球场管理配置名（如 `2026-1122`）。启用后，“开赛 / 改场地”改为可用球场按钮选择（必选空闲球场），跨同日关联项目实时校验球场占用与球员比赛冲突，选择已占用球场弹出警告并禁止使用 |
 
 双打组合仍是一个完整字符串；使用 `张三 & 李四`，界面会将两位球员分行显示。名单顺序决定表格顺序、组内比赛顺序及排名完全相同时的最终顺序。不要擅自推定正式赛事的出线、积分或排名规则。
 
@@ -286,6 +288,17 @@ tournament_scores:
 - 比分刷新保留球员/场地选择，不替换完整表格 DOM；这项功能仅用于网页，已有 Excel 导出不会动态同步。
 - “刷新比分”按钮和同步状态位于完整表格下方；筛选球员或场地时仍显示在卡片内容下方。筛选视图仅保留“晋级后对阵以赛会公布为准。”提示。
 
+### 8.4 球场管理与跨项目占用同步
+
+- 配置文件 `_data/courts/<id>.yml`（如 `2026-1122.yml`）定义当日可用球场列表（如 `1–6, 9–15` 及开放时段说明）、可选 `schedule` 及当日关联的 `events` 列表；页面通过 `{% include court_mgt.html id="2026-1122" %}` 挂载（如内部管理页 [court_1122.md](../2026/mgt/court_1122.md)，设置 `noindex, nofollow`，不在公开赛事页放入口链接，页内提供返回赛事页、赛程及各项目页快捷按钮）。
+- **单数据源设计**：不新增独立的远程球场锁文件，直接复用并聚合各关联项目的 `events/scores/<id>.json`。进行中记录 `{ p, live: true, c: "<court>", t }` 表示占用对应球场（`normalizeCourtId()` 将 `03`、`3号场`、`Court 3` 等统一规范为 `"3"`）；裁判录入比分（正常完赛、RET、W/O）或点击“取消进行中（释放球场）”时，同一 GitHub API 提交原子覆盖或删除该键，对应球场自动释放；若小组成绩修改导致淘汰赛对阵人员变化，`collectEventLiveMatches()` 依据 `compute()` 自动忽略失效的旧 `live` 记录，避免残留锁死球场。
+- **跨项目冲突拦截**：配置了 `court_mgt` 的项目（2026 双打四个项目均设为 `court_mgt: "2026-1122"`），裁判点“开赛 / 改场地”时弹窗实时拉取同日全部关联项目比分，展示固定球场按钮网格（标注 `空闲`、`空闲 · 原赛程`、`当前球场` 或 `占用 · <项目简称>`），且必须选择空闲球场：
+  - 点击任何已占用球场按钮会弹出警告框（写明占用该项目、小组轮次或淘汰赛轮次及双方球员）并拒绝选中该球场；
+  - 若原定赛程默认球场仍被前一场占用，打开弹窗时自动取消预选并显示占用提示；
+  - 保存前再次拉取同日其他项目最新比分并在 `writeMatch()` 的 `liveUpdate` 回调内复核本项目最新记录，防止多设备并发抢占同一球场，同时拦截同一球员/组合同时在两片球场标记“进行中”。
+  - 未配置 `court_mgt` 的独立项目保持原有可选文本输入，但填写非空场地号时仍校验同项目内的球场与球员冲突。
+- **管理页交互与共享接口**：`window.ACTCTournamentScores` 保持原有只读 4 个方法不变；`js/tournament.js` 另通过 `window.ACTCCourtMgt` 向 `js/court-mgt.js` 暴露球场聚合、冲突校验及复用弹窗（`openEditor`、`openLiveEditor`、`openWarningModal`、`openLogin`）和同浏览器跨标签页 `BroadcastChannel('actc-tournament-sync')` 即时通知。未登录时管理页为只读看板（展示全部/使用中/空闲筛选、项目徽章、小组轮次或淘汰赛轮次、双方球员、开赛时间与已进行分钟数、空闲球场的赛程下一场待打提示，每 60 秒轮询）；裁判登录后每 30 秒通过带令牌 Contents API 实时无缓存同步，并可直接在该页点“派场开赛 / 按赛程直接开赛 / 换场地 / 录入比分（释放） / 释放”。
+
 ## 9. 组织者、裁判和观众操作
 
 ### 9.1 组织者
@@ -388,6 +401,7 @@ git diff --check
 | 2026-11-16：W/O 按满分计算 | 新增可选 `rules.wo_score`（字符串或按组人数映射），W/O 按满分计入双方盘局；2026 四个单打项目已配置，真实比分下排名、签表与冠军不变 |
 | 2026-11-16：小组赛进行中及默认场地 | 小组 Match 视图可开赛、改场地、取消，Table 格子同步浅橙色；新增顶层 `schedule` 配置及 `scheduleCourts()`，`event.html` 嵌入赛程数据，以赛程场地作为默认场地，改场地不回写赛程；2026 四个单打项目已关联 `2026-singles` |
 | 2026-11-18：双打赛程同步修复 | 保留女双 A/C 与 B/D 的人工场地对调，同步工作簿矩阵、`Match List`、组分配与公开双打快照；导入器支持双打项目 ID、旧表头回退、场地提示忽略和按输入选择输出快照；23 项赛程测试及记分板回归通过 |
+| 2026-11-21：球场管理与占用同步 | 新增 `_data/courts/2026-1122.yml`、`court_mgt.html`、`2026/mgt/court_1122.md` 及 `js/court-mgt.js`；4 个双打项目接入 `court_mgt: "2026-1122"`，开赛必选空闲球场，跨项目拦截已占用球场并弹窗警告，录比分原子释放球场；算法与赛程集成测试（25 项）及隔离浏览器模拟流程通过，未验证真实 API 写入或 Jekyll 构建 |
 
 后续每次修改时：
 

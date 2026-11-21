@@ -11,8 +11,8 @@ assert(boundary > 0);
 const context = { window: {} };
 vm.createContext(context);
 vm.runInContext(source.slice(0, boundary) +
-  '\nwindow.test = { roundRobin, seedOrder, autoDraw, computeGroup, computeKO, compute, result, setsToScore, woSets, scheduleCourts }; })();', context);
-const { roundRobin, seedOrder, autoDraw, computeGroup, computeKO, compute, result, setsToScore, woSets, scheduleCourts } = context.window.test;
+  '\nwindow.test = { roundRobin, seedOrder, autoDraw, computeGroup, computeKO, compute, result, setsToScore, woSets, scheduleCourts, normalizeCourtId, normalizeCourtMgt, collectEventLiveMatches, checkCourtAssignment, buildCourtBoard, collectPlayableMatches }; })();', context);
+const { roundRobin, seedOrder, autoDraw, computeGroup, computeKO, compute, result, setsToScore, woSets, scheduleCourts, normalizeCourtId, normalizeCourtMgt, checkCourtAssignment, buildCourtBoard, collectPlayableMatches } = context.window.test;
 
 for (let count = 2; count <= 32; count++) {
   const players = Array.from({ length: count }, (_, index) => 'P' + index);
@@ -150,4 +150,85 @@ const courts = scheduleCourts({ courts: [1, 14], rows: [
 assert.equal([...courts].join(';'), 'RR|A|A|B,1;RR|A|A|C,14');
 assert.equal(scheduleCourts(null, 'ev').size, 0);
 
-console.log('PASS: round robin 2-32 players; opposite halves 1-64 groups; seed positions; manual draw; existing scores; KO in-progress marks; per-set score entry; W/O full score; round-robin live marks and scheduled courts.');
+// Court management: normalization, RR & KO live occupancy, conflict blocking, and release on score entry.
+assert.equal(normalizeCourtId(' 03号场 '), '3');
+assert.equal(normalizeCourtId('Court 12'), '12');
+assert.equal(normalizeCourtId('6号'), '6');
+assert.equal(normalizeCourtId(''), '');
+
+const cmSample = normalizeCourtMgt({
+  id: '2026-1122',
+  courts: [{ id: '1', note: '8:00AM-6:00PM' }, { id: '3' }, { id: '6' }],
+  schedule: {
+    courts: [1, 6],
+    rows: [
+      { time: '轮次1', matches: [null, { eventId: 'ev-b', group: 'D', label: '男B双-D组-第1轮', player1: 'P2', player2: 'P3' }] },
+      { time: '轮次2', matches: [null, { eventId: 'ev-b', group: 'D', label: '男B双-D组-第2轮', player1: 'P1', player2: 'P3' }] },
+      { time: '轮次3', matches: [null, { eventId: 'ev-b', group: 'D', label: '男B双-D组-第3轮', player1: 'P1', player2: 'P2' }] },
+    ],
+  },
+  events: [
+    {
+      id: 'ev-a',
+      label: '男子双打 A级别',
+      short: '男A双',
+      cfg: { groups: {}, rules: { advance: 0, draw: [['K1', 'K2'], ['K3', 'K4']] } },
+    },
+    {
+      id: 'ev-b',
+      label: '男子双打 B级别',
+      short: '男B双',
+      cfg: { groups: { D: ['P1', 'P2', 'P3'] }, rules: { advance: 2 } },
+    },
+  ],
+});
+assert.equal(cmSample.courts.length, 3);
+
+// Start a RR match on Court 6 and a Playoff match on Court 1.
+const cmScores = {
+  'ev-a': { matches: { 'KO|1|1': { p: ['K1', 'K2'], live: true, c: 'Court 1', t: '2026-11-22T01:00:00Z' } } },
+  'ev-b': { matches: { 'RR|D|P1|P2': { p: ['P1', 'P2'], live: true, c: '6号场', t: '2026-11-22T01:05:00Z' } } },
+};
+let board = buildCourtBoard(cmSample, cmScores);
+assert.equal(board.busy, 2);
+assert.equal(board.free, 1);
+assert.equal(board.courts[0].matches[0].roundText, '半决赛 · 第1场');
+assert.equal(board.courts[0].matches[0].eventLabel, '男子双打 A级别');
+assert.equal(board.courts[2].matches[0].roundText, 'D组 · 第3轮');
+assert.equal(board.courts[2].nextScheduled.a, 'P2');
+assert.equal(board.courts[2].nextScheduled.b, 'P3');
+
+// Selecting an occupied court across events or within same event is blocked with occupier details.
+const occCross = checkCourtAssignment('6', { eventId: 'ev-a', key: 'KO|1|2', a: 'K3', b: 'K4' }, cmSample, cmScores);
+assert.equal(occCross.ok, false);
+assert.equal(occCross.code, 'occupied');
+assert.match(occCross.message, /6号场 已被占用.*男B双.*P1 vs P2/);
+
+// Closed / unconfigured court (e.g. Court 7) and empty court are rejected.
+assert.equal(checkCourtAssignment('7', { eventId: 'ev-a', key: 'KO|1|2', a: 'K3', b: 'K4' }, cmSample, cmScores).code, 'invalid_court');
+assert.equal(checkCourtAssignment('', { eventId: 'ev-a', key: 'KO|1|2', a: 'K3', b: 'K4' }, cmSample, cmScores).code, 'required');
+
+// Editing the same match's court and keeping its own court is allowed; moving to free Court 3 is allowed.
+assert.equal(checkCourtAssignment('6', { eventId: 'ev-b', key: 'RR|D|P1|P2', a: 'P1', b: 'P2' }, cmSample, cmScores).ok, true);
+assert.equal(checkCourtAssignment('3', { eventId: 'ev-a', key: 'KO|1|2', a: 'K3', b: 'K4' }, cmSample, cmScores).ok, true);
+
+// Busy player check blocks starting a second concurrent match for P1 on a free court.
+const busyPlayer = checkCourtAssignment('3', { eventId: 'ev-b', key: 'RR|D|P1|P3', a: 'P1', b: 'P3' }, cmSample, cmScores);
+assert.equal(busyPlayer.ok, false);
+assert.equal(busyPlayer.code, 'player_busy');
+
+// Playable matches exclude already-live matches and flag busy players.
+const playable = collectPlayableMatches(cmSample, cmScores);
+assert(!playable.some((m) => m.key === 'KO|1|1' || m.key === 'RR|D|P1|P2'));
+assert.equal(playable.find((m) => m.key === 'KO|1|2').busyConflict, null);
+assert.equal(playable.find((m) => m.key === 'RR|D|P1|P3').busyConflict.court, '6');
+
+// Entering the final score replaces the live record and automatically releases Court 6 and Court 1.
+cmScores['ev-b'].matches['RR|D|P1|P2'] = { p: ['P1', 'P2'], s: '6-3', w: 'P1' };
+cmScores['ev-a'].matches['KO|1|1'] = { p: ['K1', 'K2'], s: '5-2', w: 'K1' };
+board = buildCourtBoard(cmSample, cmScores);
+assert.equal(board.busy, 0);
+assert.equal(board.free, 3);
+assert.equal(checkCourtAssignment('6', { eventId: 'ev-a', key: 'KO|1|2', a: 'K3', b: 'K4' }, cmSample, cmScores).ok, true);
+
+console.log('PASS: round robin 2-32 players; opposite halves 1-64 groups; seed positions; manual draw; existing scores; KO in-progress marks; per-set score entry; W/O full score; round-robin live marks, scheduled courts, and court management sync.');

@@ -10,6 +10,10 @@
 {%- if ev.schedule and site.data.schedules[ev.schedule] %}
 <script type="application/json" data-tm-schedule>{{ site.data.schedules[ev.schedule] | jsonify | replace: '<', '\u003c' }}</script>
 {%- endif %}
+{%- if ev.court_mgt and site.data.courts[ev.court_mgt] %}
+{%- assign cm = site.data.courts[ev.court_mgt] %}
+<script type="application/json" data-tm-court-mgt>{"courts":{{ cm.courts | jsonify | replace: '<', '\u003c' }},"events":[{%- for item in cm.events -%}{"id":{{ item.id | jsonify }},"label":{{ item.label | jsonify }},"short":{{ item.short | jsonify }},"theme":{{ item.theme | jsonify }},"url":{% if item.url %}{{ item.url | relative_url | jsonify }}{% else %}""{% endif %},"cfg":{{ site.data.events[item.id] | jsonify | replace: '<', '\u003c' }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]}</script>
+{%- endif %}
 <noscript><p>请启用 JavaScript 以查看分组及比分。</p></noscript>
 </div>
 <script src="{{ '/js/tournament.js' | prepend: site.baseurl }}?v={{ site.time | date: '%s' }}" defer></script>

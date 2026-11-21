@@ -6,6 +6,7 @@ groups:
   "D": ["Bing Liang & Jo Zhang","Sammy Gan & Claudia Wang","Chelsea He & Xin Liu"]
 seeds: {"Zijun Xia & Zilan Wu [1]":1,"Amy Chen & Alicia Wang [2]":2}
 schedule: "2026-doubles"
+court_mgt: "2026-1122"
 rules:
   advance: 2
   points: {"win":1,"loss":0,"wo_loss":0}

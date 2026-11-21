@@ -355,6 +355,312 @@
     return { groups, done, total, rrComplete: done === total, ko };
   }
 
+  function normalizeConfig(raw) {
+    const cfg = raw && typeof raw === 'object' ? raw : {};
+    const groups = {};
+    for (const g of Object.keys(cfg.groups || {})) {
+      const list = (cfg.groups[g] || []).map((p) => String(p).trim()).filter(Boolean);
+      if (list.length) groups[String(g)] = list;
+    }
+    cfg.groups = groups;
+    cfg.rules = cfg.rules || {};
+    cfg.rules.advance = Math.max(0, parseInt(cfg.rules.advance, 10) || 0);
+    return cfg;
+  }
+
+  // ---------- Court management ----------
+  function normalizeCourtId(raw) {
+    const s = String(raw == null ? '' : raw).trim().replace(/\s+/g, ' ');
+    if (!s) return '';
+    const m = /^(?:court\s*)?0*(\d+)\s*(?:号场?|场)?$/i.exec(s);
+    return m ? String(+m[1]) : s;
+  }
+
+  function normalizeCourtMgt(raw) {
+    if (!raw || typeof raw !== 'object') return null;
+    const seen = new Set();
+    const courts = [];
+    for (const item of Array.isArray(raw.courts) ? raw.courts : []) {
+      const obj = item && typeof item === 'object';
+      const id = normalizeCourtId(obj ? item.id : item);
+      if (!id || seen.has(id)) continue;
+      seen.add(id);
+      courts.push({ id, note: obj && item.note ? String(item.note) : '' });
+    }
+    if (!courts.length) return null;
+    const events = (Array.isArray(raw.events) ? raw.events : [])
+      .filter((e) => e && e.id && e.cfg && typeof e.cfg === 'object')
+      .map((e) => ({
+        id: String(e.id),
+        label: String(e.label || e.cfg.name || e.id),
+        short: String(e.short || e.label || e.cfg.name || e.id),
+        theme: String(e.theme || ''),
+        url: String(e.url || ''),
+        cfg: normalizeConfig(JSON.parse(JSON.stringify(e.cfg))),
+      }));
+    return {
+      id: String(raw.id || ''),
+      title: String(raw.title || ''),
+      courts,
+      events,
+      schedule: raw.schedule && typeof raw.schedule === 'object' ? raw.schedule : null,
+    };
+  }
+
+  function collectEventLiveMatches(ev, scores) {
+    const safeScores = scores && scores.matches ? scores : { matches: {} };
+    const view = compute({ cfg: ev.cfg, scores: safeScores });
+    const rawMatches = safeScores.matches;
+    const out = [];
+    const base = {
+      eventId: ev.id,
+      eventLabel: ev.label || ev.cfg.name || ev.id,
+      eventShort: ev.short || ev.label || ev.cfg.name || ev.id,
+      theme: ev.theme || '',
+      url: ev.url || '',
+    };
+
+    for (const gName of Object.keys(view.groups)) {
+      const G = view.groups[gName];
+      const lookup = new Map();
+      G.games.forEach((g) => { lookup.set(g.a + '\u0000' + g.b, g); lookup.set(g.b + '\u0000' + g.a, g); });
+      G.rounds.forEach((rd, ri) => {
+        rd.pairs.forEach(([a, b]) => {
+          const g = lookup.get(a + '\u0000' + b);
+          if (!g || !g.live) return;
+          const rec = rawMatches[g.key] || {};
+          out.push(Object.assign({}, base, {
+            key: g.key,
+            stage: 'rr',
+            group: gName,
+            roundNo: ri + 1,
+            roundText: gName + '组 · 第' + (ri + 1) + '轮',
+            editorTitle: gName + '组 第' + (ri + 1) + '轮',
+            a, b,
+            court: normalizeCourtId(g.live.court),
+            rawCourt: g.live.court || '',
+            startedAt: rec.t || '',
+            by: rec.by || '',
+          }));
+        });
+      });
+    }
+
+    if (view.ko) {
+      const addKO = (m, rdName) => {
+        if (!m || !m.live) return;
+        const rec = rawMatches[m.key] || {};
+        out.push(Object.assign({}, base, {
+          key: m.key,
+          stage: 'ko',
+          group: '',
+          roundNo: m.no,
+          roundText: rdName + ' · 第' + m.no + '场',
+          editorTitle: rdName + ' 第' + m.no + '场',
+          a: m.a.name,
+          b: m.b.name,
+          court: normalizeCourtId(m.live.court),
+          rawCourt: m.live.court || '',
+          startedAt: rec.t || '',
+          by: rec.by || '',
+        }));
+      };
+      view.ko.rounds.forEach((rd) => rd.matches.forEach((m) => addKO(m, rd.name)));
+      if (view.ko.third) addKO(view.ko.third, '三四名决赛');
+    }
+    return out;
+  }
+
+  function checkCourtAssignment(courtRaw, ctx, courtMgt, scoresByEvent) {
+    const court = normalizeCourtId(courtRaw);
+    const hasManagedCourts = !!(courtMgt && Array.isArray(courtMgt.courts) && courtMgt.courts.length);
+    if (hasManagedCourts) {
+      if (!court) return { ok: false, code: 'required', message: '请选择空闲球场后再开始比赛。' };
+      if (!courtMgt.courts.some((c) => c.id === court)) {
+        return {
+          ok: false,
+          code: 'invalid_court',
+          court,
+          message: courtText(court) + ' 不在可用球场列表（' + courtMgt.courts.map((c) => c.id).join('、') + '号场）内。',
+        };
+      }
+    }
+    const events = courtMgt && Array.isArray(courtMgt.events) && courtMgt.events.length
+      ? courtMgt.events
+      : (ctx && ctx.singleEvent ? [ctx.singleEvent] : []);
+    const map = scoresByEvent || {};
+    const otherLive = [];
+    for (const ev of events) {
+      for (const lm of collectEventLiveMatches(ev, map[ev.id])) {
+        if (ctx && lm.eventId === ctx.eventId && lm.key === ctx.key) continue;
+        otherLive.push(lm);
+      }
+    }
+    if (court) {
+      const occupiers = otherLive.filter((lm) => lm.court === court);
+      if (occupiers.length) {
+        const first = occupiers[0];
+        return {
+          ok: false,
+          code: 'occupied',
+          court,
+          occupier: first,
+          occupiers,
+          message: courtText(court) + ' 已被占用：' + first.eventShort + ' · ' + first.roundText + '（' + first.a + ' vs ' + first.b + '），不能使用该球场。',
+        };
+      }
+    }
+    if (ctx && ctx.a && ctx.b) {
+      const playerBusy = otherLive.find((lm) => lm.a === ctx.a || lm.b === ctx.a || lm.a === ctx.b || lm.b === ctx.b);
+      if (playerBusy) {
+        return {
+          ok: false,
+          code: 'player_busy',
+          occupier: playerBusy,
+          message: '该场球员正在另一场比赛进行中：' + playerBusy.eventShort + ' · ' + playerBusy.roundText +
+            (playerBusy.court ? '（' + courtText(playerBusy.court) + '）' : '') + '，请先结束该场比赛。',
+        };
+      }
+    }
+    return { ok: true, court };
+  }
+
+  function buildCourtBoard(courtMgt, scoresByEvent) {
+    const map = scoresByEvent || {};
+    const allLive = [];
+    const evById = new Map();
+    for (const ev of courtMgt.events) {
+      evById.set(ev.id, ev);
+      collectEventLiveMatches(ev, map[ev.id]).forEach((lm) => allLive.push(lm));
+    }
+    const courtMap = new Map(courtMgt.courts.map((c) => [c.id, { id: c.id, note: c.note || '', matches: [], nextScheduled: null }]));
+    const unassigned = [];
+    for (const lm of allLive) {
+      if (lm.court && courtMap.has(lm.court)) courtMap.get(lm.court).matches.push(lm);
+      else unassigned.push(lm);
+    }
+    const sched = courtMgt.schedule;
+    if (sched && Array.isArray(sched.rows) && Array.isArray(sched.courts)) {
+      for (const row of sched.rows) {
+        (row.matches || []).forEach((m, idx) => {
+          if (!m || !m.eventId || !m.group || sched.courts[idx] == null) return;
+          const cId = normalizeCourtId(sched.courts[idx]);
+          const entry = courtMap.get(cId);
+          if (!entry || entry.nextScheduled) return;
+          const ev = evById.get(m.eventId);
+          const groupPlayers = ev && ev.cfg.groups && ev.cfg.groups[m.group];
+          if (!groupPlayers || !groupPlayers.includes(m.player1) || !groupPlayers.includes(m.player2)) return;
+          const matches = (map[m.eventId] && map[m.eventId].matches) || {};
+          const key = pairKey('RR|' + m.group, m.player1, m.player2);
+          if (result(matches, key, m.player1, m.player2) || liveInfo(matches, key, m.player1, m.player2)) return;
+          const rdMatch = /-第(\d+)轮$/.exec(m.label || '');
+          const rdNo = rdMatch ? +rdMatch[1] : 0;
+          entry.nextScheduled = {
+            eventId: ev.id,
+            eventLabel: ev.label,
+            eventShort: ev.short,
+            theme: ev.theme,
+            key,
+            stage: 'rr',
+            group: m.group,
+            roundNo: rdNo,
+            roundText: m.group + '组' + (rdNo ? ' · 第' + rdNo + '轮' : ''),
+            editorTitle: m.group + '组' + (rdNo ? ' 第' + rdNo + '轮' : ''),
+            time: row.time || '',
+            a: m.player1,
+            b: m.player2,
+            plannedCourt: cId,
+          };
+        });
+      }
+    }
+    const courts = Array.from(courtMap.values());
+    const busy = courts.filter((c) => c.matches.length > 0).length;
+    const conflicts = courts.filter((c) => c.matches.length > 1).length;
+    return { courts, unassigned, allLive, total: courts.length, busy, free: courts.length - busy, conflicts };
+  }
+
+  function collectPlayableMatches(courtMgt, scoresByEvent) {
+    const map = scoresByEvent || {};
+    const busyByPlayer = new Map();
+    for (const ev of courtMgt.events) {
+      for (const lm of collectEventLiveMatches(ev, map[ev.id])) {
+        if (!busyByPlayer.has(lm.a)) busyByPlayer.set(lm.a, lm);
+        if (!busyByPlayer.has(lm.b)) busyByPlayer.set(lm.b, lm);
+      }
+    }
+    const schedMeta = new Map();
+    const sched = courtMgt.schedule;
+    if (sched && Array.isArray(sched.rows) && Array.isArray(sched.courts)) {
+      sched.rows.forEach((row, rIdx) => {
+        (row.matches || []).forEach((m, cIdx) => {
+          if (!m || !m.eventId || !m.group || sched.courts[cIdx] == null) return;
+          const k = m.eventId + '|' + pairKey('RR|' + m.group, m.player1, m.player2);
+          schedMeta.set(k, {
+            court: normalizeCourtId(sched.courts[cIdx]),
+            time: row.time || '',
+            seq: rIdx * 100 + cIdx,
+          });
+        });
+      });
+    }
+    const playable = [];
+    for (const ev of courtMgt.events) {
+      const safeScores = map[ev.id] && map[ev.id].matches ? map[ev.id] : { matches: {} };
+      const view = compute({ cfg: ev.cfg, scores: safeScores });
+      const base = { eventId: ev.id, eventLabel: ev.label, eventShort: ev.short, theme: ev.theme, url: ev.url };
+
+      if (view.ko) {
+        const pushKO = (m, rdName) => {
+          if (!m || !m.playable || m.r || m.live) return;
+          playable.push(Object.assign({}, base, {
+            key: m.key,
+            stage: 'ko',
+            group: '',
+            roundNo: m.no,
+            roundText: rdName + ' · 第' + m.no + '场',
+            editorTitle: rdName + ' 第' + m.no + '场',
+            a: m.a.name,
+            b: m.b.name,
+            plannedCourt: '',
+            scheduledTime: '',
+            scheduleSeq: 1e6 + m.no,
+            busyConflict: busyByPlayer.get(m.a.name) || busyByPlayer.get(m.b.name) || null,
+          }));
+        };
+        view.ko.rounds.forEach((rd) => rd.matches.forEach((m) => pushKO(m, rd.name)));
+        if (view.ko.third) pushKO(view.ko.third, '三四名决赛');
+      }
+
+      for (const gName of Object.keys(view.groups)) {
+        const G = view.groups[gName];
+        const lookup = new Map();
+        G.games.forEach((g) => { lookup.set(g.a + '\u0000' + g.b, g); lookup.set(g.b + '\u0000' + g.a, g); });
+        G.rounds.forEach((rd, ri) => {
+          rd.pairs.forEach(([a, b]) => {
+            const g = lookup.get(a + '\u0000' + b);
+            if (!g || g.r || g.live) return;
+            const sm = schedMeta.get(ev.id + '|' + g.key);
+            playable.push(Object.assign({}, base, {
+              key: g.key,
+              stage: 'rr',
+              group: gName,
+              roundNo: ri + 1,
+              roundText: gName + '组 · 第' + (ri + 1) + '轮',
+              editorTitle: gName + '组 第' + (ri + 1) + '轮',
+              a, b,
+              plannedCourt: sm ? sm.court : '',
+              scheduledTime: sm ? sm.time : '',
+              scheduleSeq: sm ? sm.seq : 5e5 + (ri + 1) * 100,
+              busyConflict: busyByPlayer.get(a) || busyByPlayer.get(b) || null,
+            }));
+          });
+        });
+      }
+    }
+    return playable;
+  }
+
   // ---------- GitHub storage ----------
   function b64encode(str) {
     const bytes = new TextEncoder().encode(str);
@@ -479,13 +785,14 @@
   }
 
   // Start (rec) or cancel (null) an in-progress mark without overwriting a result saved meanwhile.
-  function liveUpdate(key, a, b, rec) {
+  function liveUpdate(key, a, b, rec, extraCheck) {
     return (matches) => {
       if (result(matches, key, a, b)) {
         const e = new Error('该场比赛已录入比分，请刷新后查看。');
         e.userMessage = e.message;
         throw e;
       }
+      if (rec && typeof extraCheck === 'function') extraCheck(matches);
       return rec;
     };
   }
@@ -710,7 +1017,41 @@
     return dlg;
   }
 
-  function openEditor(inst, ctx) {
+  const syncListeners = [];
+  let syncChannel = null;
+  try {
+    if (typeof BroadcastChannel !== 'undefined') {
+      syncChannel = new BroadcastChannel('actc-tournament-sync');
+      syncChannel.addEventListener('message', (ev) => {
+        instances.forEach((i) => refresh(i, true));
+        syncListeners.forEach((fn) => { try { fn(ev.data || {}); } catch (e) { /* ignore */ } });
+      });
+    }
+  } catch (e) { /* optional */ }
+
+  function notifySync(detail) {
+    const payload = Object.assign({ t: Date.now() }, detail);
+    try { if (syncChannel) syncChannel.postMessage(payload); } catch (e) { /* ignore */ }
+    syncListeners.forEach((fn) => { try { fn(payload); } catch (e) { /* ignore */ } });
+  }
+
+  function onSync(fn) {
+    if (typeof fn === 'function') syncListeners.push(fn);
+  }
+
+  function openWarningModal(title, message) {
+    let dlg;
+    const closeBtn = h('button', { type: 'button', class: 'btn btn--dark btn--sm', onclick: () => dlg.close() }, '知道了');
+    const lines = String(message || '').split('\n').filter(Boolean);
+    dlg = modal(h('div', { class: 'tm-warn-modal', role: 'alertdialog', 'aria-label': title || '提示' },
+      h('h3', { class: 'tm-warn-modal__title', text: '⚠️ ' + (title || '球场已被占用') }),
+      lines.map((line) => h('p', { class: 'tm-warn-modal__line', text: line })),
+      h('div', { class: 'tm-actions' }, h('span', { class: 'tm-bar__sp' }), closeBtn)));
+    closeBtn.focus();
+    return dlg;
+  }
+
+  function openEditor(inst, ctx, onSaved) {
     const a = ctx.a, b = ctx.b;
     const existing = result(inst.scores.matches, ctx.key, a, b);
     const hint = inst.cfg.rules.score_hint || '';
@@ -782,7 +1123,9 @@
         inst.scores = await writeMatch(inst, ctx.key, rec, msg);
         inst.error = '';
         dlg.close();
-        render(inst);
+        if (inst.root) render(inst);
+        notifySync({ type: 'score', eventId: inst.id, key: ctx.key });
+        if (typeof onSaved === 'function') onSaved(inst.scores);
       } catch (e) {
         err.textContent = apiErrorText(e);
         saveBtn.disabled = false;
@@ -838,24 +1181,170 @@
     rows[0].ia.focus();
   }
 
-  function openLiveEditor(inst, ctx) {
+  async function loadPeerScores(inst, courtMgt, includeSelf) {
+    const out = {};
+    out[inst.id] = inst.scores || emptyScores();
+    if (!courtMgt || !Array.isArray(courtMgt.events)) return out;
+    await Promise.all(courtMgt.events.map(async (ev) => {
+      if (!includeSelf && ev.id === inst.id) return;
+      const client = { id: ev.id, repo: inst.repo, branch: inst.branch, path: inst.path, scores: emptyScores() };
+      out[ev.id] = await loadScores(client);
+    }));
+    return out;
+  }
+
+  function openLiveEditor(inst, ctx, onSaved) {
     const a = ctx.a, b = ctx.b;
-    const courtIn = h('input', { type: 'text', inputmode: 'numeric', autocomplete: 'off', maxlength: '12', placeholder: '如 5', value: ctx.live ? ctx.live.court : (ctx.court || '') });
+    const cm = inst.courtMgt || null;
+    const singleEvent = { id: inst.id, label: inst.cfg.name || inst.id, short: inst.cfg.name || inst.id, cfg: inst.cfg };
+    const plannedId = normalizeCourtId(ctx.court || '');
+    const ownLiveId = ctx.live ? normalizeCourtId(ctx.live.court) : '';
+    let selectedCourt = ownLiveId || plannedId;
+    let peerScores = { [inst.id]: inst.scores || emptyScores() };
+    let syncingPeers = !!cm;
+
+    const courtIn = cm ? null : h('input', {
+      type: 'text', inputmode: 'numeric', autocomplete: 'off', maxlength: '12',
+      placeholder: '如 5', value: ctx.live ? ctx.live.court : (ctx.court || ''),
+    });
+    const syncBar = cm ? h('div', { class: 'tm-court-sync' }) : null;
+    const courtGrid = cm ? h('div', { class: 'tm-court-grid', role: 'radiogroup', 'aria-label': '选择球场' }) : null;
+    const warnBox = h('div', { class: 'tm-warn', role: 'alert', hidden: true });
     const err = h('p', { class: 'tm-error', role: 'alert' });
-    const saveBtn = h('button', { type: 'submit', class: 'btn btn--dark btn--sm' }, ctx.live ? '保存' : '标记进行中');
+    const saveBtn = h('button', { type: 'submit', class: 'btn btn--dark btn--sm', disabled: syncingPeers }, ctx.live ? '保存球场' : '开始比赛');
     const desc = ctx.title + ' ' + a + ' vs ' + b;
 
-    async function persist(rec, msg) {
+    function showWarn(text) {
+      warnBox.textContent = text ? ('⚠️ ' + text) : '';
+      warnBox.hidden = !text;
+    }
+
+    function renderManagedCourts() {
+      if (!cm) return;
+      const board = buildCourtBoard(cm, peerScores);
+      const btns = board.courts.map((c) => {
+        const others = c.matches.filter((lm) => !(lm.eventId === inst.id && lm.key === ctx.key));
+        const isOccupied = others.length > 0;
+        const isOwn = !!ownLiveId && ownLiveId === c.id && !isOccupied;
+        const isSelected = !isOccupied && selectedCourt === c.id;
+        let sub = '空闲';
+        if (isOccupied) sub = '占用 · ' + others[0].eventShort;
+        else if (isOwn) sub = '当前球场';
+        else if (plannedId === c.id) sub = '空闲 · 原赛程';
+        const tip = isOccupied
+          ? (courtText(c.id) + ' 占用中：' + others[0].eventLabel + ' ' + others[0].roundText + '（' + others[0].a + ' vs ' + others[0].b + '）')
+          : (c.note || '');
+        return h('button', {
+          type: 'button',
+          class: 'tm-court-btn' + (isOccupied ? ' is-occupied' : isSelected ? ' is-selected' : ''),
+          role: 'radio',
+          'aria-checked': String(isSelected),
+          'data-court-id': c.id,
+          'data-occupied': isOccupied ? 'true' : null,
+          title: tip || null,
+          onclick: () => {
+            if (isOccupied) {
+              const first = others[0];
+              const shortMsg = courtText(c.id) + ' 已被占用：' + first.eventShort + ' · ' + first.roundText + '（' + first.a + ' vs ' + first.b + '），不能使用该球场。';
+              const modalMsg = courtText(c.id) + ' 当前正在进行比赛：\n' +
+                '项目：' + first.eventLabel + '\n' +
+                '轮次：' + first.roundText + '\n' +
+                '球员：' + first.a + ' vs ' + first.b + '\n\n' +
+                '不能使用已被占用的球场。若该场已完赛，请先录入比分释放球场；或改选其他空闲球场。';
+              showWarn(shortMsg);
+              openWarningModal('球场已被占用', modalMsg);
+              return;
+            }
+            selectedCourt = c.id;
+            err.textContent = '';
+            showWarn('');
+            renderManagedCourts();
+          },
+        },
+          h('span', { class: 'tm-court-btn__num', text: courtText(c.id) }),
+          h('span', { class: 'tm-court-btn__sub', text: sub }));
+      });
+      courtGrid.replaceChildren(...btns);
+    }
+
+    async function syncManagedCourts() {
+      if (!cm) return;
+      syncingPeers = true;
+      saveBtn.disabled = true;
+      err.textContent = '';
+      syncBar.replaceChildren(h('span', { class: 'tm-muted', text: '正在同步全部项目球场占用状态…' }));
+      try {
+        peerScores = await loadPeerScores(inst, cm, true);
+        inst.scores = peerScores[inst.id] || inst.scores;
+        syncingPeers = false;
+        saveBtn.disabled = false;
+        const check = selectedCourt
+          ? checkCourtAssignment(selectedCourt, { eventId: inst.id, key: ctx.key, a, b }, cm, peerScores)
+          : checkCourtAssignment('', { eventId: inst.id, key: ctx.key, a, b }, { courts: [], events: cm.events }, peerScores);
+        if (!check.ok && (check.code === 'occupied' || check.code === 'invalid_court')) {
+          selectedCourt = '';
+          showWarn((plannedId ? '原赛程 ' : '') + check.message + ' 请改选其他空闲球场，或先录入前一场比分释放球场。');
+        } else if (!check.ok && check.code === 'player_busy') {
+          showWarn(check.message);
+        } else {
+          showWarn('');
+        }
+        const board = buildCourtBoard(cm, peerScores);
+        syncBar.replaceChildren(
+          h('span', { class: 'tm-muted', text: '当前空闲 ' + board.free + ' / ' + board.total + ' 片球场（点击空闲球场分配）' }),
+          h('button', { type: 'button', class: 'tm-link', onclick: syncManagedCourts }, '刷新球场'));
+        renderManagedCourts();
+      } catch (e) {
+        syncingPeers = false;
+        saveBtn.disabled = true;
+        syncBar.replaceChildren(
+          h('span', { class: 'tm-error', text: '球场状态同步失败，请重试后再分配球场。' }),
+          h('button', { type: 'button', class: 'btn btn--outline btn--sm', onclick: syncManagedCourts }, '重试同步'));
+      }
+    }
+
+    async function persist(rec, msg, chosenCourt) {
       saveBtn.disabled = true;
       err.textContent = '';
       try {
-        inst.scores = await writeMatch(inst, ctx.key, liveUpdate(ctx.key, a, b, rec), msg);
+        if (rec) {
+          if (cm) peerScores = await loadPeerScores(inst, cm, false);
+          const pre = checkCourtAssignment(chosenCourt, { eventId: inst.id, key: ctx.key, a, b, singleEvent }, cm, peerScores);
+          if (!pre.ok) {
+            const ce = new Error(pre.message);
+            ce.userMessage = pre.message;
+            ce.conflictCheck = pre;
+            throw ce;
+          }
+        }
+        inst.scores = await writeMatch(inst, ctx.key, liveUpdate(ctx.key, a, b, rec, (latestMatches) => {
+          const latestMap = Object.assign({}, peerScores, { [inst.id]: { matches: latestMatches } });
+          const finalCheck = checkCourtAssignment(chosenCourt, { eventId: inst.id, key: ctx.key, a, b, singleEvent }, cm, latestMap);
+          if (!finalCheck.ok) {
+            const ce = new Error(finalCheck.message);
+            ce.userMessage = finalCheck.message;
+            ce.conflictCheck = finalCheck;
+            throw ce;
+          }
+        }), msg);
         inst.error = '';
         dlg.close();
-        render(inst);
+        if (inst.root) render(inst);
+        notifySync({ type: 'live', eventId: inst.id, key: ctx.key });
+        if (typeof onSaved === 'function') onSaved(inst.scores);
       } catch (e) {
-        err.textContent = apiErrorText(e);
         saveBtn.disabled = false;
+        if (e && e.conflictCheck) {
+          const cc = e.conflictCheck;
+          if (cc.code === 'occupied' && cm && selectedCourt === cc.court) selectedCourt = '';
+          if (cm) renderManagedCourts();
+          if (cc.code === 'occupied' || cc.code === 'player_busy') {
+            showWarn(cc.message);
+            openWarningModal(cc.code === 'occupied' ? '球场已被占用' : '球员比赛冲突', cc.message);
+            return;
+          }
+        }
+        err.textContent = apiErrorText(e);
       }
     }
 
@@ -863,31 +1352,51 @@
       method: 'dialog',
       onsubmit: (e) => {
         e.preventDefault();
-        const court = courtIn.value.trim().replace(/\s+/g, ' ');
+        if (syncingPeers) return;
+        const rawCourt = cm ? selectedCourt : courtIn.value.trim().replace(/\s+/g, ' ');
+        const check = checkCourtAssignment(rawCourt, { eventId: inst.id, key: ctx.key, a, b, singleEvent }, cm, peerScores);
+        if (!check.ok) {
+          if (check.code === 'occupied' || check.code === 'player_busy') {
+            showWarn(check.message);
+            openWarningModal(check.code === 'occupied' ? '球场已被占用' : '球员比赛冲突', check.message);
+          } else {
+            err.textContent = check.message;
+          }
+          return;
+        }
+        const court = check.court;
         const rec = { p: [a, b], live: true, t: new Date().toISOString() };
         if (court) rec.c = court;
         if (getUser()) rec.by = getUser();
-        persist(rec, 'score(' + inst.id + '): live ' + desc + (court ? ' @ court ' + court : ''));
+        persist(rec, 'score(' + inst.id + '): live ' + desc + (court ? ' @ court ' + court : ''), court);
       },
     },
       h('h3', { text: ctx.title }),
       h('p', { class: 'tm-vs' }, h('strong', { text: a }), ' vs ', h('strong', { text: b })),
-      h('p', { class: 'tm-muted tm-hint', text: '比赛开始或即将开始时标记为进行中；录入比分后自动结束。' + (ctx.court ? '场地默认为赛程安排的 ' + courtText(ctx.court) + '，可按现场情况修改，赛程表不变。' : '') }),
-      h('label', { class: 'tm-field' }, h('span', { text: '场地号（可选）' }), courtIn),
+      h('p', { class: 'tm-muted tm-hint', text: '比赛开始时分配球场并标记为进行中；录入比分后该球场自动释放。' + (ctx.court ? '赛程原定 ' + courtText(ctx.court) + '，可按现场空闲球场调整。' : '') }),
+      cm
+        ? h('div', { class: 'tm-field' }, h('span', { text: '选择球场（必选空闲球场）' }), syncBar, courtGrid)
+        : h('label', { class: 'tm-field' }, h('span', { text: '场地号（可选）' }), courtIn),
+      warnBox,
       err,
       h('div', { class: 'tm-actions' },
         ctx.live ? h('button', {
           type: 'button', class: 'btn btn--outline btn--sm tm-danger',
-          onclick: () => persist(null, 'score(' + inst.id + '): clear live ' + desc),
-        }, '取消进行中') : null,
+          onclick: () => persist(null, 'score(' + inst.id + '): clear live ' + desc, ''),
+        }, '取消进行中（释放球场）') : null,
         h('span', { class: 'tm-bar__sp' }),
         h('button', { type: 'button', class: 'btn btn--outline btn--sm', onclick: () => dlg.close() }, '取消'),
         saveBtn));
     const dlg = modal(form);
-    courtIn.focus();
+    if (cm) {
+      renderManagedCourts();
+      syncManagedCourts();
+    } else {
+      courtIn.focus();
+    }
   }
 
-  function openLogin(inst) {
+  function openLogin(inst, onDone) {
     const input = h('input', { type: 'password', autocomplete: 'off', placeholder: 'github_pat_…', required: true });
     const err = h('p', { class: 'tm-error', role: 'alert' });
     const btn = h('button', { type: 'submit', class: 'btn btn--dark btn--sm' }, '登录');
@@ -907,6 +1416,8 @@
           if (login) localStorage.setItem(USER_KEY, login); else localStorage.removeItem(USER_KEY);
           dlg.close();
           instances.forEach((i) => refresh(i, true));
+          notifySync({ type: 'login' });
+          if (typeof onDone === 'function') onDone();
         } catch (x) {
           err.textContent = x.status === 401 ? '令牌无效。' : '无法访问仓库 ' + inst.repo + '，请检查令牌权限。';
           btn.disabled = false;
@@ -926,12 +1437,21 @@
     input.focus();
   }
 
-  function logout() {
+  function logout(onDone) {
     try { localStorage.removeItem(TOKEN_KEY); localStorage.removeItem(USER_KEY); } catch (e) { /* ignore */ }
     instances.forEach(render);
+    notifySync({ type: 'logout' });
+    if (typeof onDone === 'function') onDone();
   }
 
   window.ACTCTournamentScores = { pairKey, result, loadScores, cellText };
+  window.ACTCCourtMgt = {
+    h, modal, nameNode, courtText, fmtTime, pairKey, result, cellText, scheduleCourts,
+    normalizeConfig, normalizeCourtId, normalizeCourtMgt,
+    compute, collectEventLiveMatches, collectPlayableMatches, buildCourtBoard, checkCourtAssignment,
+    getToken, getUser, loadScores, writeMatch, liveUpdate, apiErrorText,
+    openEditor, openLiveEditor, openWarningModal, openLogin, logout, onSync, notifySync,
+  };
 
   // ---------- Lifecycle ----------
   async function refresh(inst, force) {
@@ -949,19 +1469,6 @@
     render(inst);
   }
 
-  function normalizeConfig(raw) {
-    const cfg = raw && typeof raw === 'object' ? raw : {};
-    const groups = {};
-    for (const g of Object.keys(cfg.groups || {})) {
-      const list = (cfg.groups[g] || []).map((p) => String(p).trim()).filter(Boolean);
-      if (list.length) groups[String(g)] = list;
-    }
-    cfg.groups = groups;
-    cfg.rules = cfg.rules || {};
-    cfg.rules.advance = Math.max(0, parseInt(cfg.rules.advance, 10) || 0);
-    return cfg;
-  }
-
   function init(root) {
     const id = root.dataset.event || '';
     const repo = root.dataset.repo || '';
@@ -971,14 +1478,18 @@
     }
     const cfgEl = root.querySelector('script[data-tm-config]');
     const schedEl = root.querySelector('script[data-tm-schedule]');
+    const cmEl = root.querySelector('script[data-tm-court-mgt]');
     let courts = new Map();
+    let courtMgt = null;
     try { courts = scheduleCourts(schedEl ? JSON.parse(schedEl.textContent) : null, id); } catch (e) { /* no default courts */ }
+    try { courtMgt = cmEl ? normalizeCourtMgt(JSON.parse(cmEl.textContent)) : null; } catch (e) { /* no court mgt */ }
     const inst = {
       root, id, repo,
       branch: root.dataset.branch || 'master',
       path: root.dataset.path || 'events/scores',
       cfg: normalizeConfig(JSON.parse(cfgEl ? cfgEl.textContent : '{}')),
       courts,
+      courtMgt,
       scores: emptyScores(),
       groupViews: {},
       busy: false, error: '',

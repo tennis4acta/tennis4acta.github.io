@@ -110,3 +110,19 @@
 .tm-sets__add[hidden] { display: none; }
 .tm-sets__hint { margin: 6px 0 0; font-size: .8rem; }
 .tm-danger { color: var(--live); }
+
+.tm-dialog:has(.tm-court-grid) { width: min(520px, calc(100vw - 28px)); }
+.tm-court-sync { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; font-size: .82rem; margin: 2px 0 8px; }
+.tm-court-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.tm-court-btn { appearance: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 54px; padding: 7px 6px; border: 1.5px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); font: inherit; cursor: pointer; transition: border-color .15s, background .15s, transform .1s; text-align: center; }
+.tm-court-btn:hover { border-color: var(--court); background: var(--surface-2); }
+.tm-court-btn__num { font: 700 .95rem/1.2 var(--display); }
+.tm-court-btn__sub { font-size: .72rem; line-height: 1.2; color: var(--ok); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tm-court-btn.is-selected { border-color: var(--court); background: var(--court); color: #fff; box-shadow: 0 4px 12px color-mix(in srgb, var(--court) 32%, transparent); }
+.tm-court-btn.is-selected .tm-court-btn__sub { color: rgba(255, 255, 255, .9); }
+.tm-court-btn.is-occupied { border-color: color-mix(in srgb, var(--live) 45%, var(--line)); background: color-mix(in srgb, var(--live) 10%, var(--surface)); color: var(--ink-soft); }
+.tm-court-btn.is-occupied:hover { border-color: var(--live); background: color-mix(in srgb, var(--live) 16%, var(--surface)); }
+.tm-court-btn.is-occupied .tm-court-btn__sub { color: var(--live); font-weight: 700; }
+.tm-warn { margin: 0 0 12px; padding: 10px 12px; border-radius: 10px; border: 1px solid color-mix(in srgb, var(--live) 50%, var(--line)); background: color-mix(in srgb, var(--live) 11%, var(--surface)); color: var(--ink); font-size: .88rem; line-height: 1.45; }
+.tm-warn-modal__title { color: var(--live); margin: 0 0 10px; }
+.tm-warn-modal__line { margin: 0 0 6px; font-size: .92rem; line-height: 1.5; }

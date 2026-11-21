@@ -680,3 +680,26 @@
 - 重新运行 `node scripts/import-schedule.js make_draw/2026/111122/doubles_schedule_draft.xlsx`：[2026-doubles.json](_data/schedules/2026-doubles.json) 相对上一版仅 2 处球员名及 `sha256` 变化，仍 93 场、13 片场地；`Match List` 与快照逐场一致（双向差集 0），快照与配置中已无旧名。
 - `node --test scripts/test-schedule.js` 23 项通过；`node scripts/test-tournament.js` 通过；`git diff --check` 无空白错误。
 - 未运行 Jekyll 构建或浏览器目视检查 Note 渲染，未写入真实 GitHub 比分，未提交或推送 Git。
+
+## 2026-11-21：球场管理与跨项目占用同步（`2026/mgt/court_1122.md`）
+
+### 需求与设计决定
+
+- 新增 11 月 22 日双打球场管理页面 [court_1122.md](2026/mgt/court_1122.md)（`/2026/mgt/court_1122/`），以配置化的球场安排 [2026-1122.yml](_data/courts/2026-1122.yml)（Court 1–6、9–15 共 13 片球场及开放时段，关联当日 4 个双打项目与 `2026-doubles` 赛程）作为输入。
+- **单数据源原子同步**：不引入独立球场锁文件，直接复用并聚合 4 个双打项目的 `events/scores/<id>.json`。小组循环赛（`RR|...`）或淘汰赛（`KO|...`）标记 `live: true` 并分配球场时显示在对应球场卡片下（含项目、分组轮次或淘汰赛轮次、双方球员、开赛时间与已进行分钟数）；比赛完赛录入比分或取消进行中时，同一 GitHub API 提交原子覆盖/删除 `live` 记录，对应球场自动释放。
+- 按用户确认的三项交互决定：
+  1. **管理页交互**：未登录时作为只读实时看板（支持全部/使用中/空闲筛选，空闲球场附赛程下一场待打提示）；裁判登录后可直接在该页操作（`+ 派场开赛`、`按赛程直接开赛`、`换场地`、`录入比分（释放）`、`释放`），并通过带令牌 Contents API 实时无缓存同步（30 秒轮询 + 同浏览器 `BroadcastChannel` 即时同步）。
+  2. **开赛球场选择规则**：配置了 `court_mgt` 的项目，开赛/改场地弹窗展示固定球场按钮网格（必选空闲球场）。点击任何已占用球场立即弹出警告弹窗（列出占用项目、轮次与球员）并禁止选中；若原定赛程默认球场仍被前一场占用，打开弹窗时自动取消预选并提示告警；提交前再次跨项目拉取最新状态并在 `writeMatch()` 内复核，同时拦截同一对组合同时在两场“进行中”的球员冲突。未配置 `court_mgt` 的旧项目保持可选文本输入兼容。
+  3. **页面可见性**：作为内部管理页设置 `robots: noindex, nofollow`，不在公开赛事页添加入口按钮；管理页顶部提供返回双打赛事页、双打赛程及 4 个项目页的快捷链接。
+
+### 实施
+
+- 新增 [_data/courts/2026-1122.yml](_data/courts/2026-1122.yml)、[_includes/court_mgt.html](_includes/court_mgt.html)、[2026/mgt/court_1122.md](2026/mgt/court_1122.md)、[js/court-mgt.js](js/court-mgt.js) 与 [css/court-mgt.css](css/court-mgt.css)。
+- 更新 [_includes/event.html](_includes/event.html)、[js/tournament.js](js/tournament.js)、[css/tournament.css](css/tournament.css)，并为 4 份双打配置（`2026-doubles-a/b/womens/senior.yml`）接入 `court_mgt: "2026-1122"`；保持 `window.ACTCTournamentScores` 原有只读接口不变，新增 `window.ACTCCourtMgt` 供管理页复用计算与弹窗。
+- 同步更新 [ai_tools/scoreboard.md](ai_tools/scoreboard.md) 与 [score_board/howto.md](score_board/howto.md)。
+
+### 验证与未验证事项
+
+- 算法与集成测试：`node --check js/tournament.js`、`node --check js/court-mgt.js`、`node scripts/test-tournament.js`、`node --test scripts/test-schedule.js`（25 项全部通过，含新增配置对齐测试及模拟 API 下小组赛/淘汰赛派场、跨项目球场占用拦截、录比分释放球场回归）、`node --test skills/generate_draw/generate_draw.test.js`（15 项通过）、YAML 解析（`_data/courts/2026-1122.yml` 与 4 份双打配置）及 `git diff --check` 均通过。
+- 隔离浏览器验证（生产 JS/CSS + 本地内存模拟 API，不连接真实 GitHub 或使用真实令牌，验证后已停止预览服务）：确认 13 片球场渲染、男B双开赛占用 6 号场、女双点选已占用的 6 号场弹出 `⚠️ 球场已被占用` 警告且无法选中、改选 3 号场开赛、管理页显示双场占用详情、点 `录入比分（释放）` 录入 `5-3` 后 6 号场立即释放为空闲并推进赛程待打提示，以及 1440px / 375px 浅色与深色模式无横向溢出。
+- 未运行本地 Jekyll 构建，未对真实 GitHub API 写入比分或测试多设备真实网络并发冲突，未提交或推送 Git。

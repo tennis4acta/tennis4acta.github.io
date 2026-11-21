@@ -4,6 +4,7 @@ groups:
   "B": ["Andrew Au & Bill Hsu [2]","Roy Qiao & Henry Lu","Peter Sui & Harry Song","Johnny Tang & Ted Li"]
 seeds: {"Titus Chiu & Bill Peng [1]":1,"Andrew Au & Bill Hsu [2]":2}
 schedule: "2026-doubles"
+court_mgt: "2026-1122"
 rules:
   advance: 2
   points: {"win":1,"loss":0,"wo_loss":0}
