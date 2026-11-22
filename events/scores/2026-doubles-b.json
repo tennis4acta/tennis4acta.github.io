@@ -135,9 +135,9 @@
         "Gordon Ge & Jackman Yin",
         "Connor Zhou & Steven Xie"
       ],
-      "live": true,
-      "c": "12",
-      "t": "2026-11-22T00:40:38.797Z",
+      "s": "0-5",
+      "w": "Connor Zhou & Steven Xie",
+      "t": "2026-11-22T01:00:30.775Z",
       "by": "sheenzhaox"
     },
     "RR|C|Connor Zhou & Steven Xie|Tony Liu & Sherman Kwong": {
@@ -442,5 +442,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T00:55:13.388Z"
+  "updated": "2026-11-22T01:00:31.419Z"
 }
