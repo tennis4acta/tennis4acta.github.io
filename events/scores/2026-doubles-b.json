@@ -102,12 +102,12 @@
     },
     "RR|B|Hua En Chang & Yongji Liu|Yong Fan & Jesse Chan": {
       "p": [
-        "Yong Fan & Jesse Chan",
-        "Hua En Chang & Yongji Liu"
+        "Hua En Chang & Yongji Liu",
+        "Yong Fan & Jesse Chan"
       ],
-      "live": true,
-      "c": "10",
-      "t": "2026-11-22T00:18:44.498Z",
+      "s": "1-0",
+      "w": "Hua En Chang & Yongji Liu",
+      "t": "2026-11-22T01:14:35.889Z",
       "by": "sheenzhaox"
     },
     "RR|B|Ronnie Tse & Ka Siu Luk|Yong Fan & Jesse Chan": {
@@ -462,5 +462,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T01:10:54.625Z"
+  "updated": "2026-11-22T01:14:38.639Z"
 }
