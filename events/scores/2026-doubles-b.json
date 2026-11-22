@@ -85,9 +85,10 @@
         "Tony Su & Da Di",
         "Tony Liu & Sherman Kwong"
       ],
-      "live": true,
-      "t": "2026-11-22T02:25:39.498Z",
-      "c": "13",
+      "s": "1-2",
+      "w": "Tony Liu & Sherman Kwong",
+      "t": "2026-11-22T02:55:45.065Z",
+      "n": "RET",
       "by": "sheenzhaox"
     },
     "KO|2|2": {
@@ -602,5 +603,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T02:49:33.322Z"
+  "updated": "2026-11-22T02:55:45.938Z"
 }
