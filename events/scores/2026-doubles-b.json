@@ -30,6 +30,16 @@
       "c": "6",
       "by": "sheenzhaox"
     },
+    "KO|1|7": {
+      "p": [
+        "Connor Zhou & Steven Xie",
+        "Chris Yu & John Yue"
+      ],
+      "live": true,
+      "t": "2026-11-22T01:38:15.874Z",
+      "c": "4",
+      "by": "sheenzhaox"
+    },
     "RR|A|Jason Zhao & Kevin Liang|Romeo Chen & Xiaohan Wang": {
       "p": [
         "Jason Zhao & Kevin Liang",
@@ -512,5 +522,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T01:37:55.518Z"
+  "updated": "2026-11-22T01:38:17.185Z"
 }
