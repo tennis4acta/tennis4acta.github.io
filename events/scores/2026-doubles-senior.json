@@ -10,6 +10,16 @@
       "t": "2026-11-22T02:52:01.232Z",
       "by": "sheenzhaox"
     },
+    "KO|1|2": {
+      "p": [
+        "Roy Qiao & Henry Lu",
+        "Yiou Tan & Edward Xu"
+      ],
+      "live": true,
+      "c": "15",
+      "t": "2026-11-22T02:52:07.544Z",
+      "by": "sheenzhaox"
+    },
     "RR|A|Richard Yang & Guangyao Jiang|Titus Chiu & Bill Peng [1]": {
       "p": [
         "Titus Chiu & Bill Peng [1]",
@@ -131,5 +141,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T02:52:01.855Z"
+  "updated": "2026-11-22T02:52:08.120Z"
 }
