@@ -40,6 +40,16 @@
       "t": "2026-11-22T02:51:16.459Z",
       "by": "sheenzhaox"
     },
+    "KO|2|2": {
+      "p": [
+        "Amy Chen & Alicia Wang [2]",
+        "Jing Hong & Jamie Lee"
+      ],
+      "live": true,
+      "t": "2026-11-22T03:08:30.743Z",
+      "c": "4",
+      "by": "sheenzhaox"
+    },
     "RR|A|Jenny Wan & Jiayu Gao|Qunying Huang & Pei Zou": {
       "p": [
         "Qunying Huang & Pei Zou",
@@ -251,5 +261,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T02:51:17.302Z"
+  "updated": "2026-11-22T03:08:31.925Z"
 }
