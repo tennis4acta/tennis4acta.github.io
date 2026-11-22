@@ -160,6 +160,16 @@
       "t": "2026-11-21T22:06:57.582Z",
       "by": "sheenzhaox"
     },
+    "RR|D|Junde Liu & Yatao Cui|Patrick Zhang & Andrew Tan": {
+      "p": [
+        "Junde Liu & Yatao Cui",
+        "Patrick Zhang & Andrew Tan"
+      ],
+      "live": true,
+      "c": "9",
+      "t": "2026-11-22T00:17:29.181Z",
+      "by": "sheenzhaox"
+    },
     "RR|D|Junde Liu & Yatao Cui|Wujian Gao & Fanning Meng": {
       "p": [
         "Wujian Gao & Fanning Meng",
@@ -342,5 +352,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T00:17:15.134Z"
+  "updated": "2026-11-22T00:17:29.785Z"
 }
