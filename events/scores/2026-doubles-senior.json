@@ -1,5 +1,15 @@
 {
   "matches": {
+    "KO|1|1": {
+      "p": [
+        "Richard Yang & Guangyao Jiang",
+        "Andrew Au & Bill Hsu [2]"
+      ],
+      "live": true,
+      "c": "14",
+      "t": "2026-11-22T02:52:01.232Z",
+      "by": "sheenzhaox"
+    },
     "RR|A|Richard Yang & Guangyao Jiang|Titus Chiu & Bill Peng [1]": {
       "p": [
         "Titus Chiu & Bill Peng [1]",
@@ -121,5 +131,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T02:51:44.115Z"
+  "updated": "2026-11-22T02:52:01.855Z"
 }
