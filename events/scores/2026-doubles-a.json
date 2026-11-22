@@ -60,6 +60,16 @@
       "t": "2026-11-22T00:05:43.713Z",
       "by": "sheenzhaox"
     },
+    "RR|C|Joseph Shao & Roger Cheung|Lu Wang & Andrew Zhao": {
+      "p": [
+        "Lu Wang & Andrew Zhao",
+        "Joseph Shao & Roger Cheung"
+      ],
+      "live": true,
+      "c": "1",
+      "t": "2026-11-22T00:40:35.101Z",
+      "by": "sheenzhaox"
+    },
     "RR|C|Joseph Shao & Roger Cheung|Richard Gong & Brandon Liu": {
       "p": [
         "Joseph Shao & Roger Cheung",
@@ -101,5 +111,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T00:39:17.955Z"
+  "updated": "2026-11-22T00:40:35.756Z"
 }
