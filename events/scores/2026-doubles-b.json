@@ -401,6 +401,16 @@
       "t": "2026-11-22T00:48:37.714Z",
       "by": "sheenzhaox"
     },
+    "RR|H|Amos Chen & Fred Zheng|Shawn Han & Maurice Li": {
+      "p": [
+        "Shawn Han & Maurice Li",
+        "Amos Chen & Fred Zheng"
+      ],
+      "live": true,
+      "c": "13",
+      "t": "2026-11-22T01:05:48.754Z",
+      "by": "sheenzhaox"
+    },
     "RR|H|Amos Chen & Fred Zheng|Si Wang & Xiugui Tang": {
       "p": [
         "Si Wang & Xiugui Tang",
@@ -442,5 +452,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T01:04:27.644Z"
+  "updated": "2026-11-22T01:05:49.577Z"
 }
