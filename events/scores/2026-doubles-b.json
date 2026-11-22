@@ -90,6 +90,16 @@
       "c": "13",
       "by": "sheenzhaox"
     },
+    "KO|2|2": {
+      "p": [
+        "Oscar Wong & Toma Ishinozeki",
+        "Cheuk Nam Ip & Xiang Zhang"
+      ],
+      "live": true,
+      "t": "2026-11-22T02:49:01.298Z",
+      "c": "2",
+      "by": "sheenzhaox"
+    },
     "RR|A|Jason Zhao & Kevin Liang|Romeo Chen & Xiaohan Wang": {
       "p": [
         "Jason Zhao & Kevin Liang",
@@ -572,5 +582,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T02:34:58.988Z"
+  "updated": "2026-11-22T02:49:02.605Z"
 }
