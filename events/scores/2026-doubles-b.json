@@ -131,6 +131,16 @@
       "c": "2",
       "by": "sheenzhaox"
     },
+    "KO|3|2": {
+      "p": [
+        "Ronnie Tse & Ka Siu Luk",
+        "Chris Yu & John Yue"
+      ],
+      "live": true,
+      "t": "2026-11-22T03:28:31.319Z",
+      "c": "3",
+      "by": "sheenzhaox"
+    },
     "RR|A|Jason Zhao & Kevin Liang|Romeo Chen & Xiaohan Wang": {
       "p": [
         "Jason Zhao & Kevin Liang",
@@ -613,5 +623,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T03:25:32.971Z"
+  "updated": "2026-11-22T03:28:32.727Z"
 }
