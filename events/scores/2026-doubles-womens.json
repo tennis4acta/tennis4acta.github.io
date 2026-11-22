@@ -10,6 +10,16 @@
       "c": "3",
       "by": "sheenzhaox"
     },
+    "KO|1|2": {
+      "p": [
+        "Bing Liang & Jo Zhang",
+        "Riley Liu & Polly Yang"
+      ],
+      "live": true,
+      "c": "11",
+      "t": "2026-11-22T02:05:38.916Z",
+      "by": "sheenzhaox"
+    },
     "KO|1|3": {
       "p": [
         "Amy Chen & Alicia Wang [2]",
@@ -231,5 +241,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T02:05:07.406Z"
+  "updated": "2026-11-22T02:05:39.767Z"
 }
