@@ -10,6 +10,16 @@
       "c": "1",
       "by": "sheenzhaox"
     },
+    "KO|1|2": {
+      "p": [
+        "Michael Deng & Dominic Tu",
+        "Richard Gong & Brandon Liu"
+      ],
+      "live": true,
+      "c": "6",
+      "t": "2026-11-22T02:01:19.424Z",
+      "by": "sheenzhaox"
+    },
     "KO|1|3": {
       "p": [
         "Roger Yu & Austin Han [2]",
@@ -151,5 +161,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T01:59:01.607Z"
+  "updated": "2026-11-22T02:01:20.286Z"
 }
