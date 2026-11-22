@@ -40,6 +40,16 @@
       "c": "6",
       "by": "sheenzhaox"
     },
+    "KO|1|6": {
+      "p": [
+        "Chris Niu & Josh Zhu",
+        "Patrick Zhang & Andrew Tan"
+      ],
+      "live": true,
+      "t": "2026-11-22T01:46:51.309Z",
+      "c": "12",
+      "by": "sheenzhaox"
+    },
     "KO|1|7": {
       "p": [
         "Connor Zhou & Steven Xie",
@@ -542,5 +552,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T01:43:05.390Z"
+  "updated": "2026-11-22T01:46:53.011Z"
 }
