@@ -40,6 +40,16 @@
       "c": "4",
       "by": "sheenzhaox"
     },
+    "KO|1|8": {
+      "p": [
+        "Zhihong Gui & David Zhou",
+        "Amos Chen & Fred Zheng"
+      ],
+      "live": true,
+      "t": "2026-11-22T01:42:19.870Z",
+      "c": "9",
+      "by": "sheenzhaox"
+    },
     "RR|A|Jason Zhao & Kevin Liang|Romeo Chen & Xiaohan Wang": {
       "p": [
         "Jason Zhao & Kevin Liang",
@@ -522,5 +532,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T01:39:20.757Z"
+  "updated": "2026-11-22T01:42:21.188Z"
 }
