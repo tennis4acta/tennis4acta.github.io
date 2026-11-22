@@ -241,6 +241,16 @@
       "t": "2026-11-21T23:03:00.155Z",
       "by": "sheenzhaox"
     },
+    "RR|F|Benedict Siu & Daniel Lee|Zhihong Gui & David Zhou": {
+      "p": [
+        "Zhihong Gui & David Zhou",
+        "Benedict Siu & Daniel Lee"
+      ],
+      "live": true,
+      "c": "13",
+      "t": "2026-11-22T00:03:20.826Z",
+      "by": "sheenzhaox"
+    },
     "RR|F|Edward Liang & Yue Liao|Zhe Yang & Yicheng Zhang": {
       "p": [
         "Edward Liang & Yue Liao",
@@ -332,5 +342,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T00:03:16.045Z"
+  "updated": "2026-11-22T00:03:21.638Z"
 }
