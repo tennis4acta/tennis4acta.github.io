@@ -1,5 +1,15 @@
 {
   "matches": {
+    "KO|1|1": {
+      "p": [
+        "Donny Jiang & James Yuan",
+        "Simon Yu & Marcus Gock"
+      ],
+      "live": true,
+      "t": "2026-11-22T01:32:28.528Z",
+      "c": "1",
+      "by": "sheenzhaox"
+    },
     "RR|A|Donny Jiang & James Yuan|Haowen Deng & Kane Duong [1]": {
       "p": [
         "Haowen Deng & Kane Duong [1]",
@@ -121,5 +131,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T01:30:18.794Z"
+  "updated": "2026-11-22T01:32:29.952Z"
 }
