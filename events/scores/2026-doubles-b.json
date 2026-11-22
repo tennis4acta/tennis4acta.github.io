@@ -130,6 +130,16 @@
       "t": "2026-11-21T21:59:30.920Z",
       "by": "sheenzhaox"
     },
+    "RR|C|Connor Zhou & Steven Xie|Gordon Ge & Jackman Yin": {
+      "p": [
+        "Gordon Ge & Jackman Yin",
+        "Connor Zhou & Steven Xie"
+      ],
+      "live": true,
+      "c": "12",
+      "t": "2026-11-22T00:40:38.797Z",
+      "by": "sheenzhaox"
+    },
     "RR|C|Connor Zhou & Steven Xie|Tony Liu & Sherman Kwong": {
       "p": [
         "Connor Zhou & Steven Xie",
@@ -382,5 +392,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T00:31:18.016Z"
+  "updated": "2026-11-22T00:40:41.507Z"
 }
