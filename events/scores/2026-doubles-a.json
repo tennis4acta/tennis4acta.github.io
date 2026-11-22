@@ -60,6 +60,16 @@
       "t": "2026-11-22T03:53:08.877Z",
       "by": "sheenzhaox"
     },
+    "KO|3|1": {
+      "p": [
+        "Simon Yu & Marcus Gock",
+        "Haowen Deng & Kane Duong [1]"
+      ],
+      "live": true,
+      "t": "2026-11-22T04:02:26.306Z",
+      "c": "1",
+      "by": "sheenzhaox"
+    },
     "RR|A|Donny Jiang & James Yuan|Haowen Deng & Kane Duong [1]": {
       "p": [
         "Haowen Deng & Kane Duong [1]",
@@ -181,5 +191,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T03:53:09.552Z"
+  "updated": "2026-11-22T04:02:27.547Z"
 }
