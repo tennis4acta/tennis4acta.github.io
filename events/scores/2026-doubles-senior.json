@@ -50,6 +50,16 @@
       "t": "2026-11-22T00:28:32.295Z",
       "by": "sheenzhaox"
     },
+    "RR|B|Johnny Tang & Ted Li|Roy Qiao & Henry Lu": {
+      "p": [
+        "Roy Qiao & Henry Lu",
+        "Johnny Tang & Ted Li"
+      ],
+      "live": true,
+      "c": "15",
+      "t": "2026-11-22T00:49:02.944Z",
+      "by": "sheenzhaox"
+    },
     "RR|B|Peter Sui & Harry Song|Roy Qiao & Henry Lu": {
       "p": [
         "Roy Qiao & Henry Lu",
@@ -61,5 +71,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T00:48:17.480Z"
+  "updated": "2026-11-22T00:49:03.703Z"
 }
