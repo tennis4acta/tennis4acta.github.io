@@ -80,6 +80,16 @@
       "c": "9",
       "by": "sheenzhaox"
     },
+    "KO|2|1": {
+      "p": [
+        "Tony Su & Da Di",
+        "Tony Liu & Sherman Kwong"
+      ],
+      "live": true,
+      "t": "2026-11-22T02:25:39.498Z",
+      "c": "13",
+      "by": "sheenzhaox"
+    },
     "RR|A|Jason Zhao & Kevin Liang|Romeo Chen & Xiaohan Wang": {
       "p": [
         "Jason Zhao & Kevin Liang",
@@ -562,5 +572,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T02:20:06.744Z"
+  "updated": "2026-11-22T02:25:40.833Z"
 }
