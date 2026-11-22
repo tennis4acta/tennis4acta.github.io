@@ -210,6 +210,16 @@
       "t": "2026-11-21T22:01:50.867Z",
       "by": "sheenzhaox"
     },
+    "RR|E|Cheuk Nam Ip & Xiang Zhang|Chris Yu & John Yue": {
+      "p": [
+        "Chris Yu & John Yue",
+        "Cheuk Nam Ip & Xiang Zhang"
+      ],
+      "live": true,
+      "c": "11",
+      "t": "2026-11-22T00:19:26.016Z",
+      "by": "sheenzhaox"
+    },
     "RR|E|Cheuk Nam Ip & Xiang Zhang|Hao Yu & Chance Qin": {
       "p": [
         "Hao Yu & Chance Qin",
@@ -362,5 +372,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T00:19:14.525Z"
+  "updated": "2026-11-22T00:19:26.679Z"
 }
