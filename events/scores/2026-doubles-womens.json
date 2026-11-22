@@ -190,6 +190,16 @@
       "t": "2026-11-21T23:51:26.772Z",
       "by": "sheenzhaox"
     },
+    "RR|D|Bing Liang & Jo Zhang|Sammy Gan & Claudia Wang": {
+      "p": [
+        "Bing Liang & Jo Zhang",
+        "Sammy Gan & Claudia Wang"
+      ],
+      "live": true,
+      "c": "12",
+      "t": "2026-11-22T01:03:40.569Z",
+      "by": "sheenzhaox"
+    },
     "RR|D|Chelsea He & Xin Liu|Sammy Gan & Claudia Wang": {
       "p": [
         "Sammy Gan & Claudia Wang",
@@ -201,5 +211,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T00:54:30.676Z"
+  "updated": "2026-11-22T01:03:41.379Z"
 }
