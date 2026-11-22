@@ -371,6 +371,16 @@
       "t": "2026-11-21T22:26:31.805Z",
       "by": "sheenzhaox"
     },
+    "RR|G|Sam Tang & Fei Wang|Simon Kwok & David Cheung": {
+      "p": [
+        "Simon Kwok & David Cheung",
+        "Sam Tang & Fei Wang"
+      ],
+      "live": true,
+      "c": "6",
+      "t": "2026-11-22T00:48:37.714Z",
+      "by": "sheenzhaox"
+    },
     "RR|H|Amos Chen & Fred Zheng|Tingwei Chen & Pong Lung Lau": {
       "p": [
         "Tingwei Chen & Pong Lung Lau",
@@ -402,5 +412,5 @@
       "by": "sheenzhaox"
     }
   },
-  "updated": "2026-11-22T00:48:31.625Z"
+  "updated": "2026-11-22T00:48:39.524Z"
 }
